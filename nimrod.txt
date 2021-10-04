@@ -75,10 +75,9 @@ NIMROD, as well as illustrate some simulation results.
 A. H. Glasser, C.  R. Sovinec, R. A. Nebel, T. A. Gianakon,
 S. J. Plimpton, M. S. Chu, D. D.  Schnack, and the NIMROD Team, Plasma
 Physics and Controlled Fusion, 41, A747- A755
-(1999). ("abstract"_anim1) ("html"_hnim1)
+(1999). ("abstract"_anim1)
 
 :link(anim1,abstracts/plasma99.html)
-:link(hnim1,papers/HTML/plasma99/plasma99.html)
 
 [Nonlinear Magnetohydrodynamics Simulation Using High-order Finite
 Elements], C. R. Sovinec, A. H. Glasser, T. A. Gianakon, D. C. Barnes,

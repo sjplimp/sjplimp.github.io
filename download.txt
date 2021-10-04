@@ -92,11 +92,8 @@ ParaDyn if you're sure it's what you want.
 S. J. Plimpton and B. A. Hendrickson, in Materials Theory and
 Modelling, edited by J. Broughton, P. Bristowe, and J. Newsam, MRS
 Proceedings 291, Pittsburgh, PA, 1993, p 37.  ("abstract"_absPD)
-("postscript"_PSPD) ("ps.gz"_gzPD)
 
 :link(absPD,abstracts/mrs92.html)
-:link(PSPD,papers/mrs92.ps)
-:link(gzPD,papers/mrs92.ps.gz)
 
 :line
 
@@ -115,13 +112,9 @@ with a wrapper on a vanilla MPI send and receive that was added later.
 
 [Fast Parallel Algorithms for Short-Range Molecular Dynamics],
 S. J. Plimpton, J Comp Phys, 117, 1-19
-(1995). ("abstract"_absjcomps95) ("pdf"_PDFjcomps95) ("tar
-file"_tarjcomps95 of figures if they don't display correctly in the
-PDF file)
+(1995). ("abstract"_absjcomps95)
 
 :link(absjcomps95,abstracts/jcompphys95.html)
-:link(PDFjcomps95,papers/jcompphys95.pdf)
-:link(tarjcomps95,papers/jcompphys95_figs.tar.gz)
 
 :line
 
@@ -162,11 +155,9 @@ Gavin did the bulk of this work and supports the modified code.
 Distributed-Memory Architectures], G. C. Conant, S. J. Plimpton,
 W. Old, A.  Wagner, P. R. Fain, T. R. Pacheco, and G. Heffelfinger,
 Journal of Parallel and Distributed Computing, 63, 674-682
-(2003). ("abstract"_abs1) ("pdf"_pdf1) ("pdf.gz"_gz1)
+(2003). ("abstract"_abs1)
 
 :link(abs1,abstracts/jpdc03.html)
-:link(pdf1,papers/jpdc03.pdf)
-:link(gz1,papers/jpdc03.pdf.gz)
 
 :line
 

@@ -210,9 +210,6 @@ benchmarks running on CPlant.
 
 [Scalability and Performance of a Two Large Linux Clusters],
 R. Brightwell and S.  J. Plimpton, J of Parallel and Distributed
-Computing, 61, 1546-1569 (2001).  ("abstract"_abs) ("postscript"_PS)
-("ps.gz"_ps)
+Computing, 61, 1546-1569 (2001).  ("abstract"_abs)
 
 :link(abs,abstracts/jpdc01.html)
-:link(PS,papers/jpdc01.ps)
-:link(ps,papers/jpdc01.ps.gz)

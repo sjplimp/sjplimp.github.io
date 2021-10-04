@@ -97,8 +97,6 @@ S. J. Plimpton, A. D. Romig Jr., Ultramicroscopy, 51, 160-167
 [Parallel Simulation of Electron-Solid Interactions for
 Electron-Microscopy Modeling], S. J. Plimpton, J. R. Michael,
 A. D. Romig, Jr., J of SuperComputing, 6, 139-151
-(1992). ("abstract"_abs2) ("postscript"_PS) ("ps.gz"_ps)
+(1992). ("abstract"_abs2)
 
 :link(abs2,abstracts/jsc92.html)
-:link(PS,papers/jsc92.ps)
-:link(ps,papers/jsc92.ps.gz)

@@ -19,27 +19,20 @@ favorite hammer on!
 [Massively Parallel Computing: A Sandia Perspective], D. E. Womble,
 S. S.  Dosanjh, B. A. Hendrickson, M. A. Heroux, S. J. Plimpton,
 J. L. Tomkins, D. S.  Greenberg, Parallel Computing, 25, 1853-1876
-(1999). ("abstract"_abs1) ("ps"_ps1) ("ps.gz"_gz1)
+(1999). ("abstract"_abs1)
 
 :link(abs1,abstracts/parco99.html)
-:link(ps1,papers/parco99.ps)
-:link(gz1,papers/parco99.ps.gz)
 
 [Massively-Parallel Methods for Engineering and Science Problems],
 W. J. Camp, S.  J. Plimpton, B. A. Hendrickson, R. W. Leland,
 Communications of the ACM, 37, 31-41 (1994). ("abstract"_abs2)
-("postscript"_PS2) ("ps.gz"_gz2)
 
 :link(abs2,abstracts/cacm94.html)
-:link(PS2,papers/cacm94.ps)
-:link(gz2,papers/cacm94.ps.gz)
 
 [Is SIMD Enough for Scientific and Engineering Applications on
 Massively Parallel Computers ?], S. J. Plimpton, S. S. Dosanjh,
 R. B. Krall, in Proc of 37th IEEE International Computer Conference,
 COMPCON '92, San Francisco, CA, February 1992. p
-95-102. ("abstract"_abs3) ("postscript"_PS3) ("ps.gz"_gz3)
+95-102. ("abstract"_abs3)
 
 :link(abs3,abstracts/compcon92.html)
-:link(PS3,papers/compcon92.ps)
-:link(gz3,papers/compcon92.ps.gz)

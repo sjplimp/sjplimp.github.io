@@ -51,13 +51,9 @@ box to each proc.
 
 [Fast Parallel Algorithms for Short-Range Molecular Dynamics],
 S. J. Plimpton, J Comp Phys, 117, 1-19
-(1995). ("abstract"_absjcomps95) ("pdf"_PDFjcomps95) ("tar
-file"_tarjcomps95 of figures if they don't display correctly in the
-PDF file)
+(1995). ("abstract"_absjcomps95)
 
 :link(absjcomps95,abstracts/jcompphys95.html)
-:link(PDFjcomps95,papers/jcompphys95.pdf)
-:link(tarjcomps95,papers/jcompphys95_figs.tar.gz)
 
 The Lennard-Jones codes discussed in the paper that implement the
 various parallel algorithms are available for download
@@ -163,11 +159,9 @@ terms within each molecule's topology.
 Systems], S.  J. Plimpton and B. A. Hendrickson, chapter in Parallel
 Computing in Computational Chemistry, edited by T. G. Mattson,
 published by the American Chemical Society, Symposium Series 592,
-114-132 (1995). ("abstract"_acs95abs) ("postscript"_acs95PS) ("ps.gz"_acs95gz)
+114-132 (1995). ("abstract"_acs95abs)
 
 :link(acs95abs,abstracts/acs95.html)
-:link(acs95PS,papers/acs95.ps)
-:link(acs95gz,papers/acs95.ps.gz)
   
 :line
 
@@ -182,11 +176,8 @@ Stephen Foiles and Murray Daw, and which is available for download
 S. J. Plimpton and B. A. Hendrickson, in Materials Theory and
 Modelling, edited by J. Broughton, P. Bristowe, and J. Newsam, MRS
 Proceedings 291, Pittsburgh, PA, 1993, p 37.  ("abstract"_mrs92abs)
-("postscript"_mrs92PS) ("ps.gz"_mrs92gz)
 
 :link(mrs92abs,abstracts/mrs92.html)
-:link(mrs92PS,papers/mrs92.ps)
-:link(mrs92gz,papers/mrs92.ps.gz)
 
 :line
 
@@ -197,12 +188,9 @@ ParBond; it has since been superceded by our
 
 [A New Parallel Method for Molecular-Dynamics Simulation of
 Macromolecular Systems], S. J. Plimpton and B. A. Hendrickson, J Comp
-Chem, 17, 326-337 (1996).  ("abstract"_jcc96abs) ("postscript"_jcc96PS)
-("ps.gz"_jcc96gz)
+Chem, 17, 326-337 (1996).  ("abstract"_jcc96abs) 
 
 :link(jcc96abs,abstracts/jcc96.html)
-:link(jcc96PS,papers/jcc96.ps)
-:link(jcc96gz,papers/jcc96.ps.gz)
  
 :line 
 
@@ -214,11 +202,8 @@ its parallel algorithms are discussed in this paper.
 Simulations], S. J. Plimpton, R. Pollock, M. Stevens, in Proc of the
 Eighth SIAM Conference on Parallel Processing for Scientific
 Computing, Minneapolis, MN, March 1997. ("abstract"_siam97abs)
-("postscript"_siam97PS) ("ps.gz"_siam97gz)
 
 :link(siam97abs,abstracts/siam97.html)
-:link(siam97PS,papers/siam97.ps)
-:link(siam97gz,papers/siam97.ps.gz)
  
 :line
 
@@ -228,8 +213,6 @@ future.
 
 [Computational Limits of Classical Molecular-Dynamics Simulations],
 S. J.  Plimpton, Computational Materials Science, 4, 361-364
-(1995). ("abstract"_cms95abs) ("postscript"_cms95PS) ("ps.gz"_cms95gz)
+(1995). ("abstract"_cms95abs)
 
 :link(cms95abs,abstracts/cms95.html)
-:link(cms95PS,papers/cms95.ps)
-:link(cms95gz,papers/cms95.ps.gz)

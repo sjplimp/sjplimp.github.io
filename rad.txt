@@ -76,11 +76,9 @@ highlights their performance on 2 large parallel machines:
 Prioritization, Grid Partitioning, and Cycle-Detection],
 S. J. Plimpton, B. Hendrickson, S. Burns, W. Mclendon III, L.
 Rauchwerger, Nuclear Science and Engineering, 150, 267-283 (2005).
-("abstract"_art3) ("postscript"_prt3) ("ps.gz"_grt3)
+("abstract"_art3)
 
 :link(art3,abstracts/nse05.html)
-:link(prt3,papers/nse05.ps)
-:link(grt3,papers/nse05.ps.gz)
 
 This paper gives greater details about the parallel graph traversal
 algorithms:
@@ -88,11 +86,9 @@ algorithms:
 [Finding Strongly Connected Components in Distributed Graphs],
 W. McLendon, B. Hendrickson, S. J. Plimpton, L. Rauchwerger, J
 Parallel and Distributed Computing, 65, 901-910 (2005).
-("abstract"_art4) ("pdf"_prt4) ("pdf.gz"_grt4)
+("abstract"_art4)
 
 :link(art4,abstracts/jpdc05.html)
-:link(prt4,papers/jpdc05.pdf)
-:link(grt4,papers/jpdc05.pdf.gz)
 
 This is a paper with details of our initial parallel sweeping
 algorithm for solving the Boltzmann equation and some performance
@@ -101,11 +97,9 @@ results on the Intel Tflops machine:
 [Parallel Algorithms for Radiation Transport on Unstructured Grids],
 S. J. Plimpton, B. A. Hendrickson, S. P. Burns, W. McLendon III, Proc
 of SuperComputing 2000 (SC2000), Dallas, TX, November
-2000. ("abstract"_abs1) ("postscript"_PS1) ("ps.gz"_gz1)
+2000. ("abstract"_abs1)
 
 :link(abs1,abstracts/sc00.html)
-:link(PS1,papers/sc00.ps)
-:link(gz1,papers/sc00.ps.gz)
  
 This paper discusses out initial parallel algorithm for cycle
 detection:
@@ -113,8 +107,6 @@ detection:
 [Identifying Strongly Connected Components in Parallel], W. McLendon
 III, B.  Hendrickson, S. J. Plimpton, L. Rauchwerger, in Proc of SIAM
 Parallel Processing for Scientific Computing Conf, March
-2001. ("abstract"_abs2) ("postscript"_PS2) ("ps.gz"_gz2)
+2001. ("abstract"_abs2)
 
 :link(abs2,abstracts/siam01a.html)
-:link(PS2,papers/siam01a.ps)
-:link(gz2,papers/siam01a.ps.gz)

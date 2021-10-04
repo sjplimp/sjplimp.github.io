@@ -49,9 +49,10 @@
 
 I'm a staff member at "Sandia National Laboratories"_snl, a US
 "Department of Energy"_doe lab, in the "Center for Computing
-Research"_1400.  I'm currently in the Multiscale Science department.
-Previously I've been in the Scalable Algorithms, Computational
-Biology, and Parallel Computational Sciences departments.
+Research"_1400.  I'm currently in the Computational Multiscale
+department.  Previously I've been in the Scalable Algorithms,
+Computational Biology, and Parallel Computational Sciences
+departments.
 
 My research involves implementing and using scientific simulations
 designed for parallel supercomputers, which often requires creation of
@@ -157,7 +158,7 @@ How to Reach Me :link(hrm),h3
 
 "sjplimp at sandia.gov"_mailto:sjplimp@sandia.gov :all(b)
 :p
-Multiscale Science Dept, MS 1316
+Computational Multiscale Dept, MS 1316
 Sandia National Laboratories
 Albuquerque, NM 87185-1316 :all(b)
 
@@ -171,7 +172,7 @@ Related Sandia Links :link(rsl),h3
 "Sandia National Laboratories"_snl
 "Sandia Privacy and Security statement"_security :all(b)
 
-:link(1400,http://www.cs.sandia.gov)
+:link(1400,https://cfwebprod.sandia.gov/cfdocs/CompResearch/index.cfm)
 :link(1400/research,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/research.cfm)
 :link(1400/staff,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/org_chart.cfm)
 :link(snl,http://www.sandia.gov)

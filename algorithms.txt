@@ -105,7 +105,6 @@ paper:
 RandomAccess Benchmark], S. J. Plimpton, R. Brightwell, C. Vaughan,
 K. Underwood, M. Davis, Proc of Cluster 2006 - IEEE International Conf
 on Cluster Computing, Sept 2006. ("abstract"_abstracts/cluster06.html)
-("pdf"_papers/cluster06.pdf)
 
 Collaborators on this project:
 
@@ -199,11 +198,8 @@ algorithm and some performance results are given in this paper:
 [A Parallel Rendezvous Algorithm for Interpolation Between Multiple
 Grids], S. J. Plimpton, B. Hendrickson, J. Stewart, J Parallel and
 Distributed Computing, 64, 266-276 (2004). ("abstract"_apa1)
-("pdf"_ppa1) ("pdf.gz"_gpa1)
 
 :link(apa1,abstracts/jpdc03a.html)
-:link(ppa1,papers/jpdc03a.pdf)
-:link(gpa1,papers/jpdc03a.pdf.gz)
 
 Collaborators on this project:
 
@@ -234,11 +230,8 @@ experimented with several dynamic algorithms in this conference paper:
 P. Diniz, S. J. Plimpton, B. Hendrickson, R. Leland, in Proc of 7th
 SIAM Conference on Parallel Processing for Scientific Computing, San
 Francisco, CA, February 1995, p 615. ("abstract"_ab2)
-("postscript"_PS) ("ps.gz"_ps)
 
 :link(ab2,abstracts/siam95.html)
-:link(PS,papers/siam95.ps)
-:link(ps,papers/siam95.ps.gz)
 
 More recently, Sandia has developed a dynamic load-balancing library,
 called "Zoltan"_Zoltan, which has on-line documentation and is freely
@@ -302,11 +295,9 @@ different applications can be architected from basic primitives:
 [Tinkertoy Parallel Programming: Complicated Applications from Simple
 Tools], B.  Hendrickson and S. J. Plimpton, in Proc of SIAM Parallel
 Processing for Scientific Computing Conf, March
-2001. ("abstract"_abs3) ("postscript"_PS3) ("ps.gz"_ps3)
+2001. ("abstract"_abs3)
 
 :link(abs3,abstracts/siam01b.html)
-:link(PS3,papers/siam01b.ps)
-:link(ps3,papers/siam01b.ps.gz)
 
 Collaborators on this project:
 
@@ -327,12 +318,9 @@ this paper:
 
 [Parallel Many-Body Simulations Without All-to-All Communication],
 B. A.  Hendrickson and S. J. Plimpton, J Parallel and Distributed
-Computing, 27, 15-25 (1995). ("abstract"_abs4) ("postscript"_PS4)
-("ps.gz"_ps4)
+Computing, 27, 15-25 (1995). ("abstract"_abs4)
 
 :link(abs4,abstracts/jpdc95.html)
-:link(PS4,papers/jpdc95.ps)
-:link(ps4,papers/jpdc95.ps.gz)
 
 The application of the force-decomposition idea to general many-body
 calculations (molecular dynamics or otherwise) is discussed in this
@@ -340,12 +328,9 @@ paper:
 
 [An Efficient Parallel Algorithm for Matrix-Vector Multiplication],
 B. A.  Hendrickson, R. W. Leland, S. J. Plimpton, Int J of High Speed
-Computing, 7, 73-88 (1995). ("abstract"_abs5) ("postscript"_PS5)
-("ps.gz"_ps5)
+Computing, 7, 73-88 (1995). ("abstract"_abs5)
 
 :link(abs5,abstracts/ijhsc95.html)
-:link(PS5,papers/ijhsc95.ps)
-:link(ps5,papers/ijhsc95.ps.gz)
 
 Collaborators on this project:
 

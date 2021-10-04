@@ -99,10 +99,9 @@ challenges for cell modeling:
 
 [Microbial cell modeling via reacting diffusing particles],
 S. J. Plimpton and A. Slepoy, Journal of Physics: Conference Series
-16, 305-309 (2005). ("abstract"_ajp) ("pdf"_pjp)
+16, 305-309 (2005). ("abstract"_ajp)
 
 :link(ajp,abstracts/jp05.html)
-:link(pjp,papers/jp05.pdf)
 
 This paper is about our "Genomics:GTL (Genomes-to-Life) project"_gtl
 funded by DOE's OBER and OASCR offices, that provided funding and

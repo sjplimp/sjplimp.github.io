@@ -141,11 +141,9 @@ Mechanics and Engineering, 184, 375-390
 Detection and Smoothed Particle Hydrodynamics], S. J. Plimpton,
 S. Attaway, B. Hendrickson, J.  Swegle, C. Vaughan, D. Gardner, J
 Parallel and Distributed Computing, 50, 104- 122
-(1998). ("abstract"_abs2) ("postscript"_PS) ("ps.gz"_gz2)
+(1998). ("abstract"_abs2)
 
 :link(abs2,abstracts/jpdc98.html)
-:link(PS,papers/jpdc98.ps)
-:link(gz2,papers/jpdc98.ps.gz)
 
 [A Parallel Contact Detection Algorithm for Transient Solid Dynamics
 Simulations Using PRONTO3D], S. W. Attaway, B. A. Hendrickson,
@@ -159,16 +157,14 @@ M. W. Heinstein, Computational Mechanics, 22, 143-159
 Computer], S.  Attaway, T. Barragy, K. Brown, D. Gardner,
 B. Hendrickson, S. J. Plimpton, C.  Vaughan, Gordon Bell finalist
 paper, in Proc of SuperComputing '97, San Jose, CA, November
-1997. ("abstract"_abs4) ("html"_html4)
+1997. ("abstract"_abs4)
 
 :link(abs4,abstracts/sc97.html)
-:link(html4,papers/HTML/sc97/sc97.html)
  
 [Transient Dynamics Simulations: Parallel Algorithms for Contact
 Detection and Smoothed Particle Hydrodynamics], S. J. Plimpton,
 S. Attaway, B. Hendrickson, J.  Swegle, C. Vaughan, D. Gardner, in
 Proc of SuperComputing '96, Pittsburgh, PA, November
-1996. ("abstract"_abs5) ("html"_html5)
+1996. ("abstract"_abs5)
 
 :link(abs5,abstracts/sc96.html)
-:link(html5,papers/HTML/sc96/sc96.html)

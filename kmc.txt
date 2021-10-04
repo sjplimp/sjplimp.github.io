@@ -74,8 +74,7 @@ as one section:
 [Crossing the Mesoscale No-Man's Land via Parallel Kinetic Monte
 Carlo], S. Plimpton, C. Battaile, M. Chandross, L. Holm,
 A. Thompson, V. Tikare, G. Wagner, E. Webb, X. Zhou, C. Garcia
-Cardona, A. Slepoy, Sandia report SAND2009-6226, October
+Cardona, A. Slepoy, Sandia Report SAND2009-6226, October
 2009. ("abstract"_abstracts/sand09.html)
 
-You can download the entire report via "this
-link"_papers/sand09.pdf, but note that it is a 45 Mb file!
+You can download the entire report via "this link"_papers/sand09.pdf.

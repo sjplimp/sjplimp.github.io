@@ -115,11 +115,8 @@ Sandia.
 [Parallel Particle Simulations of Low-Density Fluid Flows],
 S. J. Plimpton and T.  J. Bartel, in Proc of High Performance
 Computing 1994, San Diego, CA, April 1994, p 31. ("abstract"_abs1)
-("postscript"_PS1) ("ps.gz"_gz1)
 
 :link(abs1,abstracts/hpc94.html)
-:link(PS1,papers/hpc94.ps)
-:link(gz1,papers/hpc94.ps.gz)
 
 [Direct Monte Carlo Simulation of Ionized Rarefied Flows on Large MIMD
 Parallel Supercomputers], T. J. Bartel, S. J. Plimpton, C. R. Justiz,
@@ -133,8 +130,6 @@ Vancouver, Canada, July 1992, published by AIAA, A94-30156, p
 Supercomputers], S. J. Plimpton and T. J. Bartel, in Proc of Scalable
 High Performance Computing Conference, Williamsburg, VA, April 1992, p
 212, and in Computing Systems in Engineering, 3, 333-336
-(1992). ("abstract"_abs3) ("postscript"_PS3) ("ps.gz"_gz3)
+(1992). ("abstract"_abs3)
 
 :link(abs3,abstracts/shpcc92.html)
-:link(PS3,papers/shpcc92.ps)
-:link(gz3,papers/shpcc92.ps.gz)

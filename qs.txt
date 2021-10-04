@@ -72,11 +72,9 @@ in this paper:
 [A Load-Balancing Algorithm for a Parallel Electromagnetic
 Particle-in-Cell Code], S. J. Plimpton, D. B. Seidel, M. F. Pasik,
 R. S. Coats, G. R. Montry, Comp Phys Comm, 152, 227-241 (2003).
-("abstract"_aqs1) ("pdf"_pqs1) ("pdf.gz"_gqs1)
+("abstract"_aqs1)
 
 :link(aqs1,abstracts/cpc03.html)
-:link(pqs1,papers/cpc03.pdf)
-:link(gqs1,papers/cpc03.pdf.gz)
 
 :line
 
@@ -99,10 +97,8 @@ Here's a conference paper on this work:
 MIMD, SIMD, and Vector Supercomputers], S. J. Plimpton, I. Shokair,
 J. Wagner, in Proc of 5th SIAM Conference on Parallel Processing for
 Scientific Computing, Houston, TX, March 1991, p
-507-512. ("abstract"_aqs2) ("postscript"_Pqs2) ("ps.gz"_gqs2)
+507-512. ("abstract"_aqs2)
 
 :link(aqs2,abstracts/siam91.html)
-:link(Pqs2,papers/siam91.ps)
-:link(gqs2,papers/siam91.ps.gz)
 
 :c,image(images/pic_buck.gif)
