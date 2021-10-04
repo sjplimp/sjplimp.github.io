@@ -35,13 +35,9 @@ license"_gnu or "modified BSD license"_bsd.
 :link(gnu,http://www.gnu.org/copyleft/gpl.html)
 :link(bsd,http://en.wikipedia.org/wiki/BSD_license)
 
-:line
-
 There have been ~56,000 downloads from this page and another ~387,000
 from the "LAMMPS download page"_https://www.lammps.org/download.html
 from Sept 2004 thru Dec 2020.
-
-:line
 
 :link(download)
 
@@ -96,6 +92,7 @@ KB, "download"_tars/paradyn.tar.gz :b
 :link(fftmpi,http://fftmpi.sandia.gov)
 :link(pizza,http://pizza.sandia.gov)
 
+:line
 :line
 
 ParaDyn - embedded atom method (EAM) molecular dynamics :link(pd),h3
