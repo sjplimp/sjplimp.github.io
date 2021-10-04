@@ -1,0 +1,124 @@
+<HEAD>
+    <TITLE> PHISH Library </TITLE>
+    <meta name="Description" content="PHISH Library home page">
+    <meta name="keywords" content="PHISH, streaming data analysis, MPI, graph algorithms">
+    <meta name="google-site-verification" content="jIe-V87O61oNvgWFgBXMeF5bFl35XjSaG0Fm8_7q5VU" />
+    <meta name="review" content="03_27_2012" />
+    <meta name="filename" content="index.html" />
+    <meta name="subject" content="PHISH Library home page" />
+    <meta name="sandia.approval_type" content="formal" />
+    <meta name="sandia.approved" content="2004-4449W" />
+    <link rev="owns" title="Steve Plimpton" href="mailto:sjplimp@sandia.gov" />
+    <link rev="made, publisher" title="Steve Plimpton" href="mailto:sjplimp@sandia.gov" />
+    <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+    <meta name="Author" content="Steve Plimpton" />
+</HEAD>
+
+PHISH Library :c,h3
+
+{Remember, a dead fish can float downstream, but it takes a live
+one to swim upstream.} --  W. C. Fields :c
+
+{So long, and thanks for all the phish.} -- with apologies to Douglas Adams :c
+
+:b
+
+<center>
+:c,image(phish/images/school.jpg)
+school of blue and gold snappers, Coiba Natl Park, Panama :b
+photograph by Laszlo Ilyes, licensed under terms of cc-by-2.0 :b
+</center>
+
+:b
+
+<center>
+Note: This site is not about Phish the band, or illicit phishing for
+personal info, but about the PHISH library, :b
+which is software for writing parallel programs that process streaming
+data. :b
+</center>
+
+:line
+
+This is the home page for the PHISH library, which is the chief
+component of a simple framework for processing large volumes of data,
+either in a real-time streaming context or from files.
+
+"Pheatures"_phish/features.html,
+"Lingo"_phish/lingo.html,
+"Documentation"_phish/doc/Manual.html,
+"Benchmarks"_phish/bench.html,
+"Download"_download.html,
+"Publications"_phish/papers.html,
+"Latest features & bug fixes"_phish/bug.html,
+"Contribute"_phish/contribute.html,
+"Open source"_phish/open_source.html,
+"Authors"_phish/authors.html :tb(c=5,ea=c,a=c)
+
+PHISH stands for Parallel Harness for Informatic Stream Hashing.  The
+phishy metaphor is meant to evoke the image of many small minnows
+(programs) swimming in a stream (of data).
+
+PHISH is a lightweight framework which a set of independent processes
+can use to exchange data as they run on the same desktop machine, on
+processors of a parallel machine, or on different machines across a
+network.  This enables them to work in a coordinated parallel fashion
+to perform computations on either streaming or archived data.
+
+The PHISH distribution includes a simple, portable library for
+performing data exchanges in useful patterns either via "MPI
+message-passing"_mpi or "ZMQ sockets"_zmq.  PHISH input scripts are
+used to describe a data-processing algorithm, and an additional tool
+provided in the PHISH distribution converts the script into a form
+that can be launched as a parallel job.
+
+PHISH was developed at Sandia National Laboratories, a US Department
+of Energy facility, for use on "informatics problems"_informatics.  It
+has a C-style interface which can be used from any hi-level language,
+including C, C++, Fortran, or Python.  PHISH is distributed as an
+open-source code, under the terms of the modified "Berkeley Software
+Distribution (BSD) License"_bsd.  See "this
+page"_phish/open_source.html for more details.
+
+The authors of PHISH are "Steve Plimpton"_sjp and Tim Shead, who can
+be contacted at sjplimp at sandia.gov and tshead at sandia.gov.
+
+The PHISH WWW site is hosted by Sandia, which has this "Privacy and
+Security statement"_security.
+
+:link(security,http://www.sandia.gov/general/privacy-security/index.html)
+
+:link(snl,http://www.sandia.gov)
+:link(doe,http://www.doe.gov)
+:link(bsd,http://en.wikipedia.org/wiki/BSD_license)
+:link(sjp,http://www.sandia.gov/~sjplimp)
+
+:link(mpi,http://en.wikipedia.org/wiki/Message_Passing_Interface)
+:link(zmq,http://www.zeromq.org)
+:link(informatics,http://www.sandia.gov/~sjplimp/informatics.html)
+
+:line
+
+These are other software packages that provide frameworks for
+streaming computations:
+
+Twitter Storm by Nathan Marz ("overview"_tsover and "Git repo"_tsrepo)
+"S4"_s4 from Yahoo! and Apache
+"InfoSpheres Streams"_ibm (commercial package from IBM) :ul
+
+:link(tsover,http://storm-project.net)
+:link(tsrepo,https://github.com/nathanmarz/storm)
+:link(s4,http://incubator.apache.org/s4)
+:link(ibm,http://www-01.ibm.com/software/data/infosphere/stream-computing)
+
+:line
+
+Recent PHISH News :c,h4
+
+<IMG SRC = "images/new.gif"> (10/12) Posted pre-print of our first
+paper on PHISH on the "Papers"_phish/papers.html page. :ulb,l
+
+<IMG SRC = "images/new.gif"> (9/12) Initial open-source release of the
+PHISH library.  :ule,l
+
+:ule

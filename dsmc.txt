@@ -1,0 +1,140 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Direct Simulation Monte Carlo - low-density reacting flows via particles :h3
+
+Note: The text below describes an older 2d DSMC code called ICARUS we
+developed at Sandia in the 1990s.  A newer 3d code called SPARTA, has
+its own "web page"_http://sparta.sandia.gov.  Links to SPARTA papers
+are also listed here:
+
+[Molecular-Level Simulations of Turbulence and Its Decay],
+M. A. Gallis, N. P. Bitter, T. P. Koehler, J. R. Torczynski,
+S. J. Plimpton, G. Papadakis, Phys Rev Letters, 118, 064501 (2017).
+("abstract"_abstracts/prl17.html)
+
+[Direct simulation Monte Carlo investigation of the Rayleigh-Taylor
+instability], M. A. Gallis, T. P. Koehler, J. R. Torczynski, and
+S. J. Plimpton, Phys Rev Fluids, 1, 043403 (2016).
+("abstract"_abstracts/prf16.html)
+
+[Direct simulation Monte Carlo investigation of the Richtmyer-Meshkov
+instability], M. A. Gallis, T. P. Koehler, J. R. Torczynski, and
+S. J. Plimpton, Physics of Fluids, 27, 084105 (2015).
+("abstract"_abstracts/pof15.html)
+
+[Direct Simulation Monte Carlo: The Quest for Speed], M. A. Gallis,
+J. R. Torczynski, S. J. Plimpton, D. J. Rader, T. Koehler, 29th Intl
+Symposium on Rarefied Gas Dynamics in Xi'an, China, AIP Conf Proc,
+1628, 27 (2014). ("abstract"_abstracts/rgd14.html)
+
+:line
+:line
+
+Direct Simulation Monte Carlo (DSMC) is a particle-based technique for
+simulating low-density fluid flows -- those with a ratio of mean-free
+path to geometry scale (the Knudsen number) of order 0.1 or
+greater. The basic idea is simple.  Particles of various chemical
+species stream through a simulation domain bounded by inflow, outflow,
+or body surfaces. In a single timestep, each particle moves
+independently (without inter-particle collisions) to a new
+position. The move may include boundary interactions such as bouncing
+off a surface. At the end of the timestep an artificial grid is
+superposed on the simulation domain and used to locate particles that
+are near each other.  Particles within a grid cell collide with each
+other and perform chemistry reactions via Monte Carlo (random)
+rules. Similarly, particles in grid cells that border a boundary
+surface can undergo surface chemistry interactions during the particle
+move. Statistics are gathered and a new timestep begins.  Over the
+course of a many-timestep simulation, statistics accumulated within
+cells and at surfaces are used to compute various thermodynamic
+quantities of interest for all chemical species, such as flow
+temperature, density, and velocity.
+
+A Sandia DSMC code, called ICARUS, grids a 2-d domain with a
+collection of adjoining body-fitted grids (see the 1st figure
+below). Axi-symmetric problems can be simulated in 3-d by rotating the
+grid around an axis of symmetry and applying 3-d boundary
+conditions. ICARUS also allows for particle and cell weighting factors
+which enable trace species to be accurately tracked with minimal
+computational effort.
+
+ICARUS is parallelized by assigning a subset of grid cells and the
+particles in those cells to each processor. This can raise
+load-balancing issues as particle densities vary in space and
+time. Our strategies for achieving reasonable load- balance and good
+parallel performance are detailed in the papers below. On big problems
+(tens of thousands of grid cells, millions of particles) ICARUS
+typically runs efficiently on hundreds to thousands of processors. It
+has been a workhorse code at Sandia on a series of parallel machines,
+from the nCUBE 2 to the Intel Paragon to the Intel Tflops.
+
+Here is a snapshot of particle density (on a log scale) around a nose
+cone as it re-enters the earth's atmosphere. The particle-tracking
+grid is shown in the lower half.
+
+:c,image(images/dsmc_nosecone.gif)
+
+This is the temperature profile of a gas escaping from an orifice
+nozzle into vacuum with stream lines in black. The white region at the
+upper left of the figure is the nozzle; the inlet orifice is at the
+far left; the y-axis is a line of axi-symmetry.
+
+:c,image(images/dsmc_orifice.gif)
+
+This is a calculation of flow around a wake shield that was deployed
+on the space shuttle. The idea was to see if very low densities could
+be achieved in the wake of the shield as it swept through the upper
+atmosphere. These calculations of particle density showed a 6
+order-of-magnitude reduction in density behind the shield, from the
+reference ambient density.
+
+:c,image(images/dsmc_shield.gif)
+
+A more down-to-earth setting where low-density flows are important is
+in chemical vapor deposition (CVD) reactors for semiconductor
+processing. This is the pressure profile from a simulation of flow
+across a silicon wafer. Gas is injected at the top of the figure thru
+small orifices, flows across the surface of the wafer, and is pumped
+out at the lower right. Again, the left vertical axis is a line of
+axi-symmetry.
+
+:c,image(images/dsmc_shower.gif)
+
+Collaborator on this project:
+
+  Tim Bartel, Sandia :ul
+
+:line
+
+These papers provide some details of our parallelization technique and
+illustrate the application of DSMC to a few problems of interest to
+Sandia.
+
+[Parallel Particle Simulations of Low-Density Fluid Flows],
+S. J. Plimpton and T.  J. Bartel, in Proc of High Performance
+Computing 1994, San Diego, CA, April 1994, p 31. ("abstract"_abs1)
+("postscript"_PS1) ("ps.gz"_gz1)
+
+:link(abs1,abstracts/hpc94.html)
+:link(PS1,papers/hpc94.ps)
+:link(gz1,papers/hpc94.ps.gz)
+
+[Direct Monte Carlo Simulation of Ionized Rarefied Flows on Large MIMD
+Parallel Supercomputers], T. J. Bartel, S. J. Plimpton, C. R. Justiz,
+in Proc of 18th International Symposium on Rarefied Gas Dynamics,
+Vancouver, Canada, July 1992, published by AIAA, A94-30156, p
+155-165. ("abstract"_abs2)
+
+:link(abs2,abstracts/rgd92.html)
+
+[Monte Carlo Particle Simulation of Low-Density Fluid Flow on MIMD
+Supercomputers], S. J. Plimpton and T. J. Bartel, in Proc of Scalable
+High Performance Computing Conference, Williamsburg, VA, April 1992, p
+212, and in Computing Systems in Engineering, 3, 333-336
+(1992). ("abstract"_abs3) ("postscript"_PS3) ("ps.gz"_gz3)
+
+:link(abs3,abstracts/shpcc92.html)
+:link(PS3,papers/shpcc92.ps)
+:link(gz3,papers/shpcc92.ps.gz)

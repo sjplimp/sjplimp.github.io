@@ -1,0 +1,102 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Image Processing - synthetic aperture radar analysis :h3
+
+Synthetic aperture radar (SAR) is a technique for taking extremely
+high- resolution radar images, typically of ground features from an
+airplane. In spotlight mode, the radar beam is focused on one patch of
+ground as the aircraft flies from point A to point B. Returned signals
+are collected continuously to create a high-resolution image
+integrated over a very large aperture.
+
+:c,image(images/sar_airplane.gif)
+ 
+Several stages of this procedure can benefit from the power of
+parallel computing. I worked with several SAR experts at Sandia to
+implement their computational algorithms on large parallel machines we
+had at the time -- an nCUBE 2 and Connection Machine (CM-2). The SAR
+group at Sandia ended up purchasing their own 1024-processor nCUBE 2
+for research and day-to-day data processing because of the increased
+throughput it provided.
+
+Several stages of the SAR data processing are discussed in the papers
+below.  The first is called "polar reformatting", which is to take a
+large dataset (e.g. 16384 x 65536) which has been collected on a polar
+grid (circular points in the figure) and accurately interpolate it to
+a Cartesian grid (square points). This operation is performed in
+reciprocal or phase space.
+
+:c,image(images/sar_reformat.gif)
+ 
+This picture illustrates the input to the polar reformatting algorithm
+and the result for a simple test pattern. When the polar data is
+displayed on a Cartesian grid, straight lines appear bent; the
+reformatting corrects for this effect.
+
+:c,image(images/sar_lines.gif)
+ 
+The next stage is to perform a very large 2-d FFT to convert the SAR
+data from phase space to real space. Our algorithmic work in parallel
+FFTs is discussed "here"_ftts. Basically it requires an all-to-all
+matrix transpose sandwiched between 2 sets of 1-d FFTs. The 4 GB
+aggregate memory of the nCUBE 2 (large at the time!)  proved adequate
+for performing this entire operation in-memory.
+
+:link(ftts,algorithms.html)
+
+Finally, the SAR image needs enhancement to correct for errors due to
+effects like airplane motion and platform jitter. We implemented a
+parallel version of the phase-gradient autofocus (PGA) algorithm
+invented by my collaborators at Sandia. PGA has the advantages of
+being automatic (requiring no user intervention), correcting phase
+errors of all orders, and working on high and low signal-to-clutter
+images. In our implementation PGA proceeds in 2 phases: first the
+correction factors are computed for a subpatch of the overall image,
+then the correction is applied repeatedly to all subpatches in the
+entire image. The effect can be dramatic as illustrated in this data
+set.
+
+:c,image(images/sar_tower.gif)
+ 
+The photograph on the left is of a solar tower and mirror array at
+Sandia. The as-collected radar image of the tower is shown on the
+right. The images below are of the radar image after enhancement via
+the PGA algorithm. The left image is after a few iterations of PGA;
+the fully corrected image is on the right.  Note that the radar shadow
+cast by the tower onto the array of mirrors is now clearly visible, as
+are the mirror corners and tie-downs (bright points). The latter are
+very small features that SAR is capable of resolving due to their
+sharp corners (high reflectivity).
+ 
+:c,image(images/sar_pga.gif)
+ 
+Collaborators on this project:
+
+  Gary Mastin, Sandia
+  Dennis Ghiglia, Sandia :ul
+
+:line
+
+Details of the 3 stages of SAR data processing are described in these
+papers.  Parallel performance and scalability are discussed for the
+nCUBE 2 and Connection Machine (CM-2) platforms.
+
+[A Massively-Parallel Digital Processor for Spotlight
+Synthetic-Aperture Radar], G. A. Mastin, S. J. Plimpton, D. Ghiglia,
+Int J of Supercomputer Applications, 7, 97-112
+(1993). ("abstract"_abs1) ("postscript"_PS1) ("ps.gz"_gz1)
+
+:link(abs1,abstracts/ijsa93.html)
+:link(PS1,papers/ijsa93.ps)
+:link(gz1,papers/ijsa93.ps.gz)
+
+[Synthetic Aperture Radar Image Processing on Parallel
+Supercomputers], S. J.  Plimpton, G. A. Mastin, D. Ghiglia, in Proc of
+Supercomputing '91, Albuquerque, NM, November 1991, p
+446. ("abstract"_abs2) ("postscript"_PS2) ("ps.gz"_gz2)
+
+:link(abs2,abstracts/sc91.html)
+:link(PS2,papers/sc91.ps)
+:link(gz2,papers/sc91.ps.gz)

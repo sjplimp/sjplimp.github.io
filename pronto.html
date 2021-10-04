@@ -1,0 +1,181 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>PRONTO - transient dynamics with contact detection 
+</H3>
+<P>PRONTO is a Sandia transient-dynamics finite-element code that is
+similar in scope to DYNA-3D or Pam-Crash. It models objects undergoing
+deformation; prototypical examples are a car crash or the
+denting/crushing of a shipping container. PRONTO includes a wide
+variety of material models and a smoothed- particle hydrodynamics
+(SPH) capability that enables high-strain simulations (e.g. an
+explosion) that would typically tangle or break conventional finite
+element meshes.
+</P>
+<P>Here is a cool example of how accurately such codes model reality. The
+left figures are high-speed photographs of a bullet passing through a
+metal plate. A PRONTO simulation of the same effect is on the
+right. Note that the simulation nicely captures the bending and
+roll-over of the bullet trajectory.
+</P>
+<CENTER><IMG SRC = "images/pronto_bullet.gif">
+</CENTER>
+<P>The finite element portion of these calculations can be
+straightforwardly parallelized. A harder challenge is the so-called
+"contact detection" problem.  When a car bumper impacts the radiator
+or the bullet touches the plate surface there are additional push-back
+forces that come into play which must first be detected as mesh
+overlap. This figure illustrates the kinds of mesh inter- penetration
+and particle/mesh overlap that must be searched for at every timestep.
+</P>
+<CENTER><IMG SRC = "images/pronto_contacts.gif">
+</CENTER>
+<P>Contact detection has proven difficult to parallelize effectively
+because it involves a global search across all processors (any 2
+processor's elements can overlap) and it dynamically changes as the
+simulation progresses (elements initially far apart can later
+overlap). Also it only involves the surface of the 3-d finite element
+mesh, whereas the mesh is decomposed volumetrically to
+processors. Hence the search operation can be severely load-imbalanced
+and require large volumes of communicated data. Consider this
+idealized container crush simulation where the can folds up in an
+intricate fashion. When the can is fully crushed, portions of the can
+surface are touching that initially (in the uncrushed can) were far
+apart in the mesh topology.
+</P>
+<CENTER><IMG SRC = "images/pronto_can.gif">
+</CENTER>
+<P>Or consider this simulation of a bar hitting a stack of bricks. As the
+bricks fly apart, any two bricks (owned by any two or more processors)
+may come in contact.
+</P>
+<CENTER><IMG SRC = "images/pronto_bricks.gif">
+</CENTER>
+<P>Previous parallelization efforts for the contact detection problem
+generally used a single decomposition of the mesh for both the finite
+element analysis and the contact detection. They suffered from the
+load-balance problems described above and typically did not scale to
+more than a few dozen procesors.  In our approach, we use two
+different decompositions for the two computational steps. We use the
+standard static, graph-based decomposition for the finite element
+calculation, and a dynamic, geometric decomposition for the contact
+detection. Each timestep processors send surface element data (new
+coordinates) to other processors which own those elements in the
+geometric decomposition.  The surface elements are re-balanced via
+recursive coordinate bisectioning (RCB) which assigns each processor a
+compact domain of elements and nodal points. Each processor can then
+search its local domain (with a bit of overlap with its neighbors) for
+contacts. The results are shipped back to the processors that own the
+elements in the finite-element decomposition.
+</P>
+<P>The result is that the two most expensive portions of a PRONTO
+timestep (finite-elemnt analysis and contact detection) now
+load-balance independently.  There is an overhead cost to ship data
+back and forth between the two decompositions but it turns out to be
+small in practice. The resulting code runs scalably on 1000s of
+processors which has enabled Sandia analysts to run extremely large
+calculations - tens of millions of elements for long timescales. The
+code has been optimized for the Intel Tflops machine where it runs at
+over 100 Gflops on 3000 dual-processor Pentium nodes. This earned the
+PRONTO work a finalist status for the 1997 Gordon Bell Prize (see
+paper below) and the gold cup at the <A HREF = "http://parallel.rz.uni-mannheim.de/sc/suparcup99">1999 SuParCup competition</A>
+in Mannheim, Germany.
+</P>
+
+
+<P>Here is a result from a calculation of foam struts (a packing
+material) being compressed between two plates. It involves a
+considerable amount of contact detection and push-back between the
+individual struts to model the material response correctly (colors
+represent the stress state of the material).
+</P>
+<CENTER><IMG SRC = "images/pronto_foam.gif">
+</CENTER>
+<P>Adding smoothed particle hydrodyanmics (SPH particles) to PRONTO's
+finite element computations can also pose load-imbalance
+problems. This is because the particles may only fill a fraction of
+the simulation domain and they have the same dynamic characteristics
+as the contact-detection problem. We added a 3rd decomposition to
+PRONTO to handle SPH particles, so that particle-particle interactions
+are load-balanced separately, again using the geometric RCB techinque
+mentioned above.
+</P>
+<P>Here are two examples of coupled finite-element/SPH calculations. In
+the 1st figure, particles are used to model the earth as a penetrator
+passes thru.  Using a high-resolution finite-element grid for the
+penetrator, these kinds of simulations can predict the response of
+small components in the penetrator to a high-velocity impact.
+</P>
+<CENTER><IMG SRC = "images/pronto_sph.gif">
+</CENTER>
+<P>This figure is a simulation of an airplane wing hitting a vertical
+pole. Fuel dispersal from the torn wing is modeled with SPH particles.
+</P>
+<CENTER><IMG SRC = "images/pronto_wing.gif">
+</CENTER>
+<P>Collaborators on this project:
+</P>
+<UL><LI>  Bruce Hendrickson, Sandia
+<LI>  Steve Attaway, Sandia
+<LI>  Kevin Brown, Sandia
+<LI>  Dave Gardner, Sandia
+<LI>  Courtenay Vaughan, Sandia 
+</UL>
+
+
+<HR>
+
+<P>The following papers describe our parallel contact and parallel SPH
+algorithms in detail and give an overview of the kinds of simulations
+PRONTO can perform.  They also provide performance results for a few
+large-scale simulations running on 1000s of processors of the Intel
+Tflops machine.
+</P>
+<P><B>Parallel Strategies for Crash and Impact Simulations</B>, K. Brown,
+S. Attaway, S.J.Plimpton, B. Hendrickson, Computer Methods in Applied
+Mechanics and Engineering, 184, 375-390
+(2000). (<A HREF = "abstracts/cmame00.html">abstract</A>)
+</P>
+<P><B>Parallel Transient Dynamics Simulations: Algorithms for Contact
+Detection and Smoothed Particle Hydrodynamics</B>, S. J. Plimpton,
+S. Attaway, B. Hendrickson, J.  Swegle, C. Vaughan, D. Gardner, J
+Parallel and Distributed Computing, 50, 104- 122
+(1998). (<A HREF = "abstracts/jpdc98.html">abstract</A>) (<A HREF = "papers/jpdc98.ps">postscript</A>) (<A HREF = "papers/jpdc98.ps.gz">ps.gz</A>)
+</P>
+
+
+
+
+
+
+<P><B>A Parallel Contact Detection Algorithm for Transient Solid Dynamics
+Simulations Using PRONTO3D</B>, S. W. Attaway, B. A. Hendrickson,
+S. J. Plimpton, D. R.  Gardner, C. T. Vaughan, K. H. Brown,
+M. W. Heinstein, Computational Mechanics, 22, 143-159
+(1998). (<A HREF = "abstracts/compmech98.html">abstract</A>)
+</P>
+
+
+<P><B>Transient Solid Dynamics Simulations on the Sandia/Intel Teraflop
+Computer</B>, S.  Attaway, T. Barragy, K. Brown, D. Gardner,
+B. Hendrickson, S. J. Plimpton, C.  Vaughan, Gordon Bell finalist
+paper, in Proc of SuperComputing '97, San Jose, CA, November
+1997. (<A HREF = "abstracts/sc97.html">abstract</A>) (<A HREF = "papers/HTML/sc97/sc97.html">html</A>)
+</P>
+
+
+
+
+<P><B>Transient Dynamics Simulations: Parallel Algorithms for Contact
+Detection and Smoothed Particle Hydrodynamics</B>, S. J. Plimpton,
+S. Attaway, B. Hendrickson, J.  Swegle, C. Vaughan, D. Gardner, in
+Proc of SuperComputing '96, Pittsburgh, PA, November
+1996. (<A HREF = "abstracts/sc96.html">abstract</A>) (<A HREF = "papers/HTML/sc96/sc96.html">html</A>)
+</P>
+
+
+
+
+</HTML>

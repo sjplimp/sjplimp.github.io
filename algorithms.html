@@ -1,0 +1,364 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>Parallel Algorithms 
+</H3>
+<P>I've worked on the following topics that have more of a
+computer-science or algorithmic flavor.  All of this work is for
+distributed-memory parallel computers.
+</P>
+<UL><LI><A HREF = "#gups">HPCC RandomAccess (GUPS) benchmark</A> - synchronous all2all algorithm   to boost GUPS performance
+<LI><A HREF = "#ffts">FFTs</A> - parallel Fast Fourier Transforms in 2-d and 3-d 
+<LI><A HREF = "#grid">grid transfer</A> - interpolation of data between multiple   distributed grids
+<LI><A HREF = "#dynamiclb">dynamic load-balancing</A>
+<LI><A HREF = "#TOY">tinkertoy parallel programming</A> - modular design of libraries   for parallel programs
+<LI><A HREF = "#mv">matrix-vector multiply and many-body algorithms</A> - exploiting the   force-decomposition algorithm developed for   <A HREF = "md.html">molecular dynamics</A> in other settings 
+</UL>
+<HR>
+
+<H3><A NAME = "gups"></A>HPCC RandomAccess (GUPS) benchmark 
+</H3>
+<P>The RandomAccess benchmark as defined by the <A HREF = "http://icl.cs.utk.edu/hpcc/index.html">High Performance
+Computing Challenge (HPCC)</A> tests the speed at which a machine
+can update the elements of a table spread across global system memory,
+as measured in billions (giga) of updates per second (GUPS).  The
+parallel implementation provided by HPCC typically performs poorly on
+distributed-memory machines, due to updates requiring numerous small
+point-to-point messages between processors.  We've developed an
+alternative algorithm whose computation (the GUP count) scales
+linearly with P while its communication overhead scales as log_2(P),
+thus enabling better performance on large numbers of processors.  The
+new algorithm achieves a GUPS rate of 19.98 on 8192 processors of
+Sandia's Red Storm machine, compared to 1.02 for the HPCC-provided
+algorithm on 10350 processors.
+</P>
+
+
+<P>After each processor generates a short list of table updates, it needs
+to send them to other processors.  This communication can be
+formulated as a syncrhonous all2all operation.  The key idea in our
+algorithm is to perform the all2all with a minimum number of large
+messages rather than the typical MPI implementation, which for the
+RandomAccess benchmark, would send large numbers of tiny messages.
+</P>
+<P>The basic idea is captured in this figure:
+</P>
+<CENTER><IMG SRC = "images/all2all.jpg">
+</CENTER>
+<P>If P processors are viewed as a 1d list, the operation is a
+traditional all2all.  In a single stage, each processor sends a
+message to (potentially) every other processor.  The green processor
+sends data directly to the red processor.  If the P processors are
+viewed logically as a 2d array, the operation can be performed in 2
+stages.  Each processor first communicates within its column, then
+within its row.  To send a message from the green processor to red,
+green first sends to the blue processor and blue then sends to red.
+Similarly, for a 3d logical grid of processors, the all2all operation
+can be completed in 3 stages, green to blue to purple to red, with a
+further reduction in the number of messages.  We believe this 3d
+diagram is the basic idea behind IBM's optimized implementation of the
+RandomAccess benchmark for their BG/L machine (3d torus) which has
+achieved 35.5 GUPS on 128K processors.
+</P>
+<P>Note that moving to higher dimensions affords a large savings in the
+number of messages each processor sends.  If P = 10000, then in 1d
+each processor sends 10000 messages to complete the all2all, but in 2d
+for a 100x100 logical array, each processor sends only 200 messages.
+The asymptotic limit of the figure is to view the processors as an
+N-dimensional hypercube (P = 2^N) and perform the all2all in N =
+log_2(P) stages, which is what our algorithm does.  Thus, we minimize
+the number of messages that are sent, at the cost of resending each
+datum N times.  For the GUPS problem, this can be a big win, since the
+message sizes are so small.  In the large P limit, a machine's GUPS
+performance will nearly double with this algorithm each time that P is
+doubled, so long as the machine's communication network can support
+the message bandwidth required by each of the N stages of the all2all
+operation.
+</P>
+<P>Here is a table of GUPS performance on Sandia's Red Storm (Cray XT3)
+machine.  This is for the vanilla version of the code.  With some MPI
+tuning and other optimizations, the hi-water mark was 19.98 on 8192
+procs.  You can see the non-power-of-2 version doesn't do quite as
+well as the power-of-2 version.
+</P>
+<DIV ALIGN=center><TABLE  BORDER=1 >
+<TR ALIGN="center"><TD >Processors</TD><TD > 1</TD><TD > 4</TD><TD > 16</TD><TD > 64</TD><TD > 200</TD><TD > 256</TD><TD > 300</TD><TD > 1024</TD><TD > 4096</TD><TD > 8192</TD><TD > 10240</TD></TR>
+<TR ALIGN="center"><TD >GUPS (HPCC version)</TD><TD > 0.0147</TD><TD >  ---</TD><TD > 0.0105</TD><TD > 0.0634</TD><TD > ---</TD><TD > ---</TD><TD > ---</TD><TD > 0.195</TD><TD > ---</TD><TD > 0.797</TD><TD > ---</TD></TR>
+<TR ALIGN="center"><TD >GUPS (new algorithm)</TD><TD > 0.0180</TD><TD > 0.0377</TD><TD > 0.0930</TD><TD > 0.273</TD><TD > 0.567</TD><TD > 0.858</TD><TD > 0.739</TD><TD > 2.81</TD><TD > 9.25</TD><TD > 17.24</TD><TD > 19.72</TD></TR>
+<TR ALIGN="center"><TD >Parallel Efficiency (%)</TD><TD > 100</TD><TD > 52.4</TD><TD > 32.3</TD><TD > 23.7</TD><TD > 15.8</TD><TD > 18.6</TD><TD > 13.7</TD><TD > 15.2</TD><TD > 12.5</TD><TD > 11.7</TD><TD > 10.7 
+</TD></TR></TABLE></DIV>
+
+<P>A tar file you can download with source code for our algorithm is
+available from <A HREF = "download.html">this page</A>.  Three simple stand alone
+codes are provided (power-of-2 and non-power-of-2) as well as modules
+that can be plugged directly into the HPCC harness to perform an
+official benchmark test.
+</P>
+<P>Details of the algorithm and performance results are given in this
+paper:
+</P>
+<P><B>A Simple Synchronous Distributed-Memory Algorithm for the HPCC
+RandomAccess Benchmark</B>, S. J. Plimpton, R. Brightwell, C. Vaughan,
+K. Underwood, M. Davis, Proc of Cluster 2006 - IEEE International Conf
+on Cluster Computing, Sept 2006. (<A HREF = "abstracts/cluster06.html">abstract</A>)
+(<A HREF = "papers/cluster06.pdf">pdf</A>)
+</P>
+<P>Collaborators on this project:
+</P>
+<UL><LI>  <A HREF = "http://www.cs.sandia.gov/~rbbrigh">Ron Brightwell</A>, Sandia 
+<LI>  Courtenay Vaughan, Sandia 
+<LI>  Keith Underwood, Sandia 
+<LI>  Mike Davis, Cray 
+</UL>
+
+
+<HR>
+
+<H3><A NAME = "ffts"></A>FFTs 
+</H3>
+<P>My latest FFT work is distributed in the <A HREF = "http://fftmpi.sandia.gov">fftMPI
+library</A>.
+</P>
+<P>It supercedes an earlier package I worked on in the late 1990s, based
+on similar principles, which we just called a parallel FFT library and
+distributed freely.
+</P>
+<P>Our original motivation for developing parallel FFTs is that we use
+complex-to-complex FFTs in several of our parallel codes. 2-d FFTs are
+used for <A HREF = "sar.html">synthetic aperture radar image processing</A>. 3-d
+FFTs are used in our molecular dynamics code
+<A HREF = "http://lammps.sandia.gov">LAMMPS</A> for computing long-range Coulombic
+effects via the particle-mesh Ewald method, and in density-functional
+<A HREF = "quantum.html">electronic structure codes</A> for alternating between
+real-space and reciprocal-space operator representations.
+</P>
+<P>Multi-dimensional FFTs are typically computed as a series of 1-d
+FFTs. For example a 2-d FFT operates on a 2-d matrix where 1-d FFTs
+are first performed on each row of the matrix, then 1-d FFTs are
+performed down each column. If the data set is distributed across
+processors of a parallel machine, each processor can use fast library
+routines to compute on-processor 1-d FFTs for the subset of rows or
+columns it owns. This means the only issue for a parallel
+implementation is "transposing" or remapping the data set to get each
+dimension wholly on-processor when needed. For example, we do a 3-d
+parallel FFT as follows: remap the data (if needed) to get the
+x-dimension wholly on-processor, perform 1-d FFTs along the
+x-dimension, remap to get the y-dimension on- processor, perform 1-d
+FFTs in y, remap to get the z-dimension on-processor, perform 1-d FFTs
+in z, remap (if needed) to transform the data to the desired output
+layout.
+</P>
+<P>One useful feature used by our applications, in both the newer <A HREF = "http://fftmpi.sandia.gov">fftMPI
+library</A> and the older Parallel FFT Package,
+is that the libraries allow for very general styles of data layout
+across processors both on input to the routines as well as on
+output. The parallel algorithms perform serial 1d FFTs by either
+calling vendor-supplied library routines (e.g. Intel MKL) or the
+freely available <A HREF = "http://www.fftw.org">FFTW library</A>.
+</P>
+
+
+<HR>
+
+<H3><A NAME = "grid"></A>Grid transfer 
+</H3>
+<P>A number of computational procedures employ multiple grids on which
+solutions are computed. For example, in multi-physics simulations a
+primary grid may be used to compute mechanical deformation of an
+object while a secondary grid is used for thermal conduction
+calculations. We illustrate such a case with these 2-d quad-element
+grids of a plate with 2 holes. The 1st grid might be optimal for a
+calculation of stress centered on the small hole. The 2nd grid might
+be optimal for thermal effects due to heating around the large hole.
+</P>
+<CENTER><IMG SRC = "images/algs_grid1.gif">
+</CENTER>
+<CENTER><IMG SRC = "images/algs_grid2.gif">
+</CENTER>
+<P>If one code is modeling both effects in a coupled fashion, solution
+data must be interpolated back and forth between the grids each
+timestep. On a parallel machine, this grid transfer operation can be
+challenging if the two grids are decomposed to processors differently
+for reasons of computational efficiency.  If the grids move or adapt
+separately, the complexity of the operation is compounded.
+</P>
+<P>We developed a grid transfer algorithm suitable for massively parallel
+codes which use multiple grids. It uses a rendezvous technique wherein
+a third decomposition is used to search for elements in one grid that
+contain nodal points of the other. This has the advantage of enabling
+the grid transfer operation to be load-balanced separately from the
+remainder of the computations.
+</P>
+<P>This work was motivated by a multi-physics simulation framework effort
+at Sandia know as the Sierra project.  Details of the grid transfer
+algorithm and some performance results are given in this paper:
+</P>
+<P><B>A Parallel Rendezvous Algorithm for Interpolation Between Multiple
+Grids</B>, S. J. Plimpton, B. Hendrickson, J. Stewart, J Parallel and
+Distributed Computing, 64, 266-276 (2004). (<A HREF = "abstracts/jpdc03a.html">abstract</A>)
+(<A HREF = "papers/jpdc03a.pdf">pdf</A>) (<A HREF = "papers/jpdc03a.pdf.gz">pdf.gz</A>)
+</P>
+
+
+
+
+
+
+<P>Collaborators on this project:
+</P>
+<UL><LI>  Bruce Hendrickson, Sandia
+<LI>  Jim Stewart, Sandia 
+</UL>
+<HR>
+
+<H3><A NAME = "dynamiclb"></A>Dynamic load-balancing 
+</H3>
+<P>For parallel computers, load-balancing is the assignment of work to
+processors in such a way that the computational load is evenly
+balanced. If this is done well, the code's parallel performance is
+typically maximized. In some applications, a one-time assignment of
+work can be pre-computed before the calculation begins and will be
+sufficient to maintain balance for the duration of the
+simulation. This is a "static" load-balancing approach. In other
+applications, work must be periodically redistributed among processors
+as the computation proceeds to maintain load-balance. These
+applications require some form of "dynamic" load balance, which is a
+much harder problem. My collaborator Bruce Hendrickson has written
+extensively on both static and dynamic balancing techniques.
+</P>
+<P>With Pedro Diniz, a UC Santa Barbara student, we implemented and
+experimented with several dynamic algorithms in this conference paper:
+</P>
+<P><B>Parallel Algorithms for Dynamically Partitioning Unstructured Grids</B>,
+P. Diniz, S. J. Plimpton, B. Hendrickson, R. Leland, in Proc of 7th
+SIAM Conference on Parallel Processing for Scientific Computing, San
+Francisco, CA, February 1995, p 615. (<A HREF = "abstracts/siam95.html">abstract</A>)
+(<A HREF = "papers/siam95.ps">postscript</A>) (<A HREF = "papers/siam95.ps.gz">ps.gz</A>)
+</P>
+
+
+
+
+
+
+<P>More recently, Sandia has developed a dynamic load-balancing library,
+called <A HREF = "http://www.cs.sandia.gov/Zoltan">Zoltan</A>, which has on-line documentation and is freely
+available to interested users. Some of my stuff has made its way into
+Zoltan. One example is a parallel implementation of the recursive
+coordinate bisectioning (RCB) technique which is a geometric-based
+partitioning method. A schematic is shown below of how RCB does
+parallel median searches to successively find planes (lines in 2-d)
+that split the domain in half; the result is a a set of small boxes
+(typically one per processor) that contain equal numbers of
+objects. The RCB operation is our method-of-choice anytime we need a
+fast geometric partitioner -- we've used it to good effect in
+<A HREF = "pronto.html">PRONTO</A> and our <A HREF = "#grid">grid-transfer</A> work.
+</P>
+
+
+<CENTER><IMG SRC = "images/algs_rcb.gif">
+</CENTER>
+<P>Zoltan also includes a toolkit to assist the application in
+redistributing data once a re-balance has been performed. The
+communication operations in this toolkit are based on some irregular
+communication routines that Bruce and I wrote to enable processors to
+efficiently send data to other processors who don't know they'll be
+receiving the data. These algorithms have turned out to be quite
+useful in a variety of unexpected settings, such as the <A HREF = "qs.html">particle-in-
+cell code QuickSilver</A>, the <A HREF = "nimrod.html">finite element NIMROD
+code</A> for tokamak simulations, as well as in the
+aforementioned <A HREF = "pronto.html">PRONTO</A> and <A HREF = "#grid">grid-transfer</A> work.
+</P>
+<HR>
+
+<H3><A NAME = "TOY"></A>Tinkertoy parallel programming 
+</H3>
+<P>My collaborator Bruce Hendrickson coined the term "tinkertoy" to
+describe our philosophy of parallel algorithm design. The idea lies
+somewhere between an overarching "frameworks" approach that many
+applications have adopted (e.g. PETSc or Sierra) and the simple
+interfaces provided by conventional numerical libraries (e.g. BLAS,
+LAPACK). The goal is to encapsulate basic functionality for parallel
+operations such as load-balancing or data-sharing between processors
+in such a way that routines can be easily hooked together in a variety
+of interesting modes. As our software and our thinking about tinkertoy
+modularity has evolved, the concept has enabled us to produce some
+sophisticated parallel algorithms with a minimum of new code
+development. For those who are object-orientation (OO) fans, we don't
+develop in C++, just plain-old C. Rather than use OO languages, we try
+to use OO design principles for encapsulation of data structures and
+interface functionality.
+</P>
+
+
+<P>Projects that Bruce and I have worked on together based on the
+tinkertoy philosophy include the contact detection algorithms for
+<A HREF = "pronto.html">PRONTO</A>, <A HREF = "#grid">grid_transfer</A>, <A HREF = "#dynamiclb">dynamic load
+balancing</A>, and the communication operations in
+<A HREF = "qs.html">QuickSilver</A>.
+</P>
+<P>This paper describes the "tinkertoy" idea and outlines how several
+different applications can be architected from basic primitives:
+</P>
+<P><B>Tinkertoy Parallel Programming: Complicated Applications from Simple
+Tools</B>, B.  Hendrickson and S. J. Plimpton, in Proc of SIAM Parallel
+Processing for Scientific Computing Conf, March
+2001. (<A HREF = "abstracts/siam01b.html">abstract</A>) (<A HREF = "papers/siam01b.ps">postscript</A>) (<A HREF = "papers/siam01b.ps.gz">ps.gz</A>)
+</P>
+
+
+
+
+
+
+<P>Collaborators on this project:
+</P>
+<UL><LI>  Bruce Hendrickson, Sandia 
+</UL>
+<HR>
+
+<H3><A NAME = "mv"></A>Matrix-vector multiply and many-body algorithms 
+</H3>
+<P>The <A HREF = "md.html">force-decomposition algorithm</A> we developed for
+short-range molecular dynamics simulations turns out to have an analog
+in matrix-vector multiplies that are the kernel operation in iterative
+solvers. The same 2-d sub-blocking and row-wise and column-wise
+communication operations that we use for molecular dynamics can be
+effective for matrices whose structure cannot otherwise be exploited
+to produce a good parallel decomposition. The idea is described in
+this paper:
+</P>
+<P><B>Parallel Many-Body Simulations Without All-to-All Communication</B>,
+B. A.  Hendrickson and S. J. Plimpton, J Parallel and Distributed
+Computing, 27, 15-25 (1995). (<A HREF = "abstracts/jpdc95.html">abstract</A>) (<A HREF = "papers/jpdc95.ps">postscript</A>)
+(<A HREF = "papers/jpdc95.ps.gz">ps.gz</A>)
+</P>
+
+
+
+
+
+
+<P>The application of the force-decomposition idea to general many-body
+calculations (molecular dynamics or otherwise) is discussed in this
+paper:
+</P>
+<P><B>An Efficient Parallel Algorithm for Matrix-Vector Multiplication</B>,
+B. A.  Hendrickson, R. W. Leland, S. J. Plimpton, Int J of High Speed
+Computing, 7, 73-88 (1995). (<A HREF = "abstracts/ijhsc95.html">abstract</A>) (<A HREF = "papers/ijhsc95.ps">postscript</A>)
+(<A HREF = "papers/ijhsc95.ps.gz">ps.gz</A>)
+</P>
+
+
+
+
+
+
+<P>Collaborators on this project:
+</P>
+<UL><LI>  Bruce Hendrickson, Sandia 
+<LI>  Rob Leland, Sandia 
+</UL>
+</HTML>

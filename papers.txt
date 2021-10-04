@@ -1,0 +1,926 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Publications :h3
+
+Papers are listed chronologically in the next section.  All have
+viewable abstracts; some have downloadable PS, PDF, or HTML files.
+See more complete info at "Google
+Scholar"_https://scholar.google.com/citations?user=Ny7N6KQAAAAJ&hl=en.
+If you're looking for papers on a specific topic, click on one of
+these links:
+
+"Molecular Dynamics"_md.html - parallel algorithms
+"Molecular Dynamics"_mdsim.html - simulation results
+"Kinetic Monte Carlo"_kmc.html - kinetic and Metropolis Monte Carlo modeling
+"Direct Simulation Monte Carlo"_dsmc.html - low-density reacting flows \
+  via particles
+"Informatics"_informatics.html - informatics algorithms and big-data processing
+"Biological Cell Modeling"_cell.html - particle-based reaction/diffusion modeling with "ChemCell"_http://chemcell.sandia.gov
+"GeneHunter"_genehunter.html - genetic linkage analysis
+"ChISELS"_chisels.html - surface evolution model of semiconductor processing \
+  for micromachine devices (MEMS)
+"Radiation Transport"_rad.html - Boltzmann equation for thermal \
+  and X-ray radiation
+"QuickSilver"_qs.html - particle-in-cell (PIC) relativistic electromagnetics
+"PRONTO"_pronto.html - finite element transient dynamics (crash code) \
+  with contact detection
+"NIMROD"_nimrod.html - plasma simulation of tokamaks
+"Electronic Structure"_quantum.html - quantum mechanics of solids
+"Direct Simulation Monte Carlo"_dsmc.html - low-density reacting flows \
+  via particles
+"Image Processing"_sar.html - synthetic aperture radar (SAR) analysis
+"Grain Growth"_grain.html - Potts model on 2-d and 3-d lattices
+"Electron Microscopy"_ebeam.html - Monte Carlo trajectory simulation
+"Parallel Algorithms"_algorithms.html - HPCC RandomAccess benchmark, \
+  load-balancing, grid transfer, tinkertoy parallel \
+  programming, matrix-vector multiply and many-body algs
+"High Performance Computing (HPC)"_hpc.html - neuro-inspired computing, \
+  performance comparisons of parallel architectures
+"Parallel Computing"_overview.html - general overviews :ul
+
+:line
+:line
+
+2021 :h4
+
+[Rendezvous algorithms for large-scale modeling and simulation],
+S. J. Plimpton and C. Knight, J Parallel and Distributed Computing,
+147, 184-195 (2021).  ("abstract"_abstracts/jpdc21.html)
+
+[Turbulence at the edge of continuum], M. A. Gallis, J. R. Torczynski,
+M. C. Krygier, N. P. Bitter, S. J. Plimpton, Phys Rev Fluids, 6,
+013401 (2021).  ("abstract"_abstracts/prf21.html)
+
+:line
+
+2020 :h4
+
+[Parallel algorithms for hyperdynamics and local hyperdynamics],
+S. J. Plimpton, D. Perez, A. F. Voter, J Chem Phys, 153, 054116
+(2020).  ("abstract"_abstracts/jcp20.html)
+
+[Granular packings with sliding, rolling, and twisting friction],
+A. P. Santos, D. S. Bolintineanu, G. S. Grest, J. B. Lechman,
+S. J. Plimpton, I. Srivastava, L. E. Silbert, Phys Rev E, 102, 032903
+(2020).  ("abstract"_abstracts/pre20.html)
+
+:line
+
+2019 :h4
+
+[Aspherical particle models for molecular dynamics simulation],
+T. D. Nguyen and S. J. Plimpton, Comp Phys Comm, 243, 12-24 (2019). 
+("abstract"_abstracts/cpc19.html)
+
+[Direct Simulation Monte Carlo on petaflop supercomputers and beyond],
+S. J. Plimpton, S. G. Moore, A. Borner, A. K. Stagg 1 , T. P. Koehler,
+J. R. Torczynski, M. A. Gallis, Physics of Fluids, 31, 086101
+(2019). ("abstract"_abstracts/pof19.html)
+
+:line
+
+2018 :h4
+
+[Effect of shape and friction on the packing and flow of granular
+materials], K. M. Salerno, D. S. Bolintineanu, G. S. Grest,
+J. B. Lechman, S. J. Plimpton, I. Srivastava, L. E. Silbert, Phys Rev
+E, 98, 050901 (2018).
+("abstract"_abstracts/pre18.html)
+
+[Multiscale Co-Design Analysis of Energy, Latency, Area, and Accuracy
+of a ReRAM Analog Neural Training Accelerator], M. J. Marinella,
+S. Agarwal, A. Hsia, I. Richter, R. Jacobs-Gedrim, J. Niroula,
+S. J. Plimpton, E. Ipek, C. D. James, IEEE Journal on Emerging and
+Selected Topics in Circuits and Systems, 8, 86-101 (2018).
+("abstract"_abstracts/estcs18.html)
+
+[Highly scalable discrete-particle simulations with novel
+coarse-graining: Accessing the microscale], T. I. Mattox,
+J. P. Larentzos, S. G. Moore, C. P. Stone, D. A. Ibanez,
+A. P. Thompson, M. Lísal, J. K. Brennan, S. J. Plimpton, Molecular
+Physics, 116, 2061–2069 (2018).
+("abstract"_abstracts/mp18.html)
+
+[Gas-kinetic simulation of sustained turbulence in minimal Couette
+flow], M. A. Gallis, J. R. Torczynski, N. P. Bitter, T. P. Koehler,
+S. J. Plimpton, and G. Papadakis, Phys Rev Fluids, 3, 071402(R)
+(2018).  ("abstract"_abstracts/prf18.html)
+
+[Massively parallel symplectic algorithm for coupled magnetic spin
+dynamics and molecular dynamics], J. Tranchida, S. J. Plimpton,
+P. Thibaudeau, A. P. Thompson, J Comp Phys, 372, 406-425 (2018).
+("abstract"_abstracts/jcp18.html)
+
+:line
+
+2017 :h4
+
+[Molecular-Level Simulations of Turbulence and Its Decay],
+M. A. Gallis, N. P. Bitter, T. P. Koehler, J. R. Torczynski,
+S. J. Plimpton, G. Papadakis, Phys Rev Letters, 118, 064501 (2017).
+("abstract"_abstracts/prl17.html)
+
+[Achieving Ideal Accuracies in Analog Neuromorphic Computing Using
+Periodic Carry], S. Agarwal, R. B. Jacobs-Gedrim, A. H. Hsia,
+D. R. Hughart, E. J. Fuller, A. A. Talin, C. D. James, S. J. Plimpton,
+and M. J. Marinella, 2017 IEEE Symposium on VLSI Technology, Kyoto,
+Japan (2017). ("abstract"_abstracts/vlsi17.html)
+
+[Li-Ion Synaptic Transistor for Low Power Analog Computing],
+E. J. Fuller, F. E. Gabaly, F. Léonard, S. Agarwal, S. J. Plimpton,
+R. B. Jacobs-Gedrim, C. D. James, M. J. Marinella, A. A. Talin,
+Advanced Materials, 29, 1604310 (2017). ("abstract"_abstracts/am17.html)
+
+[A historical survey of algorithms and hardware architectures for
+neural-inspired and neuromorphic computing applications], C. D. James,
+J. B. Aimone, N. E. Miner, C. M. Vineyard, F. H. Rothganger,
+K. D. Carlson, S. A. Mulder, T. J. Draelos, A. Faust, M, J. Marinella,
+J. H. Naegle, S. J. Plimpton, Biologically Inspired Cognitive
+Architectures, 19, 49-64 (2017). ("abstract"_abstracts/bica17.html)
+
+:line
+
+2016 :h4
+
+[Increasing Molecular Dynamics Simulation Rates with an 8-Fold
+Increase in Electrical Power Efficiency], W. M. Brown, A. Semin,
+M. Hebenstreit, S. Khvostov, K. Raman, S. J. Plimpton, SC16
+Conference, SLC, Utah, Nov 2016. ("abstract"_abstracts/sc16.html)
+
+[Direct simulation Monte Carlo investigation of the Rayleigh-Taylor
+instability], M. A. Gallis, T. P. Koehler, J. R. Torczynski, and
+S. J. Plimpton, Phys Rev Fluids, 1, 043403 (2016).
+("abstract"_abstracts/prf16.html)
+
+[Resistive Memory Device Requirements for a Neural Algorithm
+Accelerator], S. Agarwal, S. J. Plimpton, D. R. Hughart, A. H. Hsia,
+I. Richter, J. A. Cox, C. D. James, M. J. Marinella, IEEE
+International Joint Conf on Neural Networks (IJCNN 2016), Vancouver,
+Canada, Jul 2016. ("abstract"_abstracts/ijcnn16.html)
+
+[Oxygen Modulates the Effectiveness of Granuloma Mediated Host
+Response to Mycobacterium tuberculosis: A Multiscale Computational
+Biology Approach], C. L. Sershen, S. J. Plimpton, E. E. May, Frontiers
+in Cellular and Infection Microbiology, 6,
+doi:10.3389/fcimb.2016.00006 (2016).
+("abstract"_abstracts/frontiers16.html)
+
+:line
+
+2015 :h4
+
+[Accelerating dissipative particle dynamics simulations for soft
+matter systems], T. Nguyen and S. J. Plimpton, Computational Materials
+Science, 100, 173-180 (2015).  ("abstract"_abstracts/cms15.html)
+
+[Direct simulation Monte Carlo investigation of the Richtmyer-Meshkov
+instability], M. A. Gallis, T. P. Koehler, J. R. Torczynski, and
+S. J. Plimpton, Physics of Fluids, 27, 084105 (2015).
+("abstract"_abstracts/pof15.html)
+
+[Optimizing legacy molecular dynamics software with directive-based
+offload], W. M. Brown, J.-M. Y. Carrillo, N. Gavhane, F. M. Thakkar,
+S. J. Plimpton, Comp Phys Comm, 195, 95-101 (2015).
+("abstract"_abstracts/cpc15.html)
+
+:line
+
+2014 :h4
+
+[Streaming data analytics via message passing with application to
+graph algorithms], S. J. Plimpton and T. Shead, J Parallel and
+Distributed Computing, 74, 2687-2698 (2014).
+("abstract"_abstracts/jpdc14.html)
+
+[Particle dynamics modeling methods for colloid suspensions],
+D. S. Bolintineanu, G. S. Grest, J. B. Lechman, F. Pierce,
+S. J. Plimpton, and P. R. Schunk, Computational Particle Mechanics, 1,
+321-356 (2014). ("abstract"_abstracts/cpm14.html)
+
+[A Method for Modeling Oxygen Diffusion in an Agent-based Model with
+Application to Host-Pathogen Infection], C. L. Sershen,
+S. J. Plimpton, E. E. May, EMBC'14 Conference (36th Annual Intl Conf
+of the IEEE Engineering in Medicine and Biology Society), Chicago, IL,
+Aug 2014. ("abstract"_abstracts/embc14.html)
+
+[Direct Simulation Monte Carlo: The Quest for Speed], M. A. Gallis,
+J. R. Torczynski, S. J. Plimpton, D. J. Rader, T. Koehler, 29th Intl
+Symposium on Rarefied Gas Dynamics in Xi'an, China, AIP Conf Proc,
+1628, 27 (2014). ("abstract"_abstracts/rgd14.html)
+
+:line
+
+2013 :h4
+
+[Developing community codes for materials modeling], S. J. Plimpton
+and J. D. Gale, Current Opinion in Solid State and Materials Science
+17, 271-276 (2013).
+("abstract"_abstracts/cossms13.html)
+
+[Statistical ensemble analysis for simulating extrinsic noise-driven
+response in NF-kappa B signaling networks], J. Joo, S. J. Plimpton,
+J. L. Faulon, BMC Systems Biology, 7, 45 (2013).
+("abstract"_abstracts/bmc13.html)
+
+[Maintaining connected components for infinite graph streams],
+J. W. Berry, M. Oster, C. A. Phillips, S. J. Plimpton, T. M Shead,
+BigMine-13, a KDD13 workshop - 2nd International Workshop on Big Data,
+Streams and Heterogeneous Source Mining, Chicago, IL, Aug
+2013. ("abstract"_abstracts/bigmine13.html)
+
+:line
+
+2012 :h4
+
+[Computational Aspects of Many-body Potentials], S. J. Plimpton and
+A. P. Thompson, MRS Bulletin, 37, 513-521 (2012).
+("abstract"_abstracts/mrs12.html)
+
+[Implementing Molecular Dynamics on Hybrid High Performance Computers
+- Particle-Particle Particle-Mesh], W. M. Brown, A. Kohlmeyer,
+S. J. Plimpton, A. N. Tharrington, Comp Phys Comm, 183, 449-459
+(2012).  ("abstract"_abstracts/cpc12.html)
+
+[No-slip boundary conditions and forced flow in multiparticle
+collision dynamics], D. S. Bolintineanu, J. B. Lechman,
+S. J. Plimpton, and G. S. Grest, Phys Rev E, 86, 066703 (2012).
+("abstract"_abstracts/pre12.html)
+
+:line
+
+2011 :h4
+
+[Evaporation of Lennard-Jones Fluids], S Cheng, J. B. Lechman,
+S. J. Plimpton, G. S. Grest, J Chem Phys, 134, 224704 (2011).
+("abstract"_abstracts/jcp11.html)
+
+[Implementing Molecular Dynamics on Hybrid High Performance Computers
+- Short Range Forces], W. M. Brown, P. Wang, S. J. Plimpton,
+A. N. Tharrington, Comp Phys Comm, 182, 898-911, (2011).
+("abstract"_abstracts/cpc11.html)
+
+[Parallel Simulation of 3D Sintering], C. G. Cardona, V. Tikare,
+S. J. Plimpton, Int J Computational Materials Science and Surface
+Engineering, 4, 37-54 (2011).  ("abstract"_abstracts/ijcmsse11.html)
+
+[MapReduce in MPI for Large-Scale Graph Algorithms], S. J. Plimpton
+and K. D. Devine, Parallel Computing, 37, 610-632
+(2011). ("abstract"_../abstracts/pc11.html)
+("preprint"_../papers/pc11.pdf)
+
+:line
+
+2010 :h4
+
+[Mesoscale Hydrodynamics via Stochastic Rotation Dynamics: Comparison
+with Lennard-Jones Fluid], M. K. Petersen, J. B. Lechman,
+S. J. Plimpton, G. S. Grest, P. J. in't Veld, P. R. Schunk, J Chem
+Phys, 132, 174106 (2010). ("abstract"_abstracts/jcp10.html)
+
+[Software components for parallel multiscale simulation: an example
+with LAMMPS], B. Frantzdale, S. J. Plimpton, M. S. Shephard,
+Engineering with Computers, 26, 205-211
+(2010). ("abstract"_abstracts/ec10.html)
+
+[1D-to-3D transition of phonon heat conduction in polyethylene using
+molecular dynamics simulations], A. Henry, G. Chen, S. J. Plimpton,
+A. Thompson, Phys Rev B, 82, 144308 (2010).
+("abstract"_abstracts/prb10.html)
+
+[Equation-Free Accelerated Simulations of the Morphological Relaxation
+of Crystal Surfaces], G. J. Wagner, X. Zhou, S. J. Plimpton, Int J for
+Multiscale Computational Engineering, 8, 423-439 (2010).
+("abstract"_abstracts/ijmce10.html)
+
+:line
+
+2009 :h4
+
+[Liquid crystal nanodroplets in solution], W. M. Brown,
+M. K. Petersen, S. J. Plimpton, and G. S. Grest, J Chem Phys, 130,
+044901 (2009). ("abstract"_abstracts/jcp09.html)
+
+[General formulation of pressure and stress tensor for arbitrary
+many-body interaction potentials under periodic boundary conditions],
+A. P. Thompson, S. J. Plimpton, W. Mattson, J Chem Phys, 131, 154107
+(2009). ("abstract"_abstracts/jcp09a.html)
+
+[Crossing the Mesoscale No-Man's Land via Parallel Kinetic Monte
+Carlo], S. Plimpton, C. Battaile, M. Chandross, L. Holm,
+A. Thompson, V. Tikare, G. Wagner, E. Webb, X. Zhou, C. Garcia
+Cardona, A. Slepoy, Sandia report SAND2009-6226, October
+2009. ("abstract"_abstracts/sand09.html) ("pdf"_papers/sand09.pdf)
+
+:line
+
+2008 :h4
+
+[Substructured molecular dynamics using multibody dynamics
+algorithms], R. M. Mukherjee, P. S. Crozier, S. J. Plimpton,
+K. S. Anderson, Intl J of Non-Linear Mechanics, 43, 1045-1055 (2008).
+("abstract"_abstracts/ijnlm08.html)
+
+[Implementing peridynamics within a molecular dynamics code],
+M. L. Parks, R. B. Lehoucq, S. J. Plimpton, S. A. Silling, Comp Phys
+Comm, 179, 777-783 (2008). ("abstract"_abstracts/cpc08a.html)
+
+[A Constant-Time Kinetic Monte Carlo Algorithm for Simulation of Large
+Biochemical Reaction Networks], A. Slepoy, A. P. Thompson,
+S. J. Plimpton, J Chem Phys, 128, 205101
+(2008). ("abstract"_abstracts/jcp08.html)
+
+[Accurate and Efficient Methods for Modeling Colloidal Mixtures in an
+Explicit Solvent using Molecular Dynamics], P. J. in 't Veld,
+S. J. Plimpton, G. S. Grest, Comp Phys Comm, 179, 320-329
+(2008). ("abstract"_abstracts/cpc08.html)
+
+:line
+
+2007 :h4
+
+[Sensitivity Analysis of a Computational Model of the IKK-NF-kB-A20
+Signal Transduction Network], J. Joo, S. J. Plimpton, S. Martin,
+L. Swiler, J. L. Faulon, Annals of the New York Acadamey of Sciences,
+Volume on Reverse Engineering Biological Networks, 1115, 221-239
+(2007). ("abstract"_abstracts/annals07.html)
+
+:line
+
+2006 :h4
+
+[Computing the mobility of grain boundaries], K. G. F. Janssens,
+D. Olmsted, E.A. Holm, S. M. Foiles, S. J. Plimpton, and P. M. Derlet,
+Nature Materials, 5, 124-127
+(2006). ("abstract"_abstracts/nature06.html)
+
+[A Simple Synchronous Distributed-Memory Algorithm for the HPCC
+RandomAccess Benchmark], S. J. Plimpton, R. Brightwell, C. Vaughan,
+K. Underwood, M. Davis, Proc of Cluster 2006 - IEEE International Conf
+on Cluster Computing, Sept 2006. ("abstract"_abstracts/cluster06.html)
+("pdf"_papers/cluster06.pdf)
+
+:line
+
+2005 :h4
+
+[Microbial cell modeling via reacting diffusing particles],
+S. J. Plimpton and A. Slepoy, Journal of Physics: Conference Series
+16, 305-309 (2005). ("abstract"_ajp) ("pdf"_pjp)
+
+:link(ajp,abstracts/jp05.html)
+:link(pjp,papers/jp05.pdf)
+
+[Parallel Sn Sweeps on Unstructured Grids: Algorithms for
+Prioritization, Grid Partitioning, and Cycle-Detection],
+S. J. Plimpton, B. Hendrickson, S. Burns, W. Mclendon III, L.
+Rauchwerger, Nuclear Science and Engineering, 150, 267-283 (2005).
+("abstract"_art3) ("postscript"_prt3) ("ps.gz"_grt3)
+
+:link(art3,abstracts/nse05.html)
+:link(prt3,papers/nse05.ps)
+:link(grt3,papers/nse05.ps.gz)
+
+[Finding Strongly Connected Components in Distributed Graphs],
+W. McLendon, B. Hendrickson, S. J. Plimpton, L. Rauchwerger, J
+Parallel and Distributed Computing, 65, 901-910 (2005).
+("abstract"_art4) ("pdf"_prt4) ("pdf.gz"_grt4)
+
+:link(art4,abstracts/jpdc05.html)
+:link(prt4,papers/jpdc05.pdf)
+:link(grt4,papers/jpdc05.pdf.gz)
+
+[Effect of Deformation Path Sequence on the Behavior of Nanoscale
+Copper Bicrystal Interfaces], D. E. Spearot, K. I. Jacob,
+D. L. McDowell, S. J. Plimpton, J Engr Materials and Technology, 127,
+374-382 (2005). ("abstract"_abstracts/jemt05.html)
+
+[Feature Length-Scale Modeling of LPCVD and PECVD MEMS Fabrication
+Processes], L. C. Musson, P. Ho, S. J. Plimpton, R. C. Schmidt,
+Journal of Microsystems Technologies, 12, 137-142
+(2005). ("abstract"_ajmt) ("pdf"_pjmt)
+
+:link(ajmt,abstracts/jmt05.html)
+:link(pjmt,papers/jmt05.pdf)
+
+:line
+
+2004 :h4
+
+[Discrete element simulations of stress distributions in silos:
+Crossover from two to three dimensions], J. W. Landry, G. S. Grest,
+S. J. Plimpton, Powder Technology, 139, 233-239
+(2004). ("abstract"_abstracts/pt04.html)
+
+[Effect of end-tethered polymers on surface adhesion of glassy
+polymers], S. W. Sides, G. S. Grest, M. J. Stevens, S. J. Plimpton,
+Journal of Polymer Science, Part B (Polymer Physics), 42, 199-208
+(2004). ("abstract"_abstracts/jps04.html)
+
+[Nonlinear Magnetohydrodynamics Simulation Using High-order Finite
+Elements], C. R. Sovinec, A. H. Glasser, T. A. Gianakon, D. C. Barnes,
+R. A.  Nebel, S. E. Kruger, D. D. Schnack, S. J. Plimpton, A. Tarditi,
+and M. S. Chu, J Comp Phys, 195, 355-386 (2004). ("abstract"_anim2)
+
+:link(anim2,abstracts/jcp04.html)
+
+[A Parallel Rendezvous Algorithm for Interpolation Between Multiple
+Grids], S. J. Plimpton, B. Hendrickson, J. Stewart, J Parallel and
+Distributed Computing, 64, 266-276 (2004). ("abstract"_apa1)
+("pdf"_ppa1) ("pdf.gz"_gpa1)
+
+:link(apa1,abstracts/jpdc03a.html)
+:link(ppa1,papers/jpdc03a.pdf)
+:link(gpa1,papers/jpdc03a.pdf.gz)
+
+:line
+
+2003 :h4
+
+[Confined granular packings: Structure, stress, and forces],
+G. S. Grest, J. W. Landry, S. J. Plimpton, L. E. Silbert, Phys Rev E,
+67, 041303 (2003). ("abstract"_abstracts/pre03.html)
+
+[Equilibration of long chain polymer melts in computer simulations],
+R. Auhl, R. Everaers, G. S. Grest, K. Kremer, S. J. Plimpton, J Chem
+Phys, 119, 12718-12728 (2003). ("abstract"_abstracts/jcp03.html)
+
+[Parallel Genehunter: Implementation of a Linkage Analysis Package for
+Distributed-Memory Architectures], G. C. Conant, S. J. Plimpton,
+W. Old, A.  Wagner, P. R. Fain, T. R. Pacheco, and G. Heffelfinger,
+Journal of Parallel and Distributed Computing, 63, 674-682
+(2003). ("abstract"_absgh) ("pdf"_pdfgh) ("pdf.gz"_gzgh)
+
+:link(absgh,abstracts/jpdc03.html)
+:link(pdfgh,papers/jpdc03.pdf)
+:link(gzgh,papers/jpdc03.pdf.gz)
+
+[A Load-Balancing Algorithm for a Parallel Electromagnetic
+Particle-in-Cell Code], S. J. Plimpton, D. B. Seidel, M. F. Pasik,
+R. S. Coats, G. R. Montry, Comp Phys Comm, 152, 227-241 (2003).
+("abstract"_aqs1) ("pdf"_pqs1) ("pdf.gz"_gqs1)
+
+:link(aqs1,abstracts/cpc03.html)
+:link(pqs1,papers/cpc03.pdf)
+:link(gqs1,papers/cpc03.pdf.gz)
+
+:line
+
+2002 :h4
+
+[Boundary effects and self-organization in dense granular flows],
+L. E. Silbert, G. S. Grest, S. J. Plimpton, D. Levine, Physics of
+Fluids, 14, 2637-2646 (2002). ("abstract"_abstracts/pf02.html)
+
+[Torsion/simple shear of single crystal copper], M. F. Horstemeyer,
+T. J. Lim, W. Y. Lu,, D. A. Mosher, M. I. Baskes, V. C. Prantil,
+S. J. Plimpton, J of Engineering Materials and Technology
+(Transactions of the ASME), 124, 322-328
+(2002). ("abstract"_abstracts/jemt02.html)
+
+[Development and Performance of a PVM Based Parallel Geometric Modeler
+for MEMS], C. Jorgensen, D. Melander, R. Schmidt, S. J. Plimpton, in
+Proc of Modeling and Simulation of Microsystems (MSM), Puerto Rico,
+April 2002, 218-221. ("abstract"_amsm) ("pdf"_pmsm)
+
+:link(amsm,abstracts/msm02.html)
+:link(pmsm,papers/msm02.pdf)
+
+[Carbon Sequestration in Synechococcus Sp.: From Molecular Machines to
+Hierarchical Modeling], G. S. Heffelfinger, ..., S. J. Plimpton, ...,
+OMICS - A Journal of Integrative Biology, 6, 305-330
+(2002). ("abstract"_abstracts/omics02.html)
+
+:line
+
+2001 :h4
+
+[Length scale and time scale effects on the plastic flow of FCC
+metals], M. F. Horstemeyer, M. I. Baskes, S. J. Plimpton, Acta
+Materialia, 49, 4363-4374 (2001). ("abstract"_abstracts/am01.html)
+
+[Computational nanoscale plasticity simulations using embedded atom
+potentials], M. F. Horstemeyer, M. I. Baskes, S. J. Plimpton,
+Theoretical and Applied Fracture Mechanics, 37, 49-98
+(2001). ("abstract"_abstracts/tafm01.html)
+
+[Granular flow down an inclined plane: Bagnold scaling and rheology],
+L. E. Silbert, D. Ertas, G. S. Grest, T. C. Halsey, D. Levine,
+S. J. Plimpton, Phys Rev E, 64, 051302
+(2001). ("abstract"_abstracts/pre01a.html)
+
+[Identifying Strongly Connected Components in Parallel], W. McLendon
+III, B.  Hendrickson, S. J. Plimpton, L. Rauchwerger, in Proc of SIAM
+Parallel Processing for Scientific Computing Conf, March
+2001. ("abstract"_art2) ("postscript"_Prt2) ("ps.gz"_grt2)
+
+:link(art2,abstracts/siam01a.html)
+:link(Prt2,papers/siam01a.ps)
+:link(grt2,papers/siam01a.ps.gz)
+
+[Scalability and Performance of Two Large Linux Clusters],
+R. Brightwell and S. J. Plimpton, J of Parallel and Distributed
+Computing, 61, 1546-1569 (2001).  ("abstract"_amc1)
+("postscript"_Pmc1) ("ps.gz"_gmc1)
+
+:link(amc1,abstracts/jpdc01.html)
+:link(Pmc1,papers/jpdc01.ps)
+:link(gmc1,papers/jpdc01.ps.gz)
+
+[Tinkertoy Parallel Programming: Complicated Applications from Simple
+Tools], B.  Hendrickson and S. J. Plimpton, in Proc of SIAM Parallel
+Processing for Scientific Computing Conf, March
+2001. ("abstract"_apa3) ("postscript"_Ppa3) ("ps.gz"_gpa3)
+
+:link(apa3,abstracts/siam01b.html)
+:link(Ppa3,papers/siam01b.ps)
+:link(gpa3,papers/siam01b.ps.gz)
+
+:line
+
+2000 :h4
+
+[Parallel Algorithms for Radiation Transport on Unstructured Grids],
+S. J. Plimpton, B. A. Hendrickson, S. P. Burns, W. McLendon III, Proc
+of SuperComputing 2000 (SC2000), Dallas, TX, November
+2000. ("abstract"_art1) ("postscript"_Prt1) ("ps.gz"_grt1)
+ 
+:link(art1,abstracts/sc00.html)
+:link(Prt1,papers/sc00.ps)
+:link(grt1,papers/sc00.ps.gz)
+
+[Parallel Strategies for Crash and Impact Simulations], K. Brown,
+S. Attaway, S.  J. Plimpton, B. Hendrickson, Computer Methods in
+Applied Mechanics and Engineering, 184, 375-390
+(2000). ("abstract"_abstracts/cmame00.html)
+
+:line
+
+1999 :h4
+
+[Spatial correlations of mobility and immobility in a glass-forming
+Lennard-Jones liquid], C. Donati, S. C. Glotzer, P. H. Poole,
+W. Kob, S. J. Plimpton, Phys Rev E, 60, 3107-3119
+(1999). ("abstract"_abstracts/pre99.html)
+
+[The diffusion of simple penetrants in tangent site polymer melts],
+D. R. Rottach, P. A. Tillman, J. D. McCoy, S. J. Plimpton,
+J. G. Curro, J Chem Phys, 111, 9822-9831
+(1999). ("abstract"_abstracts/jcp99.html)
+
+[The NIMROD Code: A New Approach to Numerical Plasma Physics],
+A. H. Glasser, C.  R. Sovinec, R. A. Nebel, T. A. Gianakon,
+S. J. Plimpton, M. S. Chu, D. D.  Schnack, and the NIMROD Team, Plasma
+Physics and Controlled Fusion, 41, A747- A755
+(1999). ("abstract"_anim1) ("html"_hnim1)
+
+:link(anim1,abstracts/plasma99.html)
+:link(hnim1,papers/HTML/plasma99/plasma99.html)
+
+[Massively Parallel Computing: A Sandia Perspective], D. E. Womble,
+S. S. Dosanjh, B. A. Hendrickson, M. A. Heroux, S. J. Plimpton,
+J. L. Tomkins, D. S. Greenberg, Parallel Computing, 25, 1853-1876
+(1999). ("abstract"_apc1) ("ps"_ppc1) ("ps.gz"_gpc1)
+
+:link(apc1,abstracts/parco99.html)
+:link(ppc1,papers/parco99.ps)
+:link(gpc1,papers/parco99.ps.gz)
+ 
+:line
+
+1998 :h4
+
+[Stringlike cooperative motion in a supercooled liquid], C. Donati,
+J. F. Douglas, W. Kob, S. J. Plimpton, P. H. Poole, S. C. Glotzer,
+Phys Rev Lett, 80, 2338-2341 (1998). ("abstract"_abstracts/prl98.html)
+
+[The effect of added salt on polyelectrolyte structure], M. J. Stevens
+and S. J. Plimpton, Eur Phys J B, 2, 341-345
+(1998). ("abstract"_abstracts/ep98.html)
+
+[Dislocation nucleation and defect structure during surface
+indentation], C. L. Kelchner, S. J. Plimpton, J. C. Hamilton, Phys Rev
+B, 58, 11085-11088 (1998). ("abstract"_abstracts/prb98.html)
+
+[The structure and thermodynamics of energetically and structurally
+asymmetric polymer blends], P. A. Tillman, D. R. Rottach, J. D. McCoy,
+S. J. Plimpton, J.  G. Curro, J Chem Phys, 109, 806-814
+(1998). ("abstract"_abstracts/jcp98.html)
+
+[Molecular-Dynamics Simulations of Low-Energy (25-200 eV) Argon Ion
+Interactions with Silicon Surfaces: Sputter Yields and Product
+Formation Pathways], N. A. Kubota, D. J. Economou, S. J. Plimpton, J
+of Appl Phys, 83, 4055-4063 (1998). ("abstract"_abstracts/jap98.html)
+
+[Parallel Transient Dynamics Simulations: Algorithms for Contact
+Detection and Smoothed Particle Hydrodynamics], S. J. Plimpton,
+S. Attaway, B. Hendrickson, J.  Swegle, C. Vaughan, D. Gardner, J
+Parallel and Distributed Computing, 50, 104- 122
+(1998). ("abstract"_apro2) ("postscript"_Ppro2) ("ps.gz"_gpro2)
+ 
+:link(apro2,abstracts/jpdc98.html)
+:link(Ppro2,papers/jpdc98.ps)
+:link(gpro2,papers/jpdc98.ps.gz)
+
+[A Parallel Contact Detection Algorithm for Transient Solid Dynamics
+Simulations Using PRONTO3D], S. W. Attaway, B. A. Hendrickson,
+S. J. Plimpton, D. R.  Gardner, C. T. Vaughan, K. H. Brown,
+M. W. Heinstein, Computational Mechanics, 22, 143-159
+(1998). ("abstract"_apro3)
+
+:link(apro3,abstracts/compmech98.html)
+
+[Plane-wave Psuedopotential Electronic Structure Calculations on
+Parallel Supercomputers], J. S. Nelson and S. J. Plimpton, chapter in
+Topics in Computational Materials Science, edited by C. Y. Fong,
+published by World Scientific, 61-95 (1998). ("abstract"_aes1)
+
+:link(aes1,abstracts/fong98.html)
+
+:line
+
+1997 :h4
+
+[Particle-Mesh Ewald and rRESPA for Parallel Molecular Dynamics
+Simulations], S. J. Plimpton, R. Pollock, M. Stevens, in Proc of the
+Eighth SIAM Conference on Parallel Processing for Scientific
+Computing, Minneapolis, MN, March 1997.  ("abstract"_abssiam97)
+("postscript"_PSsiam97) ("ps.gz"_gzsiam97)
+
+:link(abssiam97,abstracts/siam97.html)
+:link(PSsiam97,papers/siam97.ps)
+:link(gzsiam97,papers/siam97.ps.gz)
+ 
+[Dynamical heterogeneities in a supercooled Lennard-Jones liquid],
+W. Kob, C. Donati, S. J. Plimpton, P. H. Poole, S. C. Glotzer, Phys
+Rev Lett, 79, 2827- 2830 (1997). ("abstract"_abstracts/prl97.html)
+
+[The effect of attractions on the structure and thermodynamics of
+model polymer blends], P. A. Tillman, D. R. Rottach, J. D. McCoy,
+S. J. Plimpton, J. G. Curro, J Chem Phys, 107, 4024-4032
+(1997). ("abstract"_abstracts/jcp97.html)
+
+[Transient Solid Dynamics Simulations on the Sandia/Intel Teraflop
+Computer], S.  Attaway, T. Barragy, K. Brown, D. Gardner,
+B. Hendrickson, S. J. Plimpton, C.  Vaughan, Gordon Bell finalist
+paper, in Proc of SuperComputing '97, San Jose, CA, November
+1997. ("abstract"_apro4) ("html"_hpro4)
+ 
+:link(apro4,abstracts/sc97.html)
+:link(hpro4,papers/HTML/sc97/sc97.html)
+
+[Potts-model Grain Growth Simulations: Parallel Algorithms and
+Applications], S.  A. Wright, S. J. Plimpton, T. P. Swiler, R. M. Fye,
+M. F. Young, E. A. Holm, SAND Report 97-1925, August
+1997. ("abstract"_agg1)
+
+:link(agg1,abstracts/sand97.html)
+
+:line
+
+1996 :h4
+
+[A New Parallel Method for Molecular-Dynamics Simulation of
+Macromolecular Systems], S. J. Plimpton and B. A. Hendrickson, J Comp
+Chem, 17, 326-337 (1996).  ("abstract"_absjcc96)
+("postscript"_PSjcc96) ("ps.gz"_gzjcc96)
+
+:link(absjcc96,abstracts/jcc96.html)
+:link(PSjcc96,papers/jcc96.ps)
+:link(gzjcc96,papers/jcc96.ps.gz)
+
+[Transient Dynamics Simulations: Parallel Algorithms for Contact
+Detection and Smoothed Particle Hydrodynamics], S. J. Plimpton,
+S. Attaway, B. Hendrickson, J.  Swegle, C. Vaughan, D. Gardner, in
+Proc of SuperComputing '96, Pittsburgh, PA, November
+1996. ("abstract"_apro5) ("html"_hpro5)
+
+:link(apro5,abstracts/sc96.html)
+:link(hpro5,papers/HTML/sc96/sc96.html)
+
+:line
+
+1995 :h4
+
+[Fast Parallel Algorithms for Short-Range Molecular Dynamics],
+S. J. Plimpton, J Comp Phys, 117, 1-19
+(1995). ("abstract"_absjcomps95) ("pdf"_PDFjcomps95) ("tar
+file"_tarjcomps95 of figures if they don't display correctly in the
+PDF file)
+
+:link(absjcomps95,abstracts/jcompphys95.html)
+:link(PDFjcomps95,papers/jcompphys95.pdf)
+:link(tarjcomps95,papers/jcompphys95_figs.tar.gz)
+
+[Parallel Molecular Dynamics Algorithms for Simulation of Molecular
+Systems], S.  J. Plimpton and B. A. Hendrickson, chapter in Parallel
+Computing in Computational Chemistry, edited by T. G. Mattson,
+published by the American Chemical Society, Symposium Series 592,
+114-132 (1995). ("abstract"_abs4) ("postscript"_PS4) ("ps.gz"_gz4)
+
+:link(abs4,abstracts/acs95.html)
+:link(PS4,papers/acs95.ps)
+:link(gz4,papers/acs95.ps.gz)
+
+[Computational Limits of Classical Molecular-Dynamics Simulations],
+S. J.  Plimpton, Computational Materials Science, 4, 361-364
+(1995). ("abstract"_abs5) ("postscript"_PS5) ("ps.gz"_gz5)
+
+:link(abs5,abstracts/cms95.html)
+:link(PS5,papers/cms95.ps)
+:link(gz5,papers/cms95.ps.gz)
+
+[Molecular dynamics simulation of athermal polymer blends: Comparison
+with integral-equation theory], C. S. Stevenson, J. G. Curro,
+J. D. McCoy, S. J.  Plimpton, J Chem Phys, 103, 1208-1215
+(1995). ("abstract"_abstracts/jcp95a.html)
+
+[Molecular dynamics simulation of athermal polymer blends: Finite
+system size considerations], C. S. Stevenson, J. D. McCoy,
+S. J. Plimpton, J. G. Curro, J Chem Phys, 103, 1200-1207
+(1995). ("abstract"_abstracts/jcp95b.html)
+ 
+[Modeling a nematic liquid crystal], S. S. Patnaik, S. J. Plimpton,
+R. Pachter, W. W. Adams, Liquid Crystals, 19, 213-220
+(1995). ("abstract"_abstracts/lc95.html)
+
+[Molecular-statics and molecular-dynamics study of diffusion along
+001 tilt grain boundaries in Ag], C. L. Liu and S. J. Plimpton, Phys
+Rev B, 51, 4523-4528 (1995). ("abstract"_abstracts/prb95a.html)
+
+[Molecular-dynamics simulations of grain-boundary diffusion in Al
+using embedded-atom method potentials], C. L. Liu and S. J. Plimpton,
+J Materials Research, 10, 1589-1592
+(1995). ("abstract"_abstracts/jmr95.html)
+
+[Parallel Algorithms for Dynamically Partitioning Unstructured Grids],
+P. Diniz, S. J. Plimpton, B. Hendrickson, R. Leland, in Proc of 7th
+SIAM Conference on Parallel Processing for Scientific Computing, San
+Francisco, CA, February 1995, p 615. ("abstract"_apa2)
+("postscript"_Ppa2) ("ps.gz"_gpa2)
+
+:link(apa2,abstracts/siam95.html)
+:link(Ppa2,papers/siam95.ps)
+:link(gpa2,papers/siam95.ps.gz)
+ 
+[Parallel Many-Body Simulations Without All-to-All Communication],
+B. A.  Hendrickson and S. J. Plimpton, J Parallel and Distributed
+Computing, 27, 15-25 (1995). ("abstract"_apa4) ("postscript"_Ppa4)
+("ps.gz"_gpa4)
+
+:link(apa4,abstracts/jpdc95.html)
+:link(Ppa4,papers/jpdc95.ps)
+:link(gpa4,papers/jpdc95.ps.gz)
+
+[An Efficient Parallel Algorithm for Matrix-Vector Multiplication],
+B. A.  Hendrickson, R. W. Leland, S. J. Plimpton, Int J of High Speed
+Computing, 7, 73-88 (1995). ("abstract"_apa5) ("postscript"_Ppa5)
+("ps.gz"_gpa5)
+
+:link(apa5,abstracts/ijhsc95.html)
+:link(Ppa5,papers/ijhsc95.ps)
+:link(gpa5,papers/ijhsc95.ps.gz)
+
+[Basis-Set Convergence of Highly Defected Sites in Amorphous-Carbon],
+J. S.  Nelson, E. B. Stechel, A. F. Wright, S. J. Plimpton,
+P. A. Schultz, M. P.  Sears, Phys Rev B, 52, 9354-59
+(1995). ("abstract"_aes2)
+
+:link(aes2,abstracts/prb95b.html)
+
+:line
+
+1994 :h4
+
+[Massively-Parallel Methods for Engineering and Science Problems],
+W. J. Camp, S.  J. Plimpton, B. A. Hendrickson, R. W. Leland,
+Communications of the ACM, 37, 31-41 (1994). ("abstract"_apc2)
+("postscript"_Ppc2) ("ps.gz"_gpc2)
+
+:link(apc2,abstracts/cacm94.html)
+:link(Ppc2,papers/cacm94.ps)
+:link(gpc2,papers/cacm94.ps.gz)
+
+[Parallel Particle Simulations of Low-Density Fluid Flows],
+S. J. Plimpton and T. J. Bartel, in Proc of High Performance
+Computing 1994, San Diego, CA, April 1994, p 31. ("abstract"_adsmc1)
+("postscript"_Pdsmc1) ("ps.gz"_gdsmc1)
+
+:link(adsmc1,abstracts/hpc94.html)
+:link(Pdsmc1,papers/hpc94.ps)
+:link(gdsmc1,papers/hpc94.ps.gz)
+
+:line
+
+1993 :h4
+
+[Parallel Molecular Dynamics With the Embedded Atom Method],
+S. J. Plimpton and B. A. Hendrickson, in Materials Theory and
+Modelling, edited by J. Broughton, P. Bristowe, and J. Newsam, MRS
+Proceedings 291, Pittsburgh, PA, 1993, p 37.  ("abstract"_abs6)
+("postscript"_PS6) ("ps.gz"_gz6)
+
+:link(abs6,abstracts/mrs92.html)
+:link(PS6,papers/mrs92.ps)
+:link(gz6,papers/mrs92.ps.gz)
+
+[Plane-wave Electronic- Structure Calculations on a Parallel
+Supercomputer], J.  S. Nelson, S. J. Plimpton, M. P. Sears, Phys Rev
+B, 47, 1765-1774 (1993).  ("abstract"_aes3)
+ 
+:link(aes3,abstracts/prb93.html)
+
+[A Massively-Parallel Digital Processor for Spotlight
+Synthetic-Aperture Radar], G. A. Mastin, S. J. Plimpton, D. Ghiglia,
+Int J of Supercomputer Applications, 7, 97-112
+(1993). ("abstract"_aip1) ("postscript"_Pip1) ("ps.gz"_gip1)
+
+:link(aip1,abstracts/ijsa93.html)
+:link(Pip1,papers/ijsa93.ps)
+:link(gip1,papers/ijsa93.ps.gz)
+
+[Parallel Simulation of Electron-Solid Interactions: A Rapid Aid for
+Electron- Microscope Data Interpretation], J. R. Michael,
+S. J. Plimpton, A. D. Romig Jr., Ultramicroscopy, 51, 160-167
+(1993). ("abstract"_aem1)
+
+:link(aem1,abstracts/ultra93.html)
+
+:line
+
+1992 :h4
+
+[Is SIMD Enough for Scientific and Engineering Applications on
+Massively Parallel Computers ?], S. J. Plimpton, S. S. Dosanjh,
+R. B. Krall, in Proc of 37th IEEE International Computer Conference,
+COMPCON '92, San Francisco, CA, February 1992. p
+95-102. ("abstract"_apc3) ("postscript"_Ppc3) ("ps.gz"_gpc3)
+
+:link(apc3,abstracts/compcon92.html)
+:link(Ppc3,papers/compcon92.ps)
+:link(gpc3,papers/compcon92.ps.gz)
+
+[Direct Monte Carlo Simulation of Ionized Rarefied Flows on Large MIMD
+Parallel Supercomputers], T. J. Bartel, S. J. Plimpton, C. R. Justiz,
+in Proc of 18th International Symposium on Rarefied Gas Dynamics,
+Vancouver, Canada, July 1992, published by AIAA, A94-30156, p
+155-165. ("abstract"_adsmc2)
+
+:link(adsmc2,abstracts/rgd92.html)
+
+[Monte Carlo Particle Simulation of Low-Density Fluid Flow on MIMD
+Supercomputers], S. J. Plimpton and T. J. Bartel, in Proc of Scalable
+High Performance Computing Conference, Williamsburg, VA, April 1992, p
+212, and in Computing Systems in Engineering, 3, 333-336
+(1992). ("abstract"_adsmc3) ("postscript"_Pdsmc3) ("ps.gz"_gdsmc3)
+
+:link(adsmc3,abstracts/shpcc92.html)
+:link(Pdsmc3,papers/shpcc92.ps)
+:link(gdsmc3,papers/shpcc92.ps.gz)
+
+[Parallel Simulation of Electron-Solid Interactions for
+Electron-Microscopy Modeling], S. J. Plimpton, J. R. Michael,
+A. D. Romig, Jr., J of SuperComputing, 6, 139-151
+(1992). ("abstract"_aem2) ("postscript"_Pem2) ("ps.gz"_gem2)
+
+:link(aem2,abstracts/jsc92.html)
+:link(Pem2,papers/jsc92.ps)
+:link(gem2,papers/jsc92.ps.gz)
+
+:line
+
+1991 :h4
+
+[Load Balancing and Performance of a Gridless Particle Simulation on
+MIMD, SIMD, and Vector Supercomputers], S. J. Plimpton, I. Shokair,
+J. Wagner, in Proc of 5th SIAM Conference on Parallel Processing for
+Scientific Computing, Houston, TX, March 1991, p
+507-512. ("abstract"_aqs2) ("postscript"_Pqs2) ("ps.gz"_gqs2)
+
+:link(aqs2,abstracts/siam91.html)
+:link(Pqs2,papers/siam91.ps)
+:link(gqs2,papers/siam91.ps.gz)
+
+[Synthetic Aperture Radar Image Processing on Parallel
+Supercomputers], S. J.  Plimpton, G. A. Mastin, D. Ghiglia, in Proc of
+Supercomputing '91, Albuquerque, NM, November 1991, p
+446. ("abstract"_aip2) ("postscript"_Pip2) ("ps.gz"_gip2)
+
+:link(aip2,abstracts/sc91.html)
+:link(Pip2,papers/sc91.ps)
+:link(gip2,papers/sc91.ps.gz)
+
+:line
+
+1990 :h4
+
+[Molecular Dynamics Simulations of Grain-Boundary Diffusion for
+Varying Tilt Angle Geometries], S. J. Plimpton, in Atomic Scale
+Calulations of Structure in Materials, edited by M. S. Daw and
+M. A. Schluter, MRS Proceedings 193, Pittsburgh, PA, 1990, p
+333-336. ("abstract"_abstracts/mrs90.html)
+
+[Effect of Interatomic Potential on Simulated Grain-Boundary and Bulk
+Diffusion: A Molecular-Dynamics Study], S. J. Plimpton and E. D. Wolf,
+Phys Rev B, 41, 2712-2721 (1990). ("abstract"_abstracts/prb90.html)

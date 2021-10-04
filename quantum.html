@@ -1,0 +1,66 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>Electronic Structure - quantum mechanics of solids 
+</H3>
+<P>Density-functional theory (DFT) is widely used to describe the
+electronic structure of crystalline solids. I've worked with Jeff
+Nelson and others at Sandia to parallelize Car-Parinello DFT codes
+that represent electron wave functions with plane-wave basis
+sets. These codes are best suited to modeling materials with
+smoothly-varying valence states such as semiconductors and
+metals. Core electron states are represented with compute-efficient
+pseudo- potentials.
+</P>
+<P>Plane-wave DFT codes require parallel FFTs to swap between real-space
+and reciprocal-space representations of various operators. Our work on
+parallel FFTs is described <A HREF = "algorithms.html#ffts">here</A>. Other parallel issues
+addressed in the codes include Gram-Schmidt orthonormalization of a
+large set of wave functions and load- balancing issues that arise from
+working on 2 different data sets -- one for the full 3-d FFT mesh and
+one for the spherical subset of mesh points that correspond to wave
+vectors whose length is within a cutoff distance. We devised a novel
+way of mapping back and forth between these 2 data sets to maintain
+load-balance in each stage of the computation; it's described in the
+1993 PRB paper below.
+</P>
+
+
+<P>Collaborators on this project:
+</P>
+<UL><LI>  Jeff Nelson, Sandia
+<LI>  Alan Wright, Sandia 
+</UL>
+<HR>
+
+<P>These papers describe various aspects of the DFT work. The book
+chapter is the most recent and includes some discussion of our FFT
+methodology. The 1995 PRB article is an application of the code to
+amorphous carbon (other calcuations can be found by a literature
+search for J. S. Nelson or A. F. Wright articles).  The earlier 1993
+PRB article was our first explanation of our parallel strategy for
+plane-wave DFT codes.
+</P>
+<P><B>Plane-wave Psuedopotential Electronic Structure Calculations on Parallel
+Supercomputers</B>, J. S. Nelson and S. J. Plimpton, chapter in Topics in
+Computational Materials Science, edited by C. Y. Fong, published by World
+Scientific, 61-95 (1998). (<A HREF = "abstracts/fong98.html">abstract</A>)
+</P>
+
+
+<P><B>Basis-Set Convergence of Highly Defected Sites in Amorphous-Carbon</B>,
+J. S.  Nelson, E. B. Stechel, A. F. Wright, S. J. Plimpton,
+P. A. Schultz, M. P.  Sears, Phys Rev B, 52, 9354-59
+(1995). (<A HREF = "abstracts/prb95b.html">abstract</A>)
+</P>
+
+
+<P><B>Plane-wave Electronic- Structure Calculations on a Parallel
+Supercomputer</B>, J.  S. Nelson, S. J. Plimpton, M. P. Sears, Phys Rev
+B, 47, 1765-1774 (1993).  (<A HREF = "abstracts/prb93.html">abstract</A>)
+</P>
+
+
+</HTML>

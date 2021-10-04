@@ -1,0 +1,148 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>Direct Simulation Monte Carlo - low-density reacting flows via particles 
+</H3>
+<P>Note: The text below describes an older 2d DSMC code called ICARUS we
+developed at Sandia in the 1990s.  A newer 3d code called SPARTA, has
+its own <A HREF = "http://sparta.sandia.gov">web page</A>.  Links to SPARTA papers
+are also listed here:
+</P>
+<P><B>Molecular-Level Simulations of Turbulence and Its Decay</B>,
+M. A. Gallis, N. P. Bitter, T. P. Koehler, J. R. Torczynski,
+S. J. Plimpton, G. Papadakis, Phys Rev Letters, 118, 064501 (2017).
+(<A HREF = "abstracts/prl17.html">abstract</A>)
+</P>
+<P><B>Direct simulation Monte Carlo investigation of the Rayleigh-Taylor
+instability</B>, M. A. Gallis, T. P. Koehler, J. R. Torczynski, and
+S. J. Plimpton, Phys Rev Fluids, 1, 043403 (2016).
+(<A HREF = "abstracts/prf16.html">abstract</A>)
+</P>
+<P><B>Direct simulation Monte Carlo investigation of the Richtmyer-Meshkov
+instability</B>, M. A. Gallis, T. P. Koehler, J. R. Torczynski, and
+S. J. Plimpton, Physics of Fluids, 27, 084105 (2015).
+(<A HREF = "abstracts/pof15.html">abstract</A>)
+</P>
+<P><B>Direct Simulation Monte Carlo: The Quest for Speed</B>, M. A. Gallis,
+J. R. Torczynski, S. J. Plimpton, D. J. Rader, T. Koehler, 29th Intl
+Symposium on Rarefied Gas Dynamics in Xi'an, China, AIP Conf Proc,
+1628, 27 (2014). (<A HREF = "abstracts/rgd14.html">abstract</A>)
+</P>
+<HR>
+
+<HR>
+
+<P>Direct Simulation Monte Carlo (DSMC) is a particle-based technique for
+simulating low-density fluid flows -- those with a ratio of mean-free
+path to geometry scale (the Knudsen number) of order 0.1 or
+greater. The basic idea is simple.  Particles of various chemical
+species stream through a simulation domain bounded by inflow, outflow,
+or body surfaces. In a single timestep, each particle moves
+independently (without inter-particle collisions) to a new
+position. The move may include boundary interactions such as bouncing
+off a surface. At the end of the timestep an artificial grid is
+superposed on the simulation domain and used to locate particles that
+are near each other.  Particles within a grid cell collide with each
+other and perform chemistry reactions via Monte Carlo (random)
+rules. Similarly, particles in grid cells that border a boundary
+surface can undergo surface chemistry interactions during the particle
+move. Statistics are gathered and a new timestep begins.  Over the
+course of a many-timestep simulation, statistics accumulated within
+cells and at surfaces are used to compute various thermodynamic
+quantities of interest for all chemical species, such as flow
+temperature, density, and velocity.
+</P>
+<P>A Sandia DSMC code, called ICARUS, grids a 2-d domain with a
+collection of adjoining body-fitted grids (see the 1st figure
+below). Axi-symmetric problems can be simulated in 3-d by rotating the
+grid around an axis of symmetry and applying 3-d boundary
+conditions. ICARUS also allows for particle and cell weighting factors
+which enable trace species to be accurately tracked with minimal
+computational effort.
+</P>
+<P>ICARUS is parallelized by assigning a subset of grid cells and the
+particles in those cells to each processor. This can raise
+load-balancing issues as particle densities vary in space and
+time. Our strategies for achieving reasonable load- balance and good
+parallel performance are detailed in the papers below. On big problems
+(tens of thousands of grid cells, millions of particles) ICARUS
+typically runs efficiently on hundreds to thousands of processors. It
+has been a workhorse code at Sandia on a series of parallel machines,
+from the nCUBE 2 to the Intel Paragon to the Intel Tflops.
+</P>
+<P>Here is a snapshot of particle density (on a log scale) around a nose
+cone as it re-enters the earth's atmosphere. The particle-tracking
+grid is shown in the lower half.
+</P>
+<CENTER><IMG SRC = "images/dsmc_nosecone.gif">
+</CENTER>
+<P>This is the temperature profile of a gas escaping from an orifice
+nozzle into vacuum with stream lines in black. The white region at the
+upper left of the figure is the nozzle; the inlet orifice is at the
+far left; the y-axis is a line of axi-symmetry.
+</P>
+<CENTER><IMG SRC = "images/dsmc_orifice.gif">
+</CENTER>
+<P>This is a calculation of flow around a wake shield that was deployed
+on the space shuttle. The idea was to see if very low densities could
+be achieved in the wake of the shield as it swept through the upper
+atmosphere. These calculations of particle density showed a 6
+order-of-magnitude reduction in density behind the shield, from the
+reference ambient density.
+</P>
+<CENTER><IMG SRC = "images/dsmc_shield.gif">
+</CENTER>
+<P>A more down-to-earth setting where low-density flows are important is
+in chemical vapor deposition (CVD) reactors for semiconductor
+processing. This is the pressure profile from a simulation of flow
+across a silicon wafer. Gas is injected at the top of the figure thru
+small orifices, flows across the surface of the wafer, and is pumped
+out at the lower right. Again, the left vertical axis is a line of
+axi-symmetry.
+</P>
+<CENTER><IMG SRC = "images/dsmc_shower.gif">
+</CENTER>
+<P>Collaborator on this project:
+</P>
+<UL><LI>  Tim Bartel, Sandia 
+</UL>
+<HR>
+
+<P>These papers provide some details of our parallelization technique and
+illustrate the application of DSMC to a few problems of interest to
+Sandia.
+</P>
+<P><B>Parallel Particle Simulations of Low-Density Fluid Flows</B>,
+S. J. Plimpton and T.  J. Bartel, in Proc of High Performance
+Computing 1994, San Diego, CA, April 1994, p 31. (<A HREF = "abstracts/hpc94.html">abstract</A>)
+(<A HREF = "papers/hpc94.ps">postscript</A>) (<A HREF = "papers/hpc94.ps.gz">ps.gz</A>)
+</P>
+
+
+
+
+
+
+<P><B>Direct Monte Carlo Simulation of Ionized Rarefied Flows on Large MIMD
+Parallel Supercomputers</B>, T. J. Bartel, S. J. Plimpton, C. R. Justiz,
+in Proc of 18th International Symposium on Rarefied Gas Dynamics,
+Vancouver, Canada, July 1992, published by AIAA, A94-30156, p
+155-165. (<A HREF = "abstracts/rgd92.html">abstract</A>)
+</P>
+
+
+<P><B>Monte Carlo Particle Simulation of Low-Density Fluid Flow on MIMD
+Supercomputers</B>, S. J. Plimpton and T. J. Bartel, in Proc of Scalable
+High Performance Computing Conference, Williamsburg, VA, April 1992, p
+212, and in Computing Systems in Engineering, 3, 333-336
+(1992). (<A HREF = "abstracts/shpcc92.html">abstract</A>) (<A HREF = "papers/shpcc92.ps">postscript</A>) (<A HREF = "papers/shpcc92.ps.gz">ps.gz</A>)
+</P>
+
+
+
+
+
+
+</HTML>

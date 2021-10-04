@@ -1,0 +1,80 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Informatics Algorithms and Big-Data Processing :h3
+
+Informatics is the term commonly used for calculations that are more
+data-intensive than compute-intensive.  Often such calculations are
+limited by the size of the data sets that can be handled rather than
+the total amount of raw computation they require.  Algorithms for data
+mining, classificiation, machine learning, and pattern matching can
+fall in this category.
+
+Informatics is now being performed on Terabyte and even Petabyte data
+sets on large distributed "cloud computing"_cloudwiki platforms via
+programming paradigms such as "MapReduce"_mrwiki, implemented in
+software packages like "Hadoop"_hadoopwiki.  With my background in
+large-scale parallel computing, I'm interested in seeing whether
+traditional supercomputers can also be used effectively for these
+kinds of tasks.
+
+To experiement with this, we've written two different software
+packages.
+
+The first implements MapReduce on top of distributed-memory message
+passing ("MPI"_mpiwiki).  Our open-source software is called the
+"MapReduce-MPI (MR-MPI) library"_http://mapreduce.sandia.gov, and can
+be downloaded "here"_download.html.  The "doc pages for the
+library"_http://mapreduce.sandia.gov/doc/Manual.html describe the
+software in more detail.
+
+Collaborators on the MapReduce-MPI library:
+
+  "Karen Devine"_kdd, Sandia
+  Jon Berry, Sandia :ul
+
+The second is a small open-source library that serves as a framework
+for running streaming calculations in a pipelined fashion, as a set of
+independent processes passing a continuous stream of data among
+themselves.  The library is called "PHISH"_phish.html, for Parallel
+Harness for Informatic Stream Hashing, because fish swim in a stream.
+The "doc pages for the library"_phish/doc/Manual.html describe the
+software in more detail.
+
+Collaborator on the PHISH library:
+
+  Tim Shead, Sandia :ul
+
+:line
+
+This paper describes the PHISH library and several streaming graph
+algorithms.
+
+[Streaming data analytics via message passing with application to
+graph algorithms], S. J. Plimpton and T. Shead, J Parallel and
+Distributed Computing, 74, 2687-2698 (2014).
+("abstract"_abstracts/jpdc14.html)
+
+This paper describes the use of PHISH to identify connected
+components in a stream of graph edges.
+
+[Maintaining connected components for infinite graph streams],
+J. W. Berry, M. Oster, C. A. Phillips, S. J. Plimpton, T. M Shead,
+BigMine-13, a KDD13 workshop - 2nd International Workshop on Big Data,
+Streams and Heterogeneous Source Mining, Chicago, IL, Aug
+2013. ("abstract"_abstracts/bigmine13.html)
+
+This paper describes the MR-MPI library and several MapReduce graph
+algorithms for informatics problems.
+
+[MapReduce in MPI for Large-Scale Graph Algorithms], S. J. Plimpton
+and K. D. Devine, Parallel Computing, 37, 610-632
+(2011). ("abstract"_../abstracts/pc11.html)
+("preprint"_../papers/pc11.pdf)
+
+:link(kdd,http://www.cs.sandia.gov/~kddevin)
+:link(mrwiki,http://en.wikipedia.org/wiki/Mapreduce)
+:link(cloudwiki,http://en.wikipedia.org/wiki/Cloud_computing)
+:link(hadoopwiki,http://en.wikipedia.org/wiki/Hadoop)
+:link(mpiwiki,http://en.wikipedia.org/wiki/Message_Passing_Interface)

@@ -1,0 +1,156 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>Biological Cell Modeling 
+</H3>
+<P>Whole-cell modeling is a grand challenge for computational biology in
+the 21st century (see 2001 paper with that title by M Tomita, Trends
+in Biotechnology, 19, 205-210).  The following images give you a sense
+of what is involved for a single E. Coli cell, a cylindrical-shaped
+cell 2 microns long by 1 micron wide.  Click on any of them for larger
+versions.
+</P>
+<A HREF = "images/ecoli_expt.jpg"><IMG SRC = "images/ecoli_expt_small.jpg"></A>
+
+<A HREF = "images/ecoli_book.jpg"><IMG SRC = "images/ecoli_book_small.jpg"></A>
+
+<A HREF = "images/ecoli_ccell.png"><IMG SRC = "images/ecoli_ccell_small.png"></A>
+
+<P>On the left is a fluorescent image (off the WWW, sorry but I have lost
+the reference).  In the middle is a biologist/artist rendition by
+D. S. Goodsell from the cover of his great book, The Machinery of
+Life, Springer-Verlag, 1993.  On the right is a snapshot of a
+simulation model from ChemCell (see below).
+</P>
+<P>The "parts list" for what is inside an E. Coli cell is not that large:
+4300 genes, 60K ribosomes, 2M proteins, a few 10M small organic
+molecules, a few 100M ions, and 70% water.  I say "not that large"
+because big computers can now simulate particle models with billions
+of particles.  So if 1 particle = 1 molecule and the rules for how
+such particles move and interact were understood and could be encoded
+in the model (e.g. as biochemical reactions occurring at specicied
+rates), then it should be possible to simulate "life", at least at the
+level of an E. Coli cell as it responds to its environment, grows,
+reproduces, etc.  And from there it is a small conceptual leap to
+using such a computational model to ask and answer "what if" questions
+about how cells will respond if their genetic makeup is modified or
+they are put in different environements.
+</P>
+<P>Of course many cells are much larger and more complex than E. Coli,
+but there are a lot of years left in the 21st century.
+</P>
+<HR>
+
+<P>Our small contribution to this field has been to develop a
+particle-based cell simulator with spatial information, where
+particles represent proteins or other biomolecules.  Particles diffuse
+via Brownian motion within a cellular geometry bounded by simple
+geometric regions or triangulated surfaces that represent cellular or
+organelle membranes.  Reactions between nearby particles are carried
+out via Monte Carlo rules to model an input set of chemical rate
+equations.  For large-scale models, these computations can be
+performed in parallel, where the simulation domain and particles are
+partitioned across processors.
+</P>
+<P>Our open-source simulator is called
+<A HREF = "http://chemcell.sandia.gov">ChemCell</A>.  Documentation, images, movies,
+and download information are available on the <A HREF = "http://chemcell.sandia.gov">ChemCell WWW
+page</A> and the <A HREF = "http://chemcell.sandia.gov/doc/Manual.html">ChemCell doc
+pages</A> describes the
+software in more detail.
+</P>
+<P>ChemCell is similar in spirit to other particle-based biological cell
+simulators such as <A HREF = "http://www.mcell.cnl.salk.edu">MCell</A>, <A HREF = "http://www.smoldyn.org">Smoldyn</A>, and
+<A HREF = "http://mesord.sourceforge.net">MesoRD</A>.  Other popular cell simulators include VCell, which
+models reaction/diffusion via continuum PDEs in a spatial
+representation of a cell, and E-Cell which has a rich variety of
+continuum and stochastic solvers for non-spatial cell models.
+</P>
+
+
+
+
+
+
+
+
+
+
+<P>Collaborators on ChemCell:
+</P>
+<UL><LI>  Alex Slepoy, Sandia
+<LI>  Larry Lok and Roger Brent, TMSI 
+</UL>
+
+
+<HR>
+
+<P>These papers discusses results from signaling network analyses performed
+with ChemCell:
+</P>
+<P><B>Statistical ensemble analysis for simulating extrinsic noise-driven
+response in NF-kappa B signaling networks</B>, J. Joo, S. J. Plimpton,
+J. L. Faulon, BMC Systems Biology, 7, 45 (2013).
+(<A HREF = "abstracts/bmc13.html">abstract</A>)
+</P>
+<P><B>Sensitivity Analysis of a Computational Model of the IKK-NF-kB-A20
+Signal Transduction Network</B>, J. Joo, S. J. Plimpton, S. Martin,
+L. Swiler, J. L. Faulon, Annals of the New York Acadamey of Sciences,
+Volume on Reverse Engineering Biological Networks, 1115, 221-239
+(2007). (<A HREF = "abstracts/annals07.html">abstract</A>)
+</P>
+<P>This paper gives a brief overview of ChemCell and computational
+challenges for cell modeling:
+</P>
+<P><B>Microbial cell modeling via reacting diffusing particles</B>,
+S. J. Plimpton and A. Slepoy, Journal of Physics: Conference Series
+16, 305-309 (2005). (<A HREF = "abstracts/jp05.html">abstract</A>) (<A HREF = "papers/jp05.pdf">pdf</A>)
+</P>
+
+
+
+
+<P>This paper is about our <A HREF = "http://www.genomes2life.org">Genomics:GTL (Genomes-to-Life) project</A>
+funded by DOE's OBER and OASCR offices, that provided funding and
+motivation for the development of ChemCell.  The author list is the
+entire project team!
+</P>
+
+
+<P><B>Carbon Sequestration in Synechococcus Sp.: From Molecular Machines to
+Hierarchical Modeling</B>, G. S. Heffelfinger, ..., S. J. Plimpton, ...,
+OMICS - A Journal of Integrative Biology, 6, 305-330
+(2002). (<A HREF = "abstracts/omics02.html">abstract</A>)
+</P>
+<HR>
+
+<P>I have also worked on agent-based modeling (ABM) of cells where an
+entire cell is a single "agent" which interacts with other cells and
+background extra-cellular species according to a set of complicated
+rules.  Our ABM was written in Python to be easily extensible, with
+calls to C functions to perform numerically intensive operations.
+</P>
+<P>Collaborators on ABM work:
+</P>
+<UL><LI>  Chi-Chi May (U Houston)
+<LI>  Cheryl Sershen (Baylor College of Medicine) 
+</UL>
+<P>These papers describes ABM results for infection of lung tissue with
+tuberculosis, and the formation of granulomas:
+</P>
+<P><B>A Method for Modeling Oxygen Diffusion in an Agent-based Model with
+Application to Host-Pathogen Infection</B>, C. L. Sershen,
+S. J. Plimpton, E. E. May, EMBC'14 Conference (36th Annual Intl Conf
+of the IEEE Engineering in Medicine and Biology Society), Chicago, IL,
+Aug 2014. (<A HREF = "abstracts/embc14.html">abstract</A>)
+</P>
+<P><B>Oxygen Modulates the Effectiveness of Granuloma Mediated Host
+Response to Mycobacterium tuberculosis: A Multiscale Computational
+Biology Approach</B>, C. L. Sershen, S. J. Plimpton, E. E. May, Frontiers
+in Cellular and Infection Microbiology, 6,
+doi:10.3389/fcimb.2016.00006 (2016).
+(<A HREF = "abstracts/frontiers16.html">abstract</A>)
+</P>
+</HTML>

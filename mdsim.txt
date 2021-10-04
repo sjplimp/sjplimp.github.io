@@ -1,0 +1,213 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Molecular Dynamics - Simulations :h3
+
+The next sections list papers describing various MD simulations I've
+collaborated on for different kinds of materials: granular systems,
+coarse-grained modesl, polymers, metals, glasses, polyelectrolytes,
+silicon, and liquid crystals.
+
+"This page"_md.html gives a brief description of what molecular
+dynamics is about, and my work in developing parallel algorithms and
+codes for doing MD.
+
+Parallel MD codes I've written and distribute freely are available
+from "this page"_download.html.  Simulation work of others using these
+codes is listed on the "Publications
+page"_http://lammps/sandia.gov/papers.html of the "LAMMPS WWW
+Site"_http://lammps.sandia.gov, along with
+"pictures"_http://lammps.sandia.gov/pictures.html and
+"movies"_http://lammps.sandia.gov/movies.html.
+
+:line
+:line
+
+Granular systems :h4
+
+[Discrete element simulations of stress distributions in silos:
+Crossover from two to three dimensions], J. W. Landry, G. S. Grest,
+S. J. Plimpton, Powder Technology, 139, 233-239
+(2004). ("abstract"_abstracts/pt04.html)
+
+[Confined granular packings: Structure, stress, and forces],
+G. S. Grest, J. W. Landry, S. J. Plimpton, L. E. Silbert, Phys Rev E,
+67, 041303 (2003). ("abstract"_abstracts/pre03.html)
+
+[Boundary effects and self-organization in dense granular flows],
+L. E. Silbert, G. S. Grest, S. J. Plimpton, D. Levine, Physics of
+Fluids, 14, 2637-2646 (2002). ("abstract"_abstracts/pf02.html)
+
+[Granular flow down an inclined plane: Bagnold scaling and rheology],
+L. E. Silbert, D. Ertas, G. S. Grest, T. C. Halsey, D. Levine,
+S. J. Plimpton, Phys Rev E, 64, 051302
+(2001). ("abstract"_abstracts/pre01a.html)
+
+:line
+
+Coarse-grained models :h4
+
+[Accelerating dissipative particle dynamics simulations for soft
+matter systems], T. Nguyen and S. J. Plimpton, Computational Materials
+Science, 100, 173-180 (2015).  ("abstract"_abstracts/cms15.html)
+
+[Particle dynamics modeling methods for colloid suspensions],
+D. S. Bolintineanu, G. S. Grest, J. B. Lechman, F. Pierce,
+S. J. Plimpton, and P. R. Schunk, Computational Particle Mechanics, 1,
+321-356 (2014). ("abstract"_abstracts/cpm14.html)
+
+[No-slip boundary conditions and forced flow in multiparticle
+collision dynamics], D. S. Bolintineanu, J. B. Lechman,
+S. J. Plimpton, and G. S. Grest, Phys Rev E, 86, 066703 (2012).
+("abstract"_abstracts/pre12.html)
+
+[Evaporation of Lennard-Jones Fluids], S Cheng, J. B. Lechman,
+S. J. Plimpton, G. S. Grest, J Chem Phys, 134, 224704 (2011).
+("abstract"_abstracts/jcp11.html)
+
+[Mesoscale Hydrodynamics via Stochastic Rotation Dynamics: Comparison
+with Lennard-Jones Fluid], M. K. Petersen, J. B. Lechman,
+S. J. Plimpton, G. S. Grest, P. J. in't Veld, P. R. Schunk, J Chem
+Phys, 132, 174106 (2010). ("abstract"_abstracts/jcp10.html)
+
+:line
+
+Polymers :h4
+
+[1D-to-3D transition of phonon heat conduction in polyethylene using
+molecular dynamics simulations], A. Henry, G. Chen, S. J. Plimpton,
+A. Thompson, Phys Rev B, 82, 144308 (2010).
+("abstract"_abstracts/prb10.html)
+
+[Effect of end-tethered polymers on surface adhesion of glassy
+polymers], S. W. Sides, G. S. Grest, M. J. Stevens, S. J. Plimpton,
+Journal of Polymer Science, Part B (Polymer Physics), 42, 199-208
+(2004). ("abstract"_abstracts/jps04.html)
+
+[Equilibration of long chain polymer melts in computer simulations],
+R. Auhl, R. Everaers, G. S. Grest, K. Kremer, S. J. Plimpton, J Chem
+Phys, 119, 12718-12728 (2003). ("abstract"_abstracts/jcp03.html)
+
+[The diffusion of simple penetrants in tangent site polymer melts],
+D. R. Rottach, P. A. Tillman, J. D. McCoy, S. J. Plimpton,
+J. G. Curro, J Chem Phys, 111, 9822-9831
+(1999). ("abstract"_abstracts/jcp99.html)
+
+[The structure and thermodynamics of energetically and structurally
+asymmetric polymer blends], P. A. Tillman, D. R. Rottach, J. D. McCoy,
+S. J. Plimpton, J.  G. Curro, J Chem Phys, 109, 806-814
+(1998). ("abstract"_abstracts/jcp98.html)
+
+[The effect of attractions on the structure and thermodynamics of
+model polymer blends], P. A. Tillman, D. R. Rottach, J. D. McCoy,
+S. J. Plimpton, J. G. Curro, J Chem Phys, 107, 4024-4032
+(1997). ("abstract"_abstracts/jcp97.html)
+
+[Molecular dynamics simulation of athermal polymer blends: Comparison
+with integral-equation theory], C. S. Stevenson, J. G. Curro,
+J. D. McCoy, S. J.  Plimpton, J Chem Phys, 103, 1208-1215
+(1995). ("abstract"_abstracts/jcp95a.html)
+
+[Molecular dynamics simulation of athermal polymer blends: Finite
+system size considerations], C. S. Stevenson, J. D. McCoy,
+S. J. Plimpton, J. G. Curro, J Chem Phys, 103, 1200-1207
+(1995). ("abstract"_abstracts/jcp95b.html)
+
+:line
+
+Metals :h4
+
+[Computing the mobility of grain boundaries], K. G. F. Janssens,
+D. Olmsted, E.A. Holm, S. M. Foiles, S. J. Plimpton, and P. M. Derlet,
+Nature Materials, 5, 124-127
+(2006). ("abstract"_abstracts/nature06.html)
+
+[Effect of Deformation Path Sequence on the Behavior of Nanoscale
+Copper Bicrystal Interfaces], D. E. Spearot, K. I. Jacob,
+D. L. McDowell, S. J. Plimpton, J Engr Materials and Technology, 127,
+374-382 (2005). ("abstract"_abstracts/jemt05.html)
+
+[Torsion/simple shear of single crystal copper], M. F. Horstemeyer,
+T. J. Lim, W. Y. Lu,, D. A. Mosher, M. I. Baskes, V. C. Prantil,
+S. J. Plimpton, J of Engineering Materials and Technology
+(Transactions of the ASME), 124, 322-328
+(2002). ("abstract"_abstracts/jemt02.html)
+
+[Length scale and time scale effects on the plastic flow of FCC
+metals], M. F. Horstemeyer, M. I. Baskes, S. J. Plimpton, Acta
+Materialia, 49, 4363-4374 (2001). ("abstract"_abstracts/am01.html)
+
+[Computational nanoscale plasticity simulations using embedded atom
+potentials], M. F. Horstemeyer, M. I. Baskes, S. J. Plimpton,
+Theoretical and Applied Fracture Mechanics, 37, 49-98
+(2001). ("abstract"_abstracts/tafm01.html)
+
+[Dislocation nucleation and defect structure during surface
+indentation], C. L. Kelchner, S. J. Plimpton, J. C. Hamilton, Phys Rev
+B, 58, 11085-11088 (1998). ("abstract"_abstracts/prb98.html)
+
+[Molecular-statics and molecular-dynamics study of diffusion along
+001 tilt grain boundaries in Ag], C. L. Liu and S. J. Plimpton, Phys
+Rev B, 51, 4523-4528 (1995). ("abstract"_abstracts/prb95a.html)
+
+[Molecular-dynamics simulations of grain-boundary diffusion in Al
+using embedded-atom method potentials], C. L. Liu and S. J. Plimpton,
+J Materials Research, 10, 1589-1592
+(1995). ("abstract"_abstracts/jmr95.html)
+
+[Molecular Dynamics Simulations of Grain-Boundary Diffusion for
+Varying Tilt Angle Geometries], S. J. Plimpton, in Atomic Scale
+Calulations of Structure in Materials, edited by M. S. Daw and
+M. A. Schluter, MRS Proceedings 193, Pittsburgh, PA, 1990, p
+333-336. ("abstract"_abstracts/mrs90.html)
+
+[Effect of Interatomic Potential on Simulated Grain-Boundary and Bulk
+Diffusion: A Molecular-Dynamics Study], S. J. Plimpton and E. D. Wolf,
+Phys Rev B, 41, 2712-2721 (1990). ("abstract"_abstracts/prb90.html)
+
+:line
+
+Glasses :h4
+
+[Spatial correlations of mobility and immobility in a glass-forming
+Lennard-Jones liquid], C. Donati, S. C. Glotzer, P. H. Poole,
+W. Kob, S. J. Plimpton, Phys Rev E, 60, 3107-3119
+(1999). ("abstract"_abstracts/pre99.html)
+
+[Stringlike cooperative motion in a supercooled liquid], C. Donati,
+J. F. Douglas, W. Kob, S. J. Plimpton, P. H. Poole, S. C. Glotzer,
+Phys Rev Lett, 80, 2338-2341 (1998). ("abstract"_abstracts/prl98.html)
+
+[Dynamical heterogeneities in a supercooled Lennard-Jones liquid],
+W. Kob, C. Donati, S. J. Plimpton, P. H. Poole, S. C. Glotzer, Phys
+Rev Lett, 79, 2827- 2830 (1997). ("abstract"_abstracts/prl97.html)
+
+:line
+
+Polyelectrolytes :h4
+
+[The effect of added salt on polyelectrolyte structure], M. J. Stevens
+and S. J. Plimpton, Eur Phys J B, 2, 341-345
+(1998). ("abstract"_abstracts/ep98.html)
+
+:line
+
+Silicon :h4
+
+[Molecular-Dynamics Simulations of Low-Energy (25-200 eV) Argon Ion
+Interactions with Silicon Surfaces: Sputter Yields and Product
+Formation Pathways], N. A. Kubota, D. J. Economou, S. J. Plimpton, J
+of Appl Phys, 83, 4055-4063 (1998). ("abstract"_abstracts/jap98.html)
+
+:line
+
+Liquid crystals :h4
+
+[Liquid crystal nanodroplets in solution], W. M. Brown,
+M. K. Petersen, S. J. Plimpton, and G. S. Grest, J Chem Phys, 130,
+044901 (2009). ("abstract"_abstracts/jcp09.html)
+
+[Modeling a nematic liquid crystal], S. S. Patnaik, S. J. Plimpton,
+R. Pachter, W. W. Adams, Liquid Crystals, 19, 213-220
+(1995). ("abstract"_abstracts/lc95.html)

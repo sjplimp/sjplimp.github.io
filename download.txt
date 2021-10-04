@@ -1,0 +1,255 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Software Packages for Download :h3
+
+This page is for downloading software packages that I distribute.
+Sandia's molecular dynamics code "LAMMPS"_https://www.lammps.org has
+its own "download page"_https://www.lammps.org/download.html.
+
+Select the package you want via the circular check-button, click the
+"[Download Now]" button, and your browser should download a gzipped
+tar file.  Unpack it with the following commands, and look for a
+README to get you started.
+
+gunzip file.tar.gz
+tar xvf file.tar :pre
+
+Note that some of these packages will unpack into a directory like
+pizza-16Mar09.  If the date is later than the release date listed
+below, it means you have downloaded an upgraded version that includes
+the bug fixes and new features listed on bug/feature page whose link
+is also given below.  However, when the program runs it will still
+print out the release date listed below to the screen, since that is
+not changed every time there is a bug fix.
+
+:line
+
+Follow the links below for more information on the individual packages.
+
+Some of this software is distributed freely; some is copyrighted
+open-source software distributed under the terms of the "GNU Public
+license"_gnu or "modified BSD license"_bsd.
+
+:link(gnu,http://www.gnu.org/copyleft/gpl.html)
+:link(bsd,http://en.wikipedia.org/wiki/BSD_license)
+
+:line
+
+There have been ~56,000 downloads from this page and another ~387,000
+from the "LAMMPS download page"_https://www.lammps.org/download.html
+from Sept 2004 thru Dec 2020.
+
+:line
+
+:link(download)
+
+<FORM ACTION="/vhosts/www.cs/sjplimp/download.pl" METHOD=POST>
+
+[Molecular dynamics codes:] ("LAMMPS download
+page"_https://www.lammps.org/download.html)
+
+<INPUT TYPE="radio" NAME="choice" VALUE="PARADYN">
+"ParaDyn"_#pd --- embedded atom method (EAM) code, 390 Kb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="LJ">
+"Lennard-Jones"_#lj --- 3 LJ codes with different parallel algorithms, 47 Kb :b
+
+[Other software:]
+
+<INPUT TYPE="radio" NAME="choice" VALUE="SPARTA"> 
+"SPARTA"_sparta --- Direct Simulation Monte Carlo (DSMC) simulator,
+GPL license, 4.4 Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="SPPARKS">
+"SPPARKS"_spparks --- kinetic and Metropolis Monte Carlo simulator,
+GPL license, 3.5 Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="CHEMCELL"> 
+"ChemCell"_chemcell --- particle-based biological cell simulator, GPL
+license, 1.3 Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="MAPREDUCE">
+"Mapreduce-MPI"_mapreduce --- MapReduce-MPI library, modified BSD
+license, 1.8 Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="PHISH"> 
+"PHISH"_phish --- PHISH streaming library, modified BSD license, 1.3
+Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="CSLIB">
+"CSlib"_cslib --- CSlib client/server messaging library, modified BSD
+license, 1.0 Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="FFTMPI"> 
+"fftMPI"_fftmpi --- parallel 3d/2d complex FFT library, BSD license,
+0.9 Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="PIZZA"> "Pizza.py
+Toolkit"_pizza --- analysis/plotting/viz for
+"LAMMPS"_https://www.lammps.org, "ChemCell"_#chemcell,
+"SPPARKS"_#spparks, "SPARTA"_#sparta, GPL license, 1.6 Mb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="GUPS"> "HPCC
+RandomAccess"_#gups --- algorithm for "HPCC"_hpcc GUPS benchmark, 22
+Kb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="GENE">
+"Parallel GeneHunter"_#gene --- parallel genetic linkage analysis, 740 Kb :b
+
+<INPUT TYPE="radio" NAME="choice" VALUE="TXT2HTML">
+"txt2html"_#txt2html --- text file to HTML converter for \
+		     WWW pages and documentation, 19 Kb :b
+
+<P>
+
+<INPUT TYPE="radio" NAME="choice" VALUE="NONE" CHECKED="yes">
+No package :b
+
+<P> <INPUT TYPE="submit" VALUE="Download Now"> </FORM>
+
+:link(sparta,http://sparta.sandia.gov)
+:link(spparks,http://spparks.sandia.gov)
+:link(chemcell,http://chemcell.sandia.gov)
+:link(mapreduce,http://mapreduce.sandia.gov)
+:link(phish,http://www.sandia.gov/~sjplimp/phish.html)
+:link(cslib,http://cslib.sandia.gov)
+:link(fftmpi,http://fftmpi.sandia.gov)
+:link(fftold,algorithms.html#ffts)
+:link(pizza,http://pizza.sandia.gov)
+
+:line
+
+ParaDyn - embedded atom method (EAM) molecular dynamics :link(pd),h3
+
+ParaDyn is a parallel F77 code that implements all the features of the
+popular serial EAM code for metals and metal alloys known as DYNAMO.
+DYNAMO was written by two of the EAM originators, Stephen Foiles and
+Murray Daw.  ParaDyn's parallelism is based on the atom- and
+force-decomposition algorithms discussed on "this page"_md.html and in
+the 1993 MRS paper listed below.
+
+Nearly all of ParaDyn's functionality is now in "LAMMPS"_#lmp, which
+runs 2-4x faster than ParaDyn both on a single processor and in
+parallel.  This is due to force computations and neighbor list
+building being implemented in a different way.  So only download
+ParaDyn if you're sure it's what you want.
+
+"ParaDyn overview"_docs/paradyn/README.txt
+"ParaDyn documentation"_docs/paradyn/OVERVIEW.txt
+"Download menu"_#download (top of this page) :all(b)
+
+[Parallel Molecular Dynamics With the Embedded Atom Method],
+S. J. Plimpton and B. A. Hendrickson, in Materials Theory and
+Modelling, edited by J. Broughton, P. Bristowe, and J. Newsam, MRS
+Proceedings 291, Pittsburgh, PA, 1993, p 37.  ("abstract"_absPD)
+("postscript"_PSPD) ("ps.gz"_gzPD)
+
+:link(absPD,abstracts/mrs92.html)
+:link(PSPD,papers/mrs92.ps)
+:link(gzPD,papers/mrs92.ps.gz)
+
+:line
+
+Lennard-Jones molecular dynamics parallel algorithm codes :link(lj),h3
+
+These are 3 parallel Lennard-Jones codes discussed in the 1995 J Comp
+Phys paper listed below.  Each code performs the same computations,
+but implements either a atom-, force-, or spatial-decomposition
+algorithm.  The algorithms are discussed briefly on "this
+page"_md.html and fully in the paper.  These codes were written before
+MPI was around, so the codes have their own message-passing libraries
+with a wrapper on a vanilla MPI send and receive that was added later.
+
+"Documentation for LJ codes"_docs/lj/README.txt
+"Download menu"_#download (top of this page) :all(b)
+
+[Fast Parallel Algorithms for Short-Range Molecular Dynamics],
+S. J. Plimpton, J Comp Phys, 117, 1-19
+(1995). ("abstract"_absjcomps95) ("pdf"_PDFjcomps95) ("tar
+file"_tarjcomps95 of figures if they don't display correctly in the
+PDF file)
+
+:link(absjcomps95,abstracts/jcompphys95.html)
+:link(PDFjcomps95,papers/jcompphys95.pdf)
+:link(tarjcomps95,papers/jcompphys95_figs.tar.gz)
+
+:line
+
+HPCC RandomAccess (GUPS) Benchmark :link(gups),h3
+
+I wrote an optimized version of this "HPCC"_hpcc benchmark using a
+synchronous hypercube-style all2all algorithm.  It enables scalable
+GUPS performance on large numbers of processors.  The tar file
+includes files for a simple stand-alone code for quick testing, as
+well as modules that can be incorporated into the HPCC harness for
+running an official benchmark test.
+
+The algorithm is described briefly on "this page"_algorithms.html#gups
+and fully in this paper:
+
+[A Simple Synchronous Distributed-Memory Algorithm for the HPCC
+RandomAccess Benchmark], S. J. Plimpton, R. Brightwell, C. Vaughan,
+K. Underwood, M. Davis, Proc of Cluster 2006 - IEEE International Conf
+on Cluster Computing, Sept 2006. ("abstract"_abstracts/cluster06.html)
+("pdf"_docs/cluster06.pdf)
+
+"Download menu"_#download (top of this page) :all(b)
+
+:link(hpcc,http://icl.cs.utk.edu/hpcc/index.html)
+
+:line
+
+Parallel GeneHunter - genetic linkage analysis :link(gene),h3
+
+I worked with a UNM biology student, Gavin Conant, to parallelize the
+MIT WhiteHead Institue linkage analysis code GeneHunter.  "This
+page"_genehunter.html gives all the details as does the paper below.
+Gavin did the bulk of this work and supports the modified code.
+
+"Download menu"_#download (top of this page) :all(b)
+
+[Parallel Genehunter: Implementation of a Linkage Analysis Package for
+Distributed-Memory Architectures], G. C. Conant, S. J. Plimpton,
+W. Old, A.  Wagner, P. R. Fain, T. R. Pacheco, and G. Heffelfinger,
+Journal of Parallel and Distributed Computing, 63, 674-682
+(2003). ("abstract"_abs1) ("pdf"_pdf1) ("pdf.gz"_gz1)
+
+:link(abs1,abstracts/jpdc03.html)
+:link(pdf1,papers/jpdc03.pdf)
+:link(gz1,papers/jpdc03.pdf.gz)
+
+:line
+
+txt2html - text file to HTML converter for WWW pages and documentation
+:link(txt2html),h3
+
+This is a small C++ program (one file) that converts text files into
+HTML files.  The text files can contain simple a few simple formatting
+and markup commands that get converted into appropriate HTML syntax.
+
+I wrote this tool because I am more productive using a text editor
+(emacs) to write vanilla text than trying to write HTML or use a
+browser's WYSIWYG composer tool with an editor I don't like.  Anna
+Reese wrote the table capabilities in txt2html.
+
+All the WWW pages on "my site"_main.html and the "LAMMPS
+website"_https://www.lammps.org were converted to HTML via txt2html.
+As you view any of those pages, you can see what the underlying text
+file looks like, by changing the .html suffix of the URL you are
+browsing to .txt (not the same as viewing the source of the HTML
+file).  An example is given below.
+
+Curiously, looking at the .txt version of the page you are currently
+on (download.html), or the doc and example files for the txt2html
+itself, are not great examples of the simple syntax of .txt files that
+the tool recognizes.  This is because they have to contain a lot of
+native HTML to fool a browser into displaying HTML itself or
+displaying the download form up above.
+
+"Documentation for txt2html"_docs/txt2html/README.html
+"Examples of txt2html options"_docs/txt2html/example.html
+"Example of a text file before applying txt2html"_cluster.txt
+"Corresponding HTML page after applying txt2html"_cluster.html
+"Download menu"_#download (top of this page) :all(b)

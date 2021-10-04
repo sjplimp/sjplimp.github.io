@@ -1,0 +1,1822 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Ye Olde Quote Board :h3
+
+This is a running list of interesting quotations I've heard or read,
+which I originally kept on my office door.  Most are humorous, some
+are stupid, some are deep, some are Sandia-specific -- a small number
+are all of the above.
+
+:line
+
+[(366)]
+We are developing safe CRISPR-based technologies that send temporary
+reprogramming codes to your body that will inhibit virus infection. :b
+{-- Joe Schoeniger and Oscar Negrete on their Covid-19 work, Sandia} :b
+:p
+
+[(365)]
+If you think it's expensive to hire a professional to do the job, wait
+until you hire an amateur. :b
+{-- Red Adair, oil well firefighter} :b
+:p
+
+[(364)]
+The best dividends on the labor invested have invariably come from
+seeking more knowledge rather than more power. :b
+{-- Wright brothers, commenting on building the first flying machine, 
+or the first exascale computer} :b
+:p
+
+[(363)]
+There's a law about Moore's law.  The number of people predicting the
+death of Moore's law doubles every two years. :b
+{-- Peter Lee} :b
+:p
+
+[(362)]
+Mistakes are the portals of discovery. :b
+{-- James Joyce} :b
+:p
+
+[(361)] 
+Materials are like people - what makes them interesting are the
+defects they have. :b
+{-- Eduardo Bringa} :b
+:p
+
+[(360)] 
+Portable code is portable once it's been ported. :b
+{-- Richard Barrett} :b
+:p
+
+[(359)] 
+The most radical revolutionary will become a conservative on the day
+after the revolution. :b
+{-- Hannah Arendt} :b
+:p
+
+[(358)] 
+Always code as if the person who ends up maintaining your code is a
+violent psychopath who knows where you live. :b
+Corollary: I usually maintain my own code, so the as-if is true. :b
+{-- Martin Golding} :b
+:p
+
+[(357)] 
+SnapChat is the new FaceBook.  You take a picture of yourself doing
+something exciting, send it out to all your friends, they look at it,
+and then after 30 secs it vanishes from their screen, never to be seen
+again.  Then they do the same to you.  It's a bit like publishing in
+PRL, without all the hassle. :b
+{-- Aidan Thompson} :b
+:p
+
+[(356)] 
+If I have seen farther than others, it is because I was standing on
+the shoulders of giants. :b
+{-- Newton} :b
+If I have not seen as far as others, it is because giants were
+standing on my shoulders. :b
+{-- Hal Abelson} :b
+:p
+
+[(355)] 
+The quantum electronic structure prayer: :b
+Operator, can you help me. Help me if you please. Give me the right
+piece of code. And the number that I need. :b
+{-- Aidan Thompson, with apologies to the Grateful Dead} :b
+:p
+
+[(354)] 
+Linearity breeds contempt. :b
+{-- Peter Lax} :b
+:p
+
+[(353)] 
+One of the universal rules of happiness is: always be wary of any helpful
+item that weighs less than its operating manual. :b
+{-- Terry Pratchett} :b
+:p
+
+[(352)] 
+Give a man a program and you frustrate him for a day.  Teach him to program
+and you frustrate him for life. :b
+{-- Anonymous} :b
+:p
+
+[(351)] Premature optimization is not the root of {all} evil.  It pays
+to design scalability in from the start. :b
+{-- Daniel Laney} :b
+:p
+
+[(350)] It's easy to make a small fortune in high performance computing
+- start with a large one. :b
+{-- Unknown} :b
+:p
+
+[(349)] It's harder than you might think to squander millions of
+dollars, but a flawed software-development process is a tool well
+suited to the job. :b
+{-- Alan Cooper} :b
+:p
+
+[(348)] The better is the enemy of the good. :b
+{-- Voltaire (apparently a software developer)} :b
+:p
+
+[(347)] Sarah Palin knows more about energy than probably anyone
+else in the United States of America. :b
+{-- John McCain, 2008} :b
+Oil and coal? Of course, it's a fungible commodity and
+they don't flag, you know, the molecules, where it's going and where
+it's not. ... So, I believe that what Congress is going to do, also,
+is not to allow the export bans to such a degree that it's Americans
+that get stuck to holding the bag without the energy source that is
+produced here, pumped here. :b
+{ -- Sarah Palin (days later)} :b 
+:p
+
+[(346)] Fortran lives on not in spite of its limitations, but because
+of them. :b
+{-- Richard Barrett} :b
+:p
+
+[(345)] Badges must be removed from their case prior to swiping to
+enter into a turnstile or automatic gate.  This recurring task of
+swiping your badge and placing it back into its case prior to entering
+a turnstile could result in an injury. :b
+{-- Sandia bulletin} :b
+:p
+
+[(344)] Beauty is the first test: there is no permanent place in this
+world for ugly mathematics. :b
+{-- G. H. Hardy} :b
+:p
+
+[(343)] That's the great thing about algorithms.  As long as you are
+rigorous and precise, you can be as sloppy as you want. :b
+{-- Charles Leiserson} :b
+:p
+
+[(342)] It was almost mystical in scalability. :b
+{-- Rob Leland, on the Intel Tflops (ASCI Red) machine} :b
+:p
+
+[(341)] There are 1 kinds of people in the world, those who use
+C-style 0-based indexing and those who don't. :b
+{-- Unknown} :b
+:p
+
+[(340)] If I'm over the hill, why is it I don't recall ever being on
+top? :b
+{-- Jerry Muscha} :b
+:p
+
+[(339)] I guess I should warn you, if I turn out to be particularly
+clear, you've probably misunderstood what I've said. :b
+{-- Alan Greenspan} :b
+:p
+
+[(338)] One man alone can be pretty dumb sometimes, but for real bona
+fide stupidity, there ain't nothin' can beat teamwork. :b
+{-- Edward Abbey} :b
+:p
+
+[(337)] Those who can, do.  Those who can't, simulate. :b
+{-- Unknown} :b
+:p
+
+[(336)] Weaseling out of things is important to learn.  It's what
+separates us from the animals ... except the weasels. :b
+{-- Homer Simpson} :b
+:p
+
+[(335)] Give a man a compliment and you'll feed him for a day; teach a
+man how to fish for compliments and you'll feed his ego for life. :b
+{-- Unknown} :b
+:p
+
+[(334)] To succeed in the world it is not enough to be stupid, you
+must also be well-mannered. :b
+{-- Voltaire} :b
+:p
+
+[(333)] What kind of fish do you think Sandia is? :b
+{-- Discussion question from Advanced Concepts Group at Sandia} :b
+How about a flounder. :b
+{-- John Shadid} :b
+:p
+
+[(332)] If you put tomfoolery into a computer, nothing comes out but
+tomfoolery.  But this tomfoolery, having passed through a very
+expensive machine, is somehow ennobled and no one dares criticize
+it. :b
+{-- Pierre Gallois} :b
+:p
+
+[(331)] There's an old story about the person who wished his computer
+were as easy to use as his telephone. That wish has come true, since I
+no longer know how to use my telephone. :b
+{-- Bjarne Stroustrup} :b
+:p
+
+[(330)] Nothing shocks me. I'm a scientist. :b
+{-- Indiana Jones} :b
+:p
+
+[(329)] As we know, there are known knowns.  There are things we know
+we know.  We also know there are known unknowns.  That is to say, we
+know there are some things we do not know.  But there are also unknown
+unknowns, the ones we don't know. :b 
+{-- Donald Rumsfeld} :b
+:p
+
+[(328)] Our enemies are innovative and resourceful, and so are we.
+They never stop thinking about new ways to harm our country and
+our people, and neither do we. :b
+{-- George W. Bush} :b
+:p
+
+[(327)] The most incomprehensible thing about the world is that it is at all
+comprehensible. :b
+{-- Albert Einstein} :b
+:p
+
+[(326)] I believe that a scientist looking at nonscientific problems is
+just as dumb as the next guy. :b
+{-- Richard Feynman} :b
+:p
+
+[(325)] Be who you are and say what you feel, because those who mind
+don't matter and those who matter don't mind. :b
+{-- Dr. Seuss} :b
+:p
+
+[(324)] We've heard that a million monkeys at a million keyboards
+could produce the complete works of Shakespeare.  Now, thanks to the
+Internet, we know that is not true. :b
+{-- Robert Wilensky} :b
+:p
+
+[(323)] A paranoid is someone who knows a little of what's going on. :b
+{-- William Burroughs} :b
+:p
+
+[(322)] Politics is not the art of the possible. It consists in
+choosing between the disastrous and the unpalatable. :b
+{-- John Kenneth Galbraith} :b
+:p
+
+[(321)] Anything not worth doing is worth not doing well. :b
+{-- Elias Schwartz} :b
+:p
+
+[(320)] Experts inside and outside the US government agree that
+researchers at Los Alamos National Laboratory are not blowing up stuff
+often enough. :b
+{-- Science magazine} :b
+:p
+
+[(319)] The truth is more important than the facts. :b
+{-- Frank Lloyd Wright} :b
+:p
+
+[(318)] There are 10 kinds of people in the world.  Those who know binary
+and those who don't. :b
+{-- on a T-shirt} :b
+:p
+
+[(317)] In the 60s people took acid to make the world weird. Now the world is
+weird and people take Prozac to make it normal. :b
+{-- Unknown} :b
+:p
+
+[(316)] Nothing is impossible for the man who doesn't have to do it himself. :b
+{-- Weiler's Law} :b
+:p
+
+[(315)] Emacs is a nice OS, but to compete with Linux or Windows it needs a
+better text editor. :b
+{-- Alexander Duscheleit} :b
+:p
+
+[(314)] Did you know that if you play a Windows XP CD backwards, you will hear
+the voice of Satan? That's nothing! If you play it forward, it'll install
+Windows XP. :b
+{-- Unknown} :b
+:p
+
+[(313)] I think that gay marriage is something that should be between a man and a
+woman. :b
+{-- Arnold Schwarzenegger, in a radio interview} :b
+:p
+
+[(312)] Mathematicians are like Frenchmen: whatever you say to them they
+translate into their own language and forthwith it is something entirely
+different. :b
+{-- J. W. Goethe} :b
+:p
+
+[(311)] We are confronted with insurmountable opportunities. :b
+{-- Walt Kelly, Pogo} :b
+:p
+
+[(310)] Failure is not an option. It comes bundled with your software. :b
+{-- Unknown} :b
+:p
+
+[(309)] For every hour of brains, you will be charged three hours. The other two
+hours go to management and project management, which is to say they are wasted. :b
+{-- Robert Cringely} :b
+:p
+
+[(308)] Committee: A group of men who individually can do nothing but as a group
+decide that nothing can be done. :b
+{-- Fred Allen} :b
+:p
+
+[(307)] Debugging is at least twice as hard as writing the program in the first
+place. So if your code is as clever as you can possibly make it, then by
+definition you're not smart enough to debug it. :b
+{-- Brian Kernighan} :b
+:p
+
+[(306)] Hard work never killed anybody, but why take a chance? :b
+{-- Charlie McCarthy} :b
+:p
+
+[(305)] The difference between this company and the Titanic is that the Titanic
+had paying customers. :b
+{-- Unknown} :b
+:p
+
+[(304)] On two occasions I have been asked by members of Parliament, "Pray, Mr.
+Babbage, if you put into the machine wrong figures, will the right answers come
+out?" I am not able rightly to apprehend the kind of confusion of ideas that
+could provoke such a question. :b
+{-- Charles Babbage} :b
+:p
+
+[(303)] Never mistake motion for action. :b
+{-- Ernest Hemingway} :b
+:p
+
+[(302)] The need for accuracy must be weighed against the need for finality. :b
+{-- Supreme Court, ruling on the 2000 presidential election} :b
+:p
+
+[(301)] Power Corrupts. PowerPoint Corrupts Absolutely. :b
+{-- Unknown} :b
+:p
+
+[(300)] One of the criticisms that's been raised about PowerPoint is that it can
+give the illusion of coherence and content when there really isn't very much
+coherence or content. :b
+{-- Edward Miller} :b
+:p
+
+[(299)] It's the opinion of some that crops could be grown on the moon. Which
+raises the fear that it may not be long before we're paying somebody not to. :b
+{-- Franklin Jones} :b
+:p
+
+[(298)] Perpetual optimism is annoying. It's a sign that you are not paying
+attention. :b
+{-- Maureen Dowd} :b
+:p
+
+[(297)] Your manuscript is both good and original, but the part that is good is
+not original and the part that is original is not good. :b
+{-- Samuel Johnson} :b
+:p
+
+[(296)] The generation of random numbers is too important to be left to chance. :b
+{-- Robert Coveyou} :b
+:p
+
+[(295)] If I had 8 hours to chop down a tree, I'd spend 6 of them sharpening my
+axe. :b
+{-- Abraham Lincoln} :b
+:p
+
+[(294)] It takes 100s of years for deadwood to turn into mulch. :b
+{-- Anonymous} :b
+:p
+
+[(293)] If everything seems under control, you're just not going fast enough. :b
+{-- Mario Andretti} :b
+:p
+
+[(292)] No amount of genius can overcome a preoccupation with detail. :b
+{-- Levy} :b
+:p
+
+[(291)] They laughed at Einstein. They laughed at the Wright Brothers. But they
+also laughed at Bozo the Clown. :b
+{-- Carl Sagan} :b
+:p
+
+[(290)] Computer science is the discipline that believes all problems can be
+solved with one more layer of indirection. :b
+{-- Dennis DeBruler} :b
+:p
+
+[(289)] Earth first! We'll mine the other planets later. :b
+{-- Anonymous} :b
+:p
+
+[(288)] Brilliance is like four-wheel drive; it enables a person to get stuck in
+even more remote places. :b
+{-- Garrison Keillor} :b
+:p
+
+[(287)] I am guilty of the great crime of optimism. :b
+{-- Edward Teller, asked about Star Wars} :b
+:p
+
+[(286)] What is research but a blind date with knowledge? :b
+{-- Will Harvey} :b
+:p
+
+[(285)] If you don't know how to do something, you don't know how to do it with a
+computer. :b
+{-- Anonymous} :b
+:p
+
+[(284)] With the possible exception of veterans, farmers, and college students,
+there is no group that squeals more loudly over a reduction of federal
+subsidies than scientists. They are the quintessential special interest group,
+and in effect, they make the oil industry look like a piker. :b
+{-- OMB official} :b
+:p
+
+[(283)] DOE is updating a policy to prevent the unauthorized use of US nuclear
+weapons and explosives. :b
+{-- Tri-Valley Herald newspaper} :b
+:p
+
+[(282)] Being President is like running a cemetery. You've got a lot of people
+under you, but nobody's listening. :b
+{-- Bill Clinton} :b
+:p
+
+[(281)] A developer is someone who wants to build a house in the woods. An
+environmentalist is someone who already owns a house in the woods. :b
+{-- Dennis Miller} :b
+:p
+
+[(280)] Curiosity has its own reason for existence. One cannot help but be in awe
+when one contemplates the mysteries of eternity, of life, of the marvelous
+structure of reality. It is enough if one tries merely to comprehend a little
+of this mystery each day. :b
+{-- Albert Einstein} :b
+:p
+
+[(279)] We need to make the pie higher. :b
+{-- George W. Bush} :b
+:p
+
+[(278)] The trouble with doing something right the first time is that nobody
+appreciates how difficult it was. :b
+{-- Unknown} :b
+:p
+
+[(277)] Heuristic methods don't work ... if they did, they would be called
+algorithms. :b
+{-- Unknown} :b
+:p
+
+[(276)] If a pig loses its voice, is it disgruntled? :b
+{-- Unknown} :b
+:p
+
+[(275)] Success in life consists of going from one mistake to the next without
+losing enthusiasm. :b
+{-- Winston Churchill} :b
+:p
+
+[(274)] It takes a village to raise a child, but it takes a B-52 to raze a
+village. :b
+{-- Unknown} :b
+:p
+
+[(273)] To try to do something which is inherently impossible is always a
+corrupting enterprise. :b
+{-- Michael Oakshott} :b
+:p
+
+[(272)] If you live to be one hundred, you've got it made. Very few people die
+past that age. :b
+{-- George Burns} :b
+:p
+
+[(271)] Any sufficiently well-rigged demo is indistinguishable from advanced
+technology. :b
+{-- Unknown} :b
+:p
+
+[(270)] The trouble is, if any part of the DOE complex gets cancer, the whole
+complex gets chemotherapy. :b
+{-- Paul Robinson, Sandia president} :b
+:p
+
+[(269)] HPC is not leading edge anymore, it's lagging edge. :b
+{-- Bill Camp} :b
+:p
+
+[(268)] The pure and simple truth is rarely pure and never simple. :b
+{-- Oscar Wilde} :b
+:p
+
+[(267)] An expert is someone who doesn't know more than you, but uses vugraphs. :b
+{-- Unknown} :b
+:p
+
+[(266)] If I had enough time, I could write less. :b
+{-- Pascal} :b
+:p
+
+[(265)] If the brain were so simple we could understand it, we would be so simple
+we couldn't. :b
+{-- Lyall Watson} :b
+:p
+
+[(264)] Man is the best computer we can put aboard a spacecraft. And the only one
+that can be mass-produced with unskilled labor. :b
+{-- Wernher von Braun} :b
+:p
+
+[(263)] The sysadmin uncertainty principle: If you have a question the sysadmins
+can answer, they won't be in their office. If they can't answer it, they'll be
+there. :b
+{-- Anonymous} :b
+:p
+
+[(262)] Computers make it easier to do a lot of things, but most of the things
+they make it easier to do don't need to be done. :b
+{-- Andy Rooney} :b
+:p
+
+[(261)] A grain of wisdom is worth an ounce of knowledge, which is worth a ton of
+data. :b
+{-- Neil Larson} :b
+:p
+
+[(260)] When dealing with management, you have to boxcar average over your boss's
+temporal interest fluctations. :b
+{-- Carl Sovinec} :b
+:p
+
+[(259)] Always tell the truth. That way, you don't have to remember what you
+said. :b
+{-- Mark Twain} :b
+:p
+
+[(258)] The intelligence of any discussion diminishes with the square of the
+number of participants. :b
+{-- Adam Walinsky} :b
+And exponentially with the size of the bureaucracy. :b
+{-- Sandia amendment} :b
+:p
+
+[(257)] To be a programmer is to develop a carefully managed relationship with
+error. There's no getting around it. You either make your accomodations with
+failure, or the work will become intolerable. :b
+{-- Ellen Ullman} :b
+:p
+
+[(256)] I don't suffer from insanity, I enjoy every minute of it! :b
+{-- Button} :b
+:p
+
+[(255)] Never be afraid to try something new. Remember, amateurs built the ark;
+professionals built the Titanic. :b
+{-- Unknown} :b
+:p
+
+[(254)] The purpose of most computer languages is to lengthen your resume by a
+word and a comma. :b
+{-- Larry Wall} :b
+:p
+
+[(253)] Psychotics are consistently inconsistent. The essence of sanity is to be
+inconsistently inconsistent. :b
+{-- Larry Wall} :b
+:p
+
+[(252)] New DOE policy: Scientists at the nation's nuclear weapons laboratories
+must report any romantic liaison with a foreigner, unless it's a one-night
+stand. :b
+{-- Washington Post} :b
+:p
+
+[(251)] One of the symptoms of an approaching nervous breakdown is the belief
+that one's work is terribly important. :b
+{-- Bertrand Russell} :b
+:p
+
+[(250)] Never attribute to malice that which can be adequately explained by
+stupidity. :b
+{-- Robert Heinlein} :b
+:p
+
+[(249)] The nuclear weapons complex needs to be rescued from the Energy
+Department. :b
+{-- Senator Shelby} :b
+:p
+
+[(248)] Forty is the old age of youth; fifty is the youth of old age. :b
+{-- Victor Hugo} :b
+:p
+
+[(247)] They call the CPlant machine Alaska because it's big, sparsely populated,
+and lacks infrastructure. :b
+{-- Kent Budge} :b
+:p
+
+[(246)] If Bill Gates had a nickel for every time Windows crashed, he'd be a
+billionaire. :b
+{-- Unknown} :b
+:p
+
+[(245)] The paperless office will happen soon after the paperless toilet. :b
+{-- Unknown} :b
+:p
+
+[(244)] The statistics on sanity are that one out of every four Americans is
+suffering from some form of mental illness. Think of your three best friends.
+If they're okay, then it's you. :b
+{-- Rita Mae Brown} :b
+:p
+
+[(243)] Basic research is like shooting an arrow into the air and where it lands,
+painting a target. :b
+{-- Homer Adkins} :b
+:p
+
+[(242)] Development is when you know the answer, but not how to get there.
+Applied research is when you know the question, but not the answer. Pure
+research is when you don't know the question. :b
+{-- Nick MacLaren} :b
+:p
+
+[(241)] How could this be a problem in a country where we have Intel and
+Microsoft. :b
+{-- Al Gore, on the Y2K problem} :b
+:p
+
+[(240)] Truth is stranger than fiction, because fiction has to make sense. :b
+{-- Unknown} :b
+:p
+
+[(239)] Always forgive your enemies, but never forget their names. :b
+{-- John F. Kennedy} :b
+:p
+
+[(238)] Farming looks easy when your plow is a pencil and you're a 1000 miles
+from a corn field. :b
+{-- Dwight Eisenhower} :b
+:p
+
+[(237)] The greatest lesson in life is to know that even fools are right
+sometimes. :b
+{-- Winston Churchill} :b
+:p
+
+[(236)] Never insult an alligator until after you have crossed the river. :b
+{-- Cordell Hull} :b
+:p
+
+[(235)] Football combines two of the worst things about American life. It is
+violence punctuated by committee meetings. :b
+{-- George Will} :b
+:p
+
+[(234)] Americans will always do the right thing ... after they have exhausted
+all the other possibilities. :b
+{-- Winston Churchill} :b
+:p
+
+[(233)] No good deed goes unpunished. :b
+{-- Clare Booth Luce} :b
+:p
+
+[(232)] Do not look directly into laser beam with remaining eye. :b
+{-- sign in Sandia lab} :b
+:p
+
+[(231)] I'll do business with anyone, but I'll only go sailing with gentlemen. :b
+{-- J. P. Morgan} :b
+:p
+
+[(230)] You should never settle for the lesser of two weasels. :b
+{-- Dilbert} :b
+:p
+
+[(229)] The search was like listening for a gnat's whisper in a hurricane. :b
+{-- Frederick Reines, discoverer of the neutrino} :b
+:p
+
+[(228)] The EPA thinks it's better to pound on the wrong nail than not to pound
+at all. :b
+{-- Commentary on EPA radon rulings} :b
+:p
+
+[(227)] It is pretty hard to talk about responsibility unless you have exercised
+it yourself. :b
+{-- Bill Clinton, 1987.} :b
+:p
+
+[(226)] Nearly all men can stand adversity, but if you want to test a man's
+character, give him power. :b
+{-- Abraham Lincoln} :b
+:p
+
+[(225)] In the fight between you and the world, back the world. :b
+{-- Franz Kafka} :b
+:p
+
+[(224)] The most serious idleness is to be busy about things that do not matter. :b
+{-- Chinese proverb} :b
+:p
+
+[(223)] There is nothing so useless as doing efficiently that which should not be
+done at all. :b
+{-- Peter Drucker} :b
+:p
+
+[(222)] If you see a snake do not approach it. Sandia is negotiating a contract
+for snake pick-up. :b
+{-- Porcelain Press} :b
+:p
+
+[(221)] No science is immune to the infection of politics and the corruption of
+power. :b
+{-- Jacob Bronowski} :b
+:p
+
+[(220)] We can imagine scientific users with thoughtful looks on their faces,
+surrounded by their data as they wander through their offices and hallways,
+talking to the applications, listening to the results, and drawing on the
+walls. :b
+{-- Turner Whitted of Microsoft, on un-tethering graphics from the desktop} :b
+:p
+
+[(219)] Physics isn't a religion. If it were, we'd have a much easier time
+raising money. :b
+{-- Leon Lederman} :b
+:p
+
+[(218)] Pick battles big enough to matter, small enough to win. :b
+{-- Jonathan Kozol} :b
+:p
+
+[(217)] In mythology, Janus = the two-faced God of Gateways. :b
+{-- Al Hurd (Janus is the name of Sandia's Intel TFLOPS supercomputer)} :b
+:p
+
+[(216)] Computers are useless. They can only give you answers. :b
+{-- Pablo Picasso} :b
+:p
+
+[(215)] By the time you kill and mount what you catch, it has lost that very
+thing that made it worth having. I knew this only as a vague sense of
+disappointment at age 10; not until later did I recognize it as a metaphor for
+much of life. :b
+{-- Anna Quindlen, on collecting butterflies} :b
+:p
+
+[(214)] The hallmark of science is an experiment that can be repeated. The
+hallmark of psuedo-science is a headline that can be repeated. :b
+{-- The Economist} :b
+:p
+
+[(213)] Originality is the fine art of remembering what you hear but forgetting
+where you heard it. :b
+{-- Lawrence Peter} :b
+:p
+
+[(212)] One World, One Web, One Program. :b
+{-- Microsoft Promotional} :b 
+Ein Volk, Ein Reich, Ein Fuhrer. :b
+{-- Adolf Hitler} :b
+:p
+
+[(211)] Windows 98 (n): 32-bit extensions and a graphical shell for a 16-bit
+patch to an 8-bit operating system originally coded for a 4-bit microprocessor,
+written by a 2-bit company that can't stand for 1 bit of competition. :b
+{-- Stan Brown} :b
+:p
+
+[(210)] If you want ASCI funding, you have to go to Washington and kiss Gil
+Weigand's ASCI ring. :b
+{-- Anonymous} :b
+:p
+
+[(209)] I don't see Merced appearing on a mainstream desktop inside of a decade. :b
+{-- Andy Grove, Intel} :b
+:p
+
+[(208)] The enormous volumes that Intel can generate with Merced will drive the
+current RISC microprocessors off the desktops over the next 5 years. :b
+{-- Larry Smarr, NCSA} :b
+:p
+
+[(207)] If it's not on the Web, it's not worth knowing. :b
+{-- Steve Attaway} :b
+:p
+
+[(206)] A lot of people in physics are solving problems that don't need to be
+solved. :b
+{-- Steve Wolfram} :b
+:p
+
+[(205)] As far as the laws of mathematics refer to reality, they are not certain;
+and as far as they are certain, they do not refer to reality. :b
+{-- Albert Einstein} :b
+:p
+
+[(204)] Internet gambling is the same as my last career, except the folks I work
+with now are less sleazy. :b
+{-- Jay Cohen, former stock trader} :b
+:p
+
+[(203)] Gambling is the future of the Internet; you can only look at so many
+dirty pictures. :b
+{-- Simon Noble, Intertops bookmaking} :b
+:p
+
+[(202)] It's based on science, so it's pretty accurate. :b
+{-- Sandia spokesman Chris Miller on dinosaur noise simulations} :b
+:p
+
+[(201)] I like to keep an open mind, but not so open my brains fall out. :b
+{-- Arthur Sulzberger, NY Times chairman} :b
+:p
+
+[(200)] Knowledge grows linearly, ignorance exponentially. :b
+{-- Malthus Law of Research} :b
+:p
+
+[(199)] Boxing is like ballet, except there's no dancing, no choreography, and
+the dancers hit each other. :b
+{-- Unknown} :b
+:p
+
+[(198)] JAVA - write once, debug everywhere. :b
+{-- Unknown} :b
+:p
+
+[(197)] The one serious conviction that a man should have is that nothing is to
+be taken too seriously. :b
+{-- Samuel Butler} :b
+:p
+
+[(196)] Complexity is not a goal. I don't want to be remembered as an engineer of
+complex systems. :b
+{-- David Parnas} :b
+:p
+
+[(195)] Increasingly, people seem to misinterpret complexity as sophistication,
+which is baffling; the incomprehensible should cause suspicion rather than
+admiration. :b
+{-- Niklaus Wirth} :b
+:p
+
+[(194)] Even though this concept is implausible, the potential implications are
+enormous. Can we not afford to invest a small amount in pursuit of this
+question? :b
+{-- NIH Office of Alternative Medicine, in Nature, defending research into
+homeopathic claims that biological information can be stored in water} :b
+:p
+
+[(193)] You must be willing to bet your paycheck on a simulation. :b
+{-- Russ Skocypek (since moved to new job) on ASCI fire simulations, in Science News} :b
+:p
+
+[(192)] The chief source of problems is solutions. :b
+{-- Eric Sevareid} :b
+:p
+
+[(191)] In science, if the last 50 years were the age of physics, the next 50
+years will be the age of biology. :b
+{-- Bill Clinton} :b
+:p
+
+[(190)] Some problems don't go away until people retire. :b
+{-- Dan Hitchcock, DOE} :b
+:p
+
+[(189)] I love deadlines. I like the whooshing sound they make as they fly by. :b
+{-- Douglas Adams} :b
+:p
+
+[(188)] I can only please one person per day. Today is not your day. Tomorrow
+isn't looking good either. :b
+{-- Dave Morse} :b
+:p
+
+[(187)] If it doesn't have a badge, kill it. :b
+{-- Lucille Verdugo} :b
+:p
+
+[(186)] Ride the synergy. :b
+{-- David Greenberg, on Cplant.} :b
+:p
+
+[(185)] At Sandia we promise the world -- and deliver the 3rd world. :b
+{-- Sandia manager} :b
+:p
+
+[(184)] Any clod can have the facts, but having opinions is an art. :b
+{-- Charles McCabe, SF Chronicle} :b
+:p
+
+[(183)] If at first you don't succeed, skydiving's not for you. :b
+{-- Unknown} :b
+:p
+
+[(182)] If you want to know what God thinks about money, just look at the people
+He gives it to. :b
+{-- Old Irish saying} :b
+:p
+
+[(181)] You can't get to overexposed, without going thru filthy rich first. :b
+{-- Scott Adams} :b
+:p
+
+[(180)] An application area does not become devoid of intellectual challenge
+simply because someone can make money from it. :b
+{-- IBM manager} :b
+:p
+
+[(179)] Science is a wonderful thing, if one does not have to earn a living at
+it. :b
+{-- Albert Einstein} :b
+:p
+
+[(178)] ASCI is a Ponzi scheme. :b
+{-- Gerry Yonas} :b
+:p
+
+[(177)] Reaching a teraflop is the single biggest computer science achievement in
+two decades. Ten years ago, the most credible leaders in computing said it was
+not possible. :b
+{-- Gil Weigand} :b
+:p
+
+[(176)] If men can run the world, why can't they stop wearing neckties? How
+intelligent is it to start every day by tying a little noose around your neck? :b
+{-- Linda Ellerbee} :b
+:p
+
+[(175)] There are 3 kinds of mathematicians -- those who can count and those who
+can't. :b
+{-- Unknown} :b
+:p
+
+[(174)] It's not whether you win or lose, it's how you place the blame. :b
+{-- Sandia motto} :b
+:p
+
+[(173)] When C++ is your hammer, every problem looks like your thumb. :b
+{-- Preston Briggs} :b
+:p
+
+[(172)] If you've been pounding nails with your forehead for years, it may feel
+strange the first time someone hands you a hammer. But that doesn't mean that
+you should strap the hammer to a headband just to give your skull that old
+familiar jolt. :b
+{-- Off the Internet} :b
+:p
+
+[(171)] The more I watch television, the more I wonder why I'm not already
+Supreme ruler of Earth. :b
+{-- Dogbert} :b
+:p
+
+[(170)] If storms are caused by the flapping of butterfly wings as chaos theory
+suggests, maybe we can eliminate hurricanes by killing all butterflies. :b
+{-- Robert Park, APS What's New} :b
+:p
+
+[(169)] What happens if the mean-time to failure for nodes on the Tflops machine
+is shorter than the boot time? :b
+{-- Courtenay Vaughan} :b
+:p
+
+[(168)] As for the people who think that Java applets will replace real software,
+you have to wonder what they're smoking. :b
+{-- John Dvorak, PC Week} :b
+:p
+
+[(167)] The stock market goes nuts over any company that so much as mentions the
+word Internet. All this proves to me is that the boneheads on Wall Street are
+as dumb as they were in college when they had to switch their majors to
+business to keep from flunking out. :b
+{-- John Dvorak, PC Week} :b
+:p
+
+[(166)] TV is passive; computers are active. TV is just a really, really good
+screensaver. :b
+{-- Bill Machrone, PC Week} :b
+:p
+
+[(165)] If time means nothing to you, then surf the Web. :b
+{-- John Dvorak, PC Week} :b
+:p
+
+[(164)] Imagine having your hand impaled on a sharp hook and then having your
+entire body lifted up into an atmosphere where you can't breathe! That's
+fishing. :b
+{-- spokeswoman for PETA (People for Equal Treatment of Animals)} :b
+
+Fishing? Sounds like a typical staff meeting around here. :b
+{-- Anonymous} :b
+:p
+
+[(163)] Three stages of truth for scientists:
+(1) It's not true.
+(2) If it is true, it's not very important.
+(3) We knew it all along. :b
+{-- Leo Szilard} :b
+:p
+
+[(162)] In science it is not enough to think of an important problem on which to
+work. It is also necessary to know the means which could be used to investigate
+the problem. :b
+{-- Leo Szilard} :b
+:p
+
+[(161)] With the crummy raises Sandia's giving, it's getting hard to steal enough
+office equipment to keep up with inflation. :b
+{-- Carl Diegert} :b
+:p
+
+[(160)] Sometimes I feel like I'd have a lot more fun if I didn't have a
+conscience. :b
+{-- Karen Devine} :b
+:p
+
+[(159)] When you are thinking about something you don't understand you have a
+terrible, uncomfortable feeling called confusion. The confusion is, because we
+are all some kind of apes that are kind of stupid trying to figure out how to
+put two sticks together to reach the banana, and we can't quite make it. So I
+always feel stupid. Once in a while, I put the two sticks together, and I reach
+the banana. :b
+{-- Richard Feynman} :b
+:p
+
+[(158)] Many young people simply do not want to work in the area of nuclear
+weapons; they prefer to direct their talents to careers in environmental or
+energy R&D. With a few years experience and a more seasoned perspective, they
+are often eager to contribute their talents to national security programs. :b
+{-- Al Narath, Sandia president} :b
+:p
+
+[(157)] A concensus means that everyone agrees to say collectively what no one
+believes individually. :b
+{-- Abba Eban} :b
+:p
+
+[(156)] The trouble with the rat race is that even if you win you're still a rat. :b
+{-- Lily Tomlin} :b
+:p
+
+[(155)] The right to be heard does not include the right to be taken seriously. :b
+{-- Hubert Humphrey} :b
+:p
+
+[(154)] Like disco dancing, pet rocks, and mood rings, the Department of Energy's
+time has come and gone. :b
+{-- Rep Todd Tiahrt, House Republican} :b
+:p
+
+[(153)] Prostitutes are also customer-focused and market-driven. :b
+{-- Kevin McCurley} :b
+:p
+
+[(152)] We stand at a crossroads. One path leads to despair, the other to
+destruction. Let's hope we make the right choice. :b
+{-- Woody Allen} :b
+:p
+
+[(151)] If DOE becomes part of DOD, then WFO will become WFM = Work for Mother.
+Mother = Military Officials That Hire Energy Researchers. :b
+{-- Gerry Yonas} :b
+:p
+
+[(150)] Enjoy everything in moderation, but don't overdo it. :b
+{-- Anonymous} :b
+:p
+
+[(149)] If you have a Y-chromosome and a PhD, you could be Dr. December. :b
+{-- Solicitation to male scientists for the Studmuffins of Science calendar} :b
+:p
+
+[(148)] The role of the experimentalist is to perform crude analog simulations of
+theoretical predictions. :b
+{-- Frank Stillinger} :b
+:p
+
+[(147)] It may be possible to wipe out the entire budget on this project without
+doing any technical work whatsoever. :b
+{-- Bob Benner} :b
+:p
+
+[(146)] To do is to be. :b
+{-- Kant} :b
+To be is to do. :b
+{-- Rousseau} :b
+Do be do be do. :b
+{-- Sinatra} :b
+:p
+
+[(145)] Managers used to spend half their time doing research. Now they don't do
+anything. :b
+{-- Sudip Dosanjh} :b
+:p
+
+[(144)] After being referred to as the father of the multi-computer, I will be
+very pleased to contribute to its demise. :b
+{-- Chuck Seitz} :b
+:p
+
+[(143)] What's the difference between a computer salesman and a used-car
+salesman? The used-car salesman knows when he's lying. :b
+{-- Anonymous} :b
+:p
+
+[(142)] In the past, it was the science and engineering markets that really
+pushed us. Now, more often than not, it's the entertainment community, and the
+scientists and engineers are benefiting from the advances. :b
+{-- Greg Estes, SGI} :b
+:p
+
+[(141)] What is the world's fastest computer and how fast is it? Currently, it's
+an HP notebook. It's used on the Space Shuttle to compute orbital position and
+has been clocked at 17,500 mph. :b
+{-- Robert Hyatt} :b
+:p
+
+[(140)] Politics is not a bad profession. If you succeed there are many rewards.
+If you disgrace yourself, you can always write a book. :b
+{-- Ronald Reagan} :b
+:p
+
+[(139)] Virtual reality currently has an extremely high talk-to-work ratio. :b
+{-- 1994 National Research Council report} :b
+:p
+
+[(138)] Heisenberg Certainty Principle for the US Congress: If your position is
+everywhere, your momentum is zero. :b
+{-- William Lipscomb, Nobel laureate} :b
+:p
+
+[(137)] What programs can we eliminate? Maybe the DoE. I don't see any useful
+purpose it serves. :b
+{-- Bob Dole, Senate majority leader} :b
+:p
+
+[(136)] Instead of putting one man on the moon, we should aim to put every child
+on the Internet by the age of 10. :b
+{-- Ed McCracken, CEO of SGI} :b
+:p
+
+[(135)] Those who agree with us may not be right, but we admire their astuteness. :b
+{-- Cullen Hightower} :b
+:p
+
+[(134)] What the world really needs is more love and less paperwork. :b
+{-- Pearl Bailey} :b
+:p
+
+[(133)] The underlying physical laws necessary for the mathematical theory of a
+large part of physics and the whole of chemistry are thus completely known, and
+the difficulty is only that the exact solution of these laws leads to equations
+much too complicated to be soluble. :b
+{-- Dirac, 1929} :b
+:p
+
+[(132)] The more original a discovery, the more obvious it seems afterwords. :b
+{-- Arthur Koestler} :b
+:p
+
+[(131)] There are 2 kinds of people, those who do the work and those who take the
+credit. Try to be in the first group; there is less competition there. :b
+{-- Indira Gandhi} :b
+:p
+
+[(130)] Percentage of Canadians who say they approve of the information
+superhighway: 63% Percentage of Canadians who say they know what the
+information superhighway is: 54% :b
+{-- PC Magazine} :b
+:p
+
+[(129)] Computer scientists are smarter than mathematicians. It took computer
+scientists only 30 years to do what it took mathematicians 300 years to do.
+Become irrelevant. :b
+{-- David Kuck} :b
+:p
+
+[(128)] The secret of managing is to keep the guys who hate you away from the
+guys who are undecided. :b
+{-- Casey Stengel} :b
+:p
+
+[(127)] We're all crash-test dummies on the information superhighway. :b
+{-- Unknown} :b
+:p
+
+[(126)] The information superhighway? That sounds like a place that's long and
+boring and kills 50,000 people a year. :b
+{-- Dick Cavett} :b
+:p
+
+[(125)] Hype is the fast lane of the information superhighway. :b
+{-- Unknown} :b
+:p
+
+[(124)] The Paragon turned my code to roadkill on the information superhighway. :b
+{-- Universal sentiment} :b
+:p
+
+[(123)] For a research worker, the unforgotten moments of his life are those rare
+ones, which come after years of plodding work, when the veil over nature's
+secret seems suddenly to lift and when what was dark and chaotic appears in a
+clear and beautiful light and pattern. :b
+{-- Gerty Cori} :b
+:p
+
+[(122)] I'm undergoing an ethical realignment of my value system. :b
+{-- Anonymous commentary on the Gordon Bell process} :b
+:p
+
+[(121)] The only genuinely objective benchmark is the one left on a person's
+trousers when they sit on a bench that has just been painted. :b
+{-- HPC Wire} :b
+:p
+
+[(120)] The juvenile sea squirt wanders through the sea searching for a suitable
+rock or hunk of coral to cling to and make its home for life. For this task it
+has a rudimentary nervous system. When it finds a spot and takes root, it
+doesn't need its brain anymore so it eats it. It's rather like getting tenure
+(or becoming a manager). :b
+{-- Rodolfo Llinas} :b
+:p
+
+[(119)] C++ is a lot like teenage sex. Everyone's talking about it; no one is
+doing it. :b
+{-- Unknown} :b
+:p
+
+[(118)] Forget UNIX - it will be gone in 5 years. :b
+{-- Tom Jermoluk, president of SGI} :b
+:p
+
+[(117)] My feeling is that every town that has cable TV is going to have a
+supercomputer. We have the chance to be the 1st country that has truly scalable
+computing that is available to everyone just the way you plug your hairdryer
+into the wall. :b
+{-- Larry Smarr} :b
+:p
+
+[(116)] There is no way to educate the rest of Sandia. You can only take over
+their work. :b
+{-- Kevin McCurley} :b
+:p
+
+[(115)] More $ is not the only source of job satisfaction. :b
+{-- Bruce Hendrickson} :b
+Must be a CS guy. :b
+{ -- Bill Camp} :b
+There's a donor. :b
+{-- Ed Barsis} :b
+:p
+
+[(114)] Ethically speaking, no one around here is lily-white. At least none of
+the managers are. :b
+{-- Ed Barsis} :b
+:p
+
+[(113)] I don't understand computers. I don't even understand people who
+understand computers. :b
+{-- Queen Juliana of the Netherlands} :b
+:p
+
+[(112)] We think the gigaflop workstation will have perhaps a 1000 times more
+impact on society than the teraflop supercomputer. :b
+{-- Ed McCracken, CEO of SGI} :b
+:p
+
+[(111)] Think of the tremendous human tragedy of time and energy a lot of
+scientists have lost trying to use MP machines. :b
+{-- Henry Burkhardt, deposed CEO of KSR} :b
+:p
+
+[(110)] The sum of the intelligence on the planet is a constant; the population
+is growing. :b
+{-- Cole} :b
+:p
+
+[(109)] The farther away the future is, the better it looks. :b
+{-- Finnigan} :b
+:p
+
+[(108)] Nothing is impossible for people who don't have to do it themselves. :b
+{-- Weiler} :b
+:p
+
+[(107)] SUNMOS and C++ are the answer. Now what was the question? :b
+{-- John Shadid} :b
+:p
+
+[(106)] It's impossible to make anything foolproof, because fools are so
+ingenious. :b
+{-- Unknown} :b
+:p
+
+[(105)] For every vision there is an equal and opposite revision. :b
+{-- Thal} :b
+:p
+
+[(104)] Never confuse hard work with hard thinking. :b
+{-- Jim Watson} :b
+:p
+
+[(103)] Fortran is the language used for what God intended computers to do. :b
+{-- Alan Laub, professor at UCSB} :b
+:p
+
+[(102)] Fortran is like Latin. There's a lot of it laying around, but it's a dead
+language. :b
+{-- Dexter Senft, financial guru at Shearson-Lehman} :b
+:p
+
+[(101)] If you can distinguish between good advice and bad advice, then you don't
+need advice. :b
+{-- Van Roy} :b
+:p
+
+[(100)] Tie-in is a virtual concept. :b
+{-- Bill Camp} :b
+:p
+
+[(99)] Wisdom consists of knowing when to avoid perfection. :b
+{-- Horowitz} :b
+:p
+
+[(98)] The biggest impediment to making decisions is too much knowledge. :b
+{-- Bill Camp} :b
+:p
+
+[(97)] The Paragon OSF Unix operating system slays a dragon that has plagued the
+entire parallel computing industry --- the lack of a fully scalable, industry-
+standard OS. :b
+{-- Intel press release} :b
+:p
+
+[(96)] If I see Danny Hillis quoted as an expert on MPP one more time, I'm going
+to puke. :b
+{-- Larry Ellison, Oracle} :b
+:p
+
+[(95)] Message-passing will become the minority way of doing things. :b
+{-- Steve Wallach, Convex} :b
+:p
+
+[(94)] Technology is dominated by two types of people: those who understand what
+they don't manage, and those who manage what they don't understand. :b
+{-- Unknown} :b
+:p
+
+[(93)] The length of a progress report is inversely proportional to the amount of
+progress. :b
+{-- Unknown} :b
+:p
+
+[(92)] There are numerous reasons why a global warming CRADA on cow flatulence is
+appropriate for the tech-transfer funding process. :b
+{-- Kevin McCurley} :b
+:p
+
+[(91)] PAP = Peak Advertised Performance :b
+SAP = System Advertised Price :b
+as in "Only a sap would pay the SAP for a machine with that PAP." :b
+{-- Jack Worlton} :b
+:p
+
+[(90)] An ounce of image is worth a pound of performance. :b
+{-- Unknown} :b
+:p
+
+[(89)] Definition of a paradigm -- shift happens. :b
+{-- Allain Rossman} :b
+:p
+
+[(88)] Most Sandians realized there would be pain and this is compatible with
+that expectation. :b
+{-- Pace Vandevender, on the DOE salary freeze} :b
+:p
+
+[(87)] Experts and their forecasts: from The Experts Speak :b
+Heavier-than-air flying machines are impossible. :b
+{-- Lord Kelvin, 1895} :b
+There is not the slightest indication that nuclear energy will ever be
+obtainable. :b
+{ -- Albert Einstein, 1932} :b
+I think there is a world market for about four or five electronic computers. :b
+{-- Thomas Watson, IBM, 1943} :b
+There is no reason for an individual to have a computer in their home. :b
+{-- Ken Olsen, DEC, 1977} :b
+I think funding for the national labs should increase. :b
+{-- Bill Clinton at Sandia during the `92 campaign} :b
+:p
+
+[(86)] People will occasionally stumble over the truth, but most of the time they
+will pick themselves up and continue on. :b
+{-- Churchill} :b
+:p
+
+[(85)] If an idea can survive a bureaucratic review and be implemented, it wasn't
+worth doing. :b
+{-- Mollison} :b
+:p
+
+[(84)] Message-passing Fortran is the assembly language of high performance
+computing. People who program in it once, don't want to do it again. :b
+{-- Ken Kennedy, Fortran D guru} :b
+:p
+
+[(83)] Every fool can ask a question (about prime numbers), that the wisest man
+cannot answer. :b
+{-- Hardy} :b
+:p
+
+[(82)] If you're not pissing somebody off, you're not doing your job. :b
+{-- Bill Camp} :b
+:p
+
+[(81)] The practical scientist is trying to solve tomorrow's problem on
+yesterday's computer. Computer scientists often have it the other way around. :b
+{-- Numerical Recipes, C Edition} :b
+:p
+
+[(80)] All you need to be a manager are good English skills and a liking for
+science fiction. :b
+{-- Bill Camp} :b
+:p
+
+[(79)] UNIX is a command-line driven OS that only nerds could love. :b
+{-- PC Magazine} :b
+:p
+
+[(78)] UNIX folks can't market their way out of a paper bag. :b
+{-- PC Magazine} :b
+:p
+
+[(77)] There are 3 rules to follow when parallelizing large
+codes. Unfortunately, no one knows what these rules are. :b
+{ -- W. Somerset Maugham and Gary Montry} :b
+:p
+
+[(76)] Six Phases of a Project: :b
+(a) Enthusiasm :b
+(b) Disillusionment :b
+(c) Panic :b
+(d) Search for the guilty :b
+(e) Punishment of the innocent :b
+(f) Praise and honor for the non-participants. :b
+{-- Karla Jennings} :b
+:p
+
+[(75)] One of the worst sins you can commit around here is to believe your own
+baloney. :b
+{-- a Congressman, at the space station hearings} :b
+:p
+
+[(74)] Life is tough. It's tougher if you're stupid. :b
+{-- a John Wayne character} :b
+:p
+
+[(73)] We talk to scientists who insist the president-elect should accord science
+and technology issues top priority. It's like talking to mental patients - you
+have to look like you take them seriously. :b
+{-- Member of Clinton administration} :b
+:p
+
+[(72)] I'd love to be the lab that screwed NSA. :b
+{-- Anonymous Sandian} :b
+:p
+
+[(71)] The trouble with the gene pool is that there's no lifeguard. :b
+{-- Baldwin} :b
+:p
+
+[(70)] In theory, there is no difference between theory and practice. But in
+practice, there is. :b
+{-- Anonymous computer scientist} :b
+:p
+
+[(69)] Don't decide what it's like to be a manager by watching Ernie. :b
+{-- Sudip Dosanjh} :b
+:p
+
+[(68)] God is smooth. :b
+{-- Bill Camp, discussing PDEs} :b
+:p
+
+[(67)] Management took the ball and ran with it before it was fully inflated. The
+ball that is. :b
+{-- Bruce Hendrickson, on his research results} :b
+:p
+
+[(66)] The Intel Paragon - a one-and-a-half dimensional mesh. :b
+{-- Steve Plimpton} :b
+:p
+
+[(65)] Computer scientists are the historians of computing. :b
+{-- Gordon Bell} :b
+:p
+
+[(64)] Without the vector units, the CM-5 is a well-balanced machine. :b
+{-- TMC employee} :b
+:p
+
+[(63)] I think I might believe what I just said. :b
+{-- Bill Camp} :b
+:p
+
+[(62)] An expert is a person who avoids the small errors as he sweeps on to the
+grand fallacy. :b
+{-- Stolberg} :b
+:p
+
+[(61)] I don't mind your thinking slowly; I mind your publishing faster than you
+think. :b
+{-- Pauli} :b
+:p
+
+[(60)] We tend to meet every situation in life by reorganizing, and a wonderful
+method it can be for creating the illusion of progress while producing
+confusion, inefficiency, and demoralization. :b
+{-- Petronius, 100 AD} :b
+:p
+
+[(59)] Don't worry about people at Sandia with the wrong attitudes. Those people
+get old and die. :b
+{-- Bill Camp} :b
+:p
+
+[(58)] Technical competence is a dime-a-dozen. :b
+{-- Peter Feibelman} :b
+:p
+
+[(57)] Of course I have my snout in the LDRD trough. How else are we going to
+support cream-of-the-crop researchers around here? :b
+{-- Kevin McCurley} :b
+:p
+
+[(56)] Millionaires drive a Mercedes; billionaires drive a pick-up. :b
+{-- Art Hale} :b
+:p
+
+[(55)] We're being screwed by people who are better liars than us. :b
+{-- Bill Camp} :b
+:p
+
+[(54)] Now we know how important MIMD is. :b
+{-- TMC corporate line on the CM-5} :b
+:p
+
+[(53)] Anyone who considers arithmetical methods of producing random digits is,
+of course, in a state of sin. :b
+{-- John Von Neumann} :b
+:p
+
+[(52)] A good scientist is one who knows enough to steal from the best people. :b
+{-- J. Holton} :b
+:p
+
+[(51)] All of science can be divided into physics and stamp-collecting. :b
+{-- Lord Kelvin} :b
+:p
+
+[(50)] A state-of-the-art calculation requires 100 hours of CPU time on the
+state-of-the-art computer, independent of the decade. :b
+{-- Edward Teller} :b
+:p
+
+[(49)] A mathematician, like a painter or a poet, is a master of pattern. :b
+{-- G. Hardy} :b
+:p
+
+[(48)] ES&H is my number one priority! :b
+{-- ex-Sandian Venki Narayanamurti} :b
+:p
+
+[(47)] Fasten your seat belts. :b
+{-- Justin Rattner, Intel, on the Paragon} :b
+:p
+
+[(46)] For some people buying a MP machine is like buying a sports car. They want
+maximum performance, no matter how rough the ride. :b
+{-- Gary Montry} :b
+:p
+
+[(45)] It's impossible to do anything in real time. :b
+{-- Bill Camp} :b
+:p
+
+[(44)] There are lies, damn lies, and benchmarks. :b
+{-- Mark Twain, Kevin McCurley} :b
+:p
+
+[(43)] I know how to make 4 horses pull a cart - I don't know how to make 1024
+chickens do it. :b
+{-- Enrico Clementi} :b
+:p
+
+[(42)] The weapons labs are not here to understand the world, publish papers, or
+educate students; they are here to get practical results. :b
+{-- The Economist} :b
+:p
+
+[(41)] Weapons lab researchers look at the world of commerce like teenagers
+anticipating sex - with keen expectation, some trepidation, and no idea of the
+enganglements and messiness involved. :b
+{-- The Economist} :b
+:p
+
+[(40)] If a machine quacks like SIMD and waddles like SIMD, it's SIMD. :b
+{-- John Shadid, on the CM-5} :b
+:p
+
+[(39)] The new CM is a SIMD machine in drag. :b
+{-- John Shadid, on the CM-5} :b
+:p
+
+[(38)] The customer is a pinhead. :b
+{-- Ray Tuminaro} :b
+:p
+
+[(37)] Maybe we'll give the nCUBE-10 to some 3rd world university. :b
+{-- Bill Camp} :b
+:p
+
+[(36)] I hope these viewgraphs don't insult your intelligence - they were
+prepared for management. :b
+{-- Conference speaker} :b
+:p
+
+[(35)] It's deja-screw all over again. :b
+{-- Gary Montry} :b
+:p
+
+[(34)] I wouldn't bet a fortune on nCUBE being the CRAY of the 90's. :b
+{-- Bill Camp} :b
+:p
+
+[(33)] The world's an exciting place when you know CFD. :b
+{-- John Shadid} :b
+:p
+
+[(32)] If you're not making progress, make viewgraphs. :b
+{-- Juan Meza} :b
+:p
+
+[(31)] When we move to 980 there will be no network problems. :b
+{-- Carl Diegert} :b
+:p
+
+[(30)] The most powerful passion in life is not love or hate, but the desire to
+edit someone else's words. :b
+{-- sign in Ed Barsis's office} :b
+:p
+
+[(29)] In times of change, the learners inherit the earth - the learned find
+themselves beautifully equipped to understand a world that no longer exists. :b
+{-- Eric Hoffer} :b
+:p
+
+[(28)] The Intel Touchstone will be transparent to program. :b
+{-- Bill Camp} :b
+:p
+
+[(27)] Conversion of any code to parallel takes a few weeks, perhaps longer. :b
+{-- Ed Barsis} :b
+:p
+
+[(26)] The possibilities are frightening. :b
+{-- Bob Benner} :b
+:p
+
+[(25)] There's no point putting whipped cream on manure. :b
+{-- John Madden} :b
+:p
+
+[(24)] Quality is not goodness. :b
+{-- Sandia National Labs document} :b
+:p
+
+[(23)] Folklore and rumor are inadequate means of spreading information about how
+to use a computer system. :b
+{-- John Gustafson, on the nCUBE} :b
+:p
+
+[(22)] We're much too busy to do any real work. :b
+{-- John Shadid, Ray Tuminaro} :b
+:p
+
+[(21)] Massively parallel machines are generally considered to be hard-to-program
+special-purpose engines. But the nCUBE is different. :b
+{-- Doug Harless, nCUBE} :b
+:p
+
+[(20)] The nCUBE 2 can work in two modes: SIMD and MIMD. :b
+{-- Doug Harless, nCUBE} :b
+:p
+
+[(19)] The managers were taken to a rice paddy and unceremoniously shot to death
+as workers looked on. :b
+{-- Wall Street Journal} :b
+:p
+
+[(18)] Great meal guys! :b
+{-- Gene Golub to Sandia hosts after $150 dinner} :b
+:p
+
+[(17)] You can count on nCUBE to do the intelligent thing. :b
+{-- Andy Cleary} :b
+:p
+
+[(16)] nCUBE - software from hell. :b
+{-- Mark Sears} :b
+:p
+
+[(15)] With the new nCUBE software, you should never have to nboot again. :b
+{-- Bob Benner} :b
+:p
+
+[(14)] Let's blow LANL off the map. :b
+{-- Anonymous Sandian} :b
+:p
+
+[(13)] Fundamental science is not where I'd put the incremental dollar. :b
+{-- Al Narath, Sandia president} :b
+:p
+
+[(12)] We must overcome our preoccupation with scientific issues. :b
+{-- Al Narath, Sandia president} :b
+:p
+
+[(11)] Parallel machines are hard to program and we should make them even harder
+- to keep the riff-raff off them. :b
+{-- Gary Montry} :b
+:p
+
+[(10)] It's on the top of my list; that's an action item; I'll get right on it. :b
+{-- Bob Benner, helpful supervisor} :b
+:p
+
+[(9)] What day of the week is Thursday? :b
+{-- Bill Camp} :b
+:p
+
+[(8)] I hate this machine. (loop 1 to P: I hate it.) :b
+{-- John Shadid} :b
+:p
+
+[(7)] You have to normalize that by everything else that goes on around here. :b
+{-- unknown Sandian} :b
+:p
+
+[(6)] That's why they call it research. :b
+{-- John Shadid} :b
+:p
+
+[(5)] As a professional you know the value of quality support. :b
+{-- Elan, alleged software company} :b
+:p
+
+[(4)] Newton's got laws to burn. :b
+{-- John Shadid} :b
+:p
+
+[(3)] When we get our new machine we'll be living off the fat of the land. :b
+{-- Steve Plimpton} :b
+:p
+
+[(2)] Life isn't mostly symmetric positive definite. :b
+{-- John Shadid} :b
+:p
+
+[(1)] What's time to a pig? :b
+{-- Carl Diegert} :b
+:p
+
+[(0)] You have to remember - this is an nCUBE. :b
+{-- Courtenay Vaghan} :b

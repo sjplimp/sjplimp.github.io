@@ -1,0 +1,235 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Molecular Dynamics - Parallel Algorithms :h3
+
+I work in the area of classical molecular dynamics (MD).  It's an
+atomistic simulation method where:
+
+each atom is treated as a point mass,
+simple force rules describe the interactions between atoms
+Newton's equations are integrated to advance the atomic positions & \
+  velocities, and
+thermodynamic statistics are extracted from the motion of the atoms. :ul
+
+I've worked on several parallel algorithms that are useful for MD
+simulations.  They are described in the next section.
+
+I've also written several parallel MD codes that I distribute freely.
+They are available from "this page"_download.html.
+
+Performance of these parallel codes for a variety of systems (atomic,
+polymer, biomolecular, metal, granular) on several parallel platforms
+are discussed on the "Benchmark
+page"_http://lammps.sandia.gov/bench.html of the "LAMMPS WWW
+Site"_http://lammps.sandia.gov.
+
+Simulation efforts that I've been involved in are discussed on "this
+page"_mdsim.html.  Work of others using these codes is listed on the
+"Publications page"_http://lammps.sandia.gov/papers.html of the
+"LAMMPS WWW Site"_http://lammps.sandia.gov, along with
+"pictures"_http://lammps.sandia.gov/pictures.html and
+"movies"_http://lammps.sandia.gov/movies.html.
+
+:line
+:line
+
+This paper describes 3 classes of parallel algorithms suitable for
+short-range MD force fields: so-called atom-, force-, and
+spatial-decomposition algorithms.  All 3 are implemented and compared
+in the paper, but the only one I "invented" was force-decomposition
+which was work with Bruce Hendrickson at Sandia.
+
+:link(Bruce,http://www.cs.sandia.gov/~bahendr)
+
+In a nutshell, atom-decomposition methods assign a subset of atoms
+permanently to each processor, force-decomposition methods assign a
+subset of pairwise force computations to each proc, and
+spatial-decomposition methods assign a sub-region of the simulation
+box to each proc.
+
+[Fast Parallel Algorithms for Short-Range Molecular Dynamics],
+S. J. Plimpton, J Comp Phys, 117, 1-19
+(1995). ("abstract"_absjcomps95) ("pdf"_PDFjcomps95) ("tar
+file"_tarjcomps95 of figures if they don't display correctly in the
+PDF file)
+
+:link(absjcomps95,abstracts/jcompphys95.html)
+:link(PDFjcomps95,papers/jcompphys95.pdf)
+:link(tarjcomps95,papers/jcompphys95_figs.tar.gz)
+
+The Lennard-Jones codes discussed in the paper that implement the
+various parallel algorithms are available for download
+"here"_download.html.
+
+:line
+
+These two papers describe how MD kernels like force calcluation and
+neighbor list formation can be formulated to run efficiently Intel
+CPUs and Xeon Phis:
+
+[Increasing Molecular Dynamics Simulation Rates with an 8-Fold
+Increase in Electrical Power Efficiency], W. M. Brown, A. Semin,
+M. Hebenstreit, S. Khvostov, K. Raman, S. J. Plimpton, SC16
+Conference, SLC, Utah, Nov 2016. ("abstract"_abstracts/sc16.html)
+
+[Optimizing legacy molecular dynamics software with directive-based
+offload], W. M. Brown, J.-M. Y. Carrillo, N. Gavhane, F. M. Thakkar,
+S. J. Plimpton, Comp Phys Comm, 195, 95-101 (2015).
+("abstract"_abstracts/cpc15.html)
+
+This paper discusses how LAMMPS was designed to make it
+flexible and extensible in an open-source context:
+
+[Developing community codes for materials modeling], S. J. Plimpton
+and J. D. Gale, Current Opinion in Solid State and Materials Science
+17, 271-276 (2013).
+("abstract"_abstracts/cossms13.html)
+
+This paper discusses computational attributes of many-body
+potentials and their performance as implemented in LAMMPS:
+
+[Computational Aspects of Many-body Potentials], S. J. Plimpton and
+A. P. Thompson, MRS Bulletin, 37, 513-521 (2012).
+("abstract"_abstracts/mrs12.html)
+
+These papers describe how MD kernels like force calcluation and
+neighbor list formation and PPPM can be formulated to run efficiently
+on hybrid processors, meaning ones that have both a multicore CPU and
+a GPU:
+
+[Implementing Molecular Dynamics on Hybrid High Performance Computers
+- Short Range Forces], W. M. Brown, P. Wang, S. J. Plimpton,
+A. N. Tharrington, Comp Phys Comm, 182, 898-911, (2011).
+("abstract"_abstracts/cpc11.html)
+
+[Implementing Molecular Dynamics on Hybrid High Performance Computers
+- Particle-Particle Particle-Mesh], W. M. Brown, A. Kohlmeyer,
+S. J. Plimpton, A. N. Tharrington, Comp Phys Comm, 183, 449-459
+(2012).  ("abstract"_abstracts/cpc12.html)
+
+This paper describes how our parallel MD code LAMMPS is structured at
+the outer level to enable it to be used as one tool in conjunction
+with others, e.g. as part of a coupled multiscale calculation:
+
+[Software components for parallel multiscale simulation: an example
+with LAMMPS], B. Frantzdale, S. J. Plimpton, M. S. Shephard,
+Engineering with Computers, 26, 205-211
+(2010). ("abstract"_abstracts/ec10.html)
+
+This paper describes how the virial/pressure tensor is computed
+in LAMMPS for many-body potentials, both in serial and parallel:
+
+[General formulation of pressure and stress tensor for arbitrary
+many-body interaction potentials under periodic boundary conditions],
+A. P. Thompson, S. J. Plimpton, W. Mattson, J Chem Phys, 131, 154107
+(2009). ("abstract"_abstracts/jcp09a.html)
+
+This paper describes the coupling of our
+"LAMMPS"_http://lammps.sandia.gov MD code to the POEMS multi-body
+dynamics solver:
+
+[Substructured molecular dynamics using multibody dynamics
+algorithms], R. M. Mukherjee, P. S. Crozier, S. J. Plimpton,
+K. S. Anderson, Intl J of Non-Linear Mechanics, 43, 1045-1055 (2008).
+("abstract"_abstracts/ijnlm08.html)
+
+This paper discusses a perdynamic model we added to our
+"LAMMPS"_http://lammps.sandia.gov MD code to enable
+mesoscale/continuum modeling of material properties:
+
+[Implementing peridynamics within a molecular dynamics code],
+M. L. Parks, R. B. Lehoucq, S. J. Plimpton, S. A. Silling, Comp Phys
+Comm, 179, 777-783 (2008). ("abstract"_abstracts/cpc08a.html)
+
+This paper discusses algorithms we added to our
+"LAMMPS"_http://lammps.sandia.gov MD code to enable efficient modeling
+of mixtures with widely disparate particles sizes:
+
+[Accurate and Efficient Methods for Modeling Colloidal Mixtures in an
+Explicit Solvent using Molecular Dynamics], P. J. in 't Veld,
+S. J. Plimpton, G. S. Grest, Comp Phys Comm, 179, 320-329
+(2008). ("abstract"_abstracts/cpc08.html)
+
+:line
+
+This paper describes the pros and cons of the 3 parallel algorithms
+mentioned above in the context of molecular systems, where one must
+also compute intra-molecular forces - e.g.  bond, angle, torsional
+terms within each molecule's topology.
+
+[Parallel Molecular Dynamics Algorithms for Simulation of Molecular
+Systems], S.  J. Plimpton and B. A. Hendrickson, chapter in Parallel
+Computing in Computational Chemistry, edited by T. G. Mattson,
+published by the American Chemical Society, Symposium Series 592,
+114-132 (1995). ("abstract"_acs95abs) ("postscript"_acs95PS) ("ps.gz"_acs95gz)
+
+:link(acs95abs,abstracts/acs95.html)
+:link(acs95PS,papers/acs95.ps)
+:link(acs95gz,papers/acs95.ps.gz)
+  
+:line
+
+This paper describes how to use the force-decomposition algorithm
+with embedded atom method (EAM) potentials which are commonly used for
+metals and alloy systems. We implemented the idea in a code called
+ParaDyn, which is a parallelization of the serial DYNAMO EAM code of
+Stephen Foiles and Murray Daw, and which is available for download
+"here"_download.html.
+
+[Parallel Molecular Dynamics With the Embedded Atom Method],
+S. J. Plimpton and B. A. Hendrickson, in Materials Theory and
+Modelling, edited by J. Broughton, P. Bristowe, and J. Newsam, MRS
+Proceedings 291, Pittsburgh, PA, 1993, p 37.  ("abstract"_mrs92abs)
+("postscript"_mrs92PS) ("ps.gz"_mrs92gz)
+
+:link(mrs92abs,abstracts/mrs92.html)
+:link(mrs92PS,papers/mrs92.ps)
+:link(mrs92gz,papers/mrs92.ps.gz)
+
+:line
+
+The extension of the force-decomposition idea to molecular MD is
+described in this paper.  We used these ideas in a Sandia code called
+ParBond; it has since been superceded by our
+"LAMMPS"_http://lammps.sandia.gov code.
+
+[A New Parallel Method for Molecular-Dynamics Simulation of
+Macromolecular Systems], S. J. Plimpton and B. A. Hendrickson, J Comp
+Chem, 17, 326-337 (1996).  ("abstract"_jcc96abs) ("postscript"_jcc96PS)
+("ps.gz"_jcc96gz)
+
+:link(jcc96abs,abstracts/jcc96.html)
+:link(jcc96PS,papers/jcc96.ps)
+:link(jcc96gz,papers/jcc96.ps.gz)
+ 
+:line 
+
+"LAMMPS"_http://lammps.sandia.gov is our current production-scale
+molecular MD code (suitable for molecular or atomic systems).  Two of
+its parallel algorithms are discussed in this paper.
+
+[Particle-Mesh Ewald and rRESPA for Parallel Molecular Dynamics
+Simulations], S. J. Plimpton, R. Pollock, M. Stevens, in Proc of the
+Eighth SIAM Conference on Parallel Processing for Scientific
+Computing, Minneapolis, MN, March 1997. ("abstract"_siam97abs)
+("postscript"_siam97PS) ("ps.gz"_siam97gz)
+
+:link(siam97abs,abstracts/siam97.html)
+:link(siam97PS,papers/siam97.ps)
+:link(siam97gz,papers/siam97.ps.gz)
+ 
+:line
+
+This paper discusses projections of what will be possible with
+classical MD using current techniques on high-end computers of the
+future.
+
+[Computational Limits of Classical Molecular-Dynamics Simulations],
+S. J.  Plimpton, Computational Materials Science, 4, 361-364
+(1995). ("abstract"_cms95abs) ("postscript"_cms95PS) ("ps.gz"_cms95gz)
+
+:link(cms95abs,abstracts/cms95.html)
+:link(cms95PS,papers/cms95.ps)
+:link(cms95gz,papers/cms95.ps.gz)

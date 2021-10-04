@@ -1,0 +1,11 @@
+<HEAD> <META HTTP-EQUIV="Refresh" CONTENT="3; URL=http://spparks.sandia.gov"> </HEAD>
+
+:line
+
+SPPARKS Kinetic Monte Carlo Simulator :c,h3
+
+:line
+
+The SPPARKS home page has moved to "spparks.sandia.gov"_http://spparks.sandia.gov
+
+You will be re-directed in 3 seconds.

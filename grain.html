@@ -1,0 +1,53 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>Grain growth via the Potts model 
+</H3>
+<P>The Potts model is essentially a many-spin Ising model, where one can
+represent a multi-granular material as a large 2-d or 3-d lattice of
+spin values. A group of conjoined same-spin pixels is a grain. The
+grain "boundaries" between different-spin pixels are a high-energy
+state that can be relaxed over time via the usual Monte Carlo spin
+update rules to simulate grain-growth, grain boundary migration, or a
+variety of other interesting physical effects. The energetics for all
+these models are captured in the Hamiltonian one writes for the
+collection of lattice points and their spins.
+</P>
+<P>We worked with Liz Holm at Sandia to parallelize her Potts-model
+grain-growth code. The basic idea is similar to how one would
+parallelize an Ising model on a regular lattice. Each processor owns a
+sub-section of the lattice and updates its spins. Care is taken to
+insure Monte Carlo updates are made independently by each processor
+without violating the detailed-balance principle that two (or more)
+spins cannot be updated simultaneously if they interact with each
+other.  This requires "coloring" the lattice into sets of
+non-interacting points. Then all lattice points of the same color can
+be updated simultaneously on different processors. For example, in 2-d
+on a square lattice with an 8-neighbor stencil (a lattice point has
+energetic interactions with all 8 points surrounding it), 4 colors is
+sufficient to enable 4 sweeps thru the lattice to update every lattice
+point. Similary, for a 26-point stencil on a 3-d lattice, 8 colors are
+used.
+</P>
+<P>Collaborators on this project:
+</P>
+<UL><LI>  Richard Fye, Sandia
+<LI>  Liz Holm, Sandia 
+</UL>
+<HR>
+
+<P>This paper describes the details of our parallelization approach, some
+enhancements we made to the basic Metropolis update algorithm to
+speed-up the calculations, and some applications of the Potts model to
+grain-growth problems of interest to Sandia.
+</P>
+<P><B>Potts-model Grain Growth Simulations: Parallel Algorithms and
+Applications</B>, S.  A. Wright, S. J. Plimpton, T. P. Swiler, R. M. Fye,
+M. F. Young, E. A. Holm, SAND Report 97-1925, August
+1997. (<A HREF = "abstracts/sand97.html">abstract</A>)
+</P>
+
+
+</HTML>

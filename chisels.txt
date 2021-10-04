@@ -1,0 +1,58 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+ChISELS - Chemically Induced Surface Evolution with Level Sets :h3
+
+ChISELS is a simulation code developed to model the etching and growth
+of semiconductor surfaces as they are processed to create micromachine
+devices (MEMS).  It does aaptive gridding and level set tracking in
+either 2d or 3d.
+
+:link(chisels,http://www.sandia.gov/~wchisels/index.html)
+
+Larry Musson (lcmusso at sandia.gov) at Sandia is the lead developer for
+ChISELS.  My contribution is in the algorithms and implementation of
+the parallel level set solver and associated octtree data structure
+used to store and track the surface as it evolves.
+
+In a related effort, I worked with Craig Jorgensen and Rod Schmidt to
+create a parallel geometric modeler for MEMS designers.  We used PVM
+(parallel virtual machine) to partition the modeling tasks
+geometrically into sub-pieces and distribute them across processors of
+a workstation cluster.  This enabled large 3d models to be constructed
+from mask sets considerably more quickly.
+
+Collaborators on these projects:
+
+  Larry Musson, Sandia
+  Rod Schmidt, Sandia
+  Pauline Ho, Reaction Design
+  Craig Jorgensen, Sandia :ul
+ 
+:line
+
+This paper describes ChISELS and its basic algorithms and application
+to semiconductor deposition processes commonly used for MEMS
+fabrication:
+
+[Feature Length-Scale Modeling of LPCVD and PECVD MEMS Fabrication
+Processes], L. C. Musson, P. Ho, S. J. Plimpton, R. C. Schmidt,
+Journal of Microsystems Technologies, 12, 137-142
+(2005). ("abstract"_ajmt) ("pdf"_pjmt)
+
+:link(ajmt,abstracts/jmt05.html)
+:link(pjmt,papers/jmt05.pdf)
+
+:line
+
+This conference paper describes the parallelization of the MEMS
+geometric modeler:
+
+[Development and Performance of a PVM Based Parallel Geometric Modeler
+for MEMS], C. Jorgensen, D. Melander, R. Schmidt, S. J. Plimpton, in
+Proc of Modeling and Simulation of Microsystems (MSM), Puerto Rico,
+April 2002, 218-221. ("abstract"_amsm) ("pdf"_pmsm)
+
+:link(amsm,abstracts/msm02.html)
+:link(pmsm,papers/msm02.pdf)

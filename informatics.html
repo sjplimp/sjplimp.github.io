@@ -1,0 +1,87 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>Informatics Algorithms and Big-Data Processing 
+</H3>
+<P>Informatics is the term commonly used for calculations that are more
+data-intensive than compute-intensive.  Often such calculations are
+limited by the size of the data sets that can be handled rather than
+the total amount of raw computation they require.  Algorithms for data
+mining, classificiation, machine learning, and pattern matching can
+fall in this category.
+</P>
+<P>Informatics is now being performed on Terabyte and even Petabyte data
+sets on large distributed <A HREF = "http://en.wikipedia.org/wiki/Cloud_computing">cloud computing</A> platforms via
+programming paradigms such as <A HREF = "http://en.wikipedia.org/wiki/Mapreduce">MapReduce</A>, implemented in
+software packages like <A HREF = "http://en.wikipedia.org/wiki/Hadoop">Hadoop</A>.  With my background in
+large-scale parallel computing, I'm interested in seeing whether
+traditional supercomputers can also be used effectively for these
+kinds of tasks.
+</P>
+<P>To experiement with this, we've written two different software
+packages.
+</P>
+<P>The first implements MapReduce on top of distributed-memory message
+passing (<A HREF = "http://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</A>).  Our open-source software is called the
+<A HREF = "http://mapreduce.sandia.gov">MapReduce-MPI (MR-MPI) library</A>, and can
+be downloaded <A HREF = "download.html">here</A>.  The <A HREF = "http://mapreduce.sandia.gov/doc/Manual.html">doc pages for the
+library</A> describe the
+software in more detail.
+</P>
+<P>Collaborators on the MapReduce-MPI library:
+</P>
+<UL><LI>  <A HREF = "http://www.cs.sandia.gov/~kddevin">Karen Devine</A>, Sandia
+<LI>  Jon Berry, Sandia 
+</UL>
+<P>The second is a small open-source library that serves as a framework
+for running streaming calculations in a pipelined fashion, as a set of
+independent processes passing a continuous stream of data among
+themselves.  The library is called <A HREF = "phish.html">PHISH</A>, for Parallel
+Harness for Informatic Stream Hashing, because fish swim in a stream.
+The <A HREF = "phish/doc/Manual.html">doc pages for the library</A> describe the
+software in more detail.
+</P>
+<P>Collaborator on the PHISH library:
+</P>
+<UL><LI>  Tim Shead, Sandia 
+</UL>
+<HR>
+
+<P>This paper describes the PHISH library and several streaming graph
+algorithms.
+</P>
+<P><B>Streaming data analytics via message passing with application to
+graph algorithms</B>, S. J. Plimpton and T. Shead, J Parallel and
+Distributed Computing, 74, 2687-2698 (2014).
+(<A HREF = "abstracts/jpdc14.html">abstract</A>)
+</P>
+<P>This paper describes the use of PHISH to identify connected
+components in a stream of graph edges.
+</P>
+<P><B>Maintaining connected components for infinite graph streams</B>,
+J. W. Berry, M. Oster, C. A. Phillips, S. J. Plimpton, T. M Shead,
+BigMine-13, a KDD13 workshop - 2nd International Workshop on Big Data,
+Streams and Heterogeneous Source Mining, Chicago, IL, Aug
+2013. (<A HREF = "abstracts/bigmine13.html">abstract</A>)
+</P>
+<P>This paper describes the MR-MPI library and several MapReduce graph
+algorithms for informatics problems.
+</P>
+<P><B>MapReduce in MPI for Large-Scale Graph Algorithms</B>, S. J. Plimpton
+and K. D. Devine, Parallel Computing, 37, 610-632
+(2011). (<A HREF = "../abstracts/pc11.html">abstract</A>)
+(<A HREF = "../papers/pc11.pdf">preprint</A>)
+</P>
+
+
+
+
+
+
+
+
+
+
+</HTML>

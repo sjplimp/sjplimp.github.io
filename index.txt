@@ -1,0 +1,179 @@
+<HEAD>
+    <TITLE> Home Page for Steve Plimpton </TITLE>
+    <meta name="Description" content="Steve Plimpton home page">
+    <meta name="keywords" content="parallel computing, scientific computing, 
+      MPI, high-performance computing, distributed memory,
+      molecular dynamics, LAMMPS, kinetic Monte Carlo, Metropolis Monte Carlo, 
+      SPPARKS, SPARTA, SPARTA DSMC, biological cell modeling, ChemCell, 
+      informatics, MapReduce,
+      MapReduce-MPI library, MR-MPI library, streaming data, 
+      stream-processing, PHISH library, CSlib messaging library,
+      client/server messaging, Python, Pizza.py toolkit, 
+      HPCC RandomAccess benchmark, GUPS, particle-in-cell, PIC, QuickSilver, 
+      radiation transport, ChiSELS, surface growth and evolution,
+      transient dynamics, PRONTO, NIMROD, neuro-inspired computing, GeneHunter,
+      parallel algorithms, load-balancing,
+      parallel FFTs, fftMPI, linkage analysis,
+      direct simulation Monte Carlo, DSMC, image processing, 
+      SAR, electron microscopy images, 
+      grain growth, computational biology, humorous quotations">
+    <meta name="review" content="10_15_2020" />
+    <meta name="filename" content="main.html" />
+    <meta name="subject" content="home page of Steve Plimpton" />
+    <meta name="sandia.approval_type" content="formal" />
+    <meta name="sandia.approved" content="2020-11334W" />
+    <link rev="owns" title="Steve Plimpton" href="mailto:sjplimp@sandia.gov" />
+    <link rev="made, publisher" title="Steve Plimpton" href="mailto:sjplimp@sandia.gov" />
+    <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+    <meta name="Author" content="Steve Plimpton" />
+</HEAD>
+
+
+<table width="664" height="112" border="0" cellpadding="0"
+       cellspacing="0" summary="layout only">
+<tr width="664" height="101" valign="bottom">
+<td width="557" height="101" valign="bottom">
+<font face="arial, helvetica, sans" size="5" 
+      style="family: arial, helvetica, sans"><b>Steve Plimpton</b></font></td>
+<td align="left" valign="bottom" width="107" height="101" rowspan="2">
+<a href="http://www.sandia.gov/">
+<img src="http://www.sandia.gov/images2002/snl_globe_right03.gif" 
+     width="107" height="112" border="0" align="left" valign="top" 
+     vspace="0" hspace="0" alt="Sandia Home" title="Sandia Home"></a></td></tr>
+<tr width="664" height="11" valign="top">
+<td width="557" height="11" valign="top">
+<img src="http://www.sandia.gov/images2002/gold_rule01.gif" 
+     width="557" height="11" border="0" align="left" valign="top" vspace="0" 
+     hspace="0" alt=""></td></tr>
+</table>
+
+I'm a staff member at "Sandia National Laboratories"_snl, a US
+"Department of Energy"_doe lab, in the "Center for Computing
+Research"_1400.  I'm currently in the Multiscale Science department.
+Previously I've been in the Scalable Algorithms, Computational
+Biology, and Parallel Computational Sciences departments.
+
+My research involves implementing and using scientific simulations
+designed for parallel supercomputers, which often requires creation of
+efficient parallel algorithms.  Many of the models are particle based,
+some use structured grids or finite elements.  Most of the codes I
+develop are for materials modeling, some for biology and informatics
+problems.
+
+"Current interests"_#ci
+"Past projects"_#pp
+"Publications"_papers.html, see more info at "Google Scholar"_https://scholar.google.com/citations?user=Ny7N6KQAAAAJ&hl=en
+"University course in parallel computing"_class.html :all(l)
+
+:p
+
+"Software for download"_download.html: :all(l)
+
+"LAMMPS"_lammps = classical molecular dynamics
+"SPPARKS"_spparks = kinetic and Metropolis Monte Carlo
+"SPARTA"_sparta = Direct Simulation Monte Carlo (DSMC)
+"ChemCell"_chemcell = spatial reaction/diffusion in biological cells
+"CSlib"_cslib = client/server messaging library
+"fftMPI"_fftmpi = parallel 3d/2d FFT library
+"MapReduce-MPI"_mapreduce = MapReduce library on top of MPI
+"PHISH"_phish = stream processing library on top of MPI
+"FireHose"_firehose = stream processing benchmarks
+"CrossSim"_crosssim = simulator for modeling resisitve memory (analog) devices for neuromorphic computing
+"Pizza.py"_pizza = Python-based pre- and post-processing tools for LAMMPS, SPPARKS, SPARTA, ChemCell :ul
+
+:link(lammps,https://www.lammps.org)
+:link(sparta,https://sparta.github.io)
+:link(fftmpi,https://lammps.github.io/fftmpi)
+:link(pizza,https://lammps.github.io/pizza)
+:link(mapreduce,https://sjplimp.github.io/mapreduce)
+:link(phish,https://sjplimp.github.io/phish)
+:link(chemcell,https://sjplimp.github.io/chemcell)
+
+:link(spparks,http://spparks.sandia.gov)
+:link(cslib,http://cslib.sandia.gov)
+:link(firehose,http://firehose.sandia.gov)
+
+:link(crosssim,https://cross-sim.sandia.gov)
+
+:p
+
+"How to reach me"_#hrm
+"Humorous quotations"_quotes.html
+"Related Sandia links"_#rsl :all(l)
+
+:line
+
+Current Interests :link(ci),h3
+
+Molecular Dynamics (MD): :b
+  "parallel algorithms"_md.html
+  MD codes I distribute: "LAMMPS"_lammps, "ParaDyn"_download.html#pd
+  MD simulations: "papers"_mdsim.html, \
+    "pictures"_http://www.lammps.org/pictures.html, \
+    "movies"_http://www.lammps.org/movies.html :ul
+"Kinetic Monte Carlo"_kmc.html - KMC and Metropolis MC simulator \
+  "SPPARKS"_spparks :b
+"Direct Simulation Monte Carlo"_dsmc.html - low-density reacting flows \
+  via particles, "SPARTA"_sparta and "Icarus"_dsmc.html :b
+"High Performance Computing (HPC)"_hpc.html - neuro-inspired computing, \
+  performance comparisons of parallel architectures :b
+"Biological Cell Modeling"_cell.html - particle-based reaction/diffusion \
+  simulator "ChemCell"_chemcell :b
+"Informatics"_informatics.html - data-intensive computing via a \
+  "MapReduce-MPI library"_mapreduce, \
+  and a stream-processing "PHISH library"_phish :b
+"Pizza.py Toolkit"_pizza - Python-based toolkit for \
+  simulation setup, analysis, plotting, viz :b
+"Parallel Algorithms"_algorithms.html: :b
+  "HPCC RandomAccess (GUPS) benchmark"_download.html#gups, \
+  "FFTs"_download.html#fft, grid transfer, \
+  dynamic load-balancing, tinkertoy parallel programming, \
+  matrix-vector multiply and many-body algorithms :ul
+
+:line
+
+Past Projects :link(pp),h3
+ 
+"Gene Finding"_genehunter.html - parallelization of the \
+  "Genehunter"_download.html#gene genetic linkage analysis program
+"Radiation Transport"_rad.html - Boltzmann equation for thermal and \
+  X-ray radiation
+"ChISELS"_chisels.html - surface evolution model of semiconductor processing \
+  for micromachine devices (MEMS)
+"QuickSilver"_qs.html - particle-in-cell (PIC) relativistic \
+  electromagnetics
+"PRONTO"_pronto.html - finite element transient dynamics (crash & boom) \
+  with contact detection
+"NIMROD"_nimrod.html - plasma simulation of tokamaks
+"Electronic Structure"_quantum.html - quantum mechanics of solids
+"Image Processing"_sar.html - synthetic aperture radar (SAR) analysis
+"Grain Growth"_grain.html - Potts model on 2-d and 3-d lattices
+"Electron Microscopy"_ebeam.html - Monte Carlo trajectory simulation
+"Parallel Computing"_overview.html - general overviews :all(b)
+
+:line
+
+How to Reach Me :link(hrm),h3
+
+"sjplimp at sandia.gov"_mailto:sjplimp@sandia.gov :all(b)
+:p
+Multiscale Science Dept, MS 1316
+Sandia National Laboratories
+Albuquerque, NM 87185-1316 :all(b)
+
+:line
+
+Related Sandia Links :link(rsl),h3
+
+"Center for Computing Research"_1400
+"Center research"_1400/research
+"Center staff members"_1400/staff
+"Sandia National Laboratories"_snl
+"Sandia Privacy and Security statement"_security :all(b)
+
+:link(1400,http://www.cs.sandia.gov)
+:link(1400/research,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/research.cfm)
+:link(1400/staff,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/org_chart.cfm)
+:link(snl,http://www.sandia.gov)
+:link(doe,http://www.doe.gov)
+:link(security,http://www.sandia.gov/general/privacy-security/index.html)

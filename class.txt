@@ -1,0 +1,21 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+University Course in Parallel Computing :h3
+
+I team-taught CS 442 at the University of New Mexico in the fall of
+1997 with Bruce Hendrickson. The theme of the course was parallel
+scientific computing, with a strong distributed-memory bias. The
+lecture topics were mostly algorithm discussions; programming
+assignments were parallel codes written with "MPI"_mpi.
+
+This is the "class outline"_outline which includes several interesting
+homework and programming assignments. We used Peter Pacheko's
+"Parallel Programming with MPI" as a background textbook and added a
+lot of our own material.
+
+:link(bruce,http://www.cs.sandia.gov/~bahendr)
+:link(mpi,http://www-unix.mcs.anl.gov/mpi/index.html)
+:link(outline,class/cs442.html)
+:link(book,http://fawlty.cs.usfca.edu/mpi)

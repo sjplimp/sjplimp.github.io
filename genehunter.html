@@ -1,0 +1,171 @@
+<HTML>
+<CENTER><A HREF = "main.html">Return to Steve Plimpton's home page</A> 
+</CENTER>
+<HR>
+
+<H3>Parallel Genehunter 
+</H3>
+<P>This page describes work done primarily by Gavin Conant, then at the
+University of New Mexico, with a code from the MIT Whitehead Institute
+called Genehunter.  This work was a collaboration between the UNM
+Biology Dept, Sandia National Labs, and Pam Fain's group at the
+University of Colorado.  Gavin's participation was funded by DOE thru
+its computational science graduate fellowship (CSGF) program; Sandia's
+efforts were funded by DOE's Office of Biological and Environmental
+Research (OBER).
+</P>
+
+
+<P>Genehunter is software package for locating human genetic diseases
+using linkage analysis. Linkage analysis attempts to locate genes
+responsible for a disease using genetic data from a family affected by
+that disease. The genetic profile (or genotype) at a number of markers
+is determined for as many members of the family as possible. Markers
+are identifiable locations on a chromosome (often microsatillite
+positions or single nucleotide polymorphisms) where individual humans
+are known to show genetic differences. Because the DNA molecule is
+linear, these markers can be ordered into a list. Each individual has
+two copies of every marker, one from his or her father and one from
+his or her mother.  Each copy can also be in two possible states,
+depending on whether the parent transmitted the marker from his or her
+mother or father (the grandparents of the individual).
+</P>
+<P>To a first approximation, contiguous genes on a chromosome are
+generally inherited from the same grandparent. However, meiosis, the
+process of cell division which produces eggs and sperm, can alter this
+state of affairs. During this process, the parent's two chromosomes
+can "cross-over", resulting in two new chromosomes which each contain
+a portion of the original two. Cross-over, also known as
+recombination, occurs when the phosphate backbones of two DNA helices
+with similar sequences break and re-join with each other. Because
+recombination occurs between homologous regions of the original
+chromosomes, both new chromosomes have a complete set of markers, but
+the ancestry of these markers is mixed between the grandfather and
+grandmother of the offspring.
+</P>
+<P>Because such recombination is rare, the closer two markers are on the
+chromosome the less likely it is that recombination will separate
+them. Two widely separated markers will almost always have at least
+one recombination event occur between them and, as a result, will be
+inherited together only 50% of the time. Thus, the number of
+recombination events that have occurred between two markers is a
+distance measure which can be statistically correlated with the
+pattern of disease incidence in the extended family. This correlation
+gives insight into where on the chromosome the disease gene is located
+and is referred to as linkage analysis. Further details of the
+Genehunter algorithm can be found in the 1987 paper by Lander and
+Green (below). See the following paper for details on our parallel
+implementation of Genehunter.
+</P>
+<P><B>Parallel Genehunter: Implementation of a Linkage Analysis Package for
+Distributed-Memory Architectures</B>, G. C. Conant, S. J. Plimpton,
+W. Old, A.  Wagner, P. R. Fain, T. R. Pacheco, and G. Heffelfinger,
+Journal of Parallel and Distributed Computing, 63, 674-682
+(2003). (<A HREF = "abstracts/jpdc03.html">abstract</A>) (<A HREF = "papers/jpdc03.pdf">pdf</A>) (<A HREF = "papers/jpdc03.pdf.gz">pdf.gz</A>)
+</P>
+
+
+
+
+
+
+<HR>
+
+<P>The modified GeneHunter code can be downloaded from <A HREF = "download.html">this page</A>
+</P>
+<P>The original Genehunter project was sponsored by MIT's Whitehead
+Institute.
+</P>
+
+
+<HR>
+
+<H3>Relevant papers on serial Genehunter: 
+</H3>
+<UL><LI>E. S. Lander, P. Green, Construction of multilocus genetic linkage
+maps in humans, <I>Proceedings of the National Academy of Sciences,
+U.S.A.</I> <B>84</B> (1987) 2363-2367. 
+
+<LI>L. Kruglyak, M. J. Daly, M. P. Reeve-Daly, E. S. Lander, Parametric
+and nonparametric linkage analysis: A united multipoint approach,
+<I>American Journal of Human Genetics</I> <B>58</B> (1996) 1347-1363. 
+
+<LI>K. Markianos, M. J. Daly, L. Kruglyak, Efficient multipoint linkage
+analysis through reduction of inheritance space, <I>American Journal
+ofHuman Genetics</I> <B>68</B> (2001) 963-977. 
+
+<LI>L. Kruglyak, E. S. Lander, Faster multipoint linkage analysis using
+fourier transforms, <I>Journal of Computational Biology</I> <B>5</B> (1998)
+1-7. 
+</UL>
+<HR>
+
+<H3>Specific details on installing and using our parallel code: 
+</H3>
+<OL><LI>You will need to install the MPI libraries in order to compile our
+code. 
+
+<LI>Our code can be run on shared memory architectures.  However, you will
+still need to install the MPI libraries.  When compiling the
+libraries, specify that the shared memory should be used as the
+communication device. 
+
+<LI>We modified and tested the multi-point linkage part of Genehunter.
+Single-point mode may not work in parallel. 
+
+<LI>The makefile will likely need to be modified for your particular
+platform.  In particular, you will need to give the name of your c
+compiler and the location of the MPI library and include files. 
+
+<LI>The code is written assuming that the number of processors used is a
+power of 2.  It cannot be used with other processor counts. 
+
+<LI>The user interface has not been changed from the serial version.  We
+find it useful to write text command files and redirect input to them
+from the command line when using Genehunter on a batch system (see the
+linkloci.in file included with the parallel genehunter tar file
+above). 
+</OL>
+
+
+
+
+<HR>
+
+<H3>Performance of our code:  
+</H3>
+<P>Both memory and computation is distributed in this implementation.
+The figures below give some indication of the scaling performance of
+our algorithm for fixed size problems.  We computed parallel
+efficiency for 3 different problem sizes.  For reference, the single
+processor runtimes for the 19 and 21 bit problems are 70 minutes and
+38 minutes, respectively.  The 23 bit problem will not run on a single
+processor but requires 34 hours on 2 processors.  Panel B gives the
+memory scaling for this 23 bit problem (the dashed line indicates
+linear memory scaling).
+</P>
+<CENTER><IMG SRC = "images/genehunter_plot.gif">
+</CENTER>
+<HR>
+
+<H3>Example files: 
+</H3>
+<P>Genehunter is provided with an example input files (linkloci.dat,
+linkped.pre).  We have provided a batch script for running this input
+file and a couple of our output for verification purposes.
+</P>
+<UL><LI>linkloci.in
+<LI>linkloci.out 
+</UL>
+<HR>
+
+<H3>Contact information: 
+</H3>
+<P>Gavin Conant is the primary contact for questions and problems with
+the code.  If you cannot reach Gavin, Steve Plimpton can also provide
+assistance (<A HREF = "mailto:sjplimp@sandia.gov">sjplimp at sandia.gov</A>).  We
+would be delighted to hear if this version of Genehunter is helping
+with your research and to discuss any ideas you have about the
+implementation of or modifications to the code.
+</P>
+</HTML>

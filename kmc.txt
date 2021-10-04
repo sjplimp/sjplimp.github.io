@@ -1,0 +1,81 @@
+"Return to Steve Plimpton's home page"_main.html :c
+
+:line
+
+Kinetic Monte Carlo :h3
+
+Kinetic Monte Carlo (KMC) is a method for stochastically modeling
+"events" in a way that correctly samples the relative probabilities of
+each event occurring.  An event can be a diffusive hop by an atom, the
+deposition of an atom, a spin flip in a lattice model, a chemical
+reaction in a biochemical network, or even a person buying a widget in
+a discrete-event model.
+
+KMC models are typically "coarse-grain" in that an entire event occurs
+in one iteration/timestep of the simulation code, without the need to
+track low-level dynamics leading up to the event, e.g. atomic
+vibrations.
+
+We've written an open-source KMC simulator called
+"SPPARKS"_http://spparks.sandia.gov which can perform both KMC and
+Metropolis Monte Carlo updating of various models.  The goal of
+SPPARKS is to provide a framework where basic algorithms for KMC and
+MMC are provided both in serial and parallel, and which allows new
+applications to be easily added.  Our main focus thus far has been
+on-lattice KMC for materials phenonmena like grain growth, surface
+growth and deposition, and void growth.  But we have also been working
+to develop off-lattice KMC applications as well.
+
+"SPPARKS"_http://spparks.sandia.gov can be downloaded
+"here"_download.html, and the "SPPARKS doc
+pages"_http://spparks.sandia.gov/doc/Manual.html describes the
+software in more detail.
+
+Collaborators on SPPARKS:
+
+  Aidan Thompson, Sandia
+  Liz Holm, Sandia
+  Corbett Battaile, Sandia
+  Ed Webb, Sandia
+  Alex Slepoy, DOE/NNSA :ul
+
+:line
+
+This paper describes an efficient kinetic Monte Carlo algorithm,
+implemented in SPPARKS, which can be used for modeling biochemical
+reactions, a la the Gillespie Stochastic Simulation Algorithm (SSA):
+
+[A Constant-Time Kinetic Monte Carlo Algorithm for Simulation of Large
+Biochemical Reaction Networks], A. Slepoy, A. P. Thompson,
+S. J. Plimpton, J Chem Phys, 128, 205101
+(2008). ("abstract"_abstracts/jcp08.html)
+
+This paper describes work in SPPARKS to develop a KMC model of
+sintering that captures the coupled effects of grain growth, pore
+migration, and vacancy annihilation to the surface:
+
+[Parallel Simulation of 3D Sintering], C. G. Cardona, V. Tikare,
+S. J. Plimpton, Int J Computational Materials Science and Surface
+Engineering, 4, 37-54 (2011).  ("abstract"_abstracts/ijcmsse11.html)
+
+This paper describes work to couple KMC and SPPARKS to a
+continuum-level description of a solid surface via the equation-free
+methodology:
+
+[Equation-Free Accelerated Simulations of the Morphological Relaxation
+of Crystal Surfaces], G. J. Wagner, X. Zhou, S. J. Plimpton, Int J for
+Multiscale Computational Engineering, 8, 423-439 (2010).
+("abstract"_abstracts/ijmce10.html)
+
+This technical report gives an overall description of SPPARKS and its
+applications and algorithms.  It includes the above J Chem Phys paper
+as one section:
+
+[Crossing the Mesoscale No-Man's Land via Parallel Kinetic Monte
+Carlo], S. Plimpton, C. Battaile, M. Chandross, L. Holm,
+A. Thompson, V. Tikare, G. Wagner, E. Webb, X. Zhou, C. Garcia
+Cardona, A. Slepoy, Sandia report SAND2009-6226, October
+2009. ("abstract"_abstracts/sand09.html)
+
+You can download the entire report via "this
+link"_papers/sand09.pdf, but note that it is a 45 Mb file!
