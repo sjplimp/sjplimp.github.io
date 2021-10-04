@@ -45,69 +45,47 @@ from Sept 2004 thru Dec 2020.
 
 :link(download)
 
-<FORM ACTION="/vhosts/www.cs/sjplimp/download.pl" METHOD=POST>
-
 [Molecular dynamics codes:] ("LAMMPS download
 page"_https://www.lammps.org/download.html)
 
-<INPUT TYPE="radio" NAME="choice" VALUE="PARADYN">
-"ParaDyn"_#pd --- embedded atom method (EAM) code, 390 Kb :b
+"ParaDyn"_#pd --- embedded atom method (EAM) code, 390 KB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="LJ">
-"Lennard-Jones"_#lj --- 3 LJ codes with different parallel algorithms, 47 Kb :b
+"Lennard-Jones"_#lj --- 3 LJ codes with different parallel algorithms, 47 KB, "download"_tars/paradyn.tar.gz :b
 
 [Other software:]
 
-<INPUT TYPE="radio" NAME="choice" VALUE="SPARTA"> 
 "SPARTA"_sparta --- Direct Simulation Monte Carlo (DSMC) simulator,
-GPL license, 4.4 Mb :b
+GPL license, 4.4 MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="SPPARKS">
 "SPPARKS"_spparks --- kinetic and Metropolis Monte Carlo simulator,
-GPL license, 3.5 Mb :b
+GPL license, 3.5 MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="CHEMCELL"> 
 "ChemCell"_chemcell --- particle-based biological cell simulator, GPL
-license, 1.3 Mb :b
+license, 1.3 MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="MAPREDUCE">
 "Mapreduce-MPI"_mapreduce --- MapReduce-MPI library, modified BSD
-license, 1.8 Mb :b
+license, 1.8 MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="PHISH"> 
 "PHISH"_phish --- PHISH streaming library, modified BSD license, 1.3
-Mb :b
+MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="CSLIB">
 "CSlib"_cslib --- CSlib client/server messaging library, modified BSD
-license, 1.0 Mb :b
+license, 1.0 MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="FFTMPI"> 
 "fftMPI"_fftmpi --- parallel 3d/2d complex FFT library, BSD license,
-0.9 Mb :b
+0.9 MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="PIZZA"> "Pizza.py
-Toolkit"_pizza --- analysis/plotting/viz for
+"Pizza.py Toolkit"_pizza --- analysis/plotting/viz for
 "LAMMPS"_https://www.lammps.org, "ChemCell"_#chemcell,
-"SPPARKS"_#spparks, "SPARTA"_#sparta, GPL license, 1.6 Mb :b
+"SPPARKS"_#spparks, "SPARTA"_#sparta, GPL license, 1.6 MB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="GUPS"> "HPCC
-RandomAccess"_#gups --- algorithm for "HPCC"_hpcc GUPS benchmark, 22
-Kb :b
+"HPCC RandomAccess"_#gups --- algorithm for "HPCC"_hpcc GUPS benchmark, 22
+KB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="GENE">
-"Parallel GeneHunter"_#gene --- parallel genetic linkage analysis, 740 Kb :b
+"Parallel GeneHunter"_#gene --- parallel genetic linkage analysis, 740 KB, "download"_tars/paradyn.tar.gz :b
 
-<INPUT TYPE="radio" NAME="choice" VALUE="TXT2HTML">
 "txt2html"_#txt2html --- text file to HTML converter for \
-		     WWW pages and documentation, 19 Kb :b
-
-<P>
-
-<INPUT TYPE="radio" NAME="choice" VALUE="NONE" CHECKED="yes">
-No package :b
-
-<P> <INPUT TYPE="submit" VALUE="Download Now"> </FORM>
+		     WWW pages and documentation, 19 KB, "download"_tars/paradyn.tar.gz :b
 
 :link(sparta,http://sparta.sandia.gov)
 :link(spparks,http://spparks.sandia.gov)
@@ -116,7 +94,6 @@ No package :b
 :link(phish,http://www.sandia.gov/~sjplimp/phish.html)
 :link(cslib,http://cslib.sandia.gov)
 :link(fftmpi,http://fftmpi.sandia.gov)
-:link(fftold,algorithms.html#ffts)
 :link(pizza,http://pizza.sandia.gov)
 
 :line
