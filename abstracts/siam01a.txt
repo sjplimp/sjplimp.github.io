@@ -1,0 +1,18 @@
+[Identifying Strongly Connected Components in Parallel]
+
+W. McLendon III, B. Hendrickson, S. J. Plimpton, L. Rauchwerger, in
+Proc of SIAM Parallel Processing for Scientific Computing Conf, March
+2001.
+
+Discrete ordinates methods are commonly used to simulate radiation
+transport for fire or weapons modeling. The computation proceeds by
+sweeping the flux across a grid. A particular cell can't be computed
+until all the cells immediately upwind of it are finished. If the
+directed dependence graph for the grid cells contains a cycle then
+sweeping methods will deadlock. This can happen in unstructured grids
+and time stepped problems where the grid is allowed to deform. In this
+paper we present a parallel algorithm to detect cycles in the
+dependence graphs present in these grids as well as an implementation
+and experimental results on shared and distributed memory machines.
+
+Return to "Publications page"_../papers.html

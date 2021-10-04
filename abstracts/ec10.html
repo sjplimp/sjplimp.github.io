@@ -1,0 +1,33 @@
+<HTML>
+<P><B>Software components for parallel multiscale simulation: an example
+with LAMMPS</B>
+</P>
+<P>B. Frantzdale, S. J. Plimpton, M. S. Shephard, Engineering with
+Computers, 26, 205-211 (2010).
+</P>
+<P>Multiscale simulation is a promising approach for addressing a variety
+of real-world engineering problems. Various mathematical approaches
+have been proposed to link single-scale models of physics into
+multiscale models. In order to be effective, new multiscale simulation
+algorithms must be implemented which use partial results provided by
+single-scale software. This work considers aspects of software design
+for interfacing to existing single-scale simulation code to perform
+multiscale simulations on a parallel machine. As a practical example,
+we extended the large-scale atomistic/molecular massively parallel
+simulator (LAMMPS) atomistic simulation software to facilitate its
+efficient use as a component of parallel multiscale-simulation
+software. This required new library interface functions to LAMMPS that
+side-stepped its dependence on files for input and output and provided
+efficient access to LAMMPS's internal state. As a result, we were able
+to take advantage of LAMMPS's single-scale performance without adding
+any multiscale-specific code to LAMMPS itself. We illustrate the use
+of LAMMPS as a component in three different modes: as a stand-alone
+application called by a multiscale code, as a parallel library invoked
+by a serial multiscale code, and as a parallel library invoked by a
+parallel multiscale code. We conclude that it is possible to
+efficiently re-use existing single-scale simulation software as a
+component in multiscale-simulation software.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

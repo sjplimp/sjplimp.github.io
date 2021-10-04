@@ -1,0 +1,28 @@
+[Direct Simulation Monte Carlo on petaflop supercomputers and beyond]
+
+S. J. Plimpton, S. G. Moore, A. Borner, A. K. Stagg 1 , T. P. Koehler,
+J. R. Torczynski, M. A. Gallis, Physics of Fluids, 31, 086101 (2019).
+
+The gold-standard definition of the Direct Simulation Monte Carlo
+(DSMC) method is given in the 1994 book by Bird [ Molecular Gas
+Dynamics and the Direct Simulation of Gas Flows (Clarendon Press,
+Oxford, UK, 1994)], which refined his pioneering earlier papers in
+which he first formulated the method. In the intervening 25 years,
+DSMC has become the method of choice for modeling rarefied gas
+dynamics in a variety of scenarios. The chief barrier to applying DSMC
+to more dense or even continuum flows is its computational expense
+compared to continuum computational fluid dynamics methods. The
+dramatic (nearly billion-fold) increase in speed of the largest
+supercomputers over the last 30 years has thus been a key enabling
+factor in using DSMC to model a richer variety of flows, due to the
+method's inherent parallelism. We have developed the open-source
+SPARTA DSMC code with the goal of running DSMC efficiently on the
+largest machines, both current and future. It is largely an
+implementation of Bird's 1994 formulation. Here, we describe
+algorithms used in SPARTA to enable DSMC to operate in parallel at the
+scale of many billions of particles or grid cells, or with billions of
+surface elements. We give a few examples of the kinds of fundamental
+physics questions and engineering applications that DSMC can address
+at these scales.
+
+Return to "Publications page"_../papers.html

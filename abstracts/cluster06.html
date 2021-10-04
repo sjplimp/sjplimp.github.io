@@ -1,0 +1,32 @@
+<HTML>
+<P><B>A Simple Synchronous Distributed-Memory Algorithm for the HPCC
+RandomAccess Benchmark</B>
+</P>
+<P>S. J. Plimpton, R. Brightwell, C. Vaughan,
+K. Underwood, M. Davis, Proc of Cluster 2006 - IEEE International Conf
+on Cluster Computing, Sept 2006.
+</P>
+<P>The RandomAccess benchmark as defined by the High Performance
+Computing Challenge (HPCC) tests the speed at which a machine can
+update the elements of a table spread across global system memory, as
+measured in billions (giga) of updates per second (GUPS).  The
+parallel implementation provided by HPCC typically performs poorly on
+distributed-memory machines, due to updates requiring numerous small
+point-to-point messages between processors.  We present an alternative
+algorithm which treats the collection of P processors as a hypercube,
+aggregating data so that larger messages are sent, and routing
+individual datums through dimensions of the hypercube to their
+destination processor.  The algorithm's computation (the GUP count)
+scales linearly with P while its communication overhead scales as
+log_2(P), thus enabling better performance on large numbers of
+processors.  The new algorithm achieves a GUPS rate of 19.98 on 8192
+processors of Sandia's Red Storm machine, compared to 1.02 for the
+HPCC-provided algorithm on 10350 processors.  We also illustrate how
+GUPS performance varies with the benchmark's specification of its
+``look-ahead'' parameter.  As expected, parallel performance degrades
+for small look-ahead values, and improves dramatically for large
+values.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

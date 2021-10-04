@@ -1,0 +1,10 @@
+[Computational Limits of Classical Molecular-Dynamics Simulations]
+
+S. J. Plimpton, Computational Materials Science, 4, 361-364 (1995).
+
+The system sizes and time scales accessible by classical molecular
+dynamics techniques on current--generation parallel supercomputers are
+briefly discussed. The implications for simulation of glasses and
+glass--forming materials now and in the near future are highlighted.
+
+Return to "Publications page"_../papers.html

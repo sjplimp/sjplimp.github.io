@@ -1,0 +1,229 @@
+Example txt2html Document :c,h3
+
+This document illustrates simple examples of all the formatting and
+mark-up that the "txt2html"_README.html tool recognizes.  This
+example.html file was created from the text file example.txt by
+typing:
+
+txt2html example.txt > example.html
+
+:line
+
+[Mark-up Syntax:]
+
+This is an example of [bold text].  This is an example of {italicized
+text}.  This text is [{both bold and italicized}].
+
+This is a "link"_#lists to another location in this document.
+
+This is a "link"_README.html to another document, the README.html in
+this same directory.
+
+This is a "link"_alias1 to another location in the README.html document.
+
+This is a "link"_alias2 to the Google WWW site.
+
+If you look in example.txt you will see that the first 2 links were
+created in-line, while the last 2 used an alias to a definition
+elsewhere in the example.txt file.
+
+:link(alias1,README.html#markup)
+:link(alias2,http://www.google.com)
+
+:line
+
+[Paragraph Styles:]
+
+This is a default paragraph with no formatting styles appended.
+
+This paragraph has a :p command appended.  It should look the same as
+the default. :p
+
+This paragraph has a :b command appended.  It should have no following
+newline. :b
+
+This paragraph has a :c command appended.  It should be centered. :c
+
+This paragraph has a :h3 command appended. :h3
+
+This paragraph has a :c,h3 command appended.  It will also be centered :c,h3
+
+This paragraph has a :pre appended.
+It will appear with a different font and
+  with spacing exactly as in the example.txt file. :pre
+
+:line
+
+[Lists:] :link(lists)
+
+This is a bulleted list, created with a single :ul appended to the
+last line of the list:
+
+item 1
+item 2
+item 3 :ul
+
+This is a numbered list; an :ol command is appended:
+
+item 1
+item 2
+item 3 :ol
+
+And this is a definition list, using a :dl command:
+
+item 1
+  This is a description of the first item.
+item 2
+The text file doesn't need any \
+indentation so long as each of the 6 entries in the list is a \
+single line in the example.txt file; the list format creates the \
+indentation.  This entry in the example.txt file illustrates the \
+use of the "\" character at the end of lines, to create one long line.
+item 3
+  This is a description of the third. :dl
+
+An item in a list can have multiple lines and paragraphs if the
+formatting commands are applied to each line of the list:
+
+item 1 :ulb,l
+item 2 :l
+This is a 2nd paragraph associated with item 2. :p
+This is a 3rd paragraph. It can be as long as needed to describe the item.  It
+will keep going until a :p formatting command is placed
+at the end of a line. :p
+item 3 :l,ule
+
+:line
+
+[Commands applied to each line in the paragraph:]
+
+This entire paragraph is centered
+line by line
+by appending :all(c) to the
+last line. :all(c)
+
+This entire paragraph consists of short lines
+that are left-justified.
+This is done by appending :all(b) to the
+last line. :all(b)
+
+This is a simple bulleted list with no indentation, by appending
+:all(l) to the last line.
+
+item 1
+item 2
+item 3 :all(l)
+
+:line
+
+[Special commands:]
+
+This leading and trailing horizontal breaks for this section were
+created using the :line command.
+
+The :c,image(file) command inserts this image of an equation.  The "c"
+causes it to be centered.
+
+:c,image(equation.gif)
+
+The :image(file,link) command inserts it again, and allows you to click
+on it to go to the Google WWW site.
+
+:image(equation.gif,http://www.google.com)
+
+The :link(name) and :link(alias,value) commands were illustrated earlier
+in this document.
+
+:line
+
+[Table command:]
+
+This is a simple default table created by appending :tb to the last
+line.
+
+Procs, 1, 2, 4
+CPU, 10.0, 5.1, 2.8 :tb
+
+The next table used :tb(b=5,s=;,a=r) to create a larger border, use a
+different delimiter character in the example.txt file, and align to
+the right of the browser window.
+
+Procs; 1; 2; 4
+CPU; 10.0; 5.1; 2.8 :tb(b=5,s=;,a=r)
+
+The next table with :tb(w=100%,ea=c) has a width percentage that fills
+100% of the screen and the text in each entry aligned to the center.
+
+Procs, 1, 2, 4
+CPU, 10.0, 5.1, 2.8 :tb(w=100%,ea=c)
+
+The next table with :tb(cw1=5x0%,w=20,ca1=r) has the width of column 1
+= 50%, the rest of the columns of width 20 pixels, and the data in
+column 1 aligned to the right.
+
+Procs, 1, 2, 4
+CPU, 10.0, 5.1, 2.8 :tb(cw1=5x0%,w=20,ca1=r)
+
+The next table with :tb(c=3,cva1=t,eva=bo,cw2=60) has three columns.
+Column one is vertically aligned to the top, there is a break row
+specified by just commas, the data is vertically aligned to the
+bottom, and the width of column 2 is 60 pixels.
+
+Section One,
+Line One 
+Line Two 
+Line Three,
+Column three,
+, , ,
+[Section Two (bold)], Line One Line Two Line Three, Co
+lumn 3   
+:tb(c=3,cva1=t,eva=bo,cw2=60)
+
+The next table with :tb(c=3,cva1=t,b=0,w=60%,cw3=80%,s=***) has three
+columns (only two that have information - see heading two).  Column
+one is vertically aligned to the top, there is no border, the width of
+column 3 is 80% of the table, the width of the table is 60% of the
+screen, and the separator is not a comma (it is ***).
+
+[Heading One]*** ***
+A couple of sentences that wrap.  For example, a definition, 
+an explanation, a point about this particular page, and so 
+forth.  The lines wrap, no matter where you insert newlines, if 
+you specify a specific number of columns.  Don't forget to include 
+spaces, or your words will also wrap together.*** 
+*** *** ***
+[Heading Two]*** ***
+There is a bit of a break between the last paragraph and heading two
+because we inserted a row of blank space.  There is a separator column
+between the heading and the paragraphs because we included an extra
+separator there (compare with distance between columns in table
+above).  To make the distance larger, put &lt;br&gt; in the extra
+cell.  It need not be included in every row, just one.
+:tb(c=3,cva1=t,b=0,w=60%,cw3=80%,s=***)
+
+The next table with :tb(c=3,b=0,w=60%,cw2=5%,s=***) has columns equals
+three, there is no border, the width of the entire table covers 60% of
+the screen, column two has a width of 5% of the table, and the
+separator is, again, ***.
+
+[Heading One]*** *** [Heading Two]***
+This table is similar to the last one. A couple of sentences that
+wrap.  For example, a definition, an explaination, a point about this
+particular page, and so forth.  The lines wrap, no matter where you
+insert newlines, if you specify a specific number of columns.  Don't
+forget to include spaces, or your words will also wrap together.***
+*** This table has no extra row like the one above, but it does have
+the extra column to separate the data columns.  This column is 5% of
+the total width, so it is big enough to make a clear break between the
+columns, but not overwhelming. More text to wrap.  More text to wrap.
+More text to wrap.  More text to wrap.  More text to wrap. More text
+to wrap.
+:tb(c=3,b=0,w=60%,cw2=5%,s=***)
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<HTML>
+<P><B>Maintaining connected components for infinite graph streams</B>
+</P>
+<P>J. W. Berry, M. Oster, C. A. Phillips, S. J. Plimpton, T. M Shead,
+BigMine-13, a KDD13 workshop - 2nd International Workshop on Big Data,
+Streams and Heterogeneous Source Mining, Chicago, IL, Aug 2013.
+</P>
+<P>We present an algorithm to maintain the connected components of a
+graph that arrives as an infinite stream of edges. We formalize the
+algorithm on X-stream, a new parallel theoretical computational model
+for infinite streams. Connectivityrelated queries, including component
+spanning trees, are supported with some latency, returning the state
+of the graph at the time of the query. Because an infinite stream may
+eventually exceed the storage limits of any number of finite-memory
+processors, we assume an aging command or daemon where “uninteresting”
+edges are removed when the system nears capacity.  Following an aging
+command the system will block queries until its data structures are
+repaired, but edges will continue to be accepted from the stream,
+never dropped. The algorithm will not fail unless a model-specific
+constant fraction of the aggregate memory across all processors is
+full. In normal operation, it will not fail unless aggregate memory is
+completely full.
+</P>
+<P>Unlike previous theoretical streaming models designed for finite
+graphs that assume a single shared memory machine or require
+arbitrary-size intemediate files, X-stream distributes a graph over a
+ring network of finite-memory processors. Though the model is
+synchronous and reminiscent of systolic algorithms, our implementation
+uses an asynchronous messagepassing system. We argue the correctness
+of our X-stream connected components algorithm, and give preliminary
+experimental results on synthetic and real graph streams.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

@@ -1,0 +1,21 @@
+[The structure and thermodynamics of energetically and structurally
+asymmetric polymer blends]
+
+P. A. Tillman, D. R. Rottach, J. D. McCoy, S. J. Plimpton,
+J. G. Curro, J Chem Phys, 109, 806-814 (1998).
+
+Simple polymer blends were studied by simulations with the intent of
+probing the response of structurally asymmetric chains to
+progressively stronger attractive interactions strengths. It was
+found, for miscible blends, that the intermolecular pair correlation
+functions, the g(r)'s, varied by less than 10% from those of the
+associated blend with strictly repulsive interactions. When used for
+the purposes of calculating changes in pressure due to the attractive
+strength, the g(r)'s from either the repulsive or attractive systems
+could be used interchangeably in the perturbation theory. On the other
+hand, calculations of the enthalpic chi parameter were sensitive to
+small variations in the g(r)'s, although, at least for the systems
+studied here, the associated predictions of the phase boundaries were
+relatively insensitive.
+
+Return to "Publications page"_../papers.html

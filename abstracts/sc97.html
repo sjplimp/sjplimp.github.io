@@ -1,0 +1,34 @@
+<HTML>
+<P><B>Transient Solid Dynamics Simulations on the Sandia/Intel Teraflop
+Computer</B>
+</P>
+<P>S. Attaway, T. Barragy, K. Brown, D. Gardner, B. Hendrickson,
+S. J. Plimpton, C. Vaughan, Gordon Bell finalist paper, in Proc of
+SuperComputing '97, San Jose, CA, November 1997.
+</P>
+<P>Transient solid dynamics simulations are among the most widely used
+engineering calculations. Industrial applications include vehicle
+crashworthiness studies, metal forging, and powder compaction prior to
+sintering. These calculations are also critical to defense
+applications including safety studies and weapons simulations. The
+practical importance of these calculations and their computational
+intensiveness make them natural candidates for parallelization.  This
+has proved to be difficult, and existing implementations fail to scale
+to more than a few dozen processors. In this paper we describe our
+parallelization of PRONTO, Sandia's transient solid dynamics code, via
+a novel algorithmic approach that utilizes multiple decompositions for
+different key segments of the computations, including the material
+contact calculation. This latter calculation is notoriously difficult
+to perform well in parallel, because it involves dynamically changing
+geometry, global searches for elements in contact, and unstructured
+communications among the compute nodes. Our approach scales to at
+least 3600 compute nodes of the Sandia/Intel Teraflop computer (the
+largest set of nodes to which we have had access to date) on problems
+involving millions of finite elements. On this machine we can simulate
+models using more than ten-million elements in a few tenths of a
+second per timestep, and solve problems more than 3000 times faster
+than a single processor Cray Jedi.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

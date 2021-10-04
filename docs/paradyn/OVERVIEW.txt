@@ -1,0 +1,607 @@
+c ParaDyn - Parallel DYNAMO - molecular dynamics with EAM potentials
+c 
+c Authored by Steve Plimpton
+c   (505) 845-7873, sjplimp@cs.sandia.gov
+c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM  87185-1111
+c
+c Based on the serial DYNAMO code authored by
+c   Stephen Foiles (foiles@ca.sandia.gov), Sandia National Labs, Livermore, CA
+c   Murray Daw (daw@hubcap.clemson.edu), Clemson University
+c
+c See the README file for more information
+c
+
+ParaDyn is run with an input file of commands which set/unset various
+options and trigger (multiple) minimization or MD runs.  To run the
+code, simple redirect your input file into the ParaDyn executable:
+
+pd_unix < input.file
+
+This is a complete list of valid ParaDyn inputs and the "type" of
+parameters that should be used (i=integer,r=real,c=character string).
+A typical run would only use a few of these commands.  More details
+are given below.
+
+##########################################################################
+
+# comment
+
+log file		pd.log			(c)
+
+parallel method		1			(i)
+newton flag		1			(i)
+neighbor method		1			(i)
+neighbor cutoff		1.0			(r)
+
+boundary method		1			(i)
+boundary flags		1 1 1			(iii)
+desired pressure	0.0			(r)
+applied pressure	50.0 50.0 50.0		(rrr)
+
+thermo output		100			(i)
+atom output		100			(i)
+dump file		pd.dump			(c)
+velocity output		100			(i)
+velocity file		pd.vel			(c)
+stress output		100			(i)
+stress file		pd.stress		(c)
+
+constraint style	1 3			(ii)
+constraint vector	1 0.0 0.0 0.0		(irrr)
+
+temperature style	1 4 12345678		(iii)
+temperature flags 	1 800.0 1500.0 0	(irri)
+temperature vector	1 0.1 0.0 0.0		(irrr)
+temperature constant	1 100.0			(ir)
+
+diagnostic		100 pd.diag 2 10.0 ...	(icirrrrr)
+user force		3 10.0 ...		(irrrrr)
+
+read potential		1 agu3			(ic)
+interpolate
+
+create atoms		fcc 3.52 5 5 5 0	(criiii)
+read atoms		pd.dump			(c)
+
+constrain atom		1 1			(ii)
+constrain group		1 100 200		(iii)
+constrain region	1 -10.0 10.0 ...	(irrrrrr)
+constrain off		1			(i)
+
+control region		1 -10.0 10.0 ...	(irrrrrr)
+control off		1			(i)
+
+create velocities	1600.0 87654321		(ri)
+read velocities		pd.vel			(c)
+
+minimize		1000 1.0E-6		(r)
+run			10 0.005		(ir)
+
+scale atoms		1.01 1.02 0.98		(rrr)
+scale velocities	1500.0			(r)
+dump atoms
+dump velocities
+dump stresses
+clear
+
+##########################################################################
+
+Details:
+
+Most of the input commands take one or more parameters.  The type
+(integer, real, character string) of the parameters is important since
+the input parser expects certain kinds of values.  The keyword for
+each command should begin in the leftmost column and all characters in
+the command should be in lower-case.  Parameters can be separated by
+arbitrary numbers of spaces and/or tabs (so long as the command fits
+on one line).
+
+There are 2 basic kinds of commands, "settings" and "actions".
+Setting commands can be performed at any time (see exception with
+"parallel method" command below).  All of them have defaults so don't
+need to be set.  Action commands cause the program to perform a
+specific task.  Typically, they are done in a certain order.
+
+(1) read potentials
+(2) interpolate potentials
+(3) read or create atom positions
+(4) constrain atom(s)
+(5) temperature control atoms(s)
+(6) read or create atom velocities
+(7) minimize or run dynamics
+
+(*) scale atom coords, velocities
+(*) dump atom coords, velocities, stresses
+(*) clear all settings
+
+Steps 1,2,3 are done for all simulations; steps 4,5 are optional; step
+6 need only be done if dynamics will be run in step 7.  Dumping and
+scaling of atom positions can be done anytime after atom positions
+have been read or created.  Dumping and scaling of velocities can be
+done anytime after atom velocities have been read or created.
+Clearing of settings can be done anytime, but you then must return to
+step 1.
+
+Explanation of all ParaDyn commands:
+
+#### Settings ###############################################################
+
+# comments
+
+blank lines are ignored
+everything on a line after last parameter is ignored
+lines starting with a # are echoed into the log file
+
+# log file
+
+all info from this point on will dump into this file
+any previous file is closed
+new filename can exist, will be overwritten
+anything in input file before the first "log file" command will not
+  be echoed into a log file
+default = none
+
+# parallel method
+
+1 = atom-decomposition
+2 = force-decomposition
+
+determines how force computations are divided among processors
+setting this erases all atoms, because it must be set before 
+  atoms are read in or created
+doesn't affect simulation results, only speed
+choice 2 is generally faster
+choice 2 partitions processors in a 2-d fashion, so for optimal performance
+  you should run on P processors where P = M*N and M is roughly equal to N,
+  the worst-case scenario with choice 2 would be to run with P a prime, then 
+  P = 1*P are the only factors and you will actually be running with choice 1
+if atom positions are read in, need to be in random order for choice 2
+  to work optimally - see serial "randomize" program
+if atom positions are created, need to be in random order for choice 2
+  to work optimally - see "create atoms" command
+default = 2
+
+# newton flag
+
+1 = no Newton's method
+2 = Newton's method
+
+determines whether Newton's 3rd law is implemented
+takes less computation, but more communication
+doesn't affect simulation results, only speed
+choice 2 is generally faster for reasonably large problems
+default = 2
+
+# neighbor method
+
+1 = search all other atoms
+2 = bin into boxes, search only nearby boxes
+
+determines method for finding neighbors at each re-neighoring
+doesn't affect simulation results, only speed
+choice 2 is generally faster for reasonably large problems
+has to be 4 neighbor boxes in each dimension to use method 2
+1st method scales as N^2, 2nd as N
+default = 1
+
+# neighbor cutoff
+
+distance beyond force cutoff to check for neighbors
+force cutoff is determined by EAM potentials for each element
+units of Angstroms
+default = 1.0
+
+# boundary method
+
+1 = constant volume
+2 = constant pressure
+
+determines how boundaries of simulation box are treated
+constant volume means never change box size
+constant pressure means allow box size to change by shifting boundaries
+choice 2 is also affected by "boundary flags" command
+default = 1
+
+# boundary flags
+
+0 = non-periodic boundary
+1 = periodic boundary
+
+determines periodicity for force calculation in x,y,z directions
+choice 0 means don't interact atoms across a boundary
+choice 1 means do interact atoms across a boundary
+choice 0 also means do not adjust box size in that dimension even
+  if "boundary method" command = 2
+in either case atoms are always remapped back into box (in a periodic sense)
+  if they go past the boundary
+bottom line: if you use choice 0, you should guarantee atoms will not
+  go past those boundaries -> set box size slightly larger than
+  atom positions will ever be or just set them to 10000.0
+boundaries are set by ITEM: BOUNDS in a "read atoms" input file
+default = 1 for all 3 boundaries
+
+# desired pressure
+
+pressure to equilibrate to for constant pressure (boundary method = 2)
+units of bars
+default = 0.0
+
+# applied pressure
+
+external applied pressure to x,y,z faces of simulation box
+units of bars
+default = 0.0 for all 3 dimensions
+
+# thermo output
+
+print thermodynamic info to screen and log file every this many timesteps
+value of 0 means never print
+default = 0
+
+# atom output
+
+dump all atom positions to a dump file every this many timesteps
+positions can be dumped at the start/end of a run with "dump atoms" command
+value of 0 means never dump
+default = 0
+
+# dump file
+
+name of dump file to dump atom positions to
+any previous file is closed
+new filename can exist, will be overwritten
+default = pd.dump
+
+# velocity output
+
+dump all atom velocities to a velocity file every this many timesteps
+velocities can be dumped at the start/end of a run with 
+  "dump velocities" command
+value of 0 means never dump
+default = 0
+
+# velocity file
+
+name of velocity file to dump atom velocities to
+any previous file is closed
+new filename can exist, will be overwritten
+default = pd.vel
+
+# stress output
+
+dump all atom stresses to a stress file every this many timesteps
+stresses can be dumped at the end of a run with 
+  "dump stresses" command
+value of 0 means never dump
+this command is only defined if ParaDyn was compiled with -DSTRESS
+default = 0
+
+# stress file
+
+name of stress file to dump atom stresses to
+any previous file is closed
+new filename can exist, will be overwritten
+this command is only defined if ParaDyn was compiled with -DSTRESS
+default = pd.stress
+
+# constraint style
+
+1st parameter = constraint #
+2nd parameter = kind of constraint
+  1 = fix to a point
+  2 = fix to a line
+  3 = fix to a plane
+  4 = add a force
+
+define constraints that will later be applied to atoms/regions
+  (see "constrain" commands)
+if 1st parameter = 0 -> undefines all constraints, no need for 2nd parameter
+for 2nd parameter = 2,3,4 -> need to use "constraint vector" command
+default = no constraints
+
+# constraint vector
+
+1st parameter = constraint #
+2nd-4th parameters = 3 components of vector
+
+specify a vector corresponding to a "constraint style" #
+for style = 2, vector is the line of constraint
+for style = 3, vector is normal to the plane of constraint
+for style = 4, vector is the components of the applied force
+for styles 2,3 vector will be normalized to unit length by the program
+default = no constraints
+
+# temperature style
+
+1st parameter = temperature control #
+2nd parameter = kind of temperature control
+  1 = constant energy (no rescaling)
+  2 = explicit rescaling (no damping)
+  3 = Hoover drag (damped)
+  4 = Langevin dynamics (stochastic)
+  5 = initialize atoms to a specified velocity
+3rd parameter = random # seed
+
+define temperature controls that will later be applied to atoms/regions
+  (see "control" commands)
+if 1st parameter = 0 -> undefines all controls, no need for other parameter
+for 2nd parameter = 2,3,4 -> need to use "temperature flags" command
+for 2nd parameter = 4 -> need 3rd parameter, 8 digits or less
+  (don't need 3rd parameter otherwise)
+for 2nd parameter = 5 -> need to use "temperature vector" command
+default = no temperature controls
+
+# temperature flags
+
+1st parameter = temperature control #
+2nd parameter = beginning target temperature
+3rd parameter = ending target temperature
+4th parameter = flag for when to look for atoms in the control region
+  0 = tag atoms only at the beginning of the run
+  1 = check every timestep
+
+specify flags corresponding to a "temperature style" #
+target temperature for rescaling atom velocities will slide linearly
+  between starting and ending value during the dynamics run
+if the 2nd parameter is ---, then use the 3rd parameter as the target
+  temperature for the entire run
+units for temperature are degrees K
+default = no temperature controls
+
+# temperature vector
+
+1st parameter = temperature control #
+2nd-4th parameters = 3 components of velocity vector
+
+specify a velocity vector corresponding to a "temperature style" #
+all atoms in the control region will be set to this velocity 
+  when velocities are created
+can be used to set a region of atoms moving in a specified direction
+units of velocity vector are Angstroms/picosecond
+default = no temperature controls
+
+# temperature constant
+
+1st parameter = temperature control #
+2nd parameter = constant
+
+specify a constant corresponding to a "temperature style" # to use in 
+  temperature rescaling for that style
+affects things like how heavy the damping is, how stochastic the random
+  numbers are
+default constants are set according to style #, this command overrides it
+  style = 2	default constant = 1730.0
+  style = 3	default constant = 40.0
+  style = 4	default constant = 0.1
+default = no temperature controls
+
+# diagnostic
+
+1st parameter = call diagnostic routine every this many steps
+2nd parameter = filename to dump diagnostic results to
+3rd parameter = # of remaining parameters
+4th-8th parameters = parameters to pass to diagnostic routine
+
+allows user to link in and call a tailored diagnostic routine to compute
+  some desired quantities
+if 1st parameter = 0, never call routine (turn off diagnositcs)
+3rd parameter can be from 0 to 5
+4th-8th parameters are passed into diagnostic routine
+default = no diagnostics
+
+# user force
+
+1st parameter = # of remaining parameters
+2nd-6th parameters = parameters to pass to user force routine
+
+allows user to link in and call a tailored force routine to apply
+  desired force(s) to system
+1st parameter can be from 0 to 5
+if 1st parameter = 0, never call routine (turn off user-specified force)
+2nd-6th parameters are passed into user force routine
+default = no user-specified force
+
+#### Actions ################################################################
+
+# read potential
+
+1st parameter = # of potential being read
+2nd parameter = filename to read from
+
+read potential file to define EAM coefficients for a particular atom type
+can specify path of file as well, e.g. ../potentials/ag3
+if 1st parameter = 0, file is assumed to be a DYNAMO "setfl"
+
+# interpolate
+
+use the read-in potentials to setup all the force interpolation tables
+in no "setfl" was specified in "read potential", then alloy potentials
+  are just interpolated
+no parameters
+
+# create atoms
+
+1st parameter = lattice type (fcc, bcc, sc)
+2nd parameter = lattice constant
+3rd-5th parameters = # of cubic unit cells in each dimension
+6th parameter = random # seed
+
+create a perfect lattice of atoms (all of type 1) centered on 0.0,0.0,0.0
+sets the simulation box size accordingly
+units of lattice constant are Angstroms
+if random # seed is 0, then atoms are ordered regularly on the lattice - this
+  is fine for parallel method = 1, not optimal (speed-wise) for method = 2
+if random # seed is > 0, then atoms are randomly ordered using the parameter
+  as a seed - this is a faster choice for parallel method = 2
+
+# read atoms
+
+read atom positions from a file
+format of file is as follows (with comments in parenthesis)
+
+ITEM: NUMBER OF ATOMS
+ 500                            (# of atoms)
+ITEM: BOX BOUNDS
+ -10.0 10.0			(simulation box bounds in x,y,z dimensions)
+ -10.0 10.0
+ -10.0 10.0
+ITEM: TIME
+ 0.00000			(time in picosecs to [re]start simulation at)
+ITEM: ATOMS
+ 1  1  -10.0 -10.0 -10.0	(atom id #, atom type, x,y,z position)
+ 2  1  -10.0 -10.0 -5.0
+ 3  2  -8.0 -8.0 -8.0
+ ...
+
+remainder of file is ignored
+dump file has same format (see "dump atoms" command)
+if atom positions are read in for force-decomposition (see "parallel method"
+  command, they should be in random order for code to run optimally - this
+  can be done using serial "randomize" program
+
+# constrain atom
+
+1st parameter = constraint #
+2nd parameter = atom # to apply constraint to
+
+constrain this single atom identified by global atom id #
+
+# constrain group
+
+1st parameter = constraint #
+2nd parameter = first atom # in group to apply constraint to
+3rd parameter = last atom # in group to apply constraint to
+
+constrain group of atoms identified by consecutive global atom id #'s
+  from first # to last #
+	
+# constrain region
+
+1st parameter = constraint #
+2nd-7th parameters = x,y,z bounds of constrained region
+  (xlo,xhi, ylo,yhi, zlo,zhi)
+
+constrain all atoms in this region
+if any of the 2nd-7th parameters is --- it means + or - infinity
+  (all the way to the boundary)
+
+# constrain off
+
+unassign all atoms assigned to this constraint #
+constraint # = 0 means unassign all atoms
+
+# control region
+
+1st parameter = temperature control #
+2nd-7th parameters = x,y,z bounds of controlled region
+  (xlo,xhi, ylo,yhi, zlo,zhi)
+
+temperature control all atoms in this region
+if any of the 2nd-7th parameters is --- it means + or - infinity
+  (all the way to the boundary)
+
+# control off
+
+unassign all atoms assigned to this temperature control #
+control # = 0 means unassign all atoms
+
+# create velocities
+
+1st parameter = temperature
+2nd parameter = 8 digit (or less) random # seed
+
+generate a Boltzmann distribution of velocities	for all atoms
+  at the specified temperature
+do not need to do this if just performing a minimization
+atoms tagged for temperature control (see "control region") use a
+  temperature specified for their region (see "temperature flags"),
+  if it is not ---
+units of degrees K
+
+# read velocities
+
+read velocities for all atoms from this file
+format of file is as follows (with comments in parenthesis)
+
+ITEM: NUMBER OF ATOMS
+  500                           (# of atoms)
+ITEM: BOUNDARY VELOCITY
+  0.0 0.0 0.0                   (3 box edge vels in constant P simulation)
+ITEM: TIME
+ 0.00000			(time in picosecs)
+ITEM: VELOCITIES
+  1  -8.5 6.3 2.1          	(atom #, x,y,z components of velocity)
+  2  4.3 -5.4 -4.2
+  ...
+
+remainder of file is ignored
+warning is printed if atom #s do not match atoms #s already assigned
+ to each processor
+
+# minimize
+
+1st parameter = maximum # of conjugate gradient iterations
+2nd parameter = tolerance for stopping criterion
+
+minimize the energy of the system (relax the atom positions)
+units of eV (total energy) for tolerance
+
+# run
+
+1st parameter = # of timesteps
+2nd parameter = timestep size
+
+run molecular dynamics for this many timesteps
+units of picoseconds
+
+# scale atoms
+
+1st parameter = scale factor in x-dimension
+2nd parameter = scale factor in y-dimension
+3rd parameter = scale factor in z-dimension
+
+rescale the coordinates of all atoms by these factors in each dimension
+factor of 1.02 means 2% dilation, factor of 0.995 means 0.5% contraction
+scaling is done by fixing lower box boundary, adjusting coords of
+  all atoms relative to lower boundary, then setting new scaled
+  upper boundary position
+
+# scale velocities
+
+rescale the velocities of all atoms to this temperature
+units of degrees K
+
+# dump atoms
+	
+dump snapshot of atom positions, box bounds, and time to file 
+  specified by "dump file"
+can be done at start or end of minimize or run if not already 
+  done in timestep loop
+see "read atoms" for file format used
+
+# dump velocities
+	
+dump snapshot of atom velocities and time to file 
+  specified by "velocity file"
+can be done at start or end of minimize or run if not already 
+  done in timestep loop
+see "read velocities" for file format used
+
+# dump stresses
+	
+dump snapshot of atom stresses and time to file 
+  specified by "stress file"
+can be done at end of minimize or run if not already 
+  done in timestep loop
+stresses should not be dumped at beginning of run unless forces
+  have been computed from a previous run, else will be meaningless
+this command is only defined if ParaDyn was compiled with -DSTRESS
+see "read stresses" for file format used
+
+# clear
+
+reset all settings to default values
+log file and dump file are not closed
+clear all force constraints and temperature regions
+set time to 0.0
+all atom positions, potentials, velocities must be read/set anew

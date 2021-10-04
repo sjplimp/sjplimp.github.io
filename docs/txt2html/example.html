@@ -1,0 +1,210 @@
+<HTML>
+<CENTER><H3>Example txt2html Document 
+</H3></CENTER>
+<P>This document illustrates simple examples of all the formatting and
+mark-up that the <A HREF = "README.html">txt2html</A> tool recognizes.  This
+example.html file was created from the text file example.txt by
+typing:
+</P>
+<P>txt2html example.txt > example.html
+</P>
+<HR>
+
+<P><B>Mark-up Syntax:</B>
+</P>
+<P>This is an example of <B>bold text</B>.  This is an example of <I>italicized
+text</I>.  This text is <B><I>both bold and italicized</I></B>.
+</P>
+<P>This is a <A HREF = "#lists">link</A> to another location in this document.
+</P>
+<P>This is a <A HREF = "README.html">link</A> to another document, the README.html in
+this same directory.
+</P>
+<P>This is a <A HREF = "README.html#markup">link</A> to another location in the README.html document.
+</P>
+<P>This is a <A HREF = "http://www.google.com">link</A> to the Google WWW site.
+</P>
+<P>If you look in example.txt you will see that the first 2 links were
+created in-line, while the last 2 used an alias to a definition
+elsewhere in the example.txt file.
+</P>
+
+
+
+
+<HR>
+
+<P><B>Paragraph Styles:</B>
+</P>
+<P>This is a default paragraph with no formatting styles appended.
+</P>
+<P>This paragraph has a :p command appended.  It should look the same as
+the default. 
+</P>
+This paragraph has a :b command appended.  It should have no following
+newline. 
+<BR>
+<CENTER>This paragraph has a :c command appended.  It should be centered. 
+</CENTER>
+<H3>This paragraph has a :h3 command appended. 
+</H3>
+<CENTER><H3>This paragraph has a :c,h3 command appended.  It will also be centered 
+</H3></CENTER>
+<PRE>This paragraph has a :pre appended.
+It will appear with a different font and
+  with spacing exactly as in the example.txt file. 
+</PRE>
+<HR>
+
+<A NAME = "lists"></A><B>Lists:</B> 
+
+<P>This is a bulleted list, created with a single :ul appended to the
+last line of the list:
+</P>
+<UL><LI>item 1
+<LI>item 2
+<LI>item 3 
+</UL>
+<P>This is a numbered list; an :ol command is appended:
+</P>
+<OL><LI>item 1
+<LI>item 2
+<LI>item 3 
+</OL>
+<P>And this is a definition list, using a :dl command:
+</P>
+<DL><DT>item 1
+<DD>  This is a description of the first item.
+<DT>item 2
+<DD>The text file doesn't need any indentation so long as each of the 6 entries in the list is a single line in the example.txt file; the list format creates the indentation.  This entry in the example.txt file illustrates the use of the "\" character at the end of lines, to create one long line.
+<DT>item 3
+<DD>  This is a description of the third. 
+</DL>
+<P>An item in a list can have multiple lines and paragraphs if the
+formatting commands are applied to each line of the list:
+</P>
+<UL><LI>item 1 
+
+<LI>item 2 
+
+<P>This is a 2nd paragraph associated with item 2. 
+</P>
+<P>This is a 3rd paragraph. It can be as long as needed to describe the item.  It
+will keep going until a :p formatting command is placed
+at the end of a line. 
+</P>
+<LI>item 3 
+</UL>
+<HR>
+
+<P><B>Commands applied to each line in the paragraph:</B>
+</P>
+<CENTER>This entire paragraph is centered</CENTER>
+<CENTER>line by line</CENTER>
+<CENTER>by appending :all(c) to the</CENTER>
+<CENTER>last line. </CENTER>
+
+This entire paragraph consists of short lines<BR>
+that are left-justified.<BR>
+This is done by appending :all(b) to the<BR>
+last line. <BR>
+
+<P>This is a simple bulleted list with no indentation, by appending
+:all(l) to the last line.
+</P>
+<LI>item 1
+<LI>item 2
+<LI>item 3 
+
+<HR>
+
+<P><B>Special commands:</B>
+</P>
+<P>This leading and trailing horizontal breaks for this section were
+created using the :line command.
+</P>
+<P>The :c,image(file) command inserts this image of an equation.  The "c"
+causes it to be centered.
+</P>
+<CENTER><IMG SRC = "equation.gif">
+</CENTER>
+<P>The :image(file,link) command inserts it again, and allows you to click
+on it to go to the Google WWW site.
+</P>
+<A HREF = "http://www.google.com"><IMG SRC = "equation.gif"></A>
+
+<P>The :link(name) and :link(alias,value) commands were illustrated earlier
+in this document.
+</P>
+<HR>
+
+<P><B>Table command:</B>
+</P>
+<P>This is a simple default table created by appending :tb to the last
+line.
+</P>
+<DIV ALIGN=center><TABLE  WIDTH="0%"  BORDER=1 >
+<TR><TD >Procs</TD><TD > 1</TD><TD > 2</TD><TD > 4</TD></TR>
+<TR><TD >CPU</TD><TD > 10.0</TD><TD > 5.1</TD><TD > 2.8 
+</TD></TR></TABLE></DIV>
+
+<P>The next table used :tb(b=5,s=;,a=r) to create a larger border, use a
+different delimiter character in the example.txt file, and align to
+the right of the browser window.
+</P>
+<DIV ALIGN=right ><TABLE  WIDTH="0%"  BORDER=5 >
+<TR><TD >Procs</TD><TD > 1</TD><TD > 2</TD><TD > 4</TD></TR>
+<TR><TD >CPU</TD><TD > 10.0</TD><TD > 5.1</TD><TD > 2.8 
+</TD></TR></TABLE></DIV>
+
+<P>The next table with :tb(w=100%,ea=c) has a width percentage that fills
+100% of the screen and the text in each entry aligned to the center.
+</P>
+<DIV ALIGN=center><TABLE  WIDTH="100%" BORDER=1 >
+<TR ALIGN="center"><TD >Procs</TD><TD > 1</TD><TD > 2</TD><TD > 4</TD></TR>
+<TR ALIGN="center"><TD >CPU</TD><TD > 10.0</TD><TD > 5.1</TD><TD > 2.8 
+</TD></TR></TABLE></DIV>
+
+<P>The next table with :tb(cw1=5x0%,w=20,ca1=r) has the width of column 1
+= 50%, the rest of the columns of width 20 pixels, and the data in
+column 1 aligned to the right.
+</P>
+<DIV ALIGN=center><TABLE  WIDTH="0%"  BORDER=1 >
+<TR><TD WIDTH="5x0%" ALIGN ="right">Procs</TD><TD WIDTH="20"> 1</TD><TD WIDTH="20"> 2</TD><TD WIDTH="20"> 4</TD></TR>
+<TR><TD WIDTH="5x0%" ALIGN ="right">CPU</TD><TD WIDTH="20"> 10.0</TD><TD WIDTH="20"> 5.1</TD><TD WIDTH="20"> 2.8 
+</TD></TR></TABLE></DIV>
+
+<P>The next table with :tb(c=3,cva1=t,eva=bo,cw2=60) has three columns.
+Column one is vertically aligned to the top, there is a break row
+specified by just commas, the data is vertically aligned to the
+bottom, and the width of column 2 is 60 pixels.
+</P>
+<DIV ALIGN=center><TABLE  WIDTH="0%"  BORDER=1 >
+<TR VALIGN ="bottom"><TD  >Section One</TD><TD WIDTH="60" >Line One Line Two Line Three</TD><TD  >Column three</TD></TR>
+<TR VALIGN ="bottom"><TD  ></TD><TD WIDTH="60" > </TD><TD  > </TD></TR>
+<TR VALIGN ="bottom"><TD  ><B>Section Two (bold)</B></TD><TD WIDTH="60" > Line One Line Two Line Three</TD><TD  > Column 3   
+</TD></TR></TABLE></DIV>
+
+<P>The next table with :tb(c=3,cva1=t,b=0,w=60%,cw3=80%,s=***) has three
+columns (only two that have information - see heading two).  Column
+one is vertically aligned to the top, there is no border, the width of
+column 3 is 80% of the table, the width of the table is 60% of the
+screen, and the separator is not a comma (it is ***).
+</P>
+<DIV ALIGN=center><TABLE  WIDTH="60%" BORDER=0 >
+<TR><TD  ><B>Heading One</B></TD><TD  > </TD><TD WIDTH="80%" >A couple of sentences that wrap.  For example, a definition, an explanation, a point about this particular page, and so forth.  The lines wrap, no matter where you insert newlines, if you specify a specific number of columns.  Don't forget to include spaces, or your words will also wrap together.</TD></TR>
+<TR><TD  > </TD><TD  > </TD><TD WIDTH="80%" > </TD></TR>
+<TR><TD  ><B>Heading Two</B></TD><TD  > </TD><TD WIDTH="80%" >There is a bit of a break between the last paragraph and heading twobecause we inserted a row of blank space.  There is a separator columnbetween the heading and the paragraphs because we included an extraseparator there (compare with distance between columns in tableabove).  To make the distance larger, put &lt;br&gt; in the extracell.  It need not be included in every row, just one.
+</TD></TR></TABLE></DIV>
+
+<P>The next table with :tb(c=3,b=0,w=60%,cw2=5%,s=***) has columns equals
+three, there is no border, the width of the entire table covers 60% of
+the screen, column two has a width of 5% of the table, and the
+separator is, again, ***.
+</P>
+<DIV ALIGN=center><TABLE  WIDTH="60%" BORDER=0 >
+<TR><TD ><B>Heading One</B></TD><TD WIDTH="5%"> </TD><TD > <B>Heading Two</B></TD></TR>
+<TR><TD >This table is similar to the last one. A couple of sentences thatwrap.  For example, a definition, an explaination, a point about thisparticular page, and so forth.  The lines wrap, no matter where youinsert newlines, if you specify a specific number of columns.  Don'tforget to include spaces, or your words will also wrap together.</TD><TD WIDTH="5%"></TD><TD > This table has no extra row like the one above, but it does havethe extra column to separate the data columns.  This column is 5% ofthe total width, so it is big enough to make a clear break between thecolumns, but not overwhelming. More text to wrap.  More text to wrap.More text to wrap.  More text to wrap.  More text to wrap. More textto wrap.
+</TD></TR></TABLE></DIV>
+
+</HTML>

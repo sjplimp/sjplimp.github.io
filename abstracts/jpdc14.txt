@@ -1,0 +1,32 @@
+[Streaming data analytics via message passing with application to
+graph algorithms]
+
+S. J. Plimpton and T. Shead, J Parallel and Distributed Computing, 74,
+2687-2698 (2014).
+
+The need to process streaming data, which arrives continuously at
+high-volume in real-time, arises in a variety of contexts including
+data produced by experiments, collections of environmental or network
+sensors, and running simulations. Streaming data can also be
+formulated as queries or transactions which operate on a large dynamic
+data store, e.g. a distributed database.
+
+We describe a lightweight, portable framework named PHISH which
+provides a communication model enabling a set of independent processes
+to compute on a stream of data in a distributedmemory parallel
+manner. Datums are routed between processes in patterns defined by the
+application.  PHISH provides multiple communication backends including
+MPI and sockets/ZMQ. The former means streaming computations can be
+run on any parallel machine which supports MPI; the latter allows them
+to run on a heterogeneous, geographically dispersed network of
+machines.
+
+We illustrate how streaming MapReduce operations can be implemented
+using the PHISH communication model, and describe streaming versions
+of three algorithms for large, sparse graph analytics: triangle
+enumeration, sub-graph isomorphism matching, and connected component
+finding.  Wealso provide benchmark timings comparing MPI and socket
+performance for several kernel operations useful in streaming
+algorithms.
+
+Return to "Publications page"_../papers.html

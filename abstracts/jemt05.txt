@@ -1,0 +1,20 @@
+[Effect of Deformation Path Sequence on the Behavior of Nanoscale
+Copper Bicrystal Interfaces]
+
+D. E. Spearot, K. I. Jacob, D. L. McDowell, S. J. Plimpton, J Engr
+Materials and Technology, 127, 374-382 (2005).
+
+Molecular dynamics calculations are performed to study the effect of
+deformation sequence and history on the inelastic behavior of copper
+interfaces on the nanoscale. An asymmetric 45 deg tilt bicrystal
+interface is examined, representing an idealized high-angle grain
+boundary interface. The interface model is subjected to three
+different deformation paths: tension then shear shear then tension,
+and combined proportional tension and shear Analysis shows that
+path-history dependent material behavior is confined within a finite
+layer of deformation around the bicrystal interface. The relationships
+between length scale and,interface properties, such as the thickness
+of the path-history dependent layer and the interface strength, are
+discussed in detail.
+
+Return to "Publications page"_../papers.html

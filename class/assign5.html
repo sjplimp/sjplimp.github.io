@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+<TITLE>CS442 Programming Assignment 5</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFA0">
+<P>
+<CENTER> <H1>
+  CS 442 Programming Assignment 5<BR> 
+	  Divide and Conquer
+</H1></CENTER>
+<P>
+<b> Due:</b> Thursday, November 13
+<BR>
+<P>
+<b> Goals:</b>
+<P>
+<OL><LI> Introduce you to divide-and-conquer parallelism.
+<P>
+<LI> Learn to write a parallel algorithm from scratch rather than
+	modifying a serial code.
+<P>
+<LI> Create and free MPI communicators on the fly.
+<P>
+</OL>
+<P>
+<b> Background:</b>
+<P>
+Impressed by your bugling elk simulations, the Lincoln County Ranchers
+Association (LCRA) has funneled serious grant money into your
+department.  Your advisor sees the light and decides to change the
+direction of your research.  With a government subsidy, the LCRA has
+set up infrared monitoring stations around the perimeter of the Gila
+which detect whenever an elk leaves the safe haven of the Gila and
+laser tattoos it with a unique ID number.  Periodically these
+monitoring computers must communicate and sort their data so that ID
+numbers can be handed out to LCRA members for their weekly
+``park-and-poach'' activity.  The LCRA wants you to write a portable
+MPI code for this purpose which they will own and can license to other
+conservation-minded groups around the country.  While skeptical that
+this really qualifies as cutting-edge environmental research, as a
+maturing graduate student, you recognize the need to satisfy paying
+customers.
+<BR>
+<P>
+<b> Assignment:</b>
+<P>
+You will write a parallel program to sort a set of numerical values. To
+make life easier you may assume that no two values are identical.
+Initially, each processor owns an equal fraction of the values.  When
+your program is finished, each processor will own a sorted subset of
+values: that is, processor 0 will own the lowest few values, processor
+1 the next few, and so on.  Each processor will also sort its owned
+subset so that in aggregate, the entire list is in sorted order.  To
+perform the sort, you should implement the parallel divide-and-conquer
+variant of quicksort presented in class: divide the data into two
+subsets of low and high values on two subgroups of processors by
+finding a median, then recurse within each subgroup.  To simplify your
+task, you can assume that the number of processors is a power-of-two.
+<P>
+Input to your program will consist of the number of values to sort
+(N), a random number seed (SEED) used to generate the list of
+values, and an index (M) of the value to output.  Your code should
+run correctly for any N on any power-of-two processors P,
+including the case where P &gt; N.  The output of your code is the
+Mth value in the sorted list and a simple ``check-sum'' calculation
+on the sorted values which is more easily described in the code
+itself.  For both of these outputs you will find the MPI_Scan
+function useful.  Your parallel code should also include the following
+features: computation of the CPU time for the sort (not including
+initialization of the random values), creation and freeing of MPI
+communicators, use of asynchronous receives and waits for exchanging
+large sets of values between processors, and safeguards to insure that
+the exchanged data does not overflow allocated memory.
+<P>
+You should start with a sequential <A HREF="Program5.f">Fortran</A>
+or <A HREF="Program5.c">C</A> program which performs this task.
+<BR>
+<P>
+<b> What you hand in:</b>
+<P>
+<OL><LI> A program listing of your code.
+<P>
+<LI> Some evidence (you decide on the input/output) that your code
+      runs correctly even when P &gt; N, including when P &gt; 2N.
+<P>
+<LI> A 2-d table of results for a series of runs, all with SEED =
+      123456 and M = N/5. The table columns should be for varying
+      N by powers of 10 and should have at least 4 columns
+      (100,1000,10000,100000), more if you wish.  The table rows
+      should be for varying P and should have at least 4 rows
+      including P=1.  For example, P = 1,2,4,8 on cochiti or P =
+      1,8,64,256 on the nCUBE.  Each ``entry'' in the table should
+      contain the CPU time for the sort, the Mth sorted value, the
+      checksum result, the overall speed-up, and parallel efficiency.
+      For example, here is the table with just one row, running the
+      serial code on the Intel Paragon:
+<P>
+<TABLE BORDER=5>
+<TR>
+<TD>P=1</TD>  <TD>N = 100</TD><TD>N = 1000</TD><TD>N = 10000</TD><TD>N = 100000</TD>
+</TR>
+<TR>
+<TD>CPU (secs)</TD><TD>3.44E-4</TD><TD>5.20E-3</TD><TD>8.25E-2</TD><TD>1.28</TD>
+</TR>
+<TR>
+<TD>Mth</TD><TD>0.19539653</TD><TD>0.19475528</TD><TD>0.19816056</TD><TD>0.20036508</TD>
+</TR>
+<TR>
+<TD>Checksum</TD><TD>32.757375</TD><TD>329.27865</TD><TD>3314.1820</TD><TD>33329.805</TD>
+</TR>
+<TR>
+<TD>Speed-Up</TD><TD>1.0</TD><TD>1.0</TD><TD>1.0</TD><TD>1.0</TD>
+</TR>
+<TR>
+<TD>Efficiency</TD><TD>1.0</TD><TD>1.0</TD><TD>1.0</TD><TD>1.0</TD>
+</TR>
+</TABLE>
+<P>
+      Be sure to include at least 8 digits of precision in the Mth
+      value and checksum entries so that we can verify that your code
+      is correct.  Comment on the performance trends you see in the
+      table for one-processor, fixed-size, and scaled-size problems.
+      In other words, tell us why you think the numbers show what they
+      do.  Note: there are several scaling issues here, so you need to
+      give more thought to this than in past assignments.
+<P>
+<LI> Brief (!) answers to the Open Questions below.
+<P>
+</OL>
+<P>
+<b> Open Questions:</b>
+<P>
+<OL><LI> With this algorithm, at an intermediate stage the number of
+      values owned by a particular processor can be different than
+      N/P.  Can you bound this number so you can safely pre-allocate
+      memory?  How could this problem be avoided altogether?
+<P>
+<LI> Would your program work if the data to be sorted contained
+      duplicate values?  What about the degenerate case where all the
+      values are the same?  What part(s) of your algorithm would need
+      to be carefully constructed to avoid problems with this kind of
+      data?
+<P>
+<LI> How would you need to change your program to make it work when
+      P is not a power-of-two?
+<P>
+<LI> (Optional) How can the laser-tattoo system distinguish elk from
+      hikers, Greenpeace activists and members of the LCRA?
+<P>
+<LI> (Optional) What can the LCRA do to enhance its odds of winning
+      the annual Friend-of-Bambi award from the Sierra Club?
+</OL>
+</BODY>
+</HTML>

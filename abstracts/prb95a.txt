@@ -1,0 +1,24 @@
+[Molecular-statics and molecular-dynamics study of diffusion along 001
+tilt grain boundaries in Ag]
+
+C. L. Liu and S. J. Plimpton, Phys Rev B, 51, 4523-4528 (1995).
+
+Self-diffusion parameters of Ag along Sigma 5 (310) (001) and Sigma 13
+(320) (001) tilt grain boundaries are determined using both
+molecular-statics (MS) and molecular-dynamics (MD) techniques with a
+Ag potential based on the embedded-atom method. The MS calculations
+provide the diffusion energetics in the low-temperature regime for
+possible diffusion paths along the grain boundaries, while the MD
+simulations provide information on the effect of temperature on the
+diffusion parameters. The MD results indicate the diffusion mechanisms
+change from low temperatures to high temperatures. In the low-
+temperature regime, interstitial-related diffusion mechanisms are
+dominant.  Vacancy-related diffusion mechanisms, while unimportant at
+low temperatures, become dominant at high temperatures due to
+increased vacancy concentration and mobility. These observations are
+supported by changing slopes in the Arrhenius plots for both our
+simulation results and experimental data. The calculated diffusion
+parameters are in satisfactory agreement with available experimental
+results.
+
+Return to "Publications page"_../papers.html

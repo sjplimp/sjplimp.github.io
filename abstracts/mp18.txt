@@ -1,0 +1,27 @@
+[Highly scalable discrete-particle simulations with novel
+coarse-graining: Accessing the microscale]
+
+T. I. Mattox, J. P. Larentzos, S. G. Moore, C. P. Stone,
+D. A. Ibanez, A. P. Thompson, M. Lísal, J. K. Brennan, S. J. Plimpton,
+Molecular Physics, 116, 2061–2069 (2018).
+
+Simulating energetic materials with complex microstructure is a grand
+challenge, where until recently, an inherent gap in computational
+capabilities had existed in modelling grain-scale effects at the
+microscale. We have enabled a critical capability in modelling the
+multiscale nature of the energy release and propagation mechanisms in
+advanced energetic materials by implementing, in the widely used
+LAMMPS molecular dynamics (MD) package, several novel coarse-graining
+techniques that also treat chemical reactivity. Our innovative
+algorithmic developments rooted within the dissipative particle
+dynamics framework, along with performance optimisations and
+application of acceleration technologies, have enabled extensions in
+both the length and time scales far beyond those ever realised by
+atomistic reactive MD simulations. In this paper, we demonstrate these
+advances by modelling a shockwave propagating through a
+microstructured material and comparing performance with the
+state-of-the-art in atomistic reactive MD techniques. As a result of
+this work, unparalleled explorations in energetic materials research
+are now possible.
+
+Return to "Publications page"_../papers.html

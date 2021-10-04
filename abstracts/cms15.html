@@ -1,0 +1,29 @@
+<HTML>
+<P><B>Accelerating dissipative particle dynamics simulations for soft
+matter systems</B>
+</P>
+<P>T. Nguyen and S. J. Plimpton, Computational Materials Science, 100,
+173-180 (2015).
+</P>
+<P>Dissipative particle dynamics (DPD) is a coarse-grained particle-based
+simulation method that offers microscopic-scale insights into soft
+matter systems. We present an efficient implementation of a DPD model
+for graphical processing units (GPUs). As implemented in the LAMMPS
+molecular dynamics package, it can run effectively on
+current-generation supercomputers which often have hybrid nodes
+containing multi-core CPUs and (one or more) GPUs. Using efficient
+communication of information between the CPUs and GPUs, DPD
+interactions can be computed on the GPU while other portions of a full
+simulation model (boundary conditions, constraints, bonded
+interactions, diagnostic calculations, etc.)  can be performed on the
+CPU. Our GPU-enhanced runs show a speedup of up to 9.5 versus
+many-core CPU simulations, and can run scalably across thousands of
+compute nodes. We briefly discuss how the new GPU implementation was
+validated against the CPU version for thermodynamics, diffusion, and
+hydrodynamic behavior. We also highlight large-scale models which the
+faster DPD implementation has enabled, for studies of monolayer
+self-assembly and thin-film instabilities.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

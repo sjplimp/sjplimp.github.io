@@ -1,0 +1,24 @@
+[Increasing Molecular Dynamics Simulation Rates with an 8-Fold
+Increase in Electrical Power Efficiency]
+
+W. M. Brown, A. Semin, M. Hebenstreit, S. Khvostov, K. Raman,
+S. J. Plimpton, SC16 Conference, SLC, Utah, Nov 2016.
+
+Electrical power efficiency is a primary concern in designing modern
+HPC systems. Common strategies to improve CPU power efficiency rely on
+increased parallelism within a processor that is enabled both by an
+increase in the vector capabilities within the core and also the
+number of cores within a processor. Although many-core processors have
+been available for some time, achieving power-efficient performance
+has been challenging due to the offload model. Here, we evaluate
+performance of the molecular dynamics code LAMMPS on two new Intel(R)
+processors including the second generation many-core Intel(R) Xeon
+PhiTM processor that is available as a bootable CPU. We describe our
+approach to measure power consumption out-of-band and software
+optimizations necessary to achieve energy efficiency. We analyze
+benefits from Intel(R) Advanced Vector Extensions 512 instructions and
+demonstrate increased simulations rates with over 9X the CPU+DRAM
+power efficiency when compared to the unoptimized code on previous
+generation processors.
+
+Return to "Publications page"_../papers.html

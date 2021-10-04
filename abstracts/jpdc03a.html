@@ -1,0 +1,32 @@
+<HTML>
+<P><B>A Parallel Rendezvous Algorithm for Interpolation Between Multiple
+Grids</B>
+</P>
+<P>S. J. Plimpton, B. Hendrickson, J. Stewart, J Parallel and Distributed
+Computing, 64, 266-276 (2004).
+</P>
+<P>A number of computational procedures employ multiple grids on which
+solutions are computed. For example, in multi-physics simulations a
+primary grid may be used to compute mechanical deformation of an
+object while a secondary grid is used for thermal conduction
+calculations. When modeling coupled thermo-mechanical effects,
+solution data must be interpolated back and forth between the grids
+each timestep. On a parallel machine, this grid transfer operation can
+be challenging if the two grids are decomposed across processors
+differently for reasons of computational efficiency. If the grids move
+or adapt separately, the complexity of the operation is compounded. In
+this paper, we describe two grid transfer algorithms suitable for
+massively parallel simulations which use multiple grids. They use a
+rendezvous technique wherein a third decomposition is used to search
+for elements in one grid that contain nodal points of the other. This
+has the advantage of enabling the grid transfer operation to be
+load-balanced separately from the remainder of the computations. The
+algorithms are designed for use within the multi-physics code SIERRA,
+an object-oriented framework developed at Sandia. Performance and
+scalability results are given for the grid transfer operation running
+on up to 1024 processors of two large parallel machines, the Intel
+Tflops (ASCI Red) and DEC-Alpha CPlant cluster.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

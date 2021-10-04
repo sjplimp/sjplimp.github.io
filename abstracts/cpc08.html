@@ -1,0 +1,31 @@
+<HTML>
+<P><B>Accurate and Efficient Methods for Modeling Colloidal Mixtures in an
+Explicit Solvent using Molecular Dynamics</B>
+</P>
+<P>P. J. in 't Veld, S. J. Plimpton, G. S. Grest, Comp Phys Comm, 179,
+320-329 (2008).
+</P>
+<P>Most simulations of colloidal suspensions treat the solvent implicitly
+or as a continuum.  However as particle size decreases to the
+nanometer scale, this approximation fails and one needs to treat the
+solvent explicitly.  Due to the large number of smaller solvent
+particles, such simulations are computationally challenging.
+Additionally, as the ratio of nanoparticle size to solvent size
+increases, commonly-used molecular dynamics algorithms for neighbor
+finding and parallel communication become inefficient.  Here we
+present modified algorithms that enable fast single processor
+performance and reasonable parallel scalability for mixtures with a
+wide range of particle size ratios.  The methods developed are
+applicable for any system with widely varying force distance cutoffs,
+independent of particle sizes and independent of the interaction
+potential.  As a demonstration of the new algorithm's effectiveness,
+we present results for the pair correlation function and diffusion
+constant for mixtures where colloidal particles interact via
+integrated potentials.  In these systems, with nanoparticles 20 times
+larger than the surrounding solvent particles, our parallel molecular
+dynamics code runs more than 100 times faster using the new
+algorithms.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

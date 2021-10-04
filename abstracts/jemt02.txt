@@ -1,0 +1,40 @@
+[Torsion/simple shear of single crystal copper]
+
+M. F. Horstemeyer, T. J. Lim, W. Y. Lu,, D. A. Mosher, M. I. Baskes,
+V. C. Prantil, S. J. Plimpton, J of Engineering Materials and
+Technology (Transactions of the ASME), 124, 322-328 (2002).
+
+We analyze simple shear and torsion of single crystal copper by
+employing experiments, molecular dynamics simulations, and finite
+element simulations in order to focus on the kinematic responses and
+the apparent yield strengths at different length scales of the
+specimens. In order to compare torsion with simple shear, the
+specimens were designed to be of similar size. To accomplish this, the
+ratio of the cylinder circumference to the axial gage length in
+torsion equaled the ratio of the length to height of the simple shear
+specimens (0.43). With the [110] crystallographic direction parallel
+to the rotational axis of the specimen, we observed a deformation wave
+of material that oscillated around the specimen in torsion and through
+the length of the specimen in simple shear. In torsion, the ratio of
+the wave amplitude divided by cylinder circumference ranged from
+0.02-0.07 for the three different methods of analysis: experiments,
+molecular dynamics simulations, and finite element simulations. In
+simple shear, the ratio of the deformation wave amplitude divided by
+the specimen length and the corresponding values predicted by the
+molecular dynamics and finite element simulations (simple shear
+experiments were not performed) ranged from 0.23-0.26. Although each
+different analysis method gave similar results for each type boundary
+condition, the simple shear case gave approximately five times more
+amplitude than torsion. We attributed this observation to the plastic
+spin behaving differently as the simple shear case constrained the
+dislocation activity to planar double slip, but the torsion specimen
+experienced quadruple slip. The finite element simulations showed a
+clear relation with the plastic spin and the oscillation of the
+material wave. As for the yield stress in simple shear, a size scale
+dependence was found regarding two different size atomistic
+simulations for copper (332 atoms and 23628 atoms). We extrapolated
+the atomistic yield stresses to the order of a centimeter, and these
+comparisons were close to experimental data in the literature and the
+present study.
+
+Return to "Publications page"_../papers.html

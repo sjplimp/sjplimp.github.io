@@ -1,0 +1,27 @@
+<HTML>
+<P><B>Parallel Algorithms for Radiation Transport on Unstructured Grids</B>
+</P>
+<P>S. J. Plimpton, B. A. Hendrickson, S. P. Burns, W. McLendon III, Proc
+of SuperComputing 2000 (SC2000), Dallas, TX, November 2000.
+</P>
+<P>The method of discrete ordinates is commonly used to solve the
+Boltzmann radiation transport equation for applications ranging from
+simulations of fires to weapons effects. The equations are most
+efficiently solved by sweeping the radiation flux across the
+computational grid. For unstructured grids this poses several
+interesting challenges, particularly when implemented on distributed-
+memory parallel machines where the grid geometry is spread across
+processors.  We describe an asynchronous, parallel, message-passing
+algorithm that performs sweeps simultaneously from many directions
+across unstructured grids. We identify key factors that limit the
+algorithm's parallel scalability and discuss two enhancements we have
+made to the basic algorithm: one to prioritize the work within a
+processor's subdomain and the other to better decompose the
+unstructured grid across processors. Performance results are given for
+the basic and enhanced algorithms implemented within a radiation
+solver running on hundreds of processors of Sandia's Intel Tflops
+machine and DEC-Alpha CPlant cluster.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

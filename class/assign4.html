@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+<TITLE>CS442 Programming Assignment 4</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFA0">
+<P>
+<CENTER> <H1>
+ CS 442 Programming Assignment 4<BR>
+  Particle Simulations
+</H1> </CENTER>
+<P>
+<b> Due:</b> Tuesday, October 28
+<P>
+<b> Goals:</b>
+<P>
+<OL><LI> Introduce new types of parallelism for particles.
+<P>
+<LI> Explore trade--offs between 1D and 2D data decompositions.
+<P>
+<LI> Use MPI communicators and collective communication routines.
+<P>
+</OL>
+<P>
+<b> Background:</b>
+<P>
+While watching Melrose Place, it suddenly dawns on you that you've
+been ignoring the impact of wild animals in your Gila vegetation
+simulations.  The largest herbivores in the Gila are elk, so you
+decide to simulate their movements.  The Gila elk have evolved a
+strategy that maximizes their chance of survival by balancing two
+opposing forces: they must be dispersed enough to not compete for
+food, but be close enough to attract potential mates.  Not unlike
+their Melrose counterparts, the elk achieve this balance via one of
+nature's great spectacles --- elaborate bugling rituals.  Once a day
+each elk bugles to announce his/her location and listens for the
+return calls from other elk.  Each elk then moves so as to be far
+enough from the others to have sufficient vegetation, but close enough
+to be within bugling range for the next day.  Voluminous research has
+revealed that this can be modeled by having elk i move as if it feels
+a (vector) force due to elk j that is the derivative of a simple
+formula for their repulsive/attractive energy of interaction: (see
+class handout for mathematical representation).  Unfortunately,
+whenever an elk leaves the Gila and wanders onto neighboring private
+land, it is immediately shot by eager Lincoln County ranchers.
+<BR>
+<P>
+<b> Assignment:</b>
+<P>
+You will write a parallel program to simulate the 2-d movements of the
+Gila elk.  Serial <A href="Program4.c">C</A> and <A
+href="Program4.f">Fortran</A> codes which perform this task are
+available; use them as a starting point.  The input parameters are the
+number of elk (N), the size of the circular wilderness region
+(RADIUS), the number of timesteps (NSTEPS), and a random number seed
+(SEED).  Essentially, the code computes the force interactions between
+all N^2 pairs of elk every timestep and integrates Newton's
+equations of motion forward in time.  The specifications for the
+initial randomized positions/velocities of the elk, the force
+calculation, the time integrator, and the rancher-enforced boundary
+conditions are more easily described in the code than in words.  The
+output of a simulation is the number of remaining elk, their average
+speed, and the position of a particular elk.
+<P>
+Your parallel code should implement the force-decomposition particle
+algorithm described in class using the MPI collective communication
+routines AllGather and Reduce_Scatter.  It is not necessary to
+implement Newton's 3rd law.  Running on P processors, the code should
+accept PX and PY (PX*PY=P) as input and give the same answers for any
+PX by PY decomposition of the force matrix, including PX=1, PY=P or
+PX=PY=sqrt(P) or PX=P, PY=1.  Your code should give the same
+answers running on any P including P = non-power-of-2 and P=1.
+<P>
+At the end of a run, your code should print-out NALIVE = the number of
+elk remaining inside the RADIUS, the average speed of the NALIVE elk,
+and the x,y coordinates of elk NOUTPUT.  It should also print-out the
+total CPU time (of just the timestep loop) and the time spent in
+communication.  The difference is presumably computation time.
+<BR>
+<P>
+<b> What you hand in:</b>
+<P>
+<OL><LI> A program listing of your code, commented in the
+      sections where you made additions or changes.
+<P>
+<LI> Output for 2 problems, each run on various numbers
+      of processors, including (if your machine supports it) some runs
+      on non-power-of-two P.  Also, for problem (1) show some output
+      for runs with the same P, but where you vary PX and PY,
+      including the cases where PX=1 and where PY=1.
+<P>
+      (1) Fixed-size problem:
+<P>
+        N = 120, RADIUS = 50.0, NTIMES = 50, SEED = 123456, NOUTPUT = 50
+<P>
+      (2) Scaled-size problem:
+<P>
+        N = 30*P, RADIUS = 50.0, NTIMES = 50, SEED = 654321, NOUTPUT = 25
+<P>
+      As before, we are looking to see that you get the correct
+      answers and that (for problem 1) your results do not depend on P
+      or on PX or PY.
+<P>
+<LI> A simple table of timings for the 2 problems for different P and
+      PX,PY values that lists the total run-time, computation time,
+      communication time, and overall speed-up and parallel
+      efficiency.
+<P>
+<LI> A simple log-log plot of total CPU time vs. P for both of these
+      problems.  Include curves that show what ``perfect'' speed-up
+      would be, along with data points for your actual timings.  Also,
+      for problem (1), a plot of total and communication time vs. PX
+      where PX ranges from 1 to P.  Tell us why you think the plots
+      show what they do.
+<P>
+<LI> Brief (!) answers to the Open Questions below.
+<P>
+</OL>
+<P>
+<b> Optional:</b>
+<P>
+The serial codes include a "dump" function that writes snapshots of
+the elk coordinates to a "dump.out" file.  This file may be visualized
+with a program called "xmovie" that resides in /home/u/sjplimp/bin on
+the Sandia network and in /home/sjplimp on laguna at the ARC.  Note:
+these are Sun SPARC executables.  With the usual X-window permissions
+in place, typing "(path)/xmovie -2d dump.out" will pop up an animated
+X window of the elk movement.  When doing timing runs with your
+parallel code, you should comment out the calls to "dump" or simply
+delete the function.  However, you are welcome to parallelize the
+"dump" routine if you wish to experiment with parallel I/O and
+visualize the results of your parallel runs.
+<P>
+<b> Open Questions:</b>
+<P>
+
+<OL><LI> If you simulated millions of elk for thousands of timesteps
+      would you expect to get exactly the same answers running on any
+      P?  Why or why not?
+<P>
+<LI> Consider two runs where PX = 1, PY = P and PX = P, PY = 1.  Do
+      you expect the communication cost of the two runs to be the
+      same?  Why or why not?
+<P>
+<LI> How might you modify the code to exploit Newton's 3rd law and
+      cut the cost of computation in half?  Would this incur any extra
+      communication?
+<P>
+<LI> Is your code's performance affected by the initial density
+      distribution of elk?  I.e. if some regions of the wilderness
+      have very high density, will your code run slower?
+<P>
+<LI> (Optional) If Melrose Place were filmed in the Gila,
+      speculate on the response of Lincoln County ranchers.
+<P>
+</OL>
+</BODY>
+</HTML>

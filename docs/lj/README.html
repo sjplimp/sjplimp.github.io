@@ -1,0 +1,312 @@
+<HTML>
+<P>c Parallel Molecular Dynamics Algorithms
+c
+c Authored by Steve Plimpton
+c   (505) 845-7873, sjplimp@cs.sandia.gov
+c   Dept 1421, MS 1111, Sandia National Labs, Albuquerque, NM  87185-1111
+c
+c Last modified:  30 April 1996
+c
+</P>
+<P>This directory contains 3 Lennard-Jones benchmark codes which all
+perform the same physics, but use different parallelization
+strategies.  The algorithms used by the 3 codes, the benchmark
+specification, and the performance results on various machines are
+discussed in the paper
+</P>
+<P>S. J. Plimpton, "Fast Parallel Algorithms for Short-Range Molecular
+Dynamics", J Computational Physics, vol 117, (March 1995) p 1-19.
+</P>
+<P>The codes and a postscript copy of the paper are available from me via
+e-mail or on the Web at http://www.cs.sandia.gov/~sjplimp/main.html
+</P>
+<P>Please send me e-mail if you want to be notified of any upgrades or
+significant bug-fixes to this software.
+</P>
+<P>Also, feel free to contact me regarding the codes if you
+</P>
+<P>(a) find any bugs,
+(b) discover some way to speed them up,
+(c) port them to a new machine,
+(d) have specific questions about how they work, or
+(e) encounter problems when running them.
+</P>
+<P>Finally, I'd appreciate knowing if you find them useful or succeed in
+modifying them to solve some interesting problem ...
+</P>
+<P>Steve
+</P>
+<P>----------------------------------------------------------------------------
+</P>
+<P>Files in this directory:
+</P>
+<P>(If you didn't download all 3 codes, you won't have all these files.)
+</P>
+<P>lja.f		F77 source for atom-decomposition code
+ljf.f		F77 source for force-decomposition code
+ljs.f		F77 source for spatial-decomposition code
+</P>
+<P>lj<B>afs</B>.h	include files for each of the 3 codes
+</P>
+<P>parlib<B>afs</B>_machine.f
+</P>
+<P>		F77 source for the parallel routines used by each of 
+			the 3 codes on each machine
+		unix = UNIX workstation
+		ncube = nCUBE 2
+		gamma = Intel iPSC/860
+		osf = Intel Paragon running OSF
+		mos = Intel Paragon running SUNMOS
+		t3d = Cray T3D
+		mpi = portable MPI implementation
+</P>
+<P>Crib_lj<B>asf</B>	variable documentation for each of the 3 codes
+Crib_parlib	subroutine documentation for the parallel routines used
+			by all the codes
+</P>
+<P>lj.out.example	sample output file
+</P>
+<P>Makefile	Makefile for all 3 codes on all machines
+Makefile_lower	low-level generic Makefile used for some targets
+</P>
+<P>README          this file
+</P>
+<P>----------------------------------------------------------------------------
+</P>
+<P>Making the codes:
+</P>
+<P>(IMPORTANT NOTE for Cray T3D users: Because the T3D only supports
+8-byte reals and integers, you MUST make some minor changes to the
+source files to turn them into double-precision before making a T3D
+version.  See the section on double-precision below.)
+</P>
+<P>The Makefile is setup to make versions of lja, ljf, and ljs for
+various machines.  Type "make" to see a list of supported targets.
+Typing "make prefix.suffix" where prefix = a, f, or s (for the
+different decomposition types) and suffix is a machine type, will
+produce an executable named "ljprefix_target", such as ljf_unix or
+ljs_osf.
+</P>
+<P>The Makefile works on many Unix platforms, but may be incompatible
+with some, since the "make" command is not very standard.  If it is
+available on your system an alternative is to use the Gnu make command
+"gmake", which is standard.  Failing that, talk to a local make
+expert, or contact me and I may be able to help you modify the
+Makefile for your machine.
+</P>
+<P>When make is run for a particular target, it will create an Obj_suffix
+sub-directory to store machine-specific *.o files.  This is to prevent
+*.o files generated for different machines from getting mixed up.
+</P>
+<P>You will need to edit the "Machine-specific Definitions" section of
+the Makefile for your environment.  Specifically, the path locations
+of compilers and the "size" command will likely need to be specified.
+The optimization levels are the ones I have found to be generally
+fastest on the various machines.  You may also need to add libraries
+specific to your machine in the SYSLIB variable.  For example, the MPI
+version will require a native MPI library to be linked with the code.
+</P>
+<P>I compile my Unix versions for a Sun SPARC machine.  It's possible
+that on other Unix workstations (IBM, SGI, HP) you'll get some
+compiler glitches.  For example, the timer routine in
+parlib<B>afs</B>_unix.f calls "etime", which not all Unix system libraries
+seem to support.
+</P>
+<P>The Unix versions of these 3 codes are single-processor codes that can
+be compiled for any processor that runs UNIX - e.g. workstations, Cray
+Y-MP, Cray C90, etc.  However, these codes are not optimized for the
+vector and RISC processing those machines support.  These are not the
+codes that produced the Cray Y-MP and C90 timings discussed in the JCP
+paper.  That is a single-processor code that implements the same
+physics as these 3 codes but uses different data and loop structures
+to take advantage of vector processing.
+</P>
+<P>When making Cray T3D versions, note that the parlib*_t3d.f files have
+routines which make PVM calls.  They "include" a specific PVM header
+file which may be different on your system.
+</P>
+<P>The Makefile is currently setup to create an MPI version for the Intel
+Paragon running SUNMOS.  To make an MPI version for some other
+platform, you will need to edit the mpi_DEFS settings in the Makefile.
+You may also need to edit the parlib*_mpi.f files to use the correct
+include files and timer routines for your MPI machine.
+</P>
+<P>----------------------------------------------------------------------------
+</P>
+<P>Running the codes:
+</P>
+<P>All 3 of the codes read the file lj.in which has several options like
+atom density, cutoff distances, and neighbor-list frequency.  You can
+modify these as you wish; the current settings are for the benchmark
+problem described in the paper mentioned above - a liquid LJ state
+point.  Note that the temperature in the file is really the initial
+kinetic energy; the system will equilibrate to about 1/2 that
+temperature within a hundred or so steps since it starts with a fcc
+lattice (potential energy minimum).
+</P>
+<P>The codes also prompt for several inputs which for benchmarking
+purposes, I find more convenient to set on the fly.  Depending on the
+code and your choices you won't see all of the prompts in any one run.
+</P>
+<P>(1) Atoms: nx,ny,nz
+</P>
+<P>Number of cubic unit cells in each dimension.  There are 4 atoms/unit
+cell in the initial fcc lattice, so specifying "5 5 5" is a run with
+500 atoms.
+</P>
+<P>(2) # of Timesteps
+</P>
+<P>(3) Neighboring: (0) N^2 (1) Binned
+</P>
+<P>Create neighbor lists via an all-pairs search (N^2 option) or by
+binning the atoms first.  Which is faster depends on the problem size,
+number of processors, choice of parallel algorithms.
+</P>
+<P>(4) Specify binning: (0) No (1) Yes
+</P>
+<P>The program will choose the bin size for you (option 0) according to
+the neighbor-list cutoff or you can override it (option 1).
+</P>
+<P>(5) Bins in each direction: x,y,z
+</P>
+<P>You choose how many neighbor bins to have in each dimension of the
+global domain.  The reason I put this option in is that for the
+benchmark problem it turns out that if unit cells are specified as a
+multiple of 5, then neighbor bins (with a cutoff of 2.8 sigma) turn
+out to be just under a multiple of 3.  For example, if you run a
+10x10x10 problem of 4000 atoms, the program wants to put 5.999
+neighbor bins in each dimension which rounds to 5 and runs a little
+slower.  So for the benchmarks I specify 6x6x6 bins in this case.
+</P>
+<P>(6) Newtons 3rd law: (0) No (1) Yes (2) Hybrid
+</P>
+<P>The lja and ljf codes can save computation by taking advantage of
+Newton's 3rd law at the expense of extra computation.  Which is faster
+depends on the problem size, number of processors, etc.  The lja code
+also has a hybrid option which can sometimes be faster - see
+documentation at the beginning of the neighbor4 routine in lja.f
+</P>
+<P>(7) Transpose: (0) No (1) Yes
+</P>
+<P>The force-decomposition code ljf has an older option in it which
+requires transposing a portion of the force-matrix (see the paper).
+It is always faster not to do this, but the option is there for
+historical purposes.
+</P>
+<P>(8) Specify processor grid: (0) No (1) Yes
+</P>
+<P>The ljf and ljs codes allow you to specify how to map processors to
+the force matrix (ljf) or 3-d physical domain (ljs).  This is required
+if you are running on a non-power-of-2 number of processors and can be
+useful with ljs if your global physical domain is not cubical.
+</P>
+<P>(9) Processor grid: numrow,numcol
+</P>
+<P>If you choose to specify the processor grid in the ljf code you tell
+the code the "row by column" array of processors to map to the force
+matrix (see the paper).  A nearly square array is faster.  You can
+also use this to mask out processors.  For example if you run on 105
+processors, you can specify a 10x10 grid and 5 processors won't be
+used.
+</P>
+<P>(10) Processor grid: x,y,z
+</P>
+<P>If you choose to specify the processor grid in ljs code you tell the
+code the "x by y by z" array of processors to map to the phsical
+domain (see the paper).  The code runs fastest when the processor
+sub-domains are as cubical as possible.  So if you are running a
+20x4x20 problem (6400 atoms) on 32 processors, you might want to
+choose a 4x2x4 processor grid instead of the 2x4x4 grid the code will
+give you by default.
+</P>
+<P>After the prompts, the code will do some setup, then start the
+timestep dynamics.  You won't get any other output until the timestep
+loop finishes.
+</P>
+<P>If you get an error message about "boosting" something, it means your
+arrays are not allocated large enough.  You need to modify a parameter
+statment in the lj*.h file and recompile.  Some of these errors are
+detected at setup, others (like neighbor list overflow) may not be
+detected until the middle of a run.  When the latter happens, you
+should get an error message to your screen, and the program will
+either gracefully stop (if all processors incurred the same error) or
+hang.
+</P>
+<P>I've tried to be pretty careful about detecting memory-overflow kinds
+of errors.  If the codes ever crash or hang without spitting out an
+error message first due to algorithmic/parallelism problems (as
+opposed to physics problems, like too big a timestep or putting 2
+atoms on top of each other), it's probably a bug, so let me know about
+it.
+</P>
+<P>When the run finishes, you get some timing information on the screen
+and fuller output to the file lj.out which includes thermodynamic info
+and memory-usage statistics.  The last column of thermodynamic output
+is a energy-conservation monitor which should be close to 1.0 (ratio
+of current total-energy to initial total-energy).  Actually, because
+of the leapfrog convention of velocities being on the half-step, the
+initial energy is an estimate, so energy conservation is generally
+better between 2 intermediate timesteps than versus the initial time=0
+estimate.
+</P>
+<P>----------------------------------------------------------------------------
+</P>
+<P>Understanding the codes:
+</P>
+<P>Unfortunately, I haven't had the time or inclination to comment the
+codes in much detail.  And the codes are pretty stream-lined as
+benchmarks tend to be.  Hopefully, you will find the Crib files useful
+and my coding style not too opaque.  The J Comp Phys paper is the best
+high-level overview of what each of the 3 codes are doing as far as
+parallelism.
+</P>
+<P>On the bright side, if you can't understand something or are trying to
+modify some section, give me a call or send e-mail about it and I'll
+be happy to explain (or obfuscate) things more fully.
+</P>
+<P>----------------------------------------------------------------------------
+</P>
+<P>Double precision:
+</P>
+<P>All of the codes are written as single-precision (32-bit) real.  These
+are the changes to the *.h and *.f files you need to make to convert
+them to double precision (64-bit). 
+</P>
+<P>*** changes in lj<B>afs</B>.h
+</P>
+<P>(1) implicit real*4 -> implicit real*8
+(2) real*4 -> real*8 in all variable declarations
+(3) nbyte=4 -> nbyte=8 in parameter statements
+(4) ibyte=4 -> ibyte=8 (make this change ONLY for the T3D version)
+</P>
+<P>*** changes in lj<B>afs</B>.f
+</P>
+<P>(1) real*4 function -> real*8 function
+</P>
+<P>*** changes in parlib<B>afs</B>_*.f (already done in parlib<B>afs</B>_t3d.f)
+</P>
+<P>(1) real*4 -> real*8 in all local variable declarations
+(2) nbyte=4 -> nbyte=8 in parameter statements
+</P>
+<P>Additional optimization note for the Cray T3D version:
+</P>
+<P>Last time I checked you get about a 12% speed boost if you replace
+the lines
+</P>
+<P>sr2 = sigsq/rsq
+sr6 = sr2*sr2*sr2
+tmp = sr6*(sr6-0.5)/rsq
+</P>
+<P>by
+</P>
+<P>recip = 1.0/rsq
+sr2 = sigsq*recip
+sr6 = sr2*sr2*sr2
+tmp = sr6*(sr6-0.5)*recip
+</P>
+<P>in the force routines in the lj<B>afs</B>.f files.
+</P>
+<P>This is because in the former case the Cray compiler doesn't store a
+temporary and performs 2 divides.
+</P>
+</HTML>

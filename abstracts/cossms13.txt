@@ -1,0 +1,21 @@
+[Developing community codes for materials modeling]
+
+S. J. Plimpton and J. D. Gale, Current Opinion in Solid State and
+Materials Science 17, 271–276 (2013).
+
+For this article, we call scientific software a community code if it
+is freely available, written by a team of developers who welcome user
+input, and has attracted users beyond the developers. There are
+obviously many such materials modeling codes. The authors have been
+part of such efforts for many years in the field of atomistic
+simulation, specifically for two community codes, the LAMMPS and GULP
+packages for molecular dynamics and lattice dynamics
+respectively. Here we highlight lessons we have learned about how to
+create such codes and the pros and cons of being part of a community
+effort. Many of our experiences are similar, but we also have some
+differences of opinion (like modeling vs modelling). Our hope is that
+readers will find these lessons useful as they design, implement, and
+distribute their own materials modelling software for others to
+use.
+
+Return to "Publications page"_../papers.html

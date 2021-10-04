@@ -1,0 +1,18 @@
+[The effect of added salt on polyelectrolyte structure]
+
+M. J. Stevens and S. J. Plimpton, Eur Phys J B, 2, 341-345 (1998).
+
+We present results of molecular dynamics simulations of strong,
+flexible polyelectrolyte chains in solution with added salt. The
+effect of added salt on the polyelectrolyte chain structure is fully
+treated for the first time as a function of polymer density. Systems
+above and below the Manning condensation limit are studied. The chain
+structure is intimately tied to the ion density near the chain even
+for chains in the counterion condensation (CC) regime. The end-to-end
+distance is demonstrated to be a function of the inverse Debye
+screening length and the Bjerrum length. The ion density near the
+polymer chain depends on the amount of added salt, and above the
+condensation limit the chains significantly contract due to added
+salt.
+
+Return to "Publications page"_../papers.html

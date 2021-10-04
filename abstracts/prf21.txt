@@ -1,0 +1,21 @@
+[Turbulence at the edge of continuum]
+
+M. A. Gallis, J. R. Torczynski, M. C. Krygier, N. P. Bitter,
+S. J. Plimpton, Phys Rev Fluids, 6, 013401 (2021).
+
+In typical turbulent flows, noncontinuum effects are extremely small
+and hence can be ignored. However, for some high-Mach-number flows,
+the Kolmogorov length scale is of the same order as the molecular mean
+free path, which could introduce noncontinuum molecular-level effects
+into the turbulent energy cascade. To investigate this, the
+compressible Taylor-Green vortex flow is simulated for near-continuum
+conditions using both noncontinuum molecular gas dynamics (direct
+simulation Monte Carlo method) and continuum computational fluid
+dynamics (direct numerical simulation of the Navier-Stokes
+equations). Although the energy-decay histories are basically the
+same, molecular-level fluctuations are observed to break the
+symmetries of the initial conditions and thereby produce different but
+statistically similar routes (based on velocity spectra) from the
+initial nonturbulent flow to the long-time turbulent flow.
+
+Return to "Publications page"_../papers.html

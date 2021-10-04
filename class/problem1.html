@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE> CS442 Problem Set 1 </TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFA0">
+<P>
+ <CENTER> <H1>
+ Problem Set 1 --- CS 442
+ </H1></CENTER>
+<P>
+<P>
+<b> Due:</b> Tuesday, September 30th
+<BR>
+<P>
+(1) You are tired of having your programs write output to the screen
+in random jumbled order.  Write a few lines of pseudocode that are
+executed by all processors, produce this style of output, and that
+require no more than <b>2P</b> sends/receives, where <b>P</b> is the number of
+processors.  It should work for any value of <b>P</b>.
+<BR>
+<P>
+	Proc 0: value is 4
+<BR>
+	Proc 1: value is 2
+<BR>
+	Proc 2: value is 7
+<BR>
+	Proc 3: value is 15
+<BR>
+	...
+<BR>
+<P>
+If you were writing to a file instead of the screen, typically only
+processor 0 would open the file and do the ``writes''.  Write a
+section of pseudocode that satisfies this new constraint.  How many
+sends/receives are now required?
+<BR>
+<P>
+<P>
+(2) Consider a finite difference calculation performed on an NxN grid, similar
+to the parallel game-of-life simulations we have
+been discussing.  Assume that updating the value for each grid cell
+requires 8 floating-point operations (same 9-point stencil as the
+GOL), and communication is needed at the start of each timestep to
+update ghost-cell values.  Analyze the two parallelization strategies
+discussed in class for programming assignment 3: (1) a
+one-dimensional decomposition of the grid over <b>P</b> processors, and
+(2) a two-dimensional decomposition across Q*Q=P processors.  For
+each strategy, write down a formula for the total CPU time per
+timestep in terms of communication startup (alpha), inverse
+bandwidth per byte (beta) and time per flop (tau), as well as
+<b>N</b> and <b>P</b> (or <b>Q</b>).  You can assume that <b>N</b> is an exact multiple of <b>P</b>, and
+that each communicated ghost-cell value requires eight bytes of
+memory.  For each strategy, derive formulas for the parallel speedup
+and efficiency as a function of the same parameters.
+For the 2-d strategy, assuming the startup cost is negligible, how
+quickly must <b>N</b> grow as a function of <b>P</b> to keep the parallel
+efficiency constant?
+<BR>
+<P>
+On Sandia's Intel Tflops machine, the following values are
+approximately correct (in nanoseconds): alpha = 20000, 
+beta = 3, and tau = 10.  For each of
+the two strategies running on 1024 processors, how large must <b>N</b> be
+to keep the cost of communication below 20% of the total run time?
+<BR>
+<P>
+<P>
+(3) Consider the recursive halving and recursive doubling operations
+described in class.  For <b>P</b> a power-of-two, write some pseudocode
+using these operations to perform a broadcast of a <b>N</b>-length vector
+with 2*log(P) message startups and only <b>2N</b> total communication
+volume.  Note: Although it requires more startups, for large <b>N</b> this
+is <em> better</em> than the N*log(P) communication volume required by the
+tree-structured (cascade) broadcast you programmed for the first
+assignment.
+</BODY>
+</HTML>

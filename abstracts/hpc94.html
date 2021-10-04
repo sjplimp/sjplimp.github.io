@@ -1,0 +1,25 @@
+<HTML>
+<P><B>Parallel Particle Simulations of Low-Density Fluid Flows</B>
+</P>
+<P>S. J. Plimpton and T. J. Bartel, in Proc of High Performance Computing
+1994, San Diego, CA, April 1994, p 31.
+</P>
+<P>Direct Simulation Monte Carlo (DSMC) is a simulation technique that
+uses particles to model fluids at low densities where continuum
+formulations break down. Monte Carlo rules are used to perform
+particle collisions and chemical reactions and a grid is used to
+locate nearby particles. We describe our implementation of a
+large-scale DSMC model on the thousand-processor nCUBE 2 and Intel
+Paragon machines. It includes body-fitted irregular grids and particle
+weighting to reduce the numbers of particles and grid cells that must
+be used. Our parallel methods for load-balancing and performing
+irregular communication on the distributed-memory machines are also
+discussed. The parallel machines have enabled us to run large
+simulations (10^7 particles, 10^4 grid cells, 10^4 timesteps) at
+speeds up to 40 times faster (on our nCUBE 2) than on a Cray Y-MP
+processor. For illustration purposes, we include results from some of
+these large-scale simulations.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

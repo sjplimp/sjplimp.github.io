@@ -1,0 +1,37 @@
+[Statistical ensemble analysis for simulating extrinsic noise-driven
+response in NF-kappa B signaling networks]
+
+J. Joo, S. J. Plimpton, J. L. Faulon, BMC Systems Biology, 7, 45
+(2013).
+
+Background: Gene expression profiles and protein dynamics in single
+cells have a large cell-to-cell variability due to intracellular
+noise. Intracellular fluctuations originate from two sources:
+intrinsic noise due to the probabilistic nature of biochemical
+reactions and extrinsic noise due to randomized interactions of the
+cell with other cellular systems or its environment. Presently, there
+is no systematic parameterization and modeling scheme to simulate
+cellular response at the single cell level in the presence of
+extrinsic noise.
+
+Results: In this paper, we propose a novel statistical ensemble method
+to simulate the distribution of heterogeneous cellular responses in
+single cells. We capture the effects of extrinsic noise by randomizing
+values of the model parameters. In this context, a statistical
+ensemble is a large number of system replicates, each with randomly
+sampled model parameters from biologically feasible intervals. We
+apply this statistical ensemble approach to the well-studied NF-kappa
+B signaling system. We predict several characteristic dynamic features
+of NF-kappa B response distributions; one of them is the
+dosage-dependent distribution of the first translocation time of
+NF-kappa B.
+
+Conclusion: The distributions of heterogeneous cellular responses that
+our statistical ensemble formulation generates reveal the effect of
+different cellular conditions, e.g., effects due to wild type versus
+mutant cells or between different dosages of external
+stimulants. Distributions generated in the presence of extrinsic noise
+yield valuable insight into underlying regulatory mechanisms, which
+are sometimes otherwise hidden.
+
+Return to "Publications page"_../papers.html

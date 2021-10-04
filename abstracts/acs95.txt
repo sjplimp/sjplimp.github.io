@@ -1,0 +1,15 @@
+[Parallel Molecular Dynamics Algorithms for Simulation of Molecular
+Systems]
+
+S. J. Plimpton and B. A. Hendrickson, chapter in Parallel Computing in
+Computational Chemistry, edited by T. G. Mattson, published by the
+American Chemical Society, Symposium Series 592, 114-132 (1995).
+
+Three classes of parallel algorithms for short--range classical
+molecular dynamics are presented and contrasted and their suitability
+for simulation of molecular systems is discussed. Performance of the
+algorithms on the Intel Paragon and Cray T3D in benchmark simulations
+of Lennard--Jones systems and of a macromolecular system is also
+highlighted.
+
+Return to "Publications page"_../papers.html

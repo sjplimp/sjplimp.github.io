@@ -1,0 +1,23 @@
+[Molecular Dynamics Simulations of Grain-Boundary Diffusion for
+Varying Tilt Angle Geometries]
+
+S. J. Plimpton, in Atomic Scale Calulations of Structure in Materials,
+edited by M. S. Daw and M. A. Schluter, MRS Proceedings 193,
+Pittsburgh, PA, 1990, p 333-336.
+
+The effect of structure and geometry on grain boundary self-diffusion
+is investigated. Using static structures found by relaxation
+techniques (conjugate gradients) as starting points for a molecular
+dynamic simulation of a bicrystal model, diffusion coefficients and
+activation energies are calculated for (100) fcc Al and bcc
+$\alpha$-Fe tilt boundaries. These quantities are derived by
+monitoring the mean-squared displacement of atoms in the grain
+boundary region as the simulation progresses and as the temperature of
+the simulated solid is changed. The angular, directional, and
+structural dependence of the simulated diffusion are discussed and
+compared to experimental measures and theoretical predictions. The
+implementation of the molecular dynamics algorithm on a parallel
+supercomputer is also briefly discussed to illustrate the performance
+benefits these computers make possible.
+
+Return to "Publications page"_../papers.html

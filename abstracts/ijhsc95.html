@@ -1,0 +1,27 @@
+<HTML>
+<P><B>An Efficient Parallel Algorithm for Matrix-Vector Multiplication</B>
+</P>
+<P>B. A. Hendrickson, R. W. Leland, S. J. Plimpton, Int J of High Speed
+Computing, 7, 73-88 (1995).
+</P>
+<P>The multiplication of a vector by a matrix is the kernel operation in
+many algorithms used in scientific computation. A fast and efficient
+parallel algorithm for this calculation is therefore desirable. This
+paper describes a parallel matrix-vector multiplication algorithm
+which is particularly well suited to dense matrices or matrices with
+an irregular sparsity pattern. Such matrices can arise from
+discretizing partial differential equations on irregular grids or from
+problems exhibiting nearly random connectivity between data
+structures. The communication cost of the algorithm is independent of
+the matrix sparsity pattern and is shown to scale as O(N/sqrt(P) +
+log(P)) for an N x N matrix on P processors. The algorithm's
+performance is demonstrated by using it within the well known NAS
+conjugate gradient benchmark. This resulted in the fastest run times
+achieved to date on both the 1024 node nCUBE~2 and the 128 node Intel
+iPSC/860. Additional improvements to the algorithm which are possible
+when integrating it with the conjugate gradient algorithm are also
+discussed.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

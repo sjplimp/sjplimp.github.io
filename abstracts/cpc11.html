@@ -1,0 +1,34 @@
+<HTML>
+<P><B>Implementing Molecular Dynamics on Hybrid High Performance Computers
+- Short Range Forces</B>
+</P>
+<P>W. M. Brown, P. Wang, S. J. Plimpton,
+A. N. Tharrington, Comp Phys Comm, 182, 898-911, (2011).
+</P>
+<P>The use of accelerators such as graphics processing units (GPUs) has
+become popular in scientific computing applications due to their low
+cost, impressive floating-point capabilities, high memory bandwidth,
+and low electrical power requirements. Hybrid high-performance
+computers, machines with more than one type of floating-point
+processor, are now becoming more prevalent due to these advantages. In
+this work, we discuss several important issues in porting a large
+molecular dynamics code for use on parallel hybrid machines – (1)
+choosing a hybrid parallel decomposition that works on central
+processing units (CPUs) with distributed memory and accelerator cores
+with shared memory, (2) minimizing the amount of code that must be
+ported for efficient acceleration, (3) utilizing the available
+processing power from both multi-core CPUs and accelerators, and (4)
+choosing a programming model for acceleration. We present our solution
+to each of these issues for short-range force calculation in the
+molecular dynamics package LAMMPS, however, the methods can be applied
+in many molecular dynamics codes. Specifically, we describe algorithms
+for efficient short range force calculation on hybrid high-performance
+machines. We describe an approach for dynamic load balancing of work
+between CPU and accelerator cores. We describe the Geryon library that
+allows a single code to compile with both CUDA and OpenCL for use on a
+variety of accelerators. Finally, we present results on a parallel
+test cluster containing 32 Fermi GPUs and 180 CPU cores.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

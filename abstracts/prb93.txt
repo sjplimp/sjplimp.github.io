@@ -1,0 +1,21 @@
+[Plane-wave Electronic- Structure Calculations on a Parallel
+Supercomputer]
+
+J. S. Nelson, S. J. Plimpton, M. P. Sears, Phys Rev B, 47, 1765-1774
+(1993).
+
+We present a detailed description of the implementation on a parallel
+supercomputer (hypercube) of the first-order equation-of-motion
+solution to Schrodinger's equation, using plane-wave basis functions
+and ab initio separable pseudopotentials. By distributing the plane
+waves across the processors of the hypercube many of the computations
+can be performed in parallel, resulting in decreases in the overall
+computation time relative to conventional vector supercomputers. This
+partitioning also provides ample memory for large
+fast-Fourier-transform (FFT) meshes and the storage of plane- wave
+coefficients for many hundreds of energy bands. The usefulness of the
+parallel techniques is demonstrated by benchmark timings for both the
+FFT's and iterations of the self-consistent solution of Schrodinger's
+equation for different sized Si unit cells of up to 512 atoms.
+
+Return to "Publications page"_../papers.html

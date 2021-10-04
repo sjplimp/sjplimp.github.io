@@ -1,0 +1,32 @@
+<HTML>
+<P><B>Implementing Molecular Dynamics on Hybrid High Performance Computers
+- Particle-Particle Particle-Mesh</B>
+</P>
+<P>W. M. Brown, A. Kohlmeyer, S. J. Plimpton, A. N. Tharrington, Comp
+Phys Comm, 183, 449-459 (2012).
+</P>
+<P>The use of accelerators such as graphics processing units (GPUs) has
+become popular in scientific computing applications due to their low
+cost, impressive floating-point capabilities, high memory bandwidth,
+and low electrical power requirements. Hybrid high-performance
+computers, machines with nodes containing more than one type of
+floating-point processor (e.g. CPU and GPU), are now becoming more
+prevalent due to these advantages. In this paper, we present a
+continuation of previous work implementing algorithms for using
+accelerators into the LAMMPS molecular dynamics software for
+distributed memory parallel hybrid machines. In our previous work, we
+focused on acceleration for short-range models with an approach
+intended to harness the processing power of both the accelerator and
+(multi-core) CPUs. To augment the existing implementations, we present
+an efficient implementation of long-range electrostatic force
+calculation for molecular dynamics. Specifically, we present an
+implementation of the particle-particle particle-mesh method based on
+the work by Harvey and De Fabritiis. We present benchmark results on
+the Keeneland InfiniBand GPU cluster. We provide a performance
+comparison of the same kernels compiled with both CUDA and OpenCL. We
+discuss limitations to parallel efficiency and future directions for
+improving performance on hybrid or heterogeneous computers.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

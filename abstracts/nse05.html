@@ -1,0 +1,32 @@
+<HTML>
+<P><B>Parallel Sn Sweeps on Unstructured Grids: Algorithms for
+Prioritization, Grid Partitioning, and Cycle-Detection</B>
+</P>
+<P>S. J. Plimpton, B. Hendrickson, S. Burns, W. Mclendon III, L.
+Rauchwerger, Nuclear Science and Engineering, 150, 267-283 (2005).
+</P>
+<P>The method of discrete ordinates is commonly used to solve the
+Boltzmann transport equation.  The solution in each ordinate direction
+is most efficiently computed by sweeping the radiation flux across the
+computational grid.  For unstructured grids this poses many
+challenges, particularly when implemented on distributed-memory
+parallel machines where the grid geometry is spread across processors.
+We present several algorithms relevant to this approach: (a) an
+asynchronous message-passing algorithm that performs sweeps
+simultaneously in multiple ordinate directions, (b) a simple geometric
+heuristic to prioritize the computational tasks that a processor works
+on, (c) a partitioning algorithm that creates columnar-style
+decompositions for unstructured grids, and (d) an algorithm for
+detecting and eliminating cycles which sometimes exist in unstructured
+grids and can prevent sweeps from successfully completing.  Algorithms
+(a) and (d) are fully parallel; algorithms (b) and (c) can be used in
+conjunction with (a) to achieve higher parallel efficiencies.  We
+describe our message-passing implementations of these algorithms
+within a radiation transport package.  Performance and scalability
+results are given for unstructured grids with up to 3 million elements
+(500 million unknowns) running on thousands of processors of Sandia's
+Intel Tflops machine and DEC-Alpha CPlant cluster.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

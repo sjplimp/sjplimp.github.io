@@ -1,0 +1,22 @@
+[Achieving Ideal Accuracies in Analog Neuromorphic Computing Using
+Periodic Carry]
+
+S. Agarwal, R. B. Jacobs-Gedrim, A. H. Hsia, D. R. Hughart,
+E. J. Fuller, A. A. Talin, C. D. James, S. J. Plimpton, and
+M. J. Marinella, 2017 IEEE Symposium on VLSI Technology, Kyoto, Japan
+(2017).
+
+Analog resistive memories promise to reduce the energy of neural
+networks by orders of magnitude. However, the write variability and
+write nonlinearity of current devices prevent neural networks from
+training to high accuracy. We present a novel periodic carry method
+that uses a positional number system to overcome this while
+maintaining the benefit of parallel analog matrix operations. We
+demonstrate how noisy, nonlinear TaOx devices that could only train to
+80% accuracy on MNIST, can now reach 97% accuracy, only 1% away from
+an ideal numeric accuracy of 98%. On a file type dataset, the TaOx
+devices achieve ideal numeric accuracy. In addition, low noise, linear
+Li1-xCoO2 devices train to ideal numeric accuracies using periodic
+carry on both datasets.
+
+Return to "Publications page"_../papers.html

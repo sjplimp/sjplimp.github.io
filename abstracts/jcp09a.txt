@@ -1,0 +1,22 @@
+[General formulation of pressure and stress tensor for arbitrary
+many-body interaction potentials under periodic boundary conditions]
+
+A. P. Thompson, S. J. Plimpton, W. Mattson, J Chem Phys, 131, 154107
+(2009).
+
+Three distinct forms are derived for the force virial contribution to
+the pressure and stress tensor of a collection of atoms interacting
+under periodic boundary conditions. All three forms are written in
+terms of forces acting on atoms, and so are valid for arbitrary
+many-body interatomic potentials. All three forms are mathematically
+equivalent. In the special case of atoms interacting with pair
+potentials, they reduce to previously published forms. i The atom-cell
+form is similar to the standard expression for the virial for a finite
+nonperiodic system, but with an explicit correction for interactions
+with periodic images. ii The atom form is particularly suited to
+implementation in modern molecular dynamics simulation codes using
+spatial decomposition parallel algorithms.  iii The group form of the
+virial allows the contributions to the virial to be assigned to
+individual atoms.
+
+Return to "Publications page"_../papers.html

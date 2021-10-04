@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE> CS442 Problem Set 2</TITLE>
+</HEAD>
+<BODY>
+<BODY BGCOLOR="FFFFA0">
+<P>
+<CENTER> <H1>
+Problem Set 2 --- CS 442
+</H1></CENTER>
+<P>
+<P>
+<b> Due:</b> Thursday, December 4th
+<BR>
+<P>
+(1) Consider the situation in which each processor wants to send data
+    to a few other processors.  Every message is of a different large
+    size.  For instance, processor 23 might want to send 92 values to
+    processor 14 and 173 values to processor 37.  Each processor knows
+    how much data it wants to send to which processors, but does NOT
+    know who it will be receiving data from or how much.  Thus it would
+    appear that it cannot make the required MPI_Recv calls, nor can it
+    allocate the needed memory for the incoming data.
+<BR>
+<P>
+    Sketch an algorithm to perform this highly unstructured
+    communication operation in terms of high-level pseudo-code.  Your
+    pseudo-code should include memory allocation for the incoming data.
+    For sending/receiving the large data sets you should use
+    regular MPI_Sends and asynchronous MPI_Irecvs with the necessary
+    accompanying MPI_Waits (in any of its forms).
+<BR>
+<P>
+<P>
+(2) Recall the parallel 2-D FFT algorithms discussed in class.
+    Processors initially own one or more rows of the 2-D data set
+    (matrix) and perform 1-D FFTs on their rows.  After a matrix
+    transpose, each processor owns one or more columns of the matrix
+    and can again perform 1-D FFTs on that data.  A final transpose
+    restores the matrix to its original form.  Two algorithms for
+    performing the matrix transpose were discussed.  In the first
+    algorithm (all-to-all), every processor sends one chunk of data to
+    every other processor.  After appropriate on-processor data
+    rearrangement, the matrix is transposed.  In the second algorithm
+    (logarithmic), there are log(P) stages.  At each stage, each
+    processor pairs with one other processor and exchanges half of
+    its data with that processor.  Again, with appropriate
+    on-processor data rearrangement at every stage, the matrix ends up
+    correctly transposed.
+<BR>
+<P>
+    Now consider performing a parallel FFT on an order N matrix with
+    P processors.  For simplicity you may assume that N is
+    greater than or equal to P and
+    that both N and P are powers-of-two.  Write a formula for the
+    total time to compute a 2-d double-precision complex FFT for
+    each of the two algorithms, as a function of N, P, and the
+    usual communication startup alpha, inverse bandwidth per byte
+    beta, and time per flop tau.  Include a term for the cost of
+    data rearrangement where delta is the time per byte to copy a
+    data value from one memory location to another.  Note: a
+    double-precision complex datum is 16 bytes and the number of flops
+    needed to perform a 1-D complex FFT of length N is 5N*log(N).
+<BR>
+<P>
+    On Sandia's Intel Tflops machine, the following values are
+    approximately correct (in nanoseconds): alpha = 20000,
+    beta = 3 and tau = 20 for 1-D FFTs,
+    and delta = 1.  What is the CPU time, total Mflop
+    rate, and parallel efficiency for each of the algorithms to
+    perform a 2048x2048 FFT on 32 processors?  On 256 processors?
+<BR>
+<P>
+<P>
+(3) Consider dense matrix-vector multiplication for the important case
+    in which the matrix is symmetric.  We would like to only store
+    only about N*N/2 values instead of all N*N.  Construct a parallel
+    algorithm in (very) high-level pseudo-code for this problem that
+    uses a 2-D decomposition and the checkerboarding idea described in
+    class for exploiting Newton's third law in particle simulations.
+    You can assume that the number of processors is a perfect square.
+    What is the communication cost of your algorithm?
+</BODY>
+</HTML>

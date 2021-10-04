@@ -1,0 +1,45 @@
+[Potts-model Grain Growth Simulations: Parallel Algorithms and
+Applications]
+
+S. A. Wright, S. J. Plimpton, T. P. Swiler, R. M. Fye, M. F. Young,
+E. A. Holm, SAND Report 97-1925, August 1997.
+
+Microstructural morphology and grain boundary properties often control
+the service properties of engineered materials. This report uses the
+Potts-model to simulate the development of microstructures in
+realistic materials. Three areas of microstructural morphology
+simulations were studies. They include the development of massively
+parallel algorithms for Potts-model grain grow simulations, modeling
+of mass transport via diffusion in these simulated microstructures,
+and the development of a gradient-dependent Hamiltonian to simulate
+columnar grain growth.
+
+Potts grain growth models for massively parallel supercomputers were developed
+for the conventional (non-accelerated) Potts-model in both two and three
+dimensions. Simulations using these parallel codes showed self similar grain
+growth and no finite size effects for previously unapproachable large scale
+problems. In addition, new enhancements to the conventional Metropolis
+algorithm used in the Potts-model were developed to accelerate the
+calculations. These techniques enable both the sequential and parallel
+algorithms to run faster and use essentially an "infinite" number of grain
+orientation values to avoid non-physical gain coalescence events.
+Mass transport phenomena in polycrystalline materials were studied in two
+dimensions using numerical diffusion techniques on microstructures generated
+using the Potts-model. The results of the mass transport modeling showed
+excellent quantitative agreement with one dimensional diffusion problems,
+however the results also suggest that transient multi-dimension diffusion
+effects cannot be parameterized as the product of the grain boundary diffusion
+coefficient and the grain boundary width. Instead, both properties are
+required.
+
+Gradient-dependent grain growth mechanisms were included in the Potts-model by
+adding an extra term to the Hamiltonian (total internal energy). Under normal
+grain growth, the primary driving term is the curvature of the grain boundary,
+which is included in the standard Potts-model Hamiltonian. To investigate
+columnar growth, a gradient-dependent term was added. This approach was taken
+because it fit easily into the mobility model in which the velocity of the
+grain boundary is proportional to its mobility times the driving forces.
+Results of these simulations produced the expected columnar grain structures in
+regions of high mobility and large temperature gradients.
+
+Return to "Publications page"_../papers.html

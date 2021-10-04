@@ -1,0 +1,18 @@
+[Parallel Simulation of Electron-Solid Interactions for
+Electron-Microscopy Modeling]
+
+S. J. Plimpton, J. R. Michael, A. D. Romig, Jr., J of SuperComputing,
+6, 139- 151 (1992).
+
+A parallel implementation of a Monte Carlo algorithm for modeling the
+scattering of electrons in solids and the resulting X-ray production
+is described. Two important issues for accurate and fast parallel
+simulation are discussed - random number generation and
+load-balancing. Timing results for the parallel simulation are given
+which show even modest sized parallel machines can be competitive with
+conventional vector supercomputers for Monte Carlo trajectory
+simulations. Examples of parallel calculations performed to analyze
+specimen composition data and to characterize electron microscope
+performance are briefly highlighted.
+
+Return to "Publications page"_../papers.html

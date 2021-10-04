@@ -1,0 +1,31 @@
+[Equation-Free Accelerated Simulations of the Morphological Relaxation
+of Crystal Surfaces]
+
+G. J. Wagner, X. Zhou, S. J. Plimpton, Int J for Multiscale
+Computational Engineering, 8, 423-439 (2010).
+
+A method for accelerating kinetic Monte Carlo simulations of solid
+surface morphology evolution, based on the equation-free projective
+integration (EFPI) technique, is developed and investigated. This
+method is demonstrated through application to the 1+1 dimensional
+solid-on-solid model for surface evolution. EFPI exploits the
+multiscale nature of a physics problem, using fine-scale simulations
+at short times to evolve coarse length scales over long times. The
+method requires identification of a set of coarse variables that
+parameterize the system, and it is found that the most obvious coarse
+variables for this problem, those related to the ensemble-averaged
+surface position, are inadequate for capturing the dynamics of the
+system. This is remedied by including among the coarse variables a
+statistical description of the fine scales in the problem, which in
+this case can be captured by a two-point correlation
+function. Projective integration allows speedup of the simulations,
+but if speed-up of more than a factor of around 3 is attempted the
+solution can become oscillatory or unstable. This is shown to be
+caused by the presence of both fast and slow components of the
+two-point correlation function, leading to the equivalent of a stiff
+system of equations that is hard to integrate. By fixing the fast
+components of the solution over each projection step, we are able to
+achieve speedups of a factor of 20 without oscillations, while
+maintaining accuracy.
+
+Return to "Publications page"_../papers.html

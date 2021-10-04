@@ -1,0 +1,19 @@
+[Liquid crystal nanodroplets in solution]
+
+W. M. Brown, M. K. Petersen, S. J. Plimpton, and G. S. Grest, J Chem
+Phys, 130, 044901 (2009).
+
+The aggregation of liquid crystal nanodroplets from a homogenous
+solution are studied by molecular dynamics simulations. The liquid
+crystal particles are modeled as elongated ellipsoidal Gay-Berne
+particles while the solvent is modeled as spherical Lennard-Jones
+particles. Extending previous studies of (Berardi et. al.,
+J. Chem. Phys. 126, 044905 (2007)), we find that liquid crystal
+nanodroplets are not stable and that after sufficiently long times the
+nanodroplets always aggregate into a single large droplet. Results
+describing the droplet shape and orientation for different
+temperatures and shear rates are presented. The implementation of the
+Gay-Berne potential for biaxial ellipsoidal particles in a parallel
+molecular dynamics code is also briefly discussed.
+
+Return to "Publications page"_../papers.html

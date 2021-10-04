@@ -1,0 +1,28 @@
+[Effect of shape and friction on the packing and flow of granular
+materials]
+
+K. M. Salerno, D. S. Bolintineanu, G. S. Grest, J. B. Lechman,
+S. J. Plimpton, I. Srivastava, L. E. Silbert, Phys Rev E, 98, 050901
+(2018).
+
+The packing and flow of aspherical frictional particles are studied
+using discrete element simulations. Particles are superballs with
+shape vertical bar x vertical bar(s )+ vertical bar y vertical bar(s
+)+ vertical bar z vertical bar(s)= 1 that varies from sphere (s = 2)
+to cube (s = infinity), constructed with an overlapping-sphere
+model. Both packing fraction, phi, and coordination number, z,
+decrease monotonically with microscopic friction mu, for all
+shapes. However, this decrease is more dramatic for larger s due to a
+reduction in the fraction of face-face contacts with increasing
+friction. For flowing grains, the dynamic friction fl-the ratio of
+shear to normal stresses-depends on shape, microscopic friction, and
+inertial number I. For all shapes, A grows from its quasistatic value
+(mu) over tilde (0) as ((mu) over tilde - (mu) over tilde (0)) =
+dI(alpha), with different universal behavior for frictional and
+frictionless shapes. For frictionless shapes the exponent alpha
+approximate to 0.5 and prefactor d approximate to 5 (mu) over tilde
+(0) while for frictional shapes alpha approximate to 1 and d varies
+only slightly. The results highlight that the flow exponents are
+universal and are consistent for all the shapes simulated here.
+
+Return to "Publications page"_../papers.html

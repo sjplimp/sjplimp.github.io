@@ -1,0 +1,19 @@
+[Monte Carlo Particle Simulation of Low-Density Fluid Flow on MIMD
+Supercomputers]
+
+S. J. Plimpton and T. J. Bartel, in Proc of Scalable High Performance
+Computing Conference, Williamsburg, VA, April 1992, p 212.
+
+Direct Simulation Monte Carlo is a well-established technique for
+modeling low density fluid flows. The parallel implementation of a
+general simulation which allows for body-fitted grids, particle
+weighting, and a variety of surface and flow chemistry models is
+described. We compare its performance on a 1024-node nCUBE 2 to a
+serial version for the CRAY-YMP. Experiences with load-balancing the
+computation via graph-based heuristics (Kernighan and Lin) and the
+newer spectral techniques (Pothen, Simon, and Liou) are also
+discussed. This is a critical issue since density fluctuations can
+create orders-of-magnitude differences in computational loads as the
+simulation progresses.
+
+Return to "Publications page"_../papers.html

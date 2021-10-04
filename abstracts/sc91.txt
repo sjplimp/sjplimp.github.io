@@ -1,0 +1,19 @@
+[Synthetic Aperture Radar Image Processing on Parallel Supercomputers]
+
+S. J. Plimpton, G. A. Mastin, D. Ghiglia, in Proc of Supercomputing
+'91, Albuquerque, NM, November 1991, p 446.
+
+We briefly discuss three algorithms used to process synthetic aperture
+radar (SAR) images: a polar reformatter that maps raw SAR data to a
+rectangular mesh, 2-d FFTs that convert the data set to a real image,
+and phase gradient autofocusing which creates clear images by
+correcting blurs resulting from uncompensated phase
+errors. Implementation details and performance data for the algorithms
+are given for two parallel supercomputers, a nCUBE 2 hypercube and a
+CM-2. Portions of the algorithms execute at gigaflop speeds, meaning
+that large SAR data sets (16,384 x 65,536) can be processed in tens of
+minutes instead of hours as on conventional supercomputers. Equally
+significantly, the gigabytes of internal memory on the parallel
+machines allow entire images to be processed in place.
+
+Return to "Publications page"_../papers.html

@@ -1,0 +1,16 @@
+[Scalability and Performance of Two Large Linux Clusters]
+
+R. Brightwell and S. J. Plimpton, J of Parallel and Distributed
+Computing, 61, 1546-1569 (2001).
+
+In this paper we present performance results from several parallel
+benchmarks and applications on two large Linux clusters at Sandia
+National Laboratories.  We compare the results on the Linux clusters
+to performance obtained on a traditional distributed-memory massively
+parallel processing machine, the Intel TeraFLOPS. We discuss the
+characteristics of these machines that influence the performance
+results and identify the key components of the system that are
+important to allow for scalability of commodity-based PC clusters to
+hundreds and possibly thousands of processors.
+
+Return to "Publications page"_../papers.html

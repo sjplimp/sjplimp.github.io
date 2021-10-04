@@ -1,0 +1,32 @@
+<HTML>
+<P><B>A New Parallel Method for Molecular-Dynamics Simulation of
+Macromolecular Systems</B>
+</P>
+<P>S. J. Plimpton and B. A. Hendrickson, J Comp Chem, 17, 326-337 (1996).
+</P>
+<P>Short--range molecular dynamics simulations of molecular systems are
+commonly parallelized by replicated--data methods, where each
+processor stores a copy of all atom positions. This enables
+computation of bonded 2--, 3--, and 4--body forces within the
+molecular topology to be partitioned among processors
+straightforwardly. A drawback to such methods is that the
+inter--processor communication scales as N, the number of atoms,
+independent of P, the number of processors. Thus, their parallel
+efficiency falls off rapidly when large numbers of processors are
+used. In this article a new parallel method for simulating
+macromolecular or small--molecule systems is presented, called
+force--decomposition. Its memory and communication costs scale as
+N/sqrt(P), allowing larger problems to be run faster on greater
+numbers of processors.  Like replicated--data techniques, and in
+contrast to spatial--decomposition approaches, the new method can be
+simply load--balanced and performs well even for irregular simulation
+geometries. The implementation of the algorithm in a prototypical
+macromolecular simulation code ParBond is also discussed. On a
+1024--processor Intel Paragon, ParBond runs a standard benchmark
+simulation of solvated myoglobin with a parallel efficiency of 61% and
+at 40 times the speed of a vectorized version of CHARMM running on a
+single Cray Y--MP processor.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

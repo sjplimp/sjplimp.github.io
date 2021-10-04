@@ -1,0 +1,21 @@
+[Feature Length-Scale Modeling of LPCVD and PECVD MEMS Fabrication
+Processes]
+
+L. C. Musson, P. Ho, S. J. Plimpton, R. C. Schmidt, Journal of
+Microsystems Technologies, 12, 137-142 (2005).
+
+The surface micromachining processes used to manufacture MEMS devices
+and integrated circuits transpire at such small length scales and are
+sufficiently complex that a theoretical analysis of them is
+particularly inviting. Under development at Sandia National
+Laboratories (SNL) is Chemically Induced Surface Evolution with Level
+Sets (ChISELS), a level-set based feature-scale modeler of such
+processes. The theoretical models used, a description of the software
+and some example results are presented here. The focus to date has
+been of low-pressure and plasma enhanced chemical vapor deposition
+(low-pressure chemical vapor deposition, LPCVD and PECVD)
+processes. Both are employed in SNLs SUMMiT V technology. Examples of
+step coverage Of SiO2 into a trench by each of the LPCVD and PECVD
+process are presented.
+
+Return to "Publications page"_../papers.html

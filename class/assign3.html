@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<TITLE>CS442 Programming Assignment 3</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFA0">
+<P>
+<CENTER> <H1>
+ CS442 Programming Assignment 3<BR> 
+  Truly Parallel Game-of-Life
+</H1> </CENTER>
+<P>
+<b> Due:</b> Tuesday, October 7
+<P>
+<b> Goals:</b>
+<P>
+<OL><LI> Introduce the concept of spatial decomposition.
+<P>
+<LI> Inspire further thought about load balancing techniques.
+<P>
+<LI> Demonstrate the utility of ghost cells.
+<P>
+<LI> Use new MPI functionality:  data packing, sendrecv.
+<P>
+</OL>
+<P>
+<b> Background:</b>
+<P>
+Despite your best efforts, your thesis advisor isn't impressed.  The
+previous simulations of the vegetation of the Gila Wilderness proved
+to be insufficiently detailed.  With the threat of field work looming,
+you are getting desperate.  While watching reruns of Wrestlemania IX
+and Monster Trucks, you realize your previous simulations weren't big
+enough to resolve all the subtle features.  Unfortunately, a
+sufficiently large simulation will consume too much time and memory to
+be feasible on a single processor.  Instead, you need to parallelize
+each instance of the game-of-life.  When Dennis Rodman enters the
+wrestling arena you go back to your computer.
+<BR>
+<P>
+<b> Assignment:</b>
+<P>
+This time you will code a truly parallel version of the game-of-life
+(GOL).  The rules for initializing and updating grid cells remain
+unchanged, but you will now run on a much larger grid.  Your program
+should divide the simulation grid among processors using a
+two-dimensional decomposition.  It should prompt for the number of
+processors in each dimension (PX by PY) and give the same answers for
+any PX and PY, including the ``degenerate'' case of PX and/or PY = 1.
+Your code should also work when one or both of the grid dimensions
+NX,NY are not integer multiples of PX,PY.  Finally, your code should
+keep track of how much time is spent in computation and in
+communication.
+<P>
+<b> What you hand in:</b>
+<P>
+<OL><LI> A program listing of your code.  Again, only hand in the
+      routines you change or add.  This time you will need to change
+      the routines that actually perform the GOL.
+<P>
+<LI> Statistical results for 2 problems, each run on various numbers
+      of processors, including (if your machine supports it) some runs
+      on non-power-of-two P.  Also, for problem (1) show some results
+      for runs with the same P, but where you vary PX and PY,
+      including the case where PX or PY = 1.
+<P>
+      (1) Fixed-size problem:
+<BR>
+	NX = NY = 240, PROB = 0.337, N = 50, SEED = 314159
+<P>
+      (2) Scaled-size problem:
+<BR>
+	NX = 50*PX, NY = 30*PY, PROB = 0.5, N = 50, SEED = 271828
+<P>
+      As before, we are looking to see that you get the correct
+      answers and that (for problem 1) your results do not depend on P
+      or on PX or PY.
+<P>
+<LI> A simple table of timings for different P and PX, PY values that
+      lists the total run-time, computation time, communication time,
+      and overall speed-up and parallel efficiency.
+<P>
+<LI> A simple log-log plot of total CPU time versus P for both of
+      these problems.  Include lines that show what ``perfect''
+      speed-up would be, along with data points for your actual
+      timings.  Tell us why you think the two problems scaled as they
+      did and any ideas you have as to how you might improve the
+      scalability.
+<P>
+<LI> Brief (!) answers to the Open Questions below.
+<P>
+</OL>
+<P>
+<b> Open Questions:</b>
+<P>
+<OL><LI> Is it better to use a one-dimensional or two-dimensional
+      decomposition of the grid?  Why?
+<P>
+<LI> What if it was more expensive to perform the update calculation 
+      on some grid cells than on others?  How might this impact your
+      code's performance and what could you do to take this into account?
+<P>
+<LI> Imagine your GOL computation wasn't performed on a regular grid,
+      but on an irregular grid of triangles?  By irregular we mean
+      that each triangle could have a variable number of neighboring
+      triangles.  What parts of your program would have to change to
+      accommodate this generality?
+<P>
+<LI> (Optional) If Hulk Hogan drove a monster truck through the Gila,
+      would there be any vegetation left?
+<P>
+</OL>
+</BODY>
+</HTML>

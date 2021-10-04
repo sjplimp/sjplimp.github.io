@@ -1,0 +1,36 @@
+<HTML>
+<P><B>Rendezvous algorithms for large-scale modeling and simulation</B>
+</P>
+<P>S. J. Plimpton and C. Knight, J Parallel and Distributed Computing,
+147, 184-195 (2021).
+</P>
+<P>Rendezvous algorithms encode a communication pattern that is useful
+when processors sending data do not know who the receiving processors
+should be, or vice versa. The idea is to define an intermediate
+decomposition where datums from different sending processors can
+"rendezvous" to perform a computation, in a manner that both the
+senders and eventual receivers of the results can identify the
+appropriate rendezvous processor.
+</P>
+<P>Originally designed for interpolating between overlaid grids with
+independent parallel decompositions (Plimpton et al., 2004), we have
+recently found rendezvous algorithms useful for a variety of
+operations in particle- or grid-based simulation codes when running
+large problems on large numbers of processors. In particular, we show
+they can perform well when a load-balanced intermediate decomposition
+is randomized and not spatial, requiring all-to-all communication to
+move data between processors. In this case rendezvous algorithms
+leverage the large bisection communication bandwidths which parallel
+machines provide.
+</P>
+<P>We describe how rendezvous algorithms work in a scientific computing
+context and give specific examples for molecular dynamics and Direct
+Simulation Monte Carlo codes which result in dramatic performance
+improvements versus simpler algorithms which do not scale as well. We
+explain how a generic rendezvous algorithm can be implemented, and
+also point out similarities with the MapReduce paradigm popularized by
+Google and Hadoop.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

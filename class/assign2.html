@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<TITLE>CS442 Programming Assignment 2</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFA0">
+<P>
+<CENTER> <H1>
+CS442 Assignment 2<BR>
+Manager/Worker Parallelism
+</H1></CENTER>
+<P>
+<P>
+<b> Due:</b> Tuesday, September 23th.
+<P>
+<b> Goals:</b>
+<P>
+<OL><LI> Introduce manager/worker style of parallelism.
+<P>
+<LI> Use randomness to improve load-balance.
+<P>
+<LI> Use MPI wildcard communication.
+<P>
+<LI> Experience non-determinism.
+<P>
+</OL>
+<P>
+<b> Background:</b>
+<P>
+Although your simulations of Gila vegetation show promise, your
+parallel program is not as efficient as you would like.  The problem
+is that some processors finish early and sit idle while others
+continue working.  While watching the X-Files, you mull over the
+possibility of the earth being enslaved by aliens.  In a sudden flash
+of insight, you realize that you can fix the load-imbalance problem
+by using a master/slave (manager/worker) approach.  You wait for the
+episode to finish before racing off to your computer.
+<P>
+<b> Assignment:</b>
+<P>
+Write a parallel program to perform the same Game-of-Life (GOL)
+simulations that you did in programming assignment 1.  As before, you
+will run one or more instances of the game-of-life on each processor.
+However, this time you won't specify in advance which instances each
+processor performs.  Instead, you will assign instances in a dynamic
+fashion using the manager/worker paradigm discussed in class.
+<P>
+To make the coding easier (and to mimic real corporate life), your
+manager processor does not need to do any useful work itself, only
+assign out tasks to the worker bees.  Thus your new code does NOT need
+to run correctly on 1 processor (manager only), but should give the
+same answers as before for all P>1, including non-power-of-two P.
+<P>
+<b> What you hand in:</b>
+<P>
+<OL><LI> A program listing of your code.  Again, only hand in the
+      routines you change or add.  You no longer need to use your own
+      broadcast or reduce routines; you may call the MPI ones directly.
+<P>
+<LI> The statistical results from 2 runs,
+      each on various numbers of processors, including (if your
+      machine supports it) some runs on non-power-of-two P.
+<P>
+      (1) NX = NY = 50, PROB = 0.35, N = 128, SEED = 314159
+<P>
+      (2) NX = NY = 100, PROB = 0.28, N = 256, SEED = 271828
+<P>
+      As before, we are looking to see that you get the correct
+      answers and that your answers do not depend on P.  Also, have
+      your program compute the maximum and minimum number of instances
+      of the GOL performed by any processor and include these results
+      in the statistics print-out at the end of each run.
+<P>
+<LI> A simple log-log plot of CPU time vs. P for one (or both) of
+      these problems.  Include a line that shows what ``perfect''
+      speed-up would be, along with data points for your actual
+      timings.  Also include the timings you obtained using your
+      previous code.  Tell us why you think the new program scaled as
+      it did and any ideas you have as to how you might improve the
+      scalability.
+<P>
+<LI> Brief (!) answers to the Open Questions below.
+<P>
+</OL>
+<P>
+<b> Open Questions:</b>
+<P>
+<OL><LI> If you were to run your program several times with exactly the
+      same set of inputs, would each processor always run the same
+      GOL instances?  Why or why not?
+<P>
+<LI> What could you do if workers finish their tasks so quickly
+      that they spend lots of time waiting for the manager?
+<P>
+<LI> What if the manager spends lots of time waiting for requests?
+      Is there some way to make use of its idle time?
+<P>
+<LI> The workers need not be on processors identical to the
+      manager or to each other.  The manager/worker form of
+      parallelism can be applied to networks of workstations, or
+      virtually any collection of processors.  If the processors have
+      different speeds, would it effect your program?
+<P>
+<LI> (Optional) If aliens did enslave the earth, would it effect 
+      vegetation growth in the Gila?
+<P>
+</OL>
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+[Parallel Molecular Dynamics With the Embedded Atom Method]
+
+S. J. Plimpton and B. A. Hendrickson, in Materials Theory and
+Modelling, edited by J. Broughton, P. Bristowe, and J. Newsam, MRS
+Proceedings 291, Pittsburgh, PA, 1993, p 37.
+
+Parallel computing offers new capabilities for using molecular
+dynamics (MD) to simulate larger numbers of atoms and longer time
+scales. In this paper we discuss two methods we have used to implement
+the embedded atom method (EAM) formalism for molecular dynamics on
+multiple-instruction/multiple-data (MIMD) parallel computers. The
+first method (atom-decomposition) is simple and suitable for small
+numbers of atoms. The second method (force-decomposition) is new and
+is particularly appropriate for the EAM because all the computations
+are between pairs of atoms. Both methods have the advantage of not
+requiring any geometric information about the physical domain being
+simulated. We present timing results for the two parallel methods on a
+benchmark EAM problem and briefly indicate how the methods can be used
+in other kinds of materials MD simulations.
+
+Return to "Publications page"_../papers.html

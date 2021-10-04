@@ -1,0 +1,33 @@
+<HTML>
+<P><B>Parallel Strategies for Crash and Impact Simulations</B>
+</P>
+<P>K. Brown, S. Attaway, S. J. Plimpton, B. Hendrickson, Computer Methods
+in Applied Mechanics and Engineering, 184, 375-390 (2000).
+</P>
+<P>We describe a general strategy we have found effective for
+parallelizing solid mechanics simulations. Such simulations often have
+several computationally intensive parts, including finite element
+integration, detection of material contacts, and particle interaction
+if smoothed particle hydrodynamics is used to model highly deforming
+materials. The need to balance all of these computations
+simultaneously is a difficult challenge that has kept many commercial
+and government codes from being used effectively on parallel
+supercomputers with hundreds or thousands of processors. Our strategy
+is to load-balance each of the significant computations independently
+with whatever balancing technique is most appropriate. The chief
+benefit is that each computation can be scalably parallelized. The
+drawback is the data exchange between processors and extra coding that
+must be written to maintain multiple decompositions in a single
+code. We discuss these trade-offs and give performance results showing
+this strategy has led to a parallel implementation of a widely-used
+solid mechanics code that can now be run efficiently on thousands of
+processors of the Pentium-based Sandia/Intel TFLOPS machine. We
+illustrate with several examples the kinds of high-resolution,
+million-element models that can now be simulated routinely. We also
+look to the future and discuss what possibilities this new capability
+promises, as well as the new set of challenges it poses in material
+models, computational techniques, and computing infrastructure.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

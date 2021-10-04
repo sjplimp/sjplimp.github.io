@@ -1,0 +1,19 @@
+[Particle-Mesh Ewald and rRESPA for Parallel Molecular Dynamics
+Simulations]
+
+S. J. Plimpton, R. Pollock, M. Stevens, in Proc of the Eighth SIAM
+Conference on Parallel Processing for Scientific Computing,
+Minneapolis, MN, March 1997.
+
+The parallel implementation of a molecular dynamics code suitable for
+simulation of general molecular systems using spatial--decomposition
+methods is discussed. Long-range Coulombic forces are computed using a
+particle-mesh Ewald (PPPM) technique. A multiple--timescale
+integration method known as rRESPA is also used to improve the
+computational efficiency. The load--balancing and interprocessor
+communication issues that arise from implementing PPPM and rRESPA
+within a spatial--decomposition framework are highlighted. Some
+performance numbers for large--scale biomembrane simulations on a
+Intel Paragon are given.
+
+Return to "Publications page"_../papers.html

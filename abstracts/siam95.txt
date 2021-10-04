@@ -1,0 +1,20 @@
+[Parallel Algorithms for Dynamically Partitioning Unstructured Grids]
+
+P. Diniz, S. J. Plimpton, B. Hendrickson, R. Leland, in Proc of 7th
+SIAM Conference on Parallel Processing for Scientific Computing, San
+Francisco, CA, February 1995, p 615.
+
+Grid partitioning is the method of choice for decomposing a wide
+variety of computational problems into naturally parallel pieces. In
+problems where computational load on the grid or the grid itself
+changes as the simulation progresses, the ability to repartition
+dynamically and in parallel is attractive for achieving higher
+performance. We describe three algorithms suitable for parallel
+dynamic load--balancing which attempt to partition unstructured grids
+so that computational load is balanced and communication is
+minimized. The execution time of the algorithms and the quality of the
+partitions they generate are compared to results from serial
+partitioners for two large grids. The integration of the algorithms
+into a parallel particle simulation is also briefly discussed.
+
+Return to "Publications page"_../papers.html

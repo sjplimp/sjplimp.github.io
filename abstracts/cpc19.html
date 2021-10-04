@@ -1,0 +1,28 @@
+<HTML>
+<P><B>Aspherical particle models for molecular dynamics simulation</B>
+</P>
+<P>T. D. Nguyen and S. J. Plimpton, Comp Phys Comm, 243, 12-24 (2019).
+</P>
+<P>In traditional molecular dynamics (MD) simulations, atoms and
+coarse-grained particles are modeled as point masses interacting via
+isotropic potentials. For studies where particle shape plays a vital
+role, more complex models are required. In this paper we describe a
+spectrum of approaches for modeling aspherical particles, all of which
+are now available (some recently) as options within the LAMMPS MD
+package. Broadly these include two classes of models. In the first,
+individual particles are aspherical, either via a pairwise anisotropic
+potential which implicitly assigns a simple geometric shape to each
+particle, or in a more general way where particles store internal
+state which can explicitly define a complex geometric shape. In the
+second class of models, individual particles are simple points or
+spheres, but rigid body constraints are used to create composite
+aspherical particles in a variety of complex shapes. We discuss
+parallel algorithms and associated data structures for both kinds of
+models, which enable dynamics simulations of aspherical particle
+systems across a wide range of length and time scales. We also
+highlight parallel performance and scalability and give a few
+illustrative examples of aspherical models in different contexts.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

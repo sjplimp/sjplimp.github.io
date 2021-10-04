@@ -1,0 +1,34 @@
+[A historical survey of algorithms and hardware architectures for
+neural-inspired and neuromorphic computing applications]
+
+C. D. James, J. B. Aimone, N. E. Miner, C. M. Vineyard,
+F. H. Rothganger, K. D. Carlson, S. A. Mulder, T. J. Draelos,
+A. Faust, M, J. Marinella, J. H. Naegle, S. J. Plimpton, Biologically
+Inspired Cognitive Architectures, 19, 49-64 (2017).
+
+Biological neural networks continue to inspire new developments in
+algorithms and microelectronic hardware to solve challenging data
+processing and classification problems. Here, we survey the history of
+neural-inspired and neuromorphic computing in order to examine the
+complex and intertwined trajectories of the mathematical theory and
+hardware developed in this field. Early research focused on adapting
+existing hardware to emulate the pattern recognition capabilities of
+living organisms.  Contributions from psychologists, mathematicians,
+engineers, neuroscientists, and other professions were crucial to
+maturing the field from narrowly-tailored demonstrations to more
+generalizable systems capable of addressing difficult problem classes
+such as object detection and speech recognition.  Algorithms that
+leverage fundamental principles found in neuroscience such as
+hierarchical structure, temporal integration, and robustness to error
+have been developed, and some of these approaches are achieving
+world-leading performance on particular data classification tasks. In
+addition, novel microelectronic hardware is being developed to perform
+logic and to serve as memory in neuromorphic computing systems with
+optimized system integration and improved energy efficiency. Key to
+such advancements was the incorporation of new discoveries in
+neuroscience research, the transition away from strict structural
+replication and towards the functional replication of neural systems,
+and the use of mathematical theory frameworks to guide algorithm and
+hardware developments.
+
+Return to "Publications page"_../papers.html

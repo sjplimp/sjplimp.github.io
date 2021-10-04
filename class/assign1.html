@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+<TITLE>CS442 Programming Assignment 1</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFA0">
+<P>
+<CENTER> <H1>
+CS442 Assignment 1<BR> 
+Embarrassingly Parallel Game-of-Life
+</H1></CENTER>
+<P>
+<P>
+<b> Due:</b> Tuesday, September 9th
+<P>
+<b> Goals:</b>
+<P>
+<OL><LI> Get up and running on the parallel machine(s).  You'll have to
+      figure out how to log in, edit, compile, run and debug parallel
+      programs.
+<P>
+<LI> Use simple MPI calls; implement two collective communication
+      routines yourself.
+<P>
+<LI> Investigate scaling performance of your code.
+<P>
+<LI> Develop code you'll use as starting point for later assignments.
+<P>
+</OL>
+<P>
+<b> Background:</b>
+<P>
+Pretend, if you're not already, that you are a biologist interested in
+studying the ecology of the Gila Wilderness.  Because you can't get
+cable TV within the Gila, instead of doing field work you decide to
+perform computational simulations.  You know that water is a scarce
+resource, and that competition for the limited precipitation is
+fierce.  In particular, if a plant is crowded by too many neighbors,
+it will die of thirst.  However, due to the symbiotic relationship
+between the different types of vegetation, a plant with no neighbors
+will die as well.  Plants will only survive if they manage to find the
+right ecological niche.  Your plan is to investigate possible
+ecological scenarios and to determine which ones generate stable
+populations.
+<P>
+<b> Assignment:</b>
+<P>
+We'll give you a sequential code that runs the <em> game-of-life</em>.
+The game is played on a two-dimensional grid of size NX by NY.
+Each grid point has a value from 0 to 10, which represents the current
+density of vegetation at a given point.  Initially, all values are
+randomly set to 0 or 1, with probability = PROB that a particular
+point has value 1.  This process is based on a user-input random
+number SEED.
+<P>
+A timestep of the game consists of updating the value of every grid
+point according to the following rules:
+<P>
+<OL><LI> SUM = sum of current values at the 8 neighboring points (left/right,
+up/down, 4 corner points).  The grid is treated as a torus; that is,
+think of the bottom of the grid as touching the top, and the right as
+touching the left.
+<P>
+<LI> If SUM <b>&lt;=</b> 3 or SUM <b>&gt;=</b> 25, then decrement value by 1 (too lonely or
+crowded).
+<P>
+<LI> If SUM <b>&gt;=</b> 4 and SUM <b>&lt;=</b> 15, then increment value by 1 (growth condition).
+<P>
+<LI> If SUM <b>&gt;</b> 15 and SUM <b>&lt;</b> 25, no change in value (just right).
+<P>
+</OL>
+<P>
+A single game runs for many timesteps until it terminates under one of
+3 conditions:
+<P>
+<OL><LI> All the vegetation dies.
+<P>
+<LI> It reaches steady-state, where the total vegetation (sum of all
+values on the grid) doesn't change for 10 timesteps.  Often, instead
+of settling down to a single configuration the solution will cycle
+with periodicity 2 or 3.  Such cycling is considered to be a
+steady-state solution and likewise terminates after 10 steps.
+<P>
+<LI> It exceeds 200 timesteps without reaching steady-state.
+<P>
+</OL>
+<P>
+A complete simulation using the serial code runs N independent games,
+one after the other and prints out some statistics: the fraction of
+games that died out, the fraction that reached steady-state, and the
+fraction that exceeded the time limit.  For the steady-state games,
+the code also computes the average time to stabilization and the average
+amount of vegetation alive on the grid.
+<P>
+Your assignment is to make this code parallel in the obvious way by
+having each of the P processors run N/P of the independent games.
+With the same inputs, your code should give identical answers when run
+on any number of processors.  But life is simple in the Gila and in
+this first assignment -- you can assume P is a power-of-two
+(1,2,4,8,etc) and that N is a multiple of P.
+<P>
+Communicating the simulation parameters will require a <em>
+broadcast</em> operation and computing the statistics will require a <em>
+reduce</em> operation.  You can use MPI calls to get this working quickly,
+but in the final version of your code, you must write these operations
+yourself, using MPI-Send and MPI-Receive.
+<P>
+<b> What you hand in:</b>
+<P>
+<OL><LI> A program listing of your code.  Since poorly formatted codes
+      are difficult to grade, we expect you to include comments and to
+      make your program easy to read.  In what you hand in, you can
+      omit the subroutines from the serial code that you don't change,
+      but you should include the main program and any additional
+      subroutines you write, particularly your broadcast and reduction
+      routines.
+<P>
+<LI> The statistical results from 2 runs, 
+      each on various numbers of processors, including P = 1.
+<P>
+      (1) NX = NY = 50, PROB = 0.35, N = 128, SEED = 314159
+<P>
+      (2) NX = NY = 100, PROB = 0.28, N = 256, SEED = 271828
+<P>
+      We are looking to see that you get the correct answers and that
+      your answers do not depend on P.
+<P>
+<LI> A simple log-log plot of CPU time vs. P for one (or both) of
+      these problems.  Include a line that shows what ``perfect''
+      speed-up would be, along with data points for your actual
+      timings.  Tell us why you think the program scaled as it did.
+<P>
+<LI> Brief (!) answers to the Open Questions below.
+<P>
+</OL>
+<P>
+<b> Sequential Version:</b>
+<P>
+You should start with sequential code to solve this problem which can
+be downloaded here in either <A HREF="Program1.c">C</A> or
+<A HREF="Program1.f">Fortran</A>.
+<P>
+<b> Open Questions:</b>
+<P>
+<OL><LI> Some of the games finish much faster than others,
+      leaving their processors idle.  Can you think of any way to
+      improve the parallel performance of the code?
+<P>
+<LI> If done correctly, you should get the same answers to these
+      problems, no matter how many processors you run on.  Can you
+      think of reasons this might be difficult or impossible to
+      achieve in other kinds of simulations?
+<P>
+<LI> Does your code crash or give different answers if P is not a
+      power-of-two?  Or if N is not a multiple of P?  Or if N <b>&gt;</b> P?
+      If so, why, and what would you have to change to make your code
+      more robust?  (Note: You don't have to actually make these
+      changes.)
+<P>
+<LI> (Optional) What can be done to get cable TV introduced to the Gila and
+      would it enhance vegetation growth ?
+<P>
+</OL>
+</BODY>
+</HTML>

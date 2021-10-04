@@ -1,0 +1,29 @@
+<HTML>
+<P><B>Optimizing legacy molecular dynamics software with directive-based
+offload</B>
+</P>
+<P>W. M. Brown, J.-M. Y. Carrillo, N. Gavhane, F. M. Thakkar,
+S. J. Plimpton, Comp Phys Comm, 195, 95-101 (2015).
+</P>
+<P>Directive-based programming models are one solution for exploiting
+many-core coprocessors to increase simulation rates in molecular
+dynamics. They offer the potential to reduce code complexity with
+offload models that can selectively target computations to run on the
+CPU, the coprocessor, or both. In this paper, we describe
+modifications to the LAMMPS molecular dynamics code to enable
+concurrent calculations on a CPU and coprocessor. We demonstrate that
+standard molecular dynamics algorithms can run efficiently on both the
+CPU and an x86-based coprocessor using the same subroutines. As a
+consequence, we demonstrate that code optimizations for the
+coprocessor also result in speedups on the CPU; in extreme cases up to
+4.7X. We provide results for LAMMPS benchmarks and for production
+molecular dynamics simulations using the Stampede hybrid supercomputer
+with both Intel⃝R Xeon PhiTM coprocessors and NVIDIA GPUs. The
+optimizations presented have increased simulation rates by over 2X for
+organic molecules and over 7X for liquid crystals on Stampede. The
+optimizations are available as part of the ‘‘Intel package’’ supplied
+with LAMMPS.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

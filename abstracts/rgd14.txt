@@ -1,0 +1,15 @@
+[Direct Simulation Monte Carlo: The Quest for Speed]
+
+M. A. Gallis, J. R. Torczynski, S. J. Plimpton, D. J. Rader,
+T. Koehler, 29th Intl Symposium on Rarefied Gas Dynamics in Xi'an,
+China, AIP Conf Proc, 1628, 27 (2014).
+
+In the 50 years since its invention, the acceptance and applicability
+of the DSMC method have increased significantly. Extensive
+verification and validation efforts have led to its greater
+acceptance, whereas the increase in computer speed has been the main
+factor behind its greater applicability. As the performance of a
+single processor reaches its limit, massively parallel computing is
+expected to play an even stronger role in its future development.
+
+Return to "Publications page"_../papers.html

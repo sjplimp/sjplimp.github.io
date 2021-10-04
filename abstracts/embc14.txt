@@ -1,0 +1,21 @@
+[A Method for Modeling Oxygen Diffusion in an Agent-based Model with
+Application to Host-Pathogen Infection]
+
+C. L. Sershen, S. J. Plimpton, E. E. May, EMBC'14 Conference (36th
+Annual Intl Conf of the IEEE Engineering in Medicine and Biology
+Society), Chicago, IL, Aug 2014.
+
+This paper describes a method for incorporating a diffusion field
+modeling oxygen usage and dispersion in a multi-scale model of
+Mycobacterium tuberculosis (Mtb) infection mediated granuloma
+formation. We implemented this method over a floating-point field to
+model oxygen dynamics in host tissue during chronic phase response and
+Mtb persistence. The method avoids the requirement of satisfying the
+Courant–Friedrichs–Lewy (CFL) condition, which is necessary in
+implementing the explicit version of the finite-difference method, but
+imposes an impractical bound on the time step. Instead, diffusion is
+modeled by a matrixbased, steady state approximate solution to the
+diffusion equation. Presented in figure 1 is the evolution of the
+diffusion profiles of a containment granuloma over time.
+
+Return to "Publications page"_../papers.html

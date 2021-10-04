@@ -1,0 +1,21 @@
+[Tinkertoy Parallel Programming: Complicated Applications from Simple
+Tools]
+
+B. Hendrickson and S. J. Plimpton, in Proc of SIAM Parallel Processing
+for Scientific Computing Conf, March 2001.
+
+Developing parallel software for unstructured problems continues to be
+a difficult undertaking, particularly for distributed memory
+machines. Framework and library support are limited for non-standard
+applications and developers are often forced to code from
+scratch. This is particularly true for complex, unstructured
+applications. In this paper, we show that this needn't always be the
+case. We describe a set of simple primitives which can be combined to
+provide solutions to a variety of unstructured parallel computing
+problems.  Specifically, we show how a small set of tools can yield
+efficient parallel algorithms for particle modeling, crash simulations
+and transferring data between two independent grids in multiphysics
+simulations. The use of such tools allows the application developer to
+program at a higher level without sacrificing performance.
+
+Return to "Publications page"_../papers.html

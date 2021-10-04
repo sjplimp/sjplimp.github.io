@@ -1,0 +1,34 @@
+[Nonlinear Magnetohydrodynamics Simulation Using High-order
+Finite Elements]
+
+C. R. Sovinec, A. H. Glasser, T. A. Gianakon, D. C. Barnes, R. A.
+Nebel, S. E. Kruger, D. D. Schnack, S. J. Plimpton, A. Tarditi, and
+M. S. Chu, J Comp Phys, 195, 355-386 (2004).
+
+A conforming representation composed of 2D finite elements and finite
+Fourier series is applied to 3D nonlinear non-ideal
+magnetohydrodynamics using a semi-implicit time-advance. The
+self-adjoint semi-implicit operator and variational approach to
+spatial discretization are synergistic and enable simulation in the
+extremely stiff conditions found in high temperature plasmas without
+sacrificing the geometric flexibility needed for modeling laboratory
+experiments. Growth rates for resistive tearing modes with
+experimentally relevant Lundquist number are computed accurately with
+time-steps that are large with respect to the global Alfven time and
+moderate spatial resolution when the finite elements have basis
+functions of polynomial degree (p) two or larger. An error diffusion
+method controls the generation of magnetic divergence
+error. Convergence studies show that this approach is effective for
+continuous basis functions with p greater than or equal to 2, where
+the number of test functions for the divergence control terms is less
+than the number of degrees of freedom in the expansion for vector
+fields. Anisotropic thermal conduction at realistic ratios of parallel
+to perpindicular conductivity (chi(\\)/chi(perpendicular to)) is
+computed accurately with p greater than or equal to 3 without mesh
+alignment. A simulation of tearing -mode evolution for a shaped
+toroidal tokamak equilibrium demonstrates the effectiveness of the
+algorithm in nonlinear conditions, and its results are used to verify
+the accuracy of the numerical anisotropic thermal conduction in 3D
+magnetic topologies.
+
+Return to "Publications page"_../papers.html

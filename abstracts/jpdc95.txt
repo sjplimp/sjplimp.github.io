@@ -1,0 +1,23 @@
+[Parallel Many-Body Simulations Without All-to-All Communication]
+
+B. A. Hendrickson and S. J. Plimpton, J Parallel and Distributed
+Computing, 27, 15-25 (1995).
+
+Simulations of interacting particles are common in science and
+engineering, appearing in such diverse disciplines as astrophysics,
+fluid dynamics, molecular physics, and materials science. These
+simulations are often computationally intensive and so natural
+candidates for massively parallel computing. Many--body simulations
+that directly compute interactions between pairs of particles, be they
+short--range or long--range interactions, have been parallelized in
+several standard ways. The simplest approaches require all--to- -all
+communication, an expensive communication step. The fastest methods
+assign a group of nearby particles to a processor, which can lead to
+load imbalance and be difficult to implement efficiently. We present a
+new approach, suitable for direct simulations, that avoids
+all--to--all communication without requiring any geometric
+clustering. For some computations we find the new method to be the
+fastest parallel algorithm available; we demonstrate its utility in
+several parallel molecular dynamics simulations.
+
+Return to "Publications page"_../papers.html

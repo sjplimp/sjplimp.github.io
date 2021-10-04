@@ -1,0 +1,27 @@
+[Massively parallel symplectic algorithm for coupled magnetic spin
+dynamics and molecular dynamics]
+
+J. Tranchida, S. J. Plimpton, P. Thibaudeau, A. P. Thompson, J Comp
+Phys, 372, 406-425 (2018).
+
+A parallel implementation of coupled spin-lattice dynamics in the
+LAMMPS molecular dynamics package is presented. The approach is very
+general, and can be applied to simple ferromagnets, magnetic alloys,
+or amorphous magnetic materials. Equations of motion for both spin
+only and coupled spin-lattice dynamics are first reviewed, including a
+detailed account of how magneto-mechanical potentials can be used to
+perform a proper coupling between spin and lattice degrees of
+freedom. A symplectic numerical integration algorithm is then
+presented which combines the Suzuki-Trotter decomposition for
+non-commuting variables and conserves the geometric properties of the
+equations of motion. The numerical accuracy of the serial
+implementation was assessed by verifying that it conserves the total
+energy and the norm of the total magnetization up to second order in
+the timestep size. Finally, a very general parallel algorithm is
+proposed that allows large spin-lattice systems to be efficiently
+simulated on large numbers of processors without degrading its
+mathematical accuracy. Its correctness as well as scaling efficiency
+were tested for realistic coupled spin-lattice systems, confirming
+that the new parallel algorithm is both accurate and efficient.
+
+Return to "Publications page"_../papers.html

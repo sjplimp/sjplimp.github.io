@@ -1,0 +1,66 @@
+[Carbon Sequestration in Synechococcus Sp.: From Molecular Machines to
+Hierarchical Modeling]
+
+G. S. Heffelfinger, ..., S. J. Plimpton, ..., OMICS - A Journal of
+Integrative Biology, 6, 305-330 (2002).
+
+The US Department of Energy recently announced the first five grants
+for the Genomes to Life (GTL) Program. This goal of this program is to
+“achieve the most far-reaching of all biological goals: a fundamental,
+comprehensive, and systematic understanding of life.” While more
+information about the program can be found at the GTL website
+(www.doegenomestolife.org), this paper provides an overview of one of
+the five GTL projects just funded: “Carbon Sequestration in
+Synechococcus Sp.: From Molecular Machines to Hierarchical Modeling.”
+
+This project is a combined experimental and computational effort
+emphasizing developing, prototyping, and applying new computational
+tools and methods to ellucidate the biochemical mechanisms of the
+carbon sequestration of Synechococcus Sp., an abundant marine
+cyanobacteria known to play an important role in the global carbon
+cycle. Understanding, predicting, and perhaps manipulating carbon
+fixation in the oceans has long been a major focus of biological
+oceanography and has more recently been of interest to a broader
+audience of scientists and policy makers. It is clear that the oceanic
+sinks and sources of CO2 are important terms in the global
+environmental response to anthropogenic atmospheric inputs of CO2 and
+that oceanic microorganisms play a key role in this response. However,
+the relationship between this global phenomenon and the biochemical
+mechanisms of carbon fixation in these microorganisms is poorly
+understood.
+
+The project includes five subprojects: an experimental investigation,
+three computational biology efforts, and a fifth which deals with
+addressing computational infrastructure challenges of relevance to
+this project and the Genomes to Life program as a whole. Our
+experimental effort is designed to provide biology and data to drive
+the computational efforts and includes significant investment in
+developing new experimental methods for uncovering protein partners,
+characterizing protein complexes, identifying new binding domains. We
+will also develop and apply new data measurement and statistical
+methods for analyzing microarray experiments. Our computational
+efforts include coupling molecular simulation methods with knowledge
+discovery from diverse biological data sets for high-throughput
+discovery and characterization of protein-protein complexes and
+developing a set of novel capabilities for inference of regulatory
+pathways in microbial genomes across multiple sources of information
+through the integration of computational and experimental
+technologies. These capabilities will be applied to Synechococcus
+regulatory pathways to characterize their interaction map and identify
+component proteins in these pathways. We will also investigate methods
+for combining experimental and computational results with
+visualization and natural language tools to accelerate discovery of
+regulatory pathways. Furthermore, given that the ultimate goal of this
+effort is develop a systems-level of understanding of how the
+Synechococcus genome affects carbon fixation at the global scale, we
+will develop and apply a set of tools for capturing the carbon
+fixation behavior of complex of Synechococcus at different levels of
+resolution. Finally, because the explosion of data being produced by
+high-throughput experiments requires data analysis and models which
+are more computationally complex, more heterogeneous, and require
+coupling to ever increasing amounts of experimentally obtained data in
+varying formats, we have also established a companion computational
+infrastructure to support this effort as well as the Genomes to Life
+program as a whole.
+
+Return to "Publications page"_../papers.html

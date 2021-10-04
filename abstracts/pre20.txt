@@ -1,0 +1,22 @@
+[Granular packings with sliding, rolling, and twisting friction]
+
+A. P. Santos, D. S. Bolintineanu, G. S. Grest, J. B. Lechman,
+S. J. Plimpton, I. Srivastava, L. E. Silbert, Phys Rev E, 102, 032903
+(2020).
+
+Intuition tells us that a rolling or spinning sphere will eventually
+stop due to the presence of friction and other dissipative
+interactions. The resistance to rolling and spinning or twisting
+torque that stops a sphere also changes the microstructure of a
+granular packing of frictional spheres by increasing the number of
+constraints on the degrees of freedom of motion. We perform discrete
+element modeling simulations to construct sphere packings implementing
+a range of frictional constraints under a pressure-controlled
+protocol. Mechanically stable packings are achievable at volume
+fractions and average coordination numbers as low as 0.53 and 2.5,
+respectively, when the particles experience high resistance to
+sliding, rolling, and twisting. Only when the particle model includes
+rolling and twisting friction were experimental volume fractions
+reproduced.
+
+Return to "Publications page"_../papers.html

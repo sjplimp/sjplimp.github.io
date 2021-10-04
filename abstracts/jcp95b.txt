@@ -1,0 +1,23 @@
+[Molecular dynamics simulation of athermal polymer blends: Finite
+system size considerations]
+
+C. S. Stevenson, J. D. McCoy, S. J. Plimpton, J. G. Curro, J Chem
+Phys, 103, 1200-1207 (1995).
+
+Molecular dynamics simulations of binary, athermal blends of chains
+consisting of 50 tangent sites were carried out over a range of
+compositions at liquidlike packing fractions. The sites interact with
+repulsive Lennard-Jones potentials and have effective hard sphere
+diameters of approximately 1.0 and 1.2 for the two site types. The
+intrachain and interchain correlation functions were found and, except
+for the single component systems, the interchain correlations were
+seen to de strongly dependent on system size. Trivial, long range
+correlations due to the finite system size can be approximated from
+simple physical arguments, and the coarse, interchain, radial
+distribution functions can be ''corrected'' for these effects. The
+resulting correlation functions are seen to behave at large separation
+as would be expected of interchain radial distribution functions in an
+infinite sized system, permitting meaningful comparisons with the
+predictions of liquid state theory.
+
+Return to "Publications page"_../papers.html

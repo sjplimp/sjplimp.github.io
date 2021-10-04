@@ -1,0 +1,21 @@
+[A Load-Balancing Algorithm for a Parallel Electromagnetic
+Particle-in-Cell Code]
+
+S. J. Plimpton, D. B. Seidel, M. F. Pasik, R. S. Coats, G. R. Montry,
+Comp Phys Comm, 152, 227-241 (2003).
+
+Particle-in-cell simulations often suffer from load-imbalance on
+parallel machines due to the competing requirements of the field-solve
+and particle-push computations. We propose a new algorithm that
+balances the two computations independently. The grid for the
+field-solve computation is statically partitioned. The particles
+within a processor's sub-domain(s) are dynamically balanced by
+migrating spatially-compact groups of particles from heavily loaded
+processors to lightly loaded ones as needed. The algorithm has been
+implemented in the QUICKSILVER electromagnetic particle-in-cell
+code. We provide details of the implementation and present performance
+results for QUICKSILVER running models with up to a billion grid cells
+and particles on thousands of processors of a large distributed-memory
+parallel machine.
+
+Return to "Publications page"_../papers.html

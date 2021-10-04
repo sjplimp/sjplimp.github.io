@@ -1,0 +1,39 @@
+<HTML>
+<P><B>Transient Dynamics Simulations: Parallel Algorithms for Contact
+Detection and Smoothed Particle Hydrodynamics</B>
+</P>
+<P>S. J. Plimpton, S. Attaway, B. Hendrickson, J. Swegle, C. Vaughan,
+D. Gardner, in Proc of SuperComputing '96, Pittsburgh, PA, November
+1996.
+</P>
+<P>Transient dynamics simulations are commonly used to model phenomena
+such as car crashes, underwater explosions, and the response of
+shipping containers to high-speed impacts. Physical objects in such a
+simulation are typically represented by Lagrangian meshes because the
+meshes can move and deform with the objects as they undergo
+stress. Fluids (gasoline, water) or fluid-like materials (soil) in the
+simulation can be modeled using the techniques of smoothed particle
+hydrodynamics. Implementing a hybrid mesh/particle model on a
+massively parallel computer poses several difficult challenges. One
+challenge is to simultaneously parallelize and load-balance both the
+mesh and particle portions of the computation. A second challenge is
+to efficiently detect the contacts that occur within the deforming
+mesh and between mesh elements and particles as the simulation
+proceeds. These contacts impart forces to the mesh elements and
+particles which must be computed at each timestep to accurately
+capture the physics of interest. In this paper we describe new
+parallel algorithms for smoothed particle hydrodynamics and contact
+detection which turn out to have several key features in
+common. Additionally, we describe how to join the new algorithms with
+traditional parallel finite element techniques to create an integrated
+particle/mesh transient dynamics simulation. Our approach to this
+problem differs from previous work in that we use three different
+parallel decompositions, a static one for the finite element analysis
+and dynamic ones for particles and for contact detection. We have
+implemented our ideas in a parallel version of the transient dynamics
+code PRONTO-3D and present results for the code running on a large
+Intel Paragon.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

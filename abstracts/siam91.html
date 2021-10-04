@@ -1,0 +1,26 @@
+<HTML>
+<P><B>Load Balancing and Performance of a Gridless Particle Simulation on
+MIMD, SIMD, and Vector Supercomputers</B>
+</P>
+<P>S. J. Plimpton, I. Shokair, J. Wagner, in Proc of 5th SIAM Conference
+on Parallel Processing for Scientific Computing, Houston, TX, March
+1991, p 507- 512.
+</P>
+<P>Our charged particle simulation models a relativistic electron beam
+for which the field solution is local and thus requires no grid. We
+have implemented the simulation on a CRAY and on two parallel
+machines, a nCUBE 2 and Connection Machine. We present implementation
+details and contrast the approaches necessary for the three
+architectures. On the parallel machines a dynamic load- balancing
+problem arises because the beam grows uniformly in one dimension from
+a few hundred to hundreds of thousands of particles as the simulation
+progresses. We discuss a folded Gray-code mapping of the processors to
+the length scale of the simulation that expands (or shrinks) as the
+beam changes length so as to minimize inter-processor
+communication. This improves the efficiency of the nCUBE version of
+the simulation which runs at 10x the speed of the vectorized CRAY
+version.
+</P>
+<P>Return to <A HREF = "../papers.html">Publications page</A>
+</P>
+</HTML>

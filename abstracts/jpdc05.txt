@@ -1,0 +1,15 @@
+[Finding Strongly Connected Components in Distributed Graphs]
+
+W. McLendon, B. Hendrickson, S. J. Plimpton, L. Rauchwerger, J
+Parallel and Distributed Computing, 65, 901-910 (2005).
+
+The traditional, serial, algorithm for finding the strongly connected
+components in a graph is based on depth first search and has
+complexity which is linear in the size of the graph.  Depth first
+search is difficult to parallelize, which creates a need for a
+different parallel algorithm for this problem.  We describe the
+implementation of a recently proposed parallel algorithm that finds
+strongly connected components in distributed graphs, and discuss how
+it is used in a radiation transport solver.
+
+Return to "Publications page"_../papers.html

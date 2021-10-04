@@ -1,0 +1,27 @@
+[Parallel algorithms for hyperdynamics and local hyperdynamics]
+
+S. J. Plimpton, D. Perez, A. F. Voter, J Chem Phys, 153, 054116
+(2020).
+
+Hyperdynamics (HD) is a method for accelerating the timescale of
+standard molecular dynamics (MD). It can be used for simulations of
+systems with an energy potential landscape that is a collection of
+basins, separated by barriers, where transitions between basins are
+infrequent. HD enables the system to escape from a basin more quickly
+while enabling a statistically accurate renormalization of the
+simulation time, thus effectively boosting the timescale of the
+simulation. In the work of Kim et al. [J. Chem. Phys. 139, 144110
+(2013)], a local version of HD was formulated, which exploits the
+intrinsic locality characteristic typical of most systems to mitigate
+the poor scaling properties of standard HD as the system size is
+increased. Here, we discuss how both HD and local HD can be formulated
+to run efficiently in parallel. We have implemented these ideas in the
+LAMMPS MD code, which means HD can be used with any interatomic
+potential LAMMPS supports. Together, these parallel methods allow
+simulations of any size to achieve the time acceleration offered by HD
+(which can be orders of magnitude), at a cost of 2-4x that of standard
+MD. As examples, we performed two simulations of a million-atom system
+to model the diffusion and clustering of Pt adatoms on a large patch
+of the Pt(100) surface for 80 mu s and 160 mu s.
+
+Return to "Publications page"_../papers.html
