@@ -61,11 +61,6 @@ some use structured grids or finite elements.  Most of the codes I
 develop are for materials modeling, some for biology and informatics
 problems.
 
-"Current interests"_#ci
-"Past projects"_#pp
-"Publications"_papers.html, see more info at "Google Scholar"_https://scholar.google.com/citations?user=Ny7N6KQAAAAJ&hl=en
-"University course in parallel computing"_class.html :all(l)
-
 :p
 
 "Software for download"_download.html: :all(l)
@@ -96,43 +91,45 @@ problems.
 
 :p
 
-"How to reach me"_#hrm
-"Humorous quotations"_quotes.html
-"Related Sandia links"_#rsl :all(l)
+"Publications"_papers.html, see more info at "Google Scholar"_https://scholar.google.com/citations?user=Ny7N6KQAAAAJ&hl=en
+"University course in parallel computing"_class.html
+"Humorous quotations"_quotes.html :all(l)
+
+:p
 
 :line
 
 Current Interests :link(ci),h3
 
-Molecular Dynamics (MD): :b
-  "parallel algorithms"_md.html
-  MD codes I distribute: "LAMMPS"_lammps, "ParaDyn"_download.html#pd
-  MD simulations: "papers"_mdsim.html, \
-    "pictures"_http://www.lammps.org/pictures.html, \
-    "movies"_http://www.lammps.org/movies.html :ul
-"Kinetic Monte Carlo"_kmc.html - KMC and Metropolis MC simulator \
-  "SPPARKS"_spparks :b
+Molecular Dynamics (MD): "LAMMPS"_lammps, "ParaDyn"_download.html#pd, \
+  "parallel algorithms"_md.html, simulations \
+  ("papers"_mdsim.html, "pictures"_http://www.lammps.org/pictures.html, \
+   "movies"_http://www.lammps.org/movies.html)
 "Direct Simulation Monte Carlo"_dsmc.html - low-density reacting flows \
-  via particles, "SPARTA"_sparta and "Icarus"_dsmc.html :b
-"High Performance Computing (HPC)"_hpc.html - neuro-inspired computing, \
-  performance comparisons of parallel architectures :b
-"Biological Cell Modeling"_cell.html - particle-based reaction/diffusion \
-  simulator "ChemCell"_chemcell :b
-"Informatics"_informatics.html - data-intensive computing via a \
-  "MapReduce-MPI library"_mapreduce, \
-  and a stream-processing "PHISH library"_phish :b
-"Pizza.py Toolkit"_pizza - Python-based toolkit for \
-  simulation setup, analysis, plotting, viz :b
-"Parallel Algorithms"_algorithms.html: :b
-  "HPCC RandomAccess (GUPS) benchmark"_download.html#gups, \
-  "FFTs"_download.html#fft, grid transfer, \
-  dynamic load-balancing, tinkertoy parallel programming, \
-  matrix-vector multiply and many-body algorithms :ul
+  via particles, "SPARTA"_sparta and "Icarus"_dsmc.html
+"Kinetic Monte Carlo"_kmc.html - KMC and Metropolis MC simulator \
+  "SPPARKS"_spparks
+"Parallel FFTs"_fftmpi - parallel distributed 3d/2d FFTs
+"Pizza.py Toolkit"_pizza - Python-based tools \
+  for simulation setup, analysis, plotting, viz :all(b)
+
+:p
 
 :line
 
 Past Projects :link(pp),h3
  
+"Informatics"_informatics.html - data-intensive computing via a \
+  "MapReduce-MPI library"_mapreduce, \
+  and a stream-processing "PHISH library"_phish
+"High Performance Computing (HPC)"_hpc.html - neuro-inspired computing, \
+  performance comparisons of parallel architectures
+"Biological Cell Modeling"_cell.html - particle-based reaction/diffusion \
+  simulator "ChemCell"_chemcell
+"Parallel Algorithms"_algorithms.html: \
+  grid transfer, dynamic load-balancing, tinkertoy parallel programming, \
+  matrix-vector multiply and many-body algorithms, \
+  "HPCC RandomAccess (GUPS) benchmark"_download.html#gups
 "Gene Finding"_genehunter.html - parallelization of the \
   "Genehunter"_download.html#gene genetic linkage analysis program
 "Radiation Transport"_rad.html - Boltzmann equation for thermal and \
@@ -150,6 +147,8 @@ Past Projects :link(pp),h3
 "Electron Microscopy"_ebeam.html - Monte Carlo trajectory simulation
 "Parallel Computing"_overview.html - general overviews :all(b)
 
+:p
+
 :line
 
 How to Reach Me :link(hrm),h3
@@ -159,6 +158,8 @@ sjplimp at sandia.gov :p
 Computational Multiscale Dept, MS 1316
 Sandia National Laboratories
 Albuquerque, NM 87185-1316 :all(b)
+
+:p
 
 :line
 
