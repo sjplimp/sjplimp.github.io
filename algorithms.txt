@@ -108,19 +108,18 @@ on Cluster Computing, Sept 2006. ("abstract"_abstracts/cluster06.html)
 
 Collaborators on this project:
 
-  "Ron Brightwell"_Ron, Sandia 
+  Ron Brightwell, Sandia 
   Courtenay Vaughan, Sandia 
   Keith Underwood, Sandia 
   Mike Davis, Cray :ul
-
-:link(Ron,http://www.cs.sandia.gov/~rbbrigh)
 
 :line
 
 FFTs :h3,link(ffts)
 
-My latest FFT work is distributed in the "fftMPI
-library"_http://fftmpi.sandia.gov.
+My latest FFT work is distributed in the "fftMPI library"_fftmpi.
+
+:link(fftmpi,https://lammps.github.io/fftmpi)
 
 It supercedes an earlier package I worked on in the late 1990s, based
 on similar principles, which we just called a parallel FFT library and
@@ -130,7 +129,7 @@ Our original motivation for developing parallel FFTs is that we use
 complex-to-complex FFTs in several of our parallel codes. 2-d FFTs are
 used for "synthetic aperture radar image processing"_sar.html. 3-d
 FFTs are used in our molecular dynamics code
-"LAMMPS"_http://lammps.sandia.gov for computing long-range Coulombic
+"LAMMPS"_http://www.lammps.org for computing long-range Coulombic
 effects via the particle-mesh Ewald method, and in density-functional
 "electronic structure codes"_quantum.html for alternating between
 real-space and reciprocal-space operator representations.
@@ -152,12 +151,12 @@ in z, remap (if needed) to transform the data to the desired output
 layout.
 
 One useful feature used by our applications, in both the newer "fftMPI
-library"_http://fftmpi.sandia.gov and the older Parallel FFT Package,
-is that the libraries allow for very general styles of data layout
-across processors both on input to the routines as well as on
-output. The parallel algorithms perform serial 1d FFTs by either
-calling vendor-supplied library routines (e.g. Intel MKL) or the
-freely available "FFTW library"_FFTW_library.
+library"_fftmpi and the older Parallel FFT Package, is that the
+libraries allow for very general styles of data layout across
+processors both on input to the routines as well as on output. The
+parallel algorithms perform serial 1d FFTs by either calling
+vendor-supplied library routines (e.g. Intel MKL) or the freely
+available "FFTW library"_FFTW_library.
 
 :link(FFTW_library,http://www.fftw.org)
 
@@ -246,7 +245,7 @@ objects. The RCB operation is our method-of-choice anytime we need a
 fast geometric partitioner -- we've used it to good effect in
 "PRONTO"_pronto.html and our "grid-transfer"_#grid work.
 
-:link(Zoltan,http://www.cs.sandia.gov/Zoltan)
+:link(Zoltan,https://trilinos.github.io/zoltan.html)
 
 :c,image(images/algs_rcb.gif)
 

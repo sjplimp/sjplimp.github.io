@@ -16,20 +16,21 @@ in one iteration/timestep of the simulation code, without the need to
 track low-level dynamics leading up to the event, e.g. atomic
 vibrations.
 
-We've written an open-source KMC simulator called
-"SPPARKS"_http://spparks.sandia.gov which can perform both KMC and
-Metropolis Monte Carlo updating of various models.  The goal of
-SPPARKS is to provide a framework where basic algorithms for KMC and
-MMC are provided both in serial and parallel, and which allows new
-applications to be easily added.  Our main focus thus far has been
-on-lattice KMC for materials phenonmena like grain growth, surface
-growth and deposition, and void growth.  But we have also been working
-to develop off-lattice KMC applications as well.
+We've written an open-source KMC simulator called "SPPARKS"_spparks
+which can perform both KMC and Metropolis Monte Carlo updating of
+various models.  The goal of SPPARKS is to provide a framework where
+basic algorithms for KMC and MMC are provided both in serial and
+parallel, and which allows new applications to be easily added.  Our
+main focus thus far has been on-lattice KMC for materials phenonmena
+like grain growth, surface growth and deposition, and void growth.
+But we have also been working to develop off-lattice KMC applications
+as well.
 
-"SPPARKS"_http://spparks.sandia.gov can be downloaded
-"here"_download.html, and the "SPPARKS doc
-pages"_http://spparks.sandia.gov/doc/Manual.html describes the
-software in more detail.
+"SPPARKS"_spparks can be downloaded "here"_download.html, and the
+"SPPARKS doc pages"_spparksdoc describes the software in more detail.
+
+:link(spparks,https://spparks.github.io)
+:link(spparksdoc,https://spparks.github.io/doc/Manual.html)
 
 Collaborators on SPPARKS:
 

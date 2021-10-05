@@ -15,7 +15,6 @@ homework and programming assignments. We used Peter Pacheko's
 "Parallel Programming with MPI" as a background textbook and added a
 lot of our own material.
 
-:link(bruce,http://www.cs.sandia.gov/~bahendr)
 :link(mpi,http://www-unix.mcs.anl.gov/mpi/index.html)
 :link(outline,class/cs442.html)
 :link(book,http://fawlty.cs.usfca.edu/mpi)

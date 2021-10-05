@@ -106,20 +106,19 @@ on Cluster Computing, Sept 2006. (<A HREF = "abstracts/cluster06.html">abstract<
 </P>
 <P>Collaborators on this project:
 </P>
-<UL><LI>  <A HREF = "http://www.cs.sandia.gov/~rbbrigh">Ron Brightwell</A>, Sandia 
+<UL><LI>  Ron Brightwell, Sandia 
 <LI>  Courtenay Vaughan, Sandia 
 <LI>  Keith Underwood, Sandia 
 <LI>  Mike Davis, Cray 
 </UL>
-
-
 <HR>
 
 <H3><A NAME = "ffts"></A>FFTs 
 </H3>
-<P>My latest FFT work is distributed in the <A HREF = "http://fftmpi.sandia.gov">fftMPI
-library</A>.
+<P>My latest FFT work is distributed in the <A HREF = "https://lammps.github.io/fftmpi">fftMPI library</A>.
 </P>
+
+
 <P>It supercedes an earlier package I worked on in the late 1990s, based
 on similar principles, which we just called a parallel FFT library and
 distributed freely.
@@ -128,7 +127,7 @@ distributed freely.
 complex-to-complex FFTs in several of our parallel codes. 2-d FFTs are
 used for <A HREF = "sar.html">synthetic aperture radar image processing</A>. 3-d
 FFTs are used in our molecular dynamics code
-<A HREF = "http://lammps.sandia.gov">LAMMPS</A> for computing long-range Coulombic
+<A HREF = "http://www.lammps.org">LAMMPS</A> for computing long-range Coulombic
 effects via the particle-mesh Ewald method, and in density-functional
 <A HREF = "quantum.html">electronic structure codes</A> for alternating between
 real-space and reciprocal-space operator representations.
@@ -149,13 +148,13 @@ FFTs in y, remap to get the z-dimension on-processor, perform 1-d FFTs
 in z, remap (if needed) to transform the data to the desired output
 layout.
 </P>
-<P>One useful feature used by our applications, in both the newer <A HREF = "http://fftmpi.sandia.gov">fftMPI
-library</A> and the older Parallel FFT Package,
-is that the libraries allow for very general styles of data layout
-across processors both on input to the routines as well as on
-output. The parallel algorithms perform serial 1d FFTs by either
-calling vendor-supplied library routines (e.g. Intel MKL) or the
-freely available <A HREF = "http://www.fftw.org">FFTW library</A>.
+<P>One useful feature used by our applications, in both the newer <A HREF = "https://lammps.github.io/fftmpi">fftMPI
+library</A> and the older Parallel FFT Package, is that the
+libraries allow for very general styles of data layout across
+processors both on input to the routines as well as on output. The
+parallel algorithms perform serial 1d FFTs by either calling
+vendor-supplied library routines (e.g. Intel MKL) or the freely
+available <A HREF = "http://www.fftw.org">FFTW library</A>.
 </P>
 
 
@@ -233,7 +232,7 @@ Francisco, CA, February 1995, p 615. (<A HREF = "abstracts/siam95.html">abstract
 
 
 <P>More recently, Sandia has developed a dynamic load-balancing library,
-called <A HREF = "http://www.cs.sandia.gov/Zoltan">Zoltan</A>, which has on-line documentation and is freely
+called <A HREF = "https://trilinos.github.io/zoltan.html">Zoltan</A>, which has on-line documentation and is freely
 available to interested users. Some of my stuff has made its way into
 Zoltan. One example is a parallel implementation of the recursive
 coordinate bisectioning (RCB) technique which is a geometric-based

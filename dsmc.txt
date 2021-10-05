@@ -6,8 +6,10 @@ Direct Simulation Monte Carlo - low-density reacting flows via particles :h3
 
 Note: The text below describes an older 2d DSMC code called ICARUS we
 developed at Sandia in the 1990s.  A newer 3d code called SPARTA, has
-its own "web page"_http://sparta.sandia.gov.  Links to SPARTA papers
-are also listed here:
+its own "webpage"_sparta.  Links to SPARTA papers are also listed
+here:
+
+:link(sparta,https://sparta.github.io)
 
 [Molecular-Level Simulations of Turbulence and Its Decay],
 M. A. Gallis, N. P. Bitter, T. P. Koehler, J. R. Torczynski,

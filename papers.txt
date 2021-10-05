@@ -17,7 +17,7 @@ these links:
 "Direct Simulation Monte Carlo"_dsmc.html - low-density reacting flows \
   via particles
 "Informatics"_informatics.html - informatics algorithms and big-data processing
-"Biological Cell Modeling"_cell.html - particle-based reaction/diffusion modeling with "ChemCell"_http://chemcell.sandia.gov
+"Biological Cell Modeling"_cell.html - particle-based reaction/diffusion modeling with "ChemCell"_chemcell
 "GeneHunter"_genehunter.html - genetic linkage analysis
 "ChISELS"_chisels.html - surface evolution model of semiconductor processing \
   for micromachine devices (MEMS)
@@ -39,6 +39,8 @@ these links:
 "High Performance Computing (HPC)"_hpc.html - neuro-inspired computing, \
   performance comparisons of parallel architectures
 "Parallel Computing"_overview.html - general overviews :ul
+
+:link(chemcell,https://sjplimp.github.io/chemcell)
 
 :line
 :line

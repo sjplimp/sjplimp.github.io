@@ -9,8 +9,6 @@ of semiconductor surfaces as they are processed to create micromachine
 devices (MEMS).  It does aaptive gridding and level set tracking in
 either 2d or 3d.
 
-:link(chisels,http://www.sandia.gov/~wchisels/index.html)
-
 Larry Musson (lcmusso at sandia.gov) at Sandia is the lead developer for
 ChISELS.  My contribution is in the algorithms and implementation of
 the parallel level set solver and associated octtree data structure

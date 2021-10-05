@@ -24,10 +24,12 @@ packages.
 
 The first implements MapReduce on top of distributed-memory message
 passing ("MPI"_mpiwiki).  Our open-source software is called the
-"MapReduce-MPI (MR-MPI) library"_http://mapreduce.sandia.gov, and can
-be downloaded "here"_download.html.  The "doc pages for the
-library"_http://mapreduce.sandia.gov/doc/Manual.html describe the
-software in more detail.
+"MapReduce-MPI (MR-MPI) library"_mapreduce, and can be downloaded
+"here"_download.html.  The "doc pages for the library"_mapreducedoc
+describe the software in more detail.
+
+:link(mapreduce,https://sjplimp.github.io/mapreduce)
+:link(mapreducedoc,https://sjplimp.github.io/mapreduce/doc/Manual.html)
 
 Collaborators on the MapReduce-MPI library:
 
@@ -72,7 +74,7 @@ algorithms for informatics problems.
 and K. D. Devine, Parallel Computing, 37, 610-632
 (2011). ("abstract"_../abstracts/pc11.html)
 
-:link(kdd,http://www.cs.sandia.gov/~kddevin)
+:link(kdd,https://cs.sandia.gov/~kddevin)
 :link(mrwiki,http://en.wikipedia.org/wiki/Mapreduce)
 :link(cloudwiki,http://en.wikipedia.org/wiki/Cloud_computing)
 :link(hadoopwiki,http://en.wikipedia.org/wiki/Hadoop)

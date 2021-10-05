@@ -76,8 +76,6 @@ parts. Collectively these machines were called CPlant, which is meant
 to invoke images of a factory (producing computational cycles) and of
 a living/growing heterogeneous entity.
 
-:link(Cplant,http://www.cs.sandia.gov/cplant)
-
 I'm just a CPlant user, so here are the salient features of the
 machine as compared to Tflops from an application point-of-view. These
 numbers and all the timing results below are for the "alaska" version
@@ -106,8 +104,6 @@ stringent test of a machine's (and code's) scalability.
 Below are scalability results for several of my parallel codes, run on
 both Tflops and CPlant. A paper with more details is listed below.
 
-:link(apps,http://www.cs.sandia.gov/cplant/apps/apps.html)
-
 [IMPORTANT NOTE:] These timing results are mostly plotted as parallel
 efficiency which is scaled to 100% on a single processor for both
 machines. The raw speed of a CPlant processor is typically 2x or 3x
@@ -123,7 +119,7 @@ liquid density using a standard 2.5 sigma cutoff. The simulation box
 is partitioned across processors using a spatial-decomposition
 algorithm -- look "here"_bench for more info on this benchmark.
 
-:link(bench,http://lammps.sandia.gov/bench.html)
+:link(bench,https://www.lammps.org/bench.html)
 
 The 1st plot is for a N = 32,000 atom system (fixed-size
 efficiency). The 2nd plot is scaled-size efficiency with 32,000
@@ -138,7 +134,7 @@ left of the plot.
 :line
  
 This data is for running a full-blown molecular dynamics simulation
-with the "LAMMPS"_http://lammps.sandia.gov code of a lipid bilayer
+with the "LAMMPS"_http://www.lammmps.org MD code of a lipid bilayer
 solvated by water. A 12 Angstrom cutoff was used for the van der Waals
 forces; long-range Coulombic forces were solved for using the
 particle-mesh Ewald method.

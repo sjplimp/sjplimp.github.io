@@ -11,8 +11,6 @@ QuickSilver.  QuickSilver grids are a concatenation of blocks; each
 block is a logically regular 3-d mesh with boundary conditions and
 internal structure such as conductors.
 
-:link(qs,http://ppt.sandia.gov/ppt_tech/compphys/tech/quicksilver/qsilver.html)
-
 :c,image(images/pic_geometry.gif)
 
 A timestep in QuickSilver consists of (1) advancing electric and

@@ -19,18 +19,20 @@ simulations.  They are described in the next section.
 <P>I've also written several parallel MD codes that I distribute freely.
 They are available from <A HREF = "download.html">this page</A>.
 </P>
+
+
 <P>Performance of these parallel codes for a variety of systems (atomic,
 polymer, biomolecular, metal, granular) on several parallel platforms
-are discussed on the <A HREF = "http://lammps.sandia.gov/bench.html">Benchmark
-page</A> of the <A HREF = "http://lammps.sandia.gov">LAMMPS WWW
-Site</A>.
+are discussed on the <A HREF = "https://www.lammps.org/bench.html">Benchmark
+page</A> of the <A HREF = "https://www.lammps.org">LAMMPS
+website</A>.
 </P>
 <P>Simulation efforts that I've been involved in are discussed on <A HREF = "mdsim.html">this
 page</A>.  Work of others using these codes is listed on the
-<A HREF = "http://lammps.sandia.gov/papers.html">Publications page</A> of the
-<A HREF = "http://lammps.sandia.gov">LAMMPS WWW Site</A>, along with
-<A HREF = "http://lammps.sandia.gov/pictures.html">pictures</A> and
-<A HREF = "http://lammps.sandia.gov/movies.html">movies</A>.
+<A HREF = "https://www.lammps.org/bench.html">Publications page</A> of the <A HREF = "lammmps">LAMMPS
+website</A>, along with
+<A HREF = "https://www.lammps.org/pictures.html">pictures</A> and
+<A HREF = "https://www.lammps.org/movies.html">movies</A>.
 </P>
 <HR>
 
@@ -42,8 +44,6 @@ spatial-decomposition algorithms.  All 3 are implemented and compared
 in the paper, but the only one I "invented" was force-decomposition
 which was work with Bruce Hendrickson at Sandia.
 </P>
-
-
 <P>In a nutshell, atom-decomposition methods assign a subset of atoms
 permanently to each processor, force-decomposition methods assign a
 subset of pairwise force computations to each proc, and
@@ -123,26 +123,24 @@ many-body interaction potentials under periodic boundary conditions</B>,
 A. P. Thompson, S. J. Plimpton, W. Mattson, J Chem Phys, 131, 154107
 (2009). (<A HREF = "abstracts/jcp09a.html">abstract</A>)
 </P>
-<P>This paper describes the coupling of our
-<A HREF = "http://lammps.sandia.gov">LAMMPS</A> MD code to the POEMS multi-body
-dynamics solver:
+<P>This paper describes the coupling of our LAMMPS MD code to the POEMS
+multi-body dynamics solver:
 </P>
 <P><B>Substructured molecular dynamics using multibody dynamics
 algorithms</B>, R. M. Mukherjee, P. S. Crozier, S. J. Plimpton,
 K. S. Anderson, Intl J of Non-Linear Mechanics, 43, 1045-1055 (2008).
 (<A HREF = "abstracts/ijnlm08.html">abstract</A>)
 </P>
-<P>This paper discusses a perdynamic model we added to our
-<A HREF = "http://lammps.sandia.gov">LAMMPS</A> MD code to enable
-mesoscale/continuum modeling of material properties:
+<P>This paper discusses a perdynamic model we added to our LAMMPS MD code
+to enable mesoscale/continuum modeling of material properties:
 </P>
 <P><B>Implementing peridynamics within a molecular dynamics code</B>,
 M. L. Parks, R. B. Lehoucq, S. J. Plimpton, S. A. Silling, Comp Phys
 Comm, 179, 777-783 (2008). (<A HREF = "abstracts/cpc08a.html">abstract</A>)
 </P>
-<P>This paper discusses algorithms we added to our
-<A HREF = "http://lammps.sandia.gov">LAMMPS</A> MD code to enable efficient modeling
-of mixtures with widely disparate particles sizes:
+<P>This paper discusses algorithms we added to our LAMMPS MD code to
+enable efficient modeling of mixtures with widely disparate particles
+sizes:
 </P>
 <P><B>Accurate and Efficient Methods for Modeling Colloidal Mixtures in an
 Explicit Solvent using Molecular Dynamics</B>, P. J. in 't Veld,
@@ -184,8 +182,7 @@ Proceedings 291, Pittsburgh, PA, 1993, p 37.  (<A HREF = "abstracts/mrs92.html">
 
 <P>The extension of the force-decomposition idea to molecular MD is
 described in this paper.  We used these ideas in a Sandia code called
-ParBond; it has since been superceded by our
-<A HREF = "http://lammps.sandia.gov">LAMMPS</A> code.
+ParBond; it has since been superceded by our LAMMPS MD code.
 </P>
 <P><B>A New Parallel Method for Molecular-Dynamics Simulation of
 Macromolecular Systems</B>, S. J. Plimpton and B. A. Hendrickson, J Comp
@@ -195,9 +192,9 @@ Chem, 17, 326-337 (1996).  (<A HREF = "abstracts/jcc96.html">abstract</A>)
 
 <HR>
 
-<P><A HREF = "http://lammps.sandia.gov">LAMMPS</A> is our current production-scale
-molecular MD code (suitable for molecular or atomic systems).  Two of
-its parallel algorithms are discussed in this paper.
+<P>LAMMPS is our current production-scale MD code (suitable for molecular
+or atomic systems).  Two of its parallel algorithms are discussed in
+this paper.
 </P>
 <P><B>Particle-Mesh Ewald and rRESPA for Parallel Molecular Dynamics
 Simulations</B>, S. J. Plimpton, R. Pollock, M. Stevens, in Proc of the

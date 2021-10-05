@@ -51,12 +51,10 @@ equations.  For large-scale models, these computations can be
 performed in parallel, where the simulation domain and particles are
 partitioned across processors.
 
-Our open-source simulator is called
-"ChemCell"_http://chemcell.sandia.gov.  Documentation, images, movies,
-and download information are available on the "ChemCell WWW
-page"_http://chemcell.sandia.gov and the "ChemCell doc
-pages"_http://chemcell.sandia.gov/doc/Manual.html describes the
-software in more detail.
+Our open-source simulator is called "ChemCell"_chemcell.
+Documentation, images, movies, and download information are available
+on the "ChemCell website"_chemcell and the "ChemCell doc
+pages"_chemcelldoc describes the software in more detail.
 
 ChemCell is similar in spirit to other particle-based biological cell
 simulators such as "MCell"_mcell, "Smoldyn"_smoldyn, and
@@ -65,6 +63,8 @@ models reaction/diffusion via continuum PDEs in a spatial
 representation of a cell, and E-Cell which has a rich variety of
 continuum and stochastic solvers for non-spatial cell models.
 
+:link(chemcell,https://sjplimp.github.io/chemcell)
+:link(chemcelldoc,https://sjplimp.github.io/chemcell/doc/Manual.html)
 :link(mcell,http://www.mcell.cnl.salk.edu)
 :link(smoldyn,http://www.smoldyn.org)
 :link(mesord,http://mesord.sourceforge.net)

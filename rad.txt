@@ -65,8 +65,6 @@ Collaborators on this project:
   Randy Baker, LANL
   Paul Nowak, LLNL :ul
 
-:link(Bruce,http://www.cs.sandia.gov/~bahendr)
- 
 :line
 
 This paper overviews all of the parallel algorithms we developed, and

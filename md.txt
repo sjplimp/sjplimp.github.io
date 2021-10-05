@@ -19,18 +19,20 @@ simulations.  They are described in the next section.
 I've also written several parallel MD codes that I distribute freely.
 They are available from "this page"_download.html.
 
+:link(lammps,https://www.lammps.org)
+
 Performance of these parallel codes for a variety of systems (atomic,
 polymer, biomolecular, metal, granular) on several parallel platforms
 are discussed on the "Benchmark
-page"_http://lammps.sandia.gov/bench.html of the "LAMMPS WWW
-Site"_http://lammps.sandia.gov.
+page"_https://www.lammps.org/bench.html of the "LAMMPS
+website"_lammps.
 
 Simulation efforts that I've been involved in are discussed on "this
 page"_mdsim.html.  Work of others using these codes is listed on the
-"Publications page"_http://lammps.sandia.gov/papers.html of the
-"LAMMPS WWW Site"_http://lammps.sandia.gov, along with
-"pictures"_http://lammps.sandia.gov/pictures.html and
-"movies"_http://lammps.sandia.gov/movies.html.
+"Publications page"_https://www.lammps.org/bench.html of the "LAMMPS
+website"_lammmps, along with
+"pictures"_https://www.lammps.org/pictures.html and
+"movies"_https://www.lammps.org/movies.html.
 
 :line
 :line
@@ -40,8 +42,6 @@ short-range MD force fields: so-called atom-, force-, and
 spatial-decomposition algorithms.  All 3 are implemented and compared
 in the paper, but the only one I "invented" was force-decomposition
 which was work with Bruce Hendrickson at Sandia.
-
-:link(Bruce,http://www.cs.sandia.gov/~bahendr)
 
 In a nutshell, atom-decomposition methods assign a subset of atoms
 permanently to each processor, force-decomposition methods assign a
@@ -122,26 +122,24 @@ many-body interaction potentials under periodic boundary conditions],
 A. P. Thompson, S. J. Plimpton, W. Mattson, J Chem Phys, 131, 154107
 (2009). ("abstract"_abstracts/jcp09a.html)
 
-This paper describes the coupling of our
-"LAMMPS"_http://lammps.sandia.gov MD code to the POEMS multi-body
-dynamics solver:
+This paper describes the coupling of our LAMMPS MD code to the POEMS
+multi-body dynamics solver:
 
 [Substructured molecular dynamics using multibody dynamics
 algorithms], R. M. Mukherjee, P. S. Crozier, S. J. Plimpton,
 K. S. Anderson, Intl J of Non-Linear Mechanics, 43, 1045-1055 (2008).
 ("abstract"_abstracts/ijnlm08.html)
 
-This paper discusses a perdynamic model we added to our
-"LAMMPS"_http://lammps.sandia.gov MD code to enable
-mesoscale/continuum modeling of material properties:
+This paper discusses a perdynamic model we added to our LAMMPS MD code
+to enable mesoscale/continuum modeling of material properties:
 
 [Implementing peridynamics within a molecular dynamics code],
 M. L. Parks, R. B. Lehoucq, S. J. Plimpton, S. A. Silling, Comp Phys
 Comm, 179, 777-783 (2008). ("abstract"_abstracts/cpc08a.html)
 
-This paper discusses algorithms we added to our
-"LAMMPS"_http://lammps.sandia.gov MD code to enable efficient modeling
-of mixtures with widely disparate particles sizes:
+This paper discusses algorithms we added to our LAMMPS MD code to
+enable efficient modeling of mixtures with widely disparate particles
+sizes:
 
 [Accurate and Efficient Methods for Modeling Colloidal Mixtures in an
 Explicit Solvent using Molecular Dynamics], P. J. in 't Veld,
@@ -183,8 +181,7 @@ Proceedings 291, Pittsburgh, PA, 1993, p 37.  ("abstract"_mrs92abs)
 
 The extension of the force-decomposition idea to molecular MD is
 described in this paper.  We used these ideas in a Sandia code called
-ParBond; it has since been superceded by our
-"LAMMPS"_http://lammps.sandia.gov code.
+ParBond; it has since been superceded by our LAMMPS MD code.
 
 [A New Parallel Method for Molecular-Dynamics Simulation of
 Macromolecular Systems], S. J. Plimpton and B. A. Hendrickson, J Comp
@@ -194,9 +191,9 @@ Chem, 17, 326-337 (1996).  ("abstract"_jcc96abs)
  
 :line 
 
-"LAMMPS"_http://lammps.sandia.gov is our current production-scale
-molecular MD code (suitable for molecular or atomic systems).  Two of
-its parallel algorithms are discussed in this paper.
+LAMMPS is our current production-scale MD code (suitable for molecular
+or atomic systems).  Two of its parallel algorithms are discussed in
+this paper.
 
 [Particle-Mesh Ewald and rRESPA for Parallel Molecular Dynamics
 Simulations], S. J. Plimpton, R. Pollock, M. Stevens, in Proc of the

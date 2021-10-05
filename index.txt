@@ -84,16 +84,12 @@ problems.
 
 :link(lammps,https://www.lammps.org)
 :link(sparta,https://sparta.github.io)
+:link(spparks,https://spparks.github.io)
 :link(fftmpi,https://lammps.github.io/fftmpi)
 :link(pizza,https://lammps.github.io/pizza)
 :link(mapreduce,https://sjplimp.github.io/mapreduce)
 :link(phish,https://sjplimp.github.io/phish)
 :link(chemcell,https://sjplimp.github.io/chemcell)
-
-:link(spparks,http://spparks.sandia.gov)
-:link(cslib,http://cslib.sandia.gov)
-:link(firehose,http://firehose.sandia.gov)
-
 :link(crosssim,https://cross-sim.sandia.gov)
 
 :p
@@ -175,6 +171,6 @@ Related Sandia Links :link(rsl),h3
 :link(1400,https://cfwebprod.sandia.gov/cfdocs/CompResearch/index.cfm)
 :link(1400/research,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/research.cfm)
 :link(1400/staff,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/org_chart.cfm)
-:link(snl,http://www.sandia.gov)
-:link(doe,http://www.doe.gov)
-:link(security,http://www.sandia.gov/general/privacy-security/index.html)
+:link(snl,https://www.sandia.gov)
+:link(doe,https://www.doe.gov)
+:link(security,https://www.sandia.gov/general/privacy-security/index.html)

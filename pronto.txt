@@ -122,8 +122,6 @@ Collaborators on this project:
   Dave Gardner, Sandia
   Courtenay Vaughan, Sandia :ul
  
-:link(Bruce,http://www.cs.sandia.gov/~bahendr)
- 
 :line
  
 The following papers describe our parallel contact and parallel SPH

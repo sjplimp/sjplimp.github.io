@@ -16,10 +16,12 @@ codes for doing MD.
 Parallel MD codes I've written and distribute freely are available
 from "this page"_download.html.  Simulation work of others using these
 codes is listed on the "Publications
-page"_http://lammps/sandia.gov/papers.html of the "LAMMPS WWW
-Site"_http://lammps.sandia.gov, along with
-"pictures"_http://lammps.sandia.gov/pictures.html and
-"movies"_http://lammps.sandia.gov/movies.html.
+page"_https://www.lammps.org/papers.html of the "LAMMPS
+website"_lammps, along with
+"pictures"_https://www.lammps.org/pictures.html and
+"movies"_https://www.lammps.org/movies.html.
+
+:link(lammps,https://www.lammps.org)
 
 :line
 :line
