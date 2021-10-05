@@ -86,6 +86,7 @@ problems.
 :link(sparta,https://sparta.github.io)
 :link(spparks,https://spparks.github.io)
 :link(fftmpi,https://lammps.github.io/fftmpi)
+:link(cslib,https://lammps.github.io/cslib)
 :link(pizza,https://lammps.github.io/pizza)
 :link(mapreduce,https://sjplimp.github.io/mapreduce)
 :link(phish,https://sjplimp.github.io/phish)
