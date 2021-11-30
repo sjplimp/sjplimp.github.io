@@ -38,7 +38,7 @@ from Sept 2004 thru Dec 2020.
 
 "LAMMPS"_lammps & "download"_https://www.lammps.org/download.html & general materials modeling MD code & GPL/LGPL & 100+ MB &
 "ParaDyn"_#pd & "download"_tars/paradyn.tar.gz & embedded atom method (EAM) code & - & 390 KB &
-"Lennard-Jones"_lj & "download"_tars/lj.tar.gz & LJ codes with 3 parallel algorithms & - & 47 KB
+"Lennard-Jones"_lj & "download"_tars/ljafs.tar.gz & LJ codes with 3 parallel algorithms & - & 47 KB
 :tb(c=5,s=&,ea=l,ca3=c,b=2)
 
 [Other software:]
