@@ -28,9 +28,10 @@ license"_gnu or "modified BSD license"_bsd.
 :link(gnu,http://www.gnu.org/copyleft/gpl.html)
 :link(bsd,http://en.wikipedia.org/wiki/BSD_license)
 
-There have been ~56,000 downloads from this page and another ~387,000
-from the "LAMMPS download page"_https://www.lammps.org/download.html
-from Sept 2004 thru Dec 2020.
+There were ~58,000 downloads from this page and another ~405,000 from
+the "LAMMPS download page"_https://www.lammps.org/download.html from
+Sept 2004 thru mid-year 2021.  At that the website was migrated to
+GitHub and I stopped logging downloads.
 
 :link(download)
 
