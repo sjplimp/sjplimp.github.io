@@ -30,8 +30,8 @@ license"_gnu or "modified BSD license"_bsd.
 
 There were ~58,000 downloads from this page and another ~405,000 from
 the "LAMMPS download page"_https://www.lammps.org/download.html from
-Sept 2004 thru mid-year 2021.  At that the website was migrated to
-GitHub and I stopped logging downloads.
+Sept 2004 thru mid-year 2021.  At that point this website was migrated
+to GitHub and I stopped logging downloads.
 
 :link(download)
 
