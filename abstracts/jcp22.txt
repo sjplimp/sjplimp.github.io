@@ -1,0 +1,24 @@
+[A parallel algorithm for the concurrent atomistic-continuum
+methodology]
+
+A. Diaz, B. Gu, Yang Li, S. J. Plimpton, D. L. McDowell, Y. Chen, J
+Comp Phys, 463, 111140 (2022).
+
+In this work we present a parallel algorithm for the Concurrent
+Atomistic Continuum (CAC) formulation that can be integrated into
+existing molecular dynamics codes. The CAC methodology is briefly
+introduced and its parallel implementation in LAMMPS is detailed and
+then demonstrated through benchmarks that compare CAC simulation
+results with corresponding all-MD (molecular dynamics) results. The
+parallel efficiency of the algorithm is demonstrated when simulating
+systems represented by both atoms and finite elements.  The
+verification benchmarks include dynamic crack propagation and
+branching in a Si single crystal, wave propagation and scattering in a
+Si phononic crystal, and phonon transport through the phase interface
+in a PbTe/PbSe heteroepitaxial system. In each of these benchmarks the
+CAC algorithm is shown to be in good agreement with MD-only
+models. This parallel CAC algorithm thus offers one of the first
+scalable multiscale material simulation methodologies that relies
+solely on atomic-interaction models.
+
+Return to "Publications page"_../papers.html

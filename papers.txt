@@ -45,6 +45,22 @@ these links:
 :line
 :line
 
+2022 :h4
+
+[LAMMPS - A flexible simulation tool for particle-based materials
+modeling at the atomic, meso, and continuum scales], A. P. Thompson,
+H. M. Aktulga, R. Berger, D. S. Bolintineanu, W. M. Brown,
+P. S. Crozier, P. J. in 't Veld, A. Kohlmeyer, S. G. Moore, T. D.
+Nguyen, R. Shan, M. J. Stevens, J. Tranchida, C. Trott,
+S. J. Plimpton, Comp Phys Comm, 271, 108171 (2022).
+("abstract"_abstracts/cpc22.html)
+DOI:https://doi.org/10.1016/j.cpc.2021.108171
+
+"A parallel algorithm for the concurrent atomistic-continuum
+methodology", A. Diaz, B. Gu, Yang Li, S. J. Plimpton, D. L. McDowell,
+Y. Chen, J Comp Phys, 463, 111140 (2022).
+("abstract"_abstracts/jcp22.html)
+
 2021 :h4
 
 [Rendezvous algorithms for large-scale modeling and simulation],

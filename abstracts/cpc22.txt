@@ -1,0 +1,29 @@
+[LAMMPS - A flexible simulation tool for particle-based materials
+modeling at the atomic, meso, and continuum scales]
+
+A. P. Thompson, H. M. Aktulga, R. Berger, D. S. Bolintineanu,
+W. M. Brown, P. S. Crozier, P. J. in 't Veld, A. Kohlmeyer,
+S. G. Moore, T. D.  Nguyen, R. Shan, M. J. Stevens, J. Tranchida,
+C. Trott, S. J. Plimpton, Comp Phys Comm, 271, 108171 (2022).
+
+Since the classical molecular dynamics simulator LAMMPS was released
+as an open source code in 2004, it has become a widely-used tool for
+particle-based modeling of materials at length scales ranging from
+atomic to mesoscale to continuum. Reasons for its popularity are that
+it provides a wide variety of particle interaction models for
+different materials, that it runs on any platform from a single CPU
+core to the largest supercomputers with accelerators, and that it
+gives users control over simulation details, either via the input
+script or by adding code for new interatomic potentials, constraints,
+diagnostics, or other features needed for their models. As a result,
+hundreds of people have contributed new capabilities to LAMMPS and it
+has grown from fifty thousand lines of code in 2004 to a million lines
+today. In this paper several of the fundamental algorithms used in
+LAMMPS are described along with the design strategies which have made
+it flexible for both users and developers. We also highlight some
+capabilities recently added to the code which were enabled by this
+flexibility, including dynamic load balancing, on-the-fly
+visualization, magnetic spin dynamics models, and quantum-accuracy
+machine learning interatomic potentials.
+
+Return to "Publications page"_../papers.html
