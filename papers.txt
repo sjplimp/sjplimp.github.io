@@ -56,10 +56,12 @@ S. J. Plimpton, Comp Phys Comm, 271, 108171 (2022).
 ("abstract"_abstracts/cpc22.html)
 DOI:https://doi.org/10.1016/j.cpc.2021.108171
 
-"A parallel algorithm for the concurrent atomistic-continuum
-methodology", A. Diaz, B. Gu, Yang Li, S. J. Plimpton, D. L. McDowell,
+[A parallel algorithm for the concurrent atomistic-continuum
+methodology], A. Diaz, B. Gu, Yang Li, S. J. Plimpton, D. L. McDowell,
 Y. Chen, J Comp Phys, 463, 111140 (2022).
 ("abstract"_abstracts/jcp22.html)
+
+:line
 
 2021 :h4
 
