@@ -43,16 +43,13 @@
      hspace="0" alt=""></td></tr>
 </table>
 
-Steve Plimpton :h3
-
 I retired in October 2022 from "Sandia National Laboratories"_snl, a
 US "Department of Energy"_doe lab, where I worked as a computational
 scientist in its "Center for Computing Research"_1400.
 
-I am still involved in doing some techincal work, particularly for the
-open source codes listed below.  You can reach me with a technical
-question or idea at "sjplimp at gmail.com", though I may not respond
-immediately!
+I'm still involved in some technical work, particularly for the open
+source codes listed below.  You can reach me with a question or idea
+at "sjplimp at gmail.com", though I may not respond immediately!
 
 My research at Sandia involved implementing and using scientific
 simulations designed for parallel supercomputers and the creation of
@@ -63,7 +60,7 @@ some for biology and informatics problems.
 
 :line
 
-"Software for download"_download.html: :all(l)
+"Software for download"_download.html: :h3
 
 "LAMMPS"_lammps = classical molecular dynamics
 "SPARTA"_sparta = Direct Simulation Monte Carlo (DSMC)
