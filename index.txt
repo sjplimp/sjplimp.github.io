@@ -22,29 +22,31 @@
     <meta name="subject" content="home page of Steve Plimpton" />
     <meta name="sandia.approval_type" content="formal" />
     <meta name="sandia.approved" content="2020-11334W" />
-    <link rev="owns" title="Steve Plimpton" href="mailto:sjplimp@sandia.gov" />
-    <link rev="made, publisher" title="Steve Plimpton" href="mailto:sjplimp@sandia.gov" />
+    <link rev="owns" title="Steve Plimpton" href="mailto:sjplimp@gmail.com" />
+    <link rev="made, publisher" title="Steve Plimpton" href="mailto:sjplimp@gmail.com" />
     <meta name="MSSmartTagsPreventParsing" content="TRUE" />
     <meta name="Author" content="Steve Plimpton" />
 </HEAD>
 
-I recently retired (Oct 2022) from "Sandia National Laboratories"_snl,
-a US "Department of Energy"_doe lab, where I worked as a computational
+Steve Plimpton :h3
+
+I retired in October 2022 from "Sandia National Laboratories"_snl, a
+US "Department of Energy"_doe lab, where I worked as a computational
 scientist in its "Center for Computing Research"_1400.
 
-I am still involved in doing some techincal work, particulary for the
+I am still involved in doing some techincal work, particularly for the
 open source codes listed below.  You can reach me with a technical
 question or idea at "sjplimp at gmail.com", though I may not respond
 immediately!
 
 My research at Sandia involved implementing and using scientific
-simulations designed for parallel supercomputers, which often requires
-creation of efficient parallel algorithms.  Many of the models are
-particle based, some use structured grids or finite elements.  Most of
-the codes I develop are for materials modeling, some for biology and
-informatics problems.
+simulations designed for parallel supercomputers and the creation of
+efficient parallel algorithms.  Many of the models I worked on were
+particle based; some used structured grids or finite elements.  Most
+of the codes I was a developer for were used for materials modeling,
+some for biology and informatics problems.
 
-:p
+:line
 
 "Software for download"_download.html: :all(l)
 
@@ -82,7 +84,7 @@ informatics problems.
 
 :line
 
-Current Interests :link(ci),h3
+Current Interests :h3
 
 Molecular Dynamics (MD): "LAMMPS"_lammps, "ParaDyn"_download.html#pd, \
   "parallel algorithms"_md.html, simulations \
@@ -100,7 +102,7 @@ Molecular Dynamics (MD): "LAMMPS"_lammps, "ParaDyn"_download.html#pd, \
 
 :line
 
-Past Projects :link(pp),h3
+Past Projects :h3
  
 "Informatics"_informatics.html - data-intensive computing via a \
   "MapReduce-MPI library"_mapreduce, \
