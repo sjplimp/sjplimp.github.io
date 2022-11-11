@@ -43,24 +43,27 @@
      hspace="0" alt=""></td></tr>
 </table>
 
+:p
+
 I retired in October 2022 from "Sandia National Laboratories"_snl, a
 US "Department of Energy"_doe lab, where I worked as a computational
 scientist in its "Center for Computing Research"_1400.
 
 I'm still involved in some technical work, particularly for the open
 source codes listed below.  You can reach me with a question or idea
-at "sjplimp at gmail.com", though I may not respond immediately!
+at this email address: sjplimp at gmail.com --- though I may not
+respond immediately. 
 
 My research at Sandia involved implementing and using scientific
-simulations designed for parallel supercomputers and the creation of
-efficient parallel algorithms.  Many of the models I worked on were
-particle based; some used structured grids or finite elements.  Most
-of the codes I was a developer for were used for materials modeling,
-some for biology and informatics problems.
+simulations designed for parallel supercomputers, as well as the
+creation of efficient parallel algorithms.  Many of the models I
+worked on were particle based; some used structured grids or finite
+elements.  Most of the codes I was a developer for were for materials
+modeling, some for biology and informatics problems.
 
 :line
 
-"Software for download"_download.html: :h3
+Software for "download"_download.html: :h3
 
 "LAMMPS"_lammps = classical molecular dynamics
 "SPARTA"_sparta = Direct Simulation Monte Carlo (DSMC)
@@ -108,7 +111,7 @@ Molecular Dynamics (MD): "LAMMPS"_lammps, "ParaDyn"_download.html#pd, \
   "SPPARKS"_spparks
 "Parallel FFTs"_fftmpi - parallel distributed 3d/2d FFTs
 "Pizza.py Toolkit"_pizza - Python-based tools \
-  for simulation setup, analysis, plotting, viz :all(b)
+  for simulation setup, analysis, plotting, viz :all(l)
 
 :p
 
@@ -142,4 +145,4 @@ Past Projects :h3
 "Image Processing"_sar.html - synthetic aperture radar (SAR) analysis
 "Grain Growth"_grain.html - Potts model on 2-d and 3-d lattices
 "Electron Microscopy"_ebeam.html - Monte Carlo trajectory simulation
-"Parallel Computing"_overview.html - general overviews :all(b)
+"Parallel Computing"_overview.html - general overviews :all(l)
