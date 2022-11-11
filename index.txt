@@ -28,38 +28,21 @@
     <meta name="Author" content="Steve Plimpton" />
 </HEAD>
 
+I recently retired (Oct 2022) from "Sandia National Laboratories"_snl,
+a US "Department of Energy"_doe lab, where I worked as a computational
+scientist in its "Center for Computing Research"_1400.
 
-<table width="664" height="112" border="0" cellpadding="0"
-       cellspacing="0" summary="layout only">
-<tr width="664" height="101" valign="bottom">
-<td width="557" height="101" valign="bottom">
-<font face="arial, helvetica, sans" size="5" 
-      style="family: arial, helvetica, sans"><b>Steve Plimpton</b></font></td>
-<td align="left" valign="bottom" width="107" height="101" rowspan="2">
-<a href="http://www.sandia.gov/">
-<img src="http://www.sandia.gov/images2002/snl_globe_right03.gif" 
-     width="107" height="112" border="0" align="left" valign="top" 
-     vspace="0" hspace="0" alt="Sandia Home" title="Sandia Home"></a></td></tr>
-<tr width="664" height="11" valign="top">
-<td width="557" height="11" valign="top">
-<img src="http://www.sandia.gov/images2002/gold_rule01.gif" 
-     width="557" height="11" border="0" align="left" valign="top" vspace="0" 
-     hspace="0" alt=""></td></tr>
-</table>
+I am still involved in doing some techincal work, particulary for the
+open source codes listed below.  You can reach me with a technical
+question or idea at "sjplimp at gmail.com", though I may not respond
+immediately!
 
-I'm a staff member at "Sandia National Laboratories"_snl, a US
-"Department of Energy"_doe lab, in the "Center for Computing
-Research"_1400.  I'm currently in the Computational Multiscale
-department.  Previously I've been in the Scalable Algorithms,
-Computational Biology, and Parallel Computational Sciences
-departments.
-
-My research involves implementing and using scientific simulations
-designed for parallel supercomputers, which often requires creation of
-efficient parallel algorithms.  Many of the models are particle based,
-some use structured grids or finite elements.  Most of the codes I
-develop are for materials modeling, some for biology and informatics
-problems.
+My research at Sandia involved implementing and using scientific
+simulations designed for parallel supercomputers, which often requires
+creation of efficient parallel algorithms.  Many of the models are
+particle based, some use structured grids or finite elements.  Most of
+the codes I develop are for materials modeling, some for biology and
+informatics problems.
 
 :p
 
@@ -147,33 +130,32 @@ Past Projects :link(pp),h3
 "Electron Microscopy"_ebeam.html - Monte Carlo trajectory simulation
 "Parallel Computing"_overview.html - general overviews :all(b)
 
-:p
 
-:line
 
-How to Reach Me :link(hrm),h3
 
-sjplimp at sandia.gov :p
 
-Computational Multiscale Dept, MS 1316
-Sandia National Laboratories
-Albuquerque, NM 87185-1316 :all(b)
 
-:p
 
-:line
 
-Related Sandia Links :link(rsl),h3
 
-"Center for Computing Research"_1400
-"Center research"_1400/research
-"Center staff members"_1400/staff
-"Sandia National Laboratories"_snl
-"Sandia Privacy and Security statement"_security :all(b)
+<!-- Old header with Sandia logo:
+<table width="664" height="112" border="0" cellpadding="0"
+       cellspacing="0" summary="layout only">
+<tr width="664" height="101" valign="bottom">
+<td width="557" height="101" valign="bottom">
+<font face="arial, helvetica, sans" size="5" 
+      style="family: arial, helvetica, sans"><b>Steve Plimpton</b></font></td>
+<td align="left" valign="bottom" width="107" height="101" rowspan="2">
+<a href="http://www.sandia.gov/">
+<img src="http://www.sandia.gov/images2002/snl_globe_right03.gif" 
+     width="107" height="112" border="0" align="left" valign="top" 
+     vspace="0" hspace="0" alt="Sandia Home" title="Sandia Home"></a></td></tr>
+<tr width="664" height="11" valign="top">
+<td width="557" height="11" valign="top">
+<img src="http://www.sandia.gov/images2002/gold_rule01.gif" 
+     width="557" height="11" border="0" align="left" valign="top" vspace="0" 
+     hspace="0" alt=""></td></tr>
+</table>
+-->
 
-:link(1400,https://cfwebprod.sandia.gov/cfdocs/CompResearch/index.cfm)
-:link(1400/research,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/research.cfm)
-:link(1400/staff,https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/org_chart.cfm)
-:link(snl,https://www.sandia.gov)
-:link(doe,https://www.doe.gov)
-:link(security,https://www.sandia.gov/general/privacy-security/index.html)
+
