@@ -50,14 +50,14 @@ US "Department of Energy"_doe lab, where I worked as a computational
 scientist in its "Center for Computing Research"_1400.
 
 I'm still involved in some technical work, particularly for the open source codes listed below.
-You can reach me with a question or idea at this email address --- sjplimp at gmail.com --- though I may not respond immediately :) :all(b)
+You can reach me with a question or idea at this email address --- sjplimp at gmail.com --- though I may not respond immediately. :all(b)
 
 My research at Sandia involved implementing and using scientific
 simulations designed for parallel supercomputers, as well as the
 creation of efficient parallel algorithms.  Many of the models I
 worked on were particle based; some used structured grids or finite
-elements.  Most of the codes I was a developer for were for materials
-modeling, some for biology and informatics problems.
+elements.  Most of the codes I helped develop were for materials
+modeling, some for biology and informatics applications.
 
 :line
 
@@ -97,7 +97,7 @@ Software for "download"_download.html: :h3
 
 :line
 
-Current Interests :h3
+Active Interests :h3
 
 Molecular Dynamics (MD): "LAMMPS"_lammps, "ParaDyn"_download.html#pd, \
   "parallel algorithms"_md.html, simulations \
