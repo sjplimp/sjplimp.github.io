@@ -61,6 +61,8 @@ S. J. Plimpton, M. Rubinstein, T. C. O'Connor, ACS Polymers, 3,
 209-216 (2023). ("abstract"_abstracts/acs23.html) DOI:
 "https://doi.org/10.1021/acspolymersau.2c00050"_https://doi.org/10.1021/acspolymersau.2c00050
 
+:line
+
 2022 :h4
 
 [LAMMPS - A flexible simulation tool for particle-based materials
