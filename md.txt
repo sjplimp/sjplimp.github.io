@@ -37,6 +37,19 @@ website"_lammmps, along with
 :line
 :line
 
+This paper gives an overview of the LAMMPS MD code, including its
+algorithms, code design, and applications:
+
+[LAMMPS - A flexible simulation tool for particle-based materials
+modeling at the atomic, meso, and continuum scales], A. P. Thompson,
+H. M. Aktulga, R. Berger, D. S. Bolintineanu, W. M. Brown,
+P. S. Crozier, P. J. in 't Veld, A. Kohlmeyer, S. G. Moore, T. D.
+Nguyen, R. Shan, M. J. Stevens, J. Tranchida, C. Trott,
+S. J. Plimpton, Comp Phys Comm, 271, 108171 (2022).
+("abstract"_abstracts/cpc22.html)
+
+:line
+
 This paper describes 3 classes of parallel algorithms suitable for
 short-range MD force fields: so-called atom-, force-, and
 spatial-decomposition algorithms.  All 3 are implemented and compared

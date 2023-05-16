@@ -11,8 +11,8 @@ distributed-memory parallel computers.
 "HPCC RandomAccess (GUPS) benchmark"_#gups - synchronous all2all algorithm \
   to boost GUPS performance
 "FFTs"_#ffts - parallel Fast Fourier Transforms in 2-d and 3-d 
-"grid transfer"_#grid - interpolation of data between multiple \
-  distributed grids
+"rendezvous algorithms"_#rendezvous - for generalized communication and \
+  interpolation of data between multiple distributed grids
 "dynamic load-balancing"_#dynamiclb
 "tinkertoy parallel programming"_#TOY - modular design of libraries \
   for parallel programs
@@ -162,9 +162,22 @@ available "FFTW library"_FFTW_library.
 
 :line
 
-Grid transfer :h3,link(grid)
+Rendezvous algorithms :h3,link(rendezvous)
 
-A number of computational procedures employ multiple grids on which
+Rendezvous algorithms are a generalized way to perform
+communication on distributed-memory machines when processors do
+not know who to send their data to, nor which processors will
+be sending them data.
+
+This paper describes rendezvous algorithms and gives several examples
+of their utility in large-scale particle-based simulation codes:
+
+[Rendezvous algorithms for large-scale modeling and simulation],
+S. J. Plimpton and C. Knight, J Parallel and Distributed Computing,
+147, 184-195 (2021). ("abstract"_abstracts/jpdc21.html)
+
+An application of rendezvous algorithms in grid-based simulation codes
+is for computational procedures which employ multiple grids on which
 solutions are computed. For example, in multi-physics simulations a
 primary grid may be used to compute mechanical deformation of an
 object while a secondary grid is used for thermal conduction
@@ -202,7 +215,7 @@ Distributed Computing, 64, 266-276 (2004). ("abstract"_apa1)
 
 Collaborators on this project:
 
-  Bruce Hendrickson, Sandia
+  Bruce Hendrickson, LLNL
   Jim Stewart, Sandia :ul
 
 :line

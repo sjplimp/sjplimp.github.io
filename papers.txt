@@ -45,6 +45,22 @@ these links:
 :line
 :line
 
+2023 :h4
+
+[Parallel simulation via SPPARKS of on-lattice kinetic and Metropolis
+Monte Carlo models for materials processing], J. A. Mitchell,
+F. Abdeljawad, C. Battaile, C. Garcia-Cardona, E. A. Holm,
+E. R. Homer, J. Madison, T. M. Rogers, A. P. Thompson, V. Tikare,
+E. Webb, S. J. Plimpton, Modelling and Simulation in Materials Science
+and Engineering, 31, 055001
+(2023). ("abstract"_abstracts/msmse23.html) DOI:
+"https://doi.org/10.1088/1361-651X/accc4b"_https://doi.org/10.1088/1361-651X/accc4b
+
+[Entropic Mixing of Ring/Linear Polymer Blends], G. S. Grest, T. Ge,
+S. J. Plimpton, M. Rubinstein, T. C. O'Connor, ACS Polymers, 3,
+209-216 (2023). ("abstract"_abstracts/acs23.html) DOI:
+"https://doi.org/10.1021/acspolymersau.2c00050"_https://doi.org/10.1021/acspolymersau.2c00050
+
 2022 :h4
 
 [LAMMPS - A flexible simulation tool for particle-based materials
@@ -53,8 +69,8 @@ H. M. Aktulga, R. Berger, D. S. Bolintineanu, W. M. Brown,
 P. S. Crozier, P. J. in 't Veld, A. Kohlmeyer, S. G. Moore, T. D.
 Nguyen, R. Shan, M. J. Stevens, J. Tranchida, C. Trott,
 S. J. Plimpton, Comp Phys Comm, 271, 108171 (2022).
-("abstract"_abstracts/cpc22.html)
-DOI:https://doi.org/10.1016/j.cpc.2021.108171
+("abstract"_abstracts/cpc22.html) DOI:
+"https://doi.org/10.1016/j.cpc.2021.108171"_https://doi.org/10.1016/j.cpc.2021.108171
 
 [A parallel algorithm for the concurrent atomistic-continuum
 methodology], A. Diaz, B. Gu, Yang Li, S. J. Plimpton, D. L. McDowell,

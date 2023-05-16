@@ -8,7 +8,8 @@
       informatics, MapReduce,
       MapReduce-MPI library, MR-MPI library, streaming data, 
       stream-processing, PHISH library, CSlib messaging library,
-      client/server messaging, Python, Pizza.py toolkit, 
+      client/server messaging, Python, Pizza.py toolkit,
+      rendezvous algorithms,
       HPCC RandomAccess benchmark, GUPS, particle-in-cell, PIC, QuickSilver, 
       radiation transport, ChiSELS, surface growth and evolution,
       transient dynamics, PRONTO, NIMROD, neuro-inspired computing, GeneHunter,
@@ -125,7 +126,7 @@ Past Projects :h3
 "Biological Cell Modeling"_cell.html - particle-based reaction/diffusion \
   simulator "ChemCell"_chemcell
 "Parallel Algorithms"_algorithms.html: \
-  grid transfer, dynamic load-balancing, tinkertoy parallel programming, \
+  rendezvous algorithms, dynamic load-balancing, tinkertoy parallel programming, \
   matrix-vector multiply and many-body algorithms, \
   "HPCC RandomAccess (GUPS) benchmark"_download.html#gups
 "Gene Finding"_genehunter.html - parallelization of the \

@@ -41,6 +41,20 @@ Collaborators on SPPARKS:
   Alex Slepoy, DOE/NNSA :ul
 
 :line
+:line
+
+This paper describes the SPPARKS KMC and MMC code, including its
+algorithms, code design, and applications:
+
+[Parallel simulation via SPPARKS of on-lattice kinetic and Metropolis
+Monte Carlo models for materials processing], J. A. Mitchell,
+F. Abdeljawad, C. Battaile, C. Garcia-Cardona, E. A. Holm,
+E. R. Homer, J. Madison, T. M. Rogers, A. P. Thompson, V. Tikare,
+E. Webb, S. J. Plimpton, Modelling and Simulation in Materials Science
+and Engineering, 31, 055001 (2023).
+("abstract"_abstracts/msmse23.html)
+
+:line
 
 This paper describes an efficient kinetic Monte Carlo algorithm,
 implemented in SPPARKS, which can be used for modeling biochemical

@@ -11,7 +11,7 @@ distributed-memory parallel computers.
 </P>
 <UL><LI><A HREF = "#gups">HPCC RandomAccess (GUPS) benchmark</A> - synchronous all2all algorithm   to boost GUPS performance
 <LI><A HREF = "#ffts">FFTs</A> - parallel Fast Fourier Transforms in 2-d and 3-d 
-<LI><A HREF = "#grid">grid transfer</A> - interpolation of data between multiple   distributed grids
+<LI><A HREF = "#rendezvous">rendezvous algorithms</A> - for generalized communication and   interpolation of data between multiple distributed grids
 <LI><A HREF = "#dynamiclb">dynamic load-balancing</A>
 <LI><A HREF = "#TOY">tinkertoy parallel programming</A> - modular design of libraries   for parallel programs
 <LI><A HREF = "#mv">matrix-vector multiply and many-body algorithms</A> - exploiting the   force-decomposition algorithm developed for   <A HREF = "md.html">molecular dynamics</A> in other settings 
@@ -160,9 +160,22 @@ available <A HREF = "http://www.fftw.org">FFTW library</A>.
 
 <HR>
 
-<H3><A NAME = "grid"></A>Grid transfer 
+<H3><A NAME = "rendezvous"></A>Rendezvous algorithms 
 </H3>
-<P>A number of computational procedures employ multiple grids on which
+<P>Rendezvous algorithms are a generalized way to perform
+communication on distributed-memory machines when processors do
+not know who to send their data to, nor which processors will
+be sending them data.
+</P>
+<P>This paper describes rendezvous algorithms and gives several examples
+of their utility in large-scale particle-based simulation codes:
+</P>
+<P><B>Rendezvous algorithms for large-scale modeling and simulation</B>,
+S. J. Plimpton and C. Knight, J Parallel and Distributed Computing,
+147, 184-195 (2021). (<A HREF = "abstracts/jpdc21.html">abstract</A>)
+</P>
+<P>An application of rendezvous algorithms in grid-based simulation codes
+is for computational procedures which employ multiple grids on which
 solutions are computed. For example, in multi-physics simulations a
 primary grid may be used to compute mechanical deformation of an
 object while a secondary grid is used for thermal conduction
@@ -201,7 +214,7 @@ Distributed Computing, 64, 266-276 (2004). (<A HREF = "abstracts/jpdc03a.html">a
 
 <P>Collaborators on this project:
 </P>
-<UL><LI>  Bruce Hendrickson, Sandia
+<UL><LI>  Bruce Hendrickson, LLNL
 <LI>  Jim Stewart, Sandia 
 </UL>
 <HR>
