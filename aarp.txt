@@ -7,17 +7,21 @@ AARP tax aide topics :c,h2
 "Interview"_#interview,
 "Scope"_#scope,
 "IRS PINs"_#pin,
+"1095-A"_#aca,
 "Filing QSS"_#qss,
+"Spouse death"_#spouse-death,
 "Dependents"_#depend,
 "E filing"_#efile,
 "Older years"_#older,
 "Estimated payments"_#estimate,
 "Printing"_#print,
 "Changes federal in 2025"_#fedchange,
-"Changes NM in 2025"_#nmchange,
+"Changes NM in 2025"_#nmchange,.,.,
 [INCOME],.,.,.,
 "Zero income"_#zero,
+"EINs and TINs"_#ein,
 "W2 form"_#w2,
+"Overtime"_#overtime,
 "1099-INT"_#int,
 "Savings bonds"_#savebond,
 "1099-OID"_#oid,
@@ -27,7 +31,7 @@ AARP tax aide topics :c,h2
 "Foreign tax"_#foreign,
 "1099 K-1"_#k-1,
 "1099-SA HSA dist"_#hsa,
-"1099-Q 529 education save"_#529edu,
+"1099-Q 529 education save"_#529edu,.,.,
 [DEDUCT & CREDIT],.,.,.,
 "Educator"_#educator,
 "Medical"_#medical,
@@ -40,6 +44,7 @@ AARP tax aide topics :c,h2
 "Self-employ 1099-NEC & 1099-K"_#self-employ,
 "Education credit"_#education,
 "Student loan interest"_#student-loan,
+"Trump account"_#trump,
 :tb(c=4,ea=c,w=80%,b=1)
 
 <p></p>
@@ -88,6 +93,8 @@ Ask on various deductions or credits
     armed forces retirement
     public school teacher supplies :pre
 
+Ask on ACA health insurance - should have 1095-A form if yes :pre
+  
 Ask on IRS Identity Protection number (IP PIN) - 6 digits
   efile will fail if exists but not entered :pre
 
@@ -120,11 +127,25 @@ if they have an IRS PIN, make sure to enter it in Basic Info section
 
 :line
 
+* 1095-A form for ACA insurance :h4,link(aca)
+
+ask EVERYONE about ACA insurance - should have 1095-A form if have it :pre
+
+:line
+
 * Filing as a QSS = qualified surviving spouse :h4,link(qss)
 
-  can be done for a couple years after a spouse passes away
+can be done for a couple years after a spouse passes away
   but REQUIRES there be a dependent child (possibly other kinds of dependents)
   TaxSlayer has a Filing Status Wizard option to help with this :pre
+
+:line
+
+* Filing in year of spouse death :h4,link(spouse-death)
+
+in year the spouse died, must include a death certificate when efile
+  if have to go home for it, make an electronic NOTE,
+  so we do not try to Efile until they bring one in :pre
 
 :line
 
@@ -141,17 +162,20 @@ difference between a dependent child and a qualifying dependent
 what if a dependent child has substantial income, e.g. more than $5050/year
   does not disqualify as a dependent so long as parent providing > half-support
   Q: can child be filing their own tax return, e.g. to get taxes refunded?
-    not sure, but I don't think they can claim self as a dependent
-  calculation for half support
-    S = sum of parents income P and child's income C
-        for child this would include a job or SS survivor benefits, etc
-        but not SSI support for child, at least for federal tax purposes
-    H = half of S = support needed for the child (2 people in house)
-    if C < half of H, then parent is providing > half-support for child
-  example 1: P = 50K, C = 10K, H = 30K
-    parent is providing 20K for child's support which is more than half of 30K
-  example 2: P = 50K, C = 20K, H = 35K
-    parent is providing 15K for child's support which is less than half of 35K :pre
+    not sure, but I don't think they can claim self as a dependent :pre
+    
+Calculation for half support
+  S = sum of parents income P and child's income C
+      for C, includes a job and SS survivor benefits, etc
+        but NOT SSI support for child, at least for federal tax purposes
+      for P, this inlcudes full SS (even is some not taxable) and other income
+  H = half of S = support needed for the child (2 people in house)
+  if C < half of H, then parent is providing > half-support for child :pre
+  
+example 1: P = 50K, C = 10K, H = 30K
+  parent is providing 20K for child's support which is more than half of 30K
+example 2: P = 50K, C = 20K, H = 35K
+  parent is providing 15K for child's support which is less than half of 35K :pre
 
 :line
 
@@ -202,7 +226,7 @@ estimated taxes
 
 * Printing :h4,link(print)
 
-  I can print directly for a one-page form like "Itemized Deductions"
+I can print directly for a one-page form like "Itemized Deductions"
   or the output of the Colorado form for future year usage :pre
 
 :line
@@ -262,9 +286,9 @@ SS fairness payments:
 NOTE: if a surviging spouse is getting no SS b/c income is too high,
   tell them to re-apply b/c law has changed :pre
 
-* Changes NM in TY 2025 :h4,link(nmchange)
-
 :line
+
+* Changes NM in TY 2025 :h4,link(nmchange)
 
 deduction for DFAS miliary retiree pay (not active duty)
   30K income exclusion from retiree pay, now permanent
@@ -301,37 +325,50 @@ Income :h3
 
 If federal income is zero (only SS), then add fictitious Income of one dollar
   to trigger filing of federal tax forms, this allows state filing as well
-  do this as Interest Income from Bank of Efile, not Other
+  do this as Interest Income from Bank of Efile, not Other :pre
+
+:line
+
+* EINs and TINs :h4,link(ein)
+
+Double check these on carry-forward returns to make sure correct
+  they can change from year to year :pre
 
 :line
 
 * W2 forms :h4,link(w2)
 
-box 14 is a special case, ask for help if see it
+box 14 is a special case, ask for help if see it :pre
 
 PERA line for insurance deduction on a W2
   counts as medical deduction
-  does NOT count as lowered income
+  does NOT count as lowered income :pre
 
-OVT or other overtime indication
+:line
+
+* Overtime on W2 form :h4,link(w2)
+
+will be in box 14 as OVT or V or other overtime indication
   info needs to be entered as a deduction
+  for time-and-a-half, need to enter 1/3 of amount on W-2
+    this is because it is only the extra "halF" pay that is deductible :pre
 
 :line
 
 * 1099-INT form :h4,link(int)
 
 1099-INT with multiple entries from a single institution
-  can enter each under one entry, and have TaxSlayer do the summation
+  can enter each under one entry, and have TaxSlayer do the summation :pre
 
 if have 2 forms from same institueion (e.g. Interest or 1099-B)
   enter 2 different names for institution
   e.g. append last few digits of account #
-  this is to make it easier for reviewer to decipher
+  this is to make it easier for reviewer to decipher :pre
 
 1099 forms with tax-free interest (or dividends?)
   in a special box on form
   refers to federal tax, but are NOT tax-free for state
-  so need to enter the same amount again in TaxSlayer beneath the first box
+  so need to enter the same amount again in TaxSlayer beneath the first box :pre
 
 :line
 
@@ -345,10 +382,10 @@ Savings bond interest
   if instead it is entered on state form as a deduction,
     will trigger PIT-ADJ entry in box 7 (same effect, but wrong box)
   same idea for T-Bill gains like in my WROS investment account
-    taxable on federal, NOT taxable on state
+    taxable on federal, NOT taxable on state :pre
 
 Converse for federal vs state
-  some bond interest/div is NOT taxable on federal, but is on state
+  some bond interest/div is NOT taxable on federal, but is on state :pre
 
 2 places to enter federal int/div which are not taxable for NM
   this is besides the savings bond interest
@@ -356,7 +393,7 @@ Converse for federal vs state
   (2) on fed 1099-DIV form (and poassibly INT) can enter a value near the end
       for apply no state tax and choose NM
   not sure of the difference between them, but show up as
-    different lines on PIT-ADJ form
+    different lines on PIT-ADJ form :pre
 
 :line
 
@@ -369,7 +406,7 @@ Converse for federal vs state
   FATCA filing required box must NOT be checked
   no non-zero amount in box 6 for Acquisition Premiiums
   one i have seen only had box 1 amount so was in scope
-  for tax purposes OID amount is treateted like taxable interest
+  for tax purposes OID amount is treateted like taxable interest :pre
 
 :line
 
@@ -378,16 +415,16 @@ Converse for federal vs state
 if 1099-R is from OMP = office of manangement personnel
   then may not have SS form, even if 65+, b/c OMP payments include it 
   they also include client's Medicare payments
-  don't fully understand this, but saw an example in 2026
+  don't fully understand this, but saw an example in 2026 :pre
 
 For annuities
-when do I need to use Colordado Simple form
+when do I need to use Colordado Simple form :pre
 
 (a) if IRA/SEP/SIMPLE box is not checked (for an IRA distribution)
-  then the distribution is from an annuity
+  then the distribution is from an annuity :pre
 
 (b) if box 2a Taxable Amount is empty or box 2b for not computed is
-  checked, it means the payer did not compute taxable amount
+  checked, it means the payer did not compute taxable amount :pre
 
 then need to use Simplified Method to compute it
   goto Colorado tools calculator, first entry on that webpage
@@ -398,7 +435,7 @@ then need to use Simplified Method to compute it
   other amounts to enter are from tax form
   if start date is long ago, there may no longer be a tax-free portion
     i.e. full amount is taxable
-  otherwise it will give an amount to enter as Taxable Amount
+  otherwise it will give an amount to enter as Taxable Amount :pre
 
 if health insurance line appears on 1099-R
   can be OUTSIDE all the boxes
@@ -410,7 +447,7 @@ if health insurance line appears on 1099-R
   similar to SS gross minus Medicare payments (not received by taxpayer)
   maybe health insurance deduction on a W-2 works the same way
     but TaxSlayer knows how to interprent codes on W-2
-    so it uses it as medical expense automatically (like Medicare)
+    so it uses it as medical expense automatically (like Medicare) :pre
 
 what if a 1099-R pension distribution is taxable in another state
   e.g. if a state tax withdrawal was paid to another state
@@ -421,27 +458,31 @@ what if a 1099-R pension distribution is taxable in another state
     the state income (from the distribution) to only be taxed once
     but it will carry over from federal to NM when we use TaxSlayer
   what we cannot do is file a state return for another state,
-    e.g. to get a refund for the state tax withdrawn by another state
+    e.g. to get a refund for the state tax withdrawn by another state :pre
 
 :line
 
 * RMD from IRA with qualified charitable donation = QCD :h4,link(rmdqcd)
 
-  should have paperwork on QCD
+should have paperwork on QCD
   idea: reduces income declaration of RMD
-  there is a place in TaxSlayer to enter this as QCD near the 1099-R forms
+  there is a place in TaxSlayer to enter this as QCD near the 1099-R forms :pre
 
 :line
 
 * 1099-B brokerage form :h4,link(brokerage)
   
 if have capital gains/loss, need to find short-term/long-term info to enter
-  note that 1099-Div forms can have captital gain entries as well - that is different
+  note that 1099-DIV forms can have captital gain entries as well
+  that kind of capital gains is different :pre
 
+NOTE: even if no cap gain/loss because basis = proceeds
+  still enter it into TaxSlayer
+  
 brokerage statements for 1099-B
   one of two places under Income in TaxSlayer
   simple form when only proceeds/cost
-  more complex form when additional adjustments (wash, etc)
+  more complex form when additional adjustments (wash, etc) :pre
 
 carry-over capital losses
   ask about this for last year if they have brokerage statements with cap gain/loss
@@ -449,47 +490,48 @@ carry-over capital losses
   if have big losses this year, carrying over to next year
     tell them to be aware of this
     put note on outer envelope so we will hopefully see it next year
-    print worksheet with this year's taxes which shows cap loss to carry over next year
+    print worksheet with this year's taxes which shows cap loss
+      to carry over next year :pre
 
 1099-B if one form has both "reported to" and "not reported to"
   basis for sold investements, then need to enter it as two
   1099-B entries in TS, b/c I think they are treated differently
-  on schedule D and accompanying form 8949
+  on schedule D and accompanying form 8949 :pre
 
 :line
 
 * Foreign tax over $300 :h4,link(foreign)
 
-  will only get a federal tax credit of $300 max unless file form 4111
+will only get a federal tax credit of $300 max unless file form 4111
   TS allows this (if search for it), but is out-of-scope for AARP
-    unless preparer is internationally certified
+    unless preparer is internationally certified :pre
 
 :line
 
 * 1099 K-1 form for a real estate investment trust :h4,link(k-1)
 
-  TS has 1000-K forms, for self-employment I think, but they
+TS has 1000-K forms, for self-employment I think, but they
   seem different than K-1 - filling it in for Springer form
   did not work the way it did for Mary Lois - several things were
-  unclear
+  unclear :pre
 
 :line
 
 * 1099-SA form for HSA distributions :h4,link(hsa)
 
-  search for form in TaxSlayer, should be under deductions ?
+search for form in TaxSlayer, should be under deductions ?
   ask if the distributions were spent for medical
     this is the rule, if not then the distribution is taxable
   both the distribution and amount of medical expenenses are boxes in TaxSlayer
   ask if they made self-contributions to their HSA this year
     this is also entered on the form
-  company contributions do not count
+  company contributions do not count :pre
 
 :line
 
 * 1099-Q form for 529 education savings accounts :h4,link(529edu)
 
-  529s are savings accounts to use for children/grandchildren's education costs
+529s are savings accounts to use for children/grandchildren's education costs
   run by a state, not federal govt
   contributions are deductible from state income in the year they were made
   withdrawals are not taxable if used for qualified educations purposes
@@ -510,7 +552,7 @@ carry-over capital losses
       simplest case is that all the basis was previously deducted
       if partial, not sure how to do it, probably as a percentage
       see NM instructions
-    the gain portion will carry-over from the federal return
+    the gain portion will carry-over from the federal return :pre
 
 <p></p>
 
@@ -527,7 +569,9 @@ Deductions and Credits :h3
 ** Educator expenses :h4,link(educator)
 
 can be entered for both federal and state
-$300 max for state
+$300 max for federal, $1000 for state
+see page in Shack Google share doc for details
+  on who and what qualifies :pre
 
 :line
 
@@ -537,27 +581,28 @@ new in 2026, no state medical deductions
   so don't bother to enter them as federal itemized deductions
     unless itemize on federal (rare)
   only relevant state deduction is for 65+ with out-of-pocket over $28K
-    there is no income limit on this
+    there is no income limit on this :pre
 
-percentage received as state deduction depends on income
+percentage received as state deduction depends on income :pre
 
 can include all out-or-pocket medical or dental or therapy expenses
   nursing home or assisted living fraction
   Medicare payments
   health insurance premiums, could be on 1099-R in a box or separate labeled line
-  so make sure they are all included
+  so make sure they are all included :pre
 
 :line
 
 ** Property tax deduction :h4,link(property)
 
-Prop tax - have to itemize on federal
-Prop tax - 2 versions on state
+Prop tax - federal, have to itemize :pre
+
+Prop tax - 2 versions on state - ALWAYS enter both places
   (1) 16K MGI limit for everyone
   (2) 24K MGI limit for Bern and other counties
   MGI adds SS and other non-taxable federal income
   have to enter these, does not pull from federal itemized
-  not sure if refundable or not
+  not sure if refundable or not :pre
 
 :line
 
@@ -565,26 +610,27 @@ Prop tax - 2 versions on state
 
 Rent - similar to prop tax
   enter it on same page for (11) 16K limit prop tax
-  enter total rent paid for entire year (client + govt), also indicate if govt assisted
+  enter total rent paid for entire year (client + govt),
+    also indicate if govt assisted :pre
 
 is on State property tax deduction form
   Enter total rent, even if client only paid part and govt subsidized rent.
-  Enter rent for the year, not monthly rent.
+  Enter rent for the year, not monthly rent :pre
 
 On state form can get credit for rent paid is income is sufficiently low
   enter as property tax under state Deduction section
   enter total amount of yearly rent (including any portion govt paid)
   and check box if had govt rent assistance (e.g. HUD)
-  apartments should know amount of total rent
+  apartments should know amount of total rent :pre
 
 Should lookup state eligiblity for prop tax and for rent
-  when does it make a difference ?
+  when does it make a difference ? :pre
 
 rent credit on state taxes
   only number needed is total rent (self + govt)
   number is for YEAR, not per month
   is it only useful to do if received govt assistance, e.g. HUD
-  what is income limit ?
+  what is income limit ? :pre
 
 :line
 
@@ -596,7 +642,7 @@ if fill-in itemmized there is a Compare button to see Std vs Item
     mortgage interest, property tax, state refund, charitable donations
     medical expenses over 7.5% of income - think only portion over
       7.5% is considered a deduction
-    only medical expenses auto-fills on state form
+    only medical expenses auto-fills on state form :pre
 
 :line
 
@@ -612,7 +658,7 @@ may be taxable on federal, and deducted from NM
     idea: if reduction last year did not dip below standard deduction
       threshold, then all of it is taxable this year
       if partially dipped below, then is pro-rated
-  should also enter on NM forms, shows up on PIT-ADJ line 21 as deduction
+  should also enter on NM forms, shows up on PIT-ADJ line 21 as deduction :pre
 
 :line
 
@@ -620,33 +666,37 @@ may be taxable on federal, and deducted from NM
     
 on federal is only for windows, furnaces, AC, insulation, possibly water heaters
 need a receipt that shows itemized amount (not including other work)
-  and verification from company that the material qualifies (hi quality)
+  and verification from company that the material qualifies (hi quality) :pre
 
 Purchase of wood burning stove can get energy credit b/c if is a biomass stove
-  is this federal or state credit ? - federal I believe
+  is this federal or state credit ? - federal I believe :pre
 
 :line
 
 ** SSI and SNAP benefits :h4,link(ssi-snap)
 
-need to enter extra govt assistance on state forms
+need to enter extra govt assistance on state forms :pre
   
 If disabled person or dependent gets SSI, won't have SSA-1099 statement
   but should have letter about amount of assistance received
   is NOT federal taxable income
   but MUST BE enerterd as Extra Income on state form, under credits (TANF, etc)
-  which may reduce their state credits (e.g. for rent)
+  which may reduce their state credits (e.g. for rent) :pre
 
 SNAP food benefits - do not count as income
   these do NOT need to be included as extra state income on the
-    TaxSlayer credits page - unlike SSI benefits
+    TaxSlayer credits page - unlike SSI benefits :pre
 
 :line
 
 ** Self-employment forms are 1099-NEC and 1099-K :h4,link(self-employ)
 
-  e.g. Uber driver or Uber eats or gig worker
-  can be tricky, ask for help
+1099-NEC is work as a contractor (non-employee) for a company
+  the company is required to create/send that form if
+    income is more than $600 :pre
+    
+e.g. Uber driver or Uber eats or gig worker
+  can be tricky, ask for help if necessary :pre
 
 :line
 
@@ -656,7 +706,7 @@ both federal - AC?? and Learning for Life
   not clear what qualifies, e.g. a real-estate class ?
   always need EIN ?
   1098-S is that the form?  don't always have it
-  is it refundable or non-refundable ?
+  is it refundable or non-refundable ? :pre
 
 :line
 
@@ -665,4 +715,14 @@ both federal - AC?? and Learning for Life
 interest paid on all loans for higher education are deductible
   also true for dependent's loans
   this is for federal forms
-  look under Deductible section in TaxSlayer
+  look under Deductible section in TaxSlayer :pre
+
+:line
+
+** Trump account :h4,link(trump)
+
+requires a valid email addresses on both 4547 page and on the E-file page
+to make this happen, need taxpayer email address in all 3 of these places:
+  Trump account 4547 form
+  basic info page
+  Erile page :pre
