@@ -30,14 +30,16 @@ AARP tax aide topics :c,h2
 "1099-B brokerage"_#brokerage,
 "Foreign tax"_#foreign,
 "1099 K-1"_#k-1,
-"1099-SA HSA dist"_#hsa,
-"1099-Q 529 education save"_#529edu,.,.,
+"1099-Q 529 education save"_#529edu,.,.,.,
 [DEDUCT & CREDIT],.,.,.,
 "Educator"_#educator,
 "Medical"_#medical,
+"HSA 1095-C form"_#1095c,
+"1099-SA HSA dist"_#hsa,
 "Property tax"_#property,
 "Rent deduction"_#rent,
 "Standard vs itemized"_#std-vs-item,
+"EIC credit"_#eic,
 "NM refund previous year"_#state-refund,
 "Energy credit"_#energy,
 "SSI and SNAP"_#ssi-snap,
@@ -86,6 +88,7 @@ Ask on various forms of income
     these benefits are not federal taxable, but need to be entered on state :pre
 
 Ask on various deductions or credits
+  make a slash mark on form if not relevant
   particularly ones relevant for state
     prop tax or rent
     child care
@@ -99,13 +102,14 @@ Ask on IRS Identity Protection number (IP PIN) - 6 digits
   efile will fail if exists but not entered :pre
 
 Initial pre-check of tax forms and intake forms
-  use a highlighter pen to mark important parts of forms
+  could use a highlighter pen to mark important parts of forms
   make notes on paper about fed/state tax withheld
     to ensure they are accounted for in final PDF for tax returns
   make notes for anything else to remember at end
   make Notes on intake form about Qs to address by me or reviewer
-    anything to help reviewer :pre
-
+    anything to help reviewer
+  WRITE clearly for reviewer to read :pre
+  
 :line
 
 * Scope :h4,link(scope)
@@ -129,7 +133,8 @@ if they have an IRS PIN, make sure to enter it in Basic Info section
 
 * 1095-A form for ACA insurance :h4,link(aca)
 
-ask EVERYONE about ACA insurance - should have 1095-A form if have it :pre
+ask EVERYONE about ACA insurance - if have it, should have 1095-A form
+  will need to enter info from it, if answer yes to health ins from ACA :pre
 
 :line
 
@@ -189,6 +194,8 @@ If client received refund, can choose bank account or check mailed to them
 If client owes tax (including zero), can choose bank debit or mail them a check
 If owes $$, can choose future date for bank debit, or can physically mail
   check (with a voucher form we give them) anytime before deadline :pre
+
+if state tax is zero, choose Efile - mail check :pre
 
 in TY 2025, federal refunds must be by direct deposit
   some exceptions are allowed
@@ -265,7 +272,10 @@ no tax on overtime rules
   max annual decuction is 12.5K for single, $25K for married jointly
   income limits phase out: 150K for single, $300K for married jointly :pre
 
-car loan - can deduct interest
+car purchase of EV before 30 Sept 2025
+  are some restrictions on USA manufacture
+  
+car loan - can deduct interest for 2025 to 2028
   only for new car and for personal use (not business car)
   only for an individual
   not for a leased car
@@ -517,18 +527,6 @@ TS has 1000-K forms, for self-employment I think, but they
 
 :line
 
-* 1099-SA form for HSA distributions :h4,link(hsa)
-
-search for form in TaxSlayer, should be under deductions ?
-  ask if the distributions were spent for medical
-    this is the rule, if not then the distribution is taxable
-  both the distribution and amount of medical expenenses are boxes in TaxSlayer
-  ask if they made self-contributions to their HSA this year
-    this is also entered on the form
-  company contributions do not count :pre
-
-:line
-
 * 1099-Q form for 529 education savings accounts :h4,link(529edu)
 
 529s are savings accounts to use for children/grandchildren's education costs
@@ -593,6 +591,31 @@ can include all out-or-pocket medical or dental or therapy expenses
 
 :line
 
+** HSA 1095-C form :h4,link(1095c)
+
+has to do with HSA
+not generally needed to fill in tax form
+but indicates should look for HSA info, either on another form
+  or contribution/deduction info from client :pre
+
+could be Box 12 W entry on W-2 which is for HSA contributions :pre
+
+HSA within TaxSlayer is in federal Deductions or Credits :pre
+
+:line
+
+* 1099-SA form for HSA distributions :h4,link(hsa)
+
+search for form in TaxSlayer, should be under deductions ?
+  ask if the distributions were spent for medical
+    this is the rule, if not then the distribution is taxable
+  both the distribution and amount of medical expenenses are boxes in TaxSlayer
+  ask if they made self-contributions to their HSA this year
+    this is also entered on the form
+  company contributions do not count :pre
+
+:line
+
 ** Property tax deduction :h4,link(property)
 
 Prop tax - federal, have to itemize :pre
@@ -643,6 +666,15 @@ if fill-in itemmized there is a Compare button to see Std vs Item
     medical expenses over 7.5% of income - think only portion over
       7.5% is considered a deduction
     only medical expenses auto-fills on state form :pre
+
+:line
+
+** EIC federal credit :h4,link(eic)
+
+need to have a child, need to have income
+amount of EIC goes up with income to a peak, then delines with more income
+can be substantial, e.g. thousands of $$
+figured out automatically by system :pre
 
 :line
 
@@ -720,6 +752,8 @@ interest paid on all loans for higher education are deductible
 :line
 
 ** Trump account :h4,link(trump)
+
+forms for this are at end of federal in Extra Forms section :pre
 
 requires a valid email addresses on both 4547 page and on the E-file page
 to make this happen, need taxpayer email address in all 3 of these places:
