@@ -7,7 +7,7 @@ AARP tax aide topics :c,h2
 "Interview"_#interview,
 "Scope"_#scope,
 "IRS PINs"_#pin,
-"1095-A"_#aca,
+"1095-A and 1095-B"_#aca,
 "Filing QSS"_#qss,
 "Spouse death"_#spouse-death,
 "Dependents"_#depend,
@@ -18,6 +18,7 @@ AARP tax aide topics :c,h2
 "Changes federal in 2025"_#fedchange,
 "Changes NM in 2025"_#nmchange,.,.,
 [INCOME],.,.,.,
+"SS income"_#ss,
 "Zero income"_#zero,
 "EINs and TINs"_#ein,
 "W2 form"_#w2,
@@ -30,7 +31,8 @@ AARP tax aide topics :c,h2
 "1099-B brokerage"_#brokerage,
 "Foreign tax"_#foreign,
 "1099 K-1"_#k-1,
-"1099-Q 529 education save"_#529edu,.,.,.,
+"Gambling gains/losses"_#gambling,
+"1099-Q 529 education save"_#529edu,.,
 [DEDUCT & CREDIT],.,.,.,
 "Educator"_#educator,
 "Medical"_#medical,
@@ -114,10 +116,9 @@ Initial pre-check of tax forms and intake forms
 
 * Scope :h4,link(scope)
 
-Cannot do military returns - not certified
-1099-DA = digital asset, could be on brokerage statement
-  applies to selling DA, not receiving, I think
-  receiving is out of scope :pre
+Cannot do married filing separately returns - out of scope
+Cannot do military returns - out of scope
+Receiving digital assets (crypto) - out of scope :pre
 
 :line
 
@@ -131,11 +132,16 @@ if they have an IRS PIN, make sure to enter it in Basic Info section
 
 :line
 
-* 1095-A form for ACA insurance :h4,link(aca)
+* 1095-A form for ACA insurance and 1095-B form :h4,link(aca)
 
 ask EVERYONE about ACA insurance - if have it, should have 1095-A form
   will need to enter info from it, if answer yes to health ins from ACA :pre
 
+1095-B form is from employer to verify the person has health insurance
+  not needed for TaxSlayer or tax forms
+  but could be needed by individual to verify they are not subject
+    to ACA penalties :pre
+    
 :line
 
 * Filing as a QSS = qualified surviving spouse :h4,link(qss)
@@ -273,16 +279,19 @@ no tax on overtime rules
   income limits phase out: 150K for single, $300K for married jointly :pre
 
 car purchase of EV before 30 Sept 2025
-  are some restrictions on USA manufacture
+  are some restrictions on USA manufacture :pre
   
 car loan - can deduct interest for 2025 to 2028
+  this is found in TaxSlayer under tips/overtime heading
   only for new car and for personal use (not business car)
   only for an individual
   not for a leased car
   must be original loan, not refinance
   car must have final assembly in US
-    VIN will specify this, think it means it just start with a number :pre
-
+    VIN will specify this, think it means it just start with a number
+  what need to know is amount of loan interest paid in the tax year
+  show up on Schedule 1-A in tax return :pre
+  
 SS fairness payments:
   may have received extra SS payments in 2025 b/c includes back pay
   term: WEP or GPO or for other reasons
@@ -331,6 +340,17 @@ Income :h3
 
 <p></p>
 
+* SS form :h4,link(ss)
+
+CHECK for fine prit that mentions a lump sum payment, possibly for previous year
+  if so there is an option on TaxSlayer SS section for lump sums
+  will be asked to enter some info like AGI from previous year tax return
+  TaxSlayer will do the computation to see if better to claim the lump sum
+    as part of this year's income or as an adjustment to previous
+    year's taxes which gets rectified this year :pre
+    
+:line
+
 * Zero income except SS :h4,link(zero)
 
 If federal income is zero (only SS), then add fictitious Income of one dollar
@@ -354,6 +374,10 @@ PERA line for insurance deduction on a W2
   counts as medical deduction
   does NOT count as lowered income :pre
 
+if there are medical insurance payments, they can be deducted
+  by public safety offices (PSO)
+  I think there is a box for that on W-2 form in TaxSlayer :pre
+  
 :line
 
 * Overtime on W2 form :h4,link(w2)
@@ -487,13 +511,15 @@ if have capital gains/loss, need to find short-term/long-term info to enter
   that kind of capital gains is different :pre
 
 NOTE: even if no cap gain/loss because basis = proceeds
-  still enter it into TaxSlayer
+  still enter it into TaxSlayer :pre
   
 brokerage statements for 1099-B
-  one of two places under Income in TaxSlayer
-  simple form when only proceeds/cost
-  more complex form when additional adjustments (wash, etc) :pre
-
+  one of two places under capital gains heading in TaxSlayer
+  USE simple form when only proceeds/cost
+    this is further down the list
+  only use more complex form when additional adjustments (wash, etc)
+    this is at the top of the list :pre
+    
 carry-over capital losses
   ask about this for last year if they have brokerage statements with cap gain/loss
   otherwise Taxslayer will not know, even if did taxes with us previously
@@ -503,10 +529,14 @@ carry-over capital losses
     print worksheet with this year's taxes which shows cap loss
       to carry over next year :pre
 
-1099-B if one form has both "reported to" and "not reported to"
+1099-B if one form has both "reported to IRS" and "not reported to IRS"
   basis for sold investements, then need to enter it as two
   1099-B entries in TS, b/c I think they are treated differently
   on schedule D and accompanying form 8949 :pre
+
+1099-DA = digital asset, could be on a brokerage statement
+  should apply to selling DA, not receiving
+  receiving is out of scope :pre
 
 :line
 
@@ -525,6 +555,20 @@ TS has 1000-K forms, for self-employment I think, but they
   did not work the way it did for Mary Lois - several things were
   unclear :pre
 
+:line
+
+* Gambling gains/losses :h4,link(gambling)
+
+should have W-2G form for gains over a few hundred $$
+  if don't have form, but know the amount, even if less,
+    then should declare it as income
+  winnings need to be declared as income even if offset by losses
+
+for losses, can be claimed as a deduction, but only if itemize
+  they should keep their own records and show me
+  should also keep for possible audits
+  only losses up to the amount of winnings can be deducted
+  
 :line
 
 * 1099-Q form for 529 education savings accounts :h4,link(529edu)
@@ -575,11 +619,13 @@ see page in Shack Google share doc for details
 
 ** Medical expenses :h4,link(medical)
 
-new in 2026, no state medical deductions
+new for TY 2025, no state medical deductions unless huge
   so don't bother to enter them as federal itemized deductions
     unless itemize on federal (rare)
   only relevant state deduction is for 65+ with out-of-pocket over $28K
     there is no income limit on this :pre
+
+BUT may come back in some form for TY 2026, so tell clients that :pre
 
 percentage received as state deduction depends on income :pre
 
@@ -623,16 +669,18 @@ Prop tax - federal, have to itemize :pre
 Prop tax - 2 versions on state - ALWAYS enter both places
   (1) 16K MGI limit for everyone
   (2) 24K MGI limit for Bern and other counties
-  MGI adds SS and other non-taxable federal income
   have to enter these, does not pull from federal itemized
   not sure if refundable or not :pre
+
+NOTE: state MGI adds SS and other non-taxable federal income :pre
 
 :line
 
 ** Rent deduction :h4,link(rent)
 
 Rent - similar to prop tax
-  enter it on same page for (11) 16K limit prop tax
+  enter it on same page as prop tax
+  maximum credit is 250, MGI must be < 16000
   enter total rent paid for entire year (client + govt),
     also indicate if govt assisted :pre
 
@@ -640,20 +688,16 @@ is on State property tax deduction form
   Enter total rent, even if client only paid part and govt subsidized rent.
   Enter rent for the year, not monthly rent :pre
 
+Rent credit on state taxes
+  only number needed is total rent (self + govt)
+  number is for YEAR, not per month
+  can be useful to do whether or not received govt assistance, e.g. HUD :pre
+
 On state form can get credit for rent paid is income is sufficiently low
   enter as property tax under state Deduction section
   enter total amount of yearly rent (including any portion govt paid)
   and check box if had govt rent assistance (e.g. HUD)
   apartments should know amount of total rent :pre
-
-Should lookup state eligiblity for prop tax and for rent
-  when does it make a difference ? :pre
-
-rent credit on state taxes
-  only number needed is total rent (self + govt)
-  number is for YEAR, not per month
-  is it only useful to do if received govt assistance, e.g. HUD
-  what is income limit ? :pre
 
 :line
 
