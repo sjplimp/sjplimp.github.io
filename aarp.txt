@@ -11,12 +11,13 @@ AARP tax aide topics :c,h2
 "Filing QSS"_#qss,
 "Spouse death"_#spouse-death,
 "Dependents"_#depend,
+"Claimed as dependent"_#claim-depend,
 "E filing"_#efile,
 "Older years"_#older,
 "Estimated payments"_#estimate,
 "Printing"_#print,
 "Changes federal in 2025"_#fedchange,
-"Changes NM in 2025"_#nmchange,.,.,
+"Changes NM in 2025"_#nmchange,.,
 [INCOME],.,.,.,
 "SS income"_#ss,
 "Zero income"_#zero,
@@ -32,12 +33,13 @@ AARP tax aide topics :c,h2
 "Foreign tax"_#foreign,
 "1099 K-1"_#k-1,
 "Gambling gains/losses"_#gambling,
-"1099-Q 529 education save"_#529edu,.,
+"Jury duty"_#jury,
+"1099-Q 529 education save"_#529edu,
 [DEDUCT & CREDIT],.,.,.,
 "Educator"_#educator,
 "Medical"_#medical,
-"HSA 1095-C form"_#1095c,
-"1099-SA HSA dist"_#hsa,
+"1095-C form"_#1095c,
+"HSA med accounts"_#hsa,
 "Property tax"_#property,
 "Rent deduction"_#rent,
 "Standard vs itemized"_#std-vs-item,
@@ -83,12 +85,18 @@ if client says they filed thru AARP before
 
 * Interview :h4,link(interview)
 
+Always have them fill out first (yellowed) page :pre
+
+Always ask if someone else can claim them as dependent :pre
+
 Ask on various forms of income
   make a slash mark on form if not relevant
   SSI = supplemental security income of disability benefits
     no form, but should have a letter
-    these benefits are not federal taxable, but need to be entered on state :pre
-
+    these benefits are not federal taxable, but need to be entered on state
+  if received state tax refund for previous year AND if itemized in previous year
+    then will need to claim it as income this year (maybe only portion taxable) :pre
+  
 Ask on various deductions or credits
   make a slash mark on form if not relevant
   particularly ones relevant for state
@@ -104,19 +112,22 @@ Ask on IRS Identity Protection number (IP PIN) - 6 digits
   efile will fail if exists but not entered :pre
 
 Initial pre-check of tax forms and intake forms
-  could use a highlighter pen to mark important parts of forms
+  check the YEAR on all tax forms to ensure they are not old forms
+  could use a highlighter pen to mark important parts of forms :pre
+
+Making notes:
+  WRITE clearly for reviewer to read
   make notes on paper about fed/state tax withheld
     to ensure they are accounted for in final PDF for tax returns
-  make notes for anything else to remember at end
+  make notes for anything else for me to remember at end
   make Notes on intake form about Qs to address by me or reviewer
-    anything to help reviewer
-  WRITE clearly for reviewer to read :pre
+  basically make a note for anything to help reviewer :pre
   
 :line
 
 * Scope :h4,link(scope)
 
-Cannot do married filing separately returns - out of scope
+Cannot do married filing separately returns - out of scope b/c NM is complex
 Cannot do military returns - out of scope
 Receiving digital assets (crypto) - out of scope :pre
 
@@ -187,6 +198,17 @@ example 1: P = 50K, C = 10K, H = 30K
   parent is providing 20K for child's support which is more than half of 30K
 example 2: P = 50K, C = 20K, H = 35K
   parent is providing 15K for child's support which is less than half of 35K :pre
+
+:line
+
+* Claimed as dependent :h4,link(claim-depend)
+
+if someone can claim client as a dependent
+  find box to check for Someone can claim You as a Dependent
+  this will mean the client only gets a small deduction, not large standard one
+  exceptions (don't check the box) if person who could claim them:
+    is not required to file a return
+    they do not file a return or file only to claim refund of withheld taxes :pre
 
 :line
 
@@ -342,7 +364,7 @@ Income :h3
 
 * SS form :h4,link(ss)
 
-CHECK for fine prit that mentions a lump sum payment, possibly for previous year
+CHECK for fine print that mentions a lump sum payment, possibly for previous year
   if so there is an option on TaxSlayer SS section for lump sums
   will be asked to enter some info like AGI from previous year tax return
   TaxSlayer will do the computation to see if better to claim the lump sum
@@ -386,6 +408,9 @@ will be in box 14 as OVT or V or other overtime indication
   info needs to be entered as a deduction
   for time-and-a-half, need to enter 1/3 of amount on W-2
     this is because it is only the extra "halF" pay that is deductible :pre
+
+if W-2 says OT Premuim, it is the full deduction amount
+  i.e. the half not the full 1.5 pay for the overtime hours :pre
 
 :line
 
@@ -446,10 +471,16 @@ Converse for federal vs state
 
 * 1099-R form :h4,link(retire)
 
+code = 1 for early withdrawal :pre
+
 if 1099-R is from OMP = office of manangement personnel
   then may not have SS form, even if 65+, b/c OMP payments include it 
   they also include client's Medicare payments
   don't fully understand this, but saw an example in 2026 :pre
+
+if a 1099 form is from DFAS, ask taxpayer if they are retired military
+  if so, up to 30K can be deducted on NM state tax
+  also applies to spouse receiving pension of a deceased military person :pre
 
 For annuities
 when do I need to use Colordado Simple form :pre
@@ -469,7 +500,9 @@ then need to use Simplified Method to compute it
   other amounts to enter are from tax form
   if start date is long ago, there may no longer be a tax-free portion
     i.e. full amount is taxable
-  otherwise it will give an amount to enter as Taxable Amount :pre
+  otherwise it will give an amount to enter as Taxable Amount
+  can print a version of this for taxpayer to use in future
+    it lists the amount to reduce taxable portion by each year :pre
 
 if health insurance line appears on 1099-R
   can be OUTSIDE all the boxes
@@ -571,6 +604,12 @@ for losses, can be claimed as a deduction, but only if itemize
   
 :line
 
+* Jury duty :h4,link(jury)
+
+jury duty entry is under Other Income
+  
+:line
+
 * 1099-Q form for 529 education savings accounts :h4,link(529edu)
 
 529s are savings accounts to use for children/grandchildren's education costs
@@ -637,28 +676,32 @@ can include all out-or-pocket medical or dental or therapy expenses
 
 :line
 
-** HSA 1095-C form :h4,link(1095c)
+** 1095-C form :h4,link(1095c)
 
-has to do with HSA
+1095-C is health insurance payments by employee for a company plan
+  is NOT related to an HSA 
 not generally needed to fill in tax form
-but indicates should look for HSA info, either on another form
-  or contribution/deduction info from client :pre
-
-could be Box 12 W entry on W-2 which is for HSA contributions :pre
-
-HSA within TaxSlayer is in federal Deductions or Credits :pre
 
 :line
 
-* 1099-SA form for HSA distributions :h4,link(hsa)
+* HSA medical savings accounts :h4,link(hsa)
 
-search for form in TaxSlayer, should be under deductions ?
-  ask if the distributions were spent for medical
-    this is the rule, if not then the distribution is taxable
-  both the distribution and amount of medical expenenses are boxes in TaxSlayer
-  ask if they made self-contributions to their HSA this year
-    this is also entered on the form
-  company contributions do not count :pre
+HSA within TaxSlayer is in federal Deductions or Credits :pre
+
+box 12 on W-2 with W letter is both HSA contributions from employer
+  AND pre-tax employee contributions thru a cafeteria plan :pre
+
+if HSA self-contributions were made separately by employee or a relative
+  can also enter those in TaxSlayer
+  total contributions cannot exceed a limit
+  tax benefits still accrue to the employee :pre
+
+form 5498-SA is for HSA contributions, possibly from both employer and employee
+  but may not be issued until May, too late for taxes :pre
+
+form 1099-SA is for HSA distributions
+  need to verify with client that they were all spent on qualified
+  health care expenses, otherwise would be taxable income :pre
 
 :line
 
@@ -766,6 +809,15 @@ SNAP food benefits - do not count as income
 :line
 
 ** Self-employment forms are 1099-NEC and 1099-K :h4,link(self-employ)
+
+1099-NEC is for nonemployee compensation
+  choose business not farm
+  can deduct legit out-of-pocket business expenses
+  they will be subtracted from taxable income
+  examples
+    car mileage (at work, not commuting)
+      if they pickup supplies on long drive to work, then is work mileage
+    construction contractor paying for licensing class or filing fee :pre
 
 1099-NEC is work as a contractor (non-employee) for a company
   the company is required to create/send that form if
