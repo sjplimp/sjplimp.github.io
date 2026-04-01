@@ -22,7 +22,7 @@ AARP tax aide topics :c,h2
 "SS income"_#ss,
 "Zero income"_#zero,
 "EINs and TINs"_#ein,
-"W2 form"_#w2,
+"W-2 form"_#w-2,
 "Overtime"_#overtime,
 "1099-INT"_#int,
 "Savings bonds"_#savebond,
@@ -115,6 +115,13 @@ Initial pre-check of tax forms and intake forms
   check the YEAR on all tax forms to ensure they are not old forms
   could use a highlighter pen to mark important parts of forms :pre
 
+Ask on disability and blindness if seems relevant - check boxes on yellow form
+  blindness has checkbox in TS on page with taxpayers personal info
+    gives them a larger standard deduction
+  disability is nowhere in TS, does not affect their tax filing
+    but is tracked on next-to-last page as part of personal Qs
+      probably so that AARP can track assitance to disabled :pre
+    
 Making notes:
   WRITE clearly for reviewer to read
   make notes on paper about fed/state tax withheld
@@ -127,9 +134,14 @@ Making notes:
 
 * Scope :h4,link(scope)
 
-Cannot do married filing separately returns - out of scope b/c NM is complex
-Cannot do military returns - out of scope
-Receiving digital assets (crypto) - out of scope :pre
+NOTE: ask check how he figures out-of-scope so quickly :pre
+
+Out of scope cases: :pre
+
+Cannot do married filing separately returns - b/c NM is complex
+Cannot do military returns
+Receiving digital assets (crypto)
+Cannot do K-1, for 1065, if Box 1 is non-zero (gain or loss) :pre
 
 :line
 
@@ -141,6 +153,11 @@ if they have an IRS PIN, make sure to enter it in Basic Info section
   else federal submission will bounce
   emphasize to them, they need to get a new PIN each year from on-line account :pre
 
+only the client can lookup/provide the PIN
+  either has a letter from IRS
+  or login to their IRS account to see it
+  or can contact IRS by phone
+  
 :line
 
 * 1095-A form for ACA insurance and 1095-B form :h4,link(aca)
@@ -252,10 +269,10 @@ client needs to have records of having made these payments (e.g. checks)
     this will print vouchers for client to use in coming year :pre
 
 estimated taxes
-  if paid this year, print them vouchers for next year
+  if paid this year, can print them vouchers for next year
   likewise if way underpaid this year, offer vouchers for next year
-  last year payment for fed/state are both under federal
-  next year vouchers are under fed and state :pre
+  tax year payments for federal/state are BOTH under federal
+  next year vouchers to print are under federal AND state :pre
 
 :line
 
@@ -388,7 +405,7 @@ Double check these on carry-forward returns to make sure correct
 
 :line
 
-* W2 forms :h4,link(w2)
+* W-2 forms :h4,link(w-2)
 
 box 14 is a special case, ask for help if see it :pre
 
@@ -399,7 +416,11 @@ PERA line for insurance deduction on a W2
 if there are medical insurance payments, they can be deducted
   by public safety offices (PSO)
   I think there is a box for that on W-2 form in TaxSlayer :pre
-  
+
+box 14 with ERA or PERA code and W-2 is for a PERA employee
+  select Retimerment (not in Box 12) - do NOT carry to Form 8880
+  this is b/c it is a mandatory retirement contribution
+
 :line
 
 * Overtime on W2 form :h4,link(w2)
@@ -581,12 +602,15 @@ will only get a federal tax credit of $300 max unless file form 4111
 
 :line
 
-* 1099 K-1 form for a real estate investment trust :h4,link(k-1)
+* 1099 K-1 form for different incomes :h4,link(k-1)
 
-TS has 1000-K forms, for self-employment I think, but they
-  seem different than K-1 - filling it in for Springer form
-  did not work the way it did for Mary Lois - several things were
-  unclear :pre
+variety of K-1 forms exist
+pass-thru of receipients share of income, losses, etc :pre
+
+form 1065 for partnerships
+  if Box 1 is filled (gain or loss) then is OUT of SCOPE :pre
+
+form 1041 for estates and trusts :pre
 
 :line
 
