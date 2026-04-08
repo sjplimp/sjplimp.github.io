@@ -24,6 +24,7 @@ AARP tax aide topics :c,h2
 "EINs and TINs"_#ein,
 "W-2 form"_#w-2,
 "Overtime"_#overtime,
+"State tax refund"_#staterefund,
 "1099-INT"_#int,
 "Savings bonds"_#savebond,
 "1099-OID"_#oid,
@@ -34,8 +35,8 @@ AARP tax aide topics :c,h2
 "1099 K-1"_#k-1,
 "Gambling gains/losses"_#gambling,
 "Jury duty"_#jury,
-"1099-Q 529 education save"_#529edu,
-[DEDUCT & CREDIT],.,.,.,
+"1099-Q 529 education save"_#529edu,.,.,.,
+[DEDUCT & CREDIT], .,.,.,
 "Educator"_#educator,
 "Medical"_#medical,
 "1095-C form"_#1095c,
@@ -190,32 +191,35 @@ in year the spouse died, must include a death certificate when efile
 
 * Dependents :h4,link(depend)
 
-if have income of more than $5K, may have to do something :pre
-
-child in prison does not qualify as dependent
+Child in prison does not qualify as dependent
   b/c govt is providing majority of cost for their care :pre
 
-difference between a dependent child and a qualifying dependent
+Difference between a dependent child and a qualifying dependent
   don't really understand this - Laura explained but it is complicated :pre
 
-what if a dependent child has substantial income, e.g. more than $5050/year
+What if a dependent child has substantial income, e.g. more than $5050/year
   does not disqualify as a dependent so long as parent providing > half-support
   Q: can child be filing their own tax return, e.g. to get taxes refunded?
     not sure, but I don't think they can claim self as a dependent :pre
     
 Calculation for half support
   S = sum of parents income P and child's income C
-      for C, includes a job and SS survivor benefits, etc
-        but NOT SSI support for child, at least for federal tax purposes
-      for P, this inlcudes full SS (even is some not taxable) and other income
+    for P, this inlcudes full SS (even is some not taxable) and other income
+    for C, includes a job and SS survivor benefits, etc
+      but NOT SSI support for child, at least for federal tax purposes
   H = half of S = support needed for the child (2 people in house)
-  if C < half of H, then parent is providing > half-support for child :pre
+  if C < half of H, then parent is providing > half-support for child
+  said anohter way, P needs to be 3x or more of C :pre
   
 example 1: P = 50K, C = 10K, H = 30K
   parent is providing 20K for child's support which is more than half of 30K
 example 2: P = 50K, C = 20K, H = 35K
-  parent is providing 15K for child's support which is less than half of 35K :pre
+  parent is providing only 15K for child's support which is less than half of 35K :pre
 
+If child filed taxes, that is OK (e.g. to get refund of withheld tax),
+  but MUST have checked box saying Someone else can claims you as a dependent,
+  else cannot be claimed as dependent by parent :pre
+  
 :line
 
 * Claimed as dependent :h4,link(claim-depend)
@@ -414,16 +418,24 @@ PERA line for insurance deduction on a W2
   does NOT count as lowered income :pre
 
 if there are medical insurance payments, they can be deducted
-  by public safety offices (PSO)
+  by a public safety offices (PSO)
+  they have to be spent on health or accident of long-term care insurance
   I think there is a box for that on W-2 form in TaxSlayer :pre
 
 box 14 with ERA or PERA code and W-2 is for a PERA employee
   select Retimerment (not in Box 12) - do NOT carry to Form 8880
   this is b/c it is a mandatory retirement contribution
 
+box 12 DD is pre-tax health care contribution by employer,
+  does NOT qualify for an income deduction
+box 14 HLTH Care (or the like) is after-tax health care contribution
+  DOES quality for an income deduction if itemmize and over 7.5% of income,
+  TS has a place to enter this when itemizing,
+  explains the pre-tax or cafeteria plan does NOT qualify
+
 :line
 
-* Overtime on W2 form :h4,link(w2)
+* Overtime on W2 form :h4,link(overtime)
 
 will be in box 14 as OVT or V or other overtime indication
   info needs to be entered as a deduction
@@ -432,6 +444,17 @@ will be in box 14 as OVT or V or other overtime indication
 
 if W-2 says OT Premuim, it is the full deduction amount
   i.e. the half not the full 1.5 pay for the overtime hours :pre
+
+:line
+
+* State tax refund :h4,link(staterefund)
+
+If got a state tax refund AND itemized last year, then typically
+  should receive tax form from NM.
+  also need last year's tax return :pre
+
+In TS, there is a state tax refund selection for income,
+  fill out various boxes with numers from last year's tax return :pre
 
 :line
 
@@ -564,23 +587,28 @@ if have capital gains/loss, need to find short-term/long-term info to enter
   note that 1099-DIV forms can have captital gain entries as well
   that kind of capital gains is different :pre
 
-NOTE: even if no cap gain/loss because basis = proceeds
-  still enter it into TaxSlayer :pre
-  
+even if no cap gain/loss because basis = proceeds
+  should still enter it into TaxSlayer :pre
+
+if have type X cap gains, is out of scope for us
+
 brokerage statements for 1099-B
   one of two places under capital gains heading in TaxSlayer
-  USE simple form when only proceeds/cost
-    this is further down the list
+  use SIMPLE form when only proceeds/cost and
+    no adjustments to cost basis or gains/loss (e.g wash)
+    this form is further down the list
   only use more complex form when additional adjustments (wash, etc)
-    this is at the top of the list :pre
+    this form is at the top of the list :pre
     
 carry-over capital losses
   ask about this for last year if they have brokerage statements with cap gain/loss
-  otherwise Taxslayer will not know, even if did taxes with us previously
+    otherwise Taxslayer will not know, even if did taxes with us previously
+  check last year's tax form for Carryover worksheet
+    it will help fill out losses for this year
   if have big losses this year, carrying over to next year
     tell them to be aware of this
     put note on outer envelope so we will hopefully see it next year
-    print worksheet with this year's taxes which shows cap loss
+    print Carryover worksheet with this year's taxes which shows cap loss
       to carry over next year :pre
 
 1099-B if one form has both "reported to IRS" and "not reported to IRS"
@@ -841,8 +869,9 @@ SNAP food benefits - do not count as income
   examples
     car mileage (at work, not commuting)
       if they pickup supplies on long drive to work, then is work mileage
-    construction contractor paying for licensing class or filing fee :pre
-
+    construction contractor paying for licensing class or filing fee
+    for umpire who did games in AZ, could deduct mileage to/from AZ :pre
+  
 1099-NEC is work as a contractor (non-employee) for a company
   the company is required to create/send that form if
     income is more than $600 :pre
